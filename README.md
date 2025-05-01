@@ -1,17 +1,33 @@
-# Lopez Productions
+<img src="assets/lopez-banner.png" alt="Lopez Productions Banner" width="100%">
 
-AI-powered workflows, brand systems, and automation strategies for digital creators and tech-forward businesses.
+# 👨‍💻 Lopez Productions
+**Smarter Brands. Automated Systems. Practical Solutions.**
 
-## 🔧 Projects
+AI-powered workflows, branding systems, and content strategies designed for creators, founders, and digital builders.
 
-- ✨ Bliss & Wellness – Mindfulness AI agentic system
-- 💈 SalonSync – Scheduling & profile AI for barbers/stylists
-- 🎥 Content Engine – YouTube scripts, templates, brand kits
-- 📊 Case Studies – Threads and research on AI & infra (NVIDIA, Azure, Tesla)
+---
 
-## 📂 Key Folders
+## 📂 Project Areas
 
-- `/workflows`: Automation pipelines (Dify, Zapier, Notion)
-- `/notion-templates`: Exportable dashboards
-- `/prompts`: Reusable prompt frameworks
-- `/case-studies`: Research narratives and breakdowns
+| Project             | Description                                                      |
+|---------------------|------------------------------------------------------------------|
+| **Bliss & Wellness** | Mindfulness AI app & archetype-based interventions              |
+| **SalonSync**        | AI scheduling + pricing for barbers/stylists                    |
+| **YouTube Engine**   | Scripts, content workflows, and repurposing tools               |
+| **Case Studies**     | Threads and analysis on NVIDIA, Azure, Tesla, and emerging tech |
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+- ✨ Notion, Zapier, Dify, Webflow
+- 🧠 GPT-based prompt libraries
+- 🛠️ Python, GitHub Actions (planned)
+
+---
+
+## 🔗 Connect
+
+- [🧠 Portfolio](https://lopezproductions.ai)
+- [🧵 X (Twitter)](https://twitter.com/lopezproductions)
+- [📬 Newsletter Signup](#)
