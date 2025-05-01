@@ -1,6 +1,6 @@
 <img src="assets/lopez-banner.png" alt="Lopez Productions Banner" width="100%">
 
-# 👨‍💻 Lopez Productions
+# 👨🏾‍💻 Lopez Productions
 **Smarter Brands. Automated Systems. Practical Solutions.**
 
 AI-powered workflows, branding systems, and content strategies designed for creators, founders, and digital builders.
