@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-brand-black text-brand-white font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-gold text-brand-black px-8 py-4 rounded-lg font-semibold 
+           hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl
+           animate-pulse-slow;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-brand-gold text-brand-white px-8 py-4 rounded-lg font-semibold
+           hover:bg-brand-gold hover:text-brand-black transition-all duration-300
+           hover:scale-105;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-center
+           bg-gradient-to-r from-brand-white to-brand-gold bg-clip-text text-transparent;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-brand-gray-light text-center max-w-3xl mx-auto mt-4;
+  }
+  
+  .card-hover {
+    @apply hover:scale-105 hover:shadow-2xl hover:shadow-brand-gold/20 
+           transition-all duration-300 border border-brand-gray-dark hover:border-brand-gold;
+  }
+  
+  .gradient-border {
+    @apply relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg p-[2px] bg-gradient-to-r from-brand-gold to-brand-gold-dark;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-white to-brand-gold bg-clip-text text-transparent;
+  }
+  
+  .glow-effect {
+    @apply hover:animate-glow transition-all duration-300;
+  }
+} 
