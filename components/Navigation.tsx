@@ -17,17 +17,26 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
-    { href: '#home', label: 'Home' },
+    { href: '/', label: 'Home' },
+    { href: '/industries', label: 'Industries' },
     { href: '#solutions', label: 'Solutions' },
     { href: '#resources', label: 'Resources' },
     { href: '#about', label: 'About' },
   ]
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href: string, e: React.MouseEvent) => {
+    e.preventDefault()
     setIsOpen(false)
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    
+    if (href.startsWith('/')) {
+      // Handle page navigation
+      window.location.href = href
+    } else {
+      // Handle anchor links
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 
@@ -50,7 +59,7 @@ const Navigation = () => {
               alt="Lopez Productions" 
               className="w-8 h-8 rounded-full object-cover border border-brand-gold/50"
             />
-            <a href="#home" className="text-2xl font-serif font-bold text-gradient">
+            <a href="/" className="text-2xl font-serif font-bold text-gradient">
               Lopez Productions
             </a>
           </motion.div>
@@ -62,10 +71,7 @@ const Navigation = () => {
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleNavClick(item.href)
-                  }}
+                  onClick={(e) => handleNavClick(item.href, e)}
                   className="text-brand-gray-light hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -104,10 +110,7 @@ const Navigation = () => {
                 <motion.a
                   key={item.href}
                   href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleNavClick(item.href)
-                  }}
+                  onClick={(e) => handleNavClick(item.href, e)}
                   className="text-brand-gray-light hover:text-brand-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
