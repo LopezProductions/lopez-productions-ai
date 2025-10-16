@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import ContactFormModal from '../../components/ContactFormModal'
@@ -147,6 +148,16 @@ export default function IndustriesPage() {
                   Book a call
                 </button>
               </div>
+              
+              {/* Link to related insights */}
+              <div className="mt-4 pt-4 border-t border-brand-gray-dark">
+                <p className="text-sm text-brand-gray-light mb-2">
+                  <strong className="text-brand-gold">Related insights:</strong>
+                </p>
+                <Link href="/insights/ai-workflows-save-time" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+                  How AI Workflows Save SaaS Teams 10 Hours a Week →
+                </Link>
+              </div>
             </div>
 
             {/* Creators */}
@@ -181,6 +192,16 @@ export default function IndustriesPage() {
                   Book a system audit
                 </button>
               </div>
+              
+              {/* Link to related insights */}
+              <div className="mt-4 pt-4 border-t border-brand-gray-dark">
+                <p className="text-sm text-brand-gray-light mb-2">
+                  <strong className="text-brand-gold">Related insights:</strong>
+                </p>
+                <Link href="/insights/creator-automation-systems" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+                  3 Systems Every Creator Should Automate in 2025 →
+                </Link>
+              </div>
             </div>
 
             {/* Agencies */}
@@ -214,6 +235,16 @@ export default function IndustriesPage() {
                 >
                   Book a call
                 </button>
+              </div>
+              
+              {/* Link to related insights */}
+              <div className="mt-4 pt-4 border-t border-brand-gray-dark">
+                <p className="text-sm text-brand-gray-light mb-2">
+                  <strong className="text-brand-gold">Related insights:</strong>
+                </p>
+                <Link href="/insights/notion-make-automation-guide" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+                  Notion + Make.com: The Ultimate Automation Stack →
+                </Link>
               </div>
             </div>
           </div>

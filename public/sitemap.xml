@@ -49,4 +49,34 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Insights Hub -->
+  <url>
+    <loc>https://lopezproductions.ai/insights</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Insight Posts -->
+  <url>
+    <loc>https://lopezproductions.ai/insights/ai-workflows-save-time</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/insights/creator-automation-systems</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/insights/notion-make-automation-guide</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Navigation from '../components/Navigation'
 import HeroSection from '../components/HeroSection'
 import SolutionsSection from '../components/SolutionsSection'
@@ -69,6 +70,21 @@ export default function Home() {
           <p className="text-xs mt-4 text-brand-gray-light opacity-70">
             You'll get instant access to both a Notion version and a downloadable CSV + setup guide.
           </p>
+          
+          {/* Link to insights */}
+          <div className="mt-6 pt-6 border-t border-brand-gray-dark">
+            <p className="text-sm text-brand-gray-light mb-3">
+              Want to learn more about automation? Check out our latest insights:
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2 justify-center">
+              <Link href="/insights/creator-automation-systems" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+                Creator Automation Systems →
+              </Link>
+              <Link href="/insights/notion-make-automation-guide" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+                Notion + Make.com Guide →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
