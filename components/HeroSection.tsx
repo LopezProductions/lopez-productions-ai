@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/lp_logo.png)',
+          backgroundImage: 'url(/transparent_logo_lp.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.15

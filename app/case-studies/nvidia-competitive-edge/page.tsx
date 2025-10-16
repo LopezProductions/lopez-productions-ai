@@ -31,7 +31,7 @@ export default function NvidiaCaseStudy() {
             "publisher": {
               "@type": "Organization",
               "name": "Lopez Productions.ai",
-              "logo": { "@type": "ImageObject", "url": "https://lopezproductions.ai/lp_logo.png" }
+              "logo": { "@type": "ImageObject", "url": "https://lopezproductions.ai/transparent_logo_lp.png" }
             },
             "contentUrl": "https://youtu.be/1ZHYh6j7lDU?si=rYOtzGlr4nSJ5UOn",
             "embedUrl": "https://www.youtube.com/embed/1ZHYh6j7lDU"

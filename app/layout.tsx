@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   description: 'AI-powered workflows and creative strategies for non-techies who want results — without the overwhelm. Build smarter brands with automated systems.',
   keywords: 'AI workflows, branding, automation, content systems, visual assets, Notion templates',
   authors: [{ name: 'Reuben Lopez' }],
+  icons: {
+    icon: [
+      { url: '/lpfavicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/lpfavicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/lpfavicon-64.png', sizes: '64x64', type: 'image/png' },
+    ],
+  },
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai',
@@ -52,7 +59,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Lopez Productions",
               "url": "https://lopezproductions.ai",
-              "logo": "https://lopezproductions.ai/lp_logo.png",
+              "logo": "https://lopezproductions.ai/transparent_logo_lp.png",
               "sameAs": [
                 "https://www.youtube.com/@LopezWorkflows",
                 "https://www.linkedin.com/company/lopez-productions"

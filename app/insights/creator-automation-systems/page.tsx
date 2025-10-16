@@ -44,7 +44,7 @@ export default function CreatorAutomationSystems() {
               "name": "Lopez Productions",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://lopezproductions.ai/lp_logo.png"
+                "url": "https://lopezproductions.ai/transparent_logo_lp.png"
               }
             },
             "datePublished": "2025-01-27",
