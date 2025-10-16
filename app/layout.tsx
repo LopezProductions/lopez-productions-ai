@@ -14,6 +14,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://lopezproductions.ai'),
   title: 'Lopez Productions - AI-Powered Workflows & Creative Strategies',
   description: 'AI-powered workflows and creative strategies for non-techies who want results — without the overwhelm. Build smarter brands with automated systems.',
   keywords: 'AI workflows, branding, automation, content systems, visual assets, Notion templates',
