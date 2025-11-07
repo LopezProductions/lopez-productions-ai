@@ -1,18 +1,43 @@
 import React from 'react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import Navigation from '../components/Navigation'
 import HeroSection from '../components/HeroSection'
 import SolutionsSection from '../components/SolutionsSection'
+import SystemsInActionSection from '../components/SystemsInActionSection'
+import ThreeStepProcess from '../components/ThreeStepProcess'
 import TestimonialsSection from '../components/TestimonialsSection'
+import FortyEightHourCTA from '../components/FortyEightHourCTA'
 import AboutSection from '../components/AboutSection'
 import Footer from '../components/Footer'
+
+export const metadata: Metadata = {
+  title: 'Build Your AI Portfolio Website | Lopez Productions',
+  description: 'Build a custom AI-powered portfolio website in 48 hours. Lopez Productions automates your content, connects your tools, and creates systems that scale your creative business.',
+  keywords: 'portfolio website builder, AI portfolio website builder, build portfolio website, website builder for portfolio, AI systems designer',
+  openGraph: {
+    type: 'website',
+    url: 'https://lopezproductions.ai',
+    title: 'Build Your AI Portfolio Website | Lopez Productions',
+    description: 'Build a custom AI-powered portfolio website in 48 hours. Lopez Productions automates your content, connects your tools, and creates systems that scale your creative business.',
+    images: ['/og-image.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Build Your AI Portfolio Website | Lopez Productions',
+    description: 'Build a custom AI-powered portfolio website in 48 hours. Lopez Productions automates your content, connects your tools, and creates systems that scale your creative business.',
+    images: ['/og-image.jpg'],
+  },
+}
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-brand-black">
       <Navigation />
       <HeroSection />
+      <ThreeStepProcess />
       <SolutionsSection />
+      <SystemsInActionSection />
       
       {/* Notion Content Planner Lead Magnet */}
       <section id="lead-magnet" className="py-20 px-6 md:px-12">
@@ -77,10 +102,10 @@ export default function Home() {
               Want to learn more about automation? Check out our latest insights:
             </p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center">
-              <Link href="/insights/creator-automation-systems" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
                 Creator Automation Systems →
               </Link>
-              <Link href="/insights/notion-make-automation-guide" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
                 Notion + Make.com Guide →
               </Link>
             </div>
@@ -89,6 +114,7 @@ export default function Home() {
       </section>
 
       <TestimonialsSection />
+      <FortyEightHourCTA />
       <AboutSection />
       <Footer />
     </main>

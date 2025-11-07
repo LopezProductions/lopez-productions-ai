@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import ContactFormModal from './ContactFormModal'
 
@@ -40,33 +41,25 @@ const HeroSection = () => {
             className="mb-16"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 text-gradient leading-tight">
-              Smarter Brands.
-              <br />
-              Automated Systems.
-              <br />
-              Practical Solutions.
+              We Build AI Portfolio Websites That Work While You Sleep.
             </h1>
             
             <p className="text-xl md:text-2xl text-brand-gray-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              AI-powered workflows and creative strategies for non-techies who want results — without the overwhelm.
+              Lopez Productions designs AI-powered systems that connect tools, automate workflows, and scale small businesses.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <motion.a
-                href="#lead-magnet"
-                className="btn-primary"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={(e) => {
-                  e.preventDefault()
-                  const element = document.querySelector('#lead-magnet')
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' })
-                  }
-                }}
               >
-                Get My Free Notion Template
-              </motion.a>
+                <Link
+                  href="/get-started"
+                  className="btn-primary"
+                >
+                  Build My Portfolio
+                </Link>
+              </motion.div>
               
               <motion.button
                 onClick={() => setIsModalOpen(true)}

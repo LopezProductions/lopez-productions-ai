@@ -18,11 +18,10 @@ const Navigation = () => {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/industries', label: 'Industries' },
-    { href: '/insights', label: 'Insights' },
-    { href: '#solutions', label: 'Solutions' },
-    { href: '#resources', label: 'Resources' },
-    { href: '#about', label: 'About' },
+    { href: '/solutions', label: 'Solutions' },
+    { href: '/get-started', label: 'Get Started' },
+    { href: '/playbook', label: 'Playbook' },
+    { href: '/#about', label: 'About' },
   ]
 
   const handleNavClick = (href: string, e: React.MouseEvent) => {
@@ -30,10 +29,10 @@ const Navigation = () => {
     setIsOpen(false)
     
     if (href.startsWith('/')) {
-      // Handle page navigation
+      // Handle page navigation (including homepage anchor links like /#about)
       window.location.href = href
     } else {
-      // Handle anchor links
+      // Handle anchor links on current page
       const element = document.querySelector(href)
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })

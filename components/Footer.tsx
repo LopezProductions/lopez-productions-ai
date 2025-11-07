@@ -36,7 +36,8 @@ const Footer = () => {
   const resources = [
     { name: 'Free Notion Template', href: '#resources' },
     { name: 'YouTube Channel', href: 'https://www.youtube.com/@LopezWorkflows' },
-    { name: 'Linktree', href: 'https://linktr.ee/lopezproductions' }
+    { name: 'Linktree', href: 'https://linktr.ee/lopezproductions' },
+    { name: 'Transitioning from Web Design → AI Systems Design', href: '/about' }
   ]
 
   return (

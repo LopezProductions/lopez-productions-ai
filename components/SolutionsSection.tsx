@@ -2,37 +2,41 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Bot, Palette, FileText, Image } from 'lucide-react'
+import { Zap, FileText, Target, Palette } from 'lucide-react'
 
 const SolutionsSection = () => {
   const solutions = [
     {
-      icon: Bot,
-      title: 'AI Workflow Setup',
-      description: 'Build intelligent automation systems using Make, Dify, and Airtable that handle repetitive tasks while you focus on what matters.',
-      tools: ['Make', 'Dify', 'Airtable'],
-      features: ['Process automation', 'Data integration', 'Smart notifications']
-    },
-    {
-      icon: Palette,
-      title: 'Brand Kit Systems',
-      description: 'Create comprehensive brand identities with strategic color palettes, typography, and visual guidelines for consistent branding.',
-      tools: ['Color Strategy', 'Font Selection', 'Logo Design'],
-      features: ['Visual identity', 'Brand guidelines', 'Asset organization']
+      icon: Zap,
+      title: 'AI Workflow Systems',
+      tagline: 'Connect your tools into seamless automation flows.',
+      description: 'We design custom AI workflows that automate repetitive tasks and integrate your favorite apps — from Notion to Zapier to Make.',
+      tools: ['Notion', 'Zapier', 'Make', 'Airtable'],
+      features: ['Tool integration', 'Process automation', 'Workflow design']
     },
     {
       icon: FileText,
-      title: 'Content Engine Design',
-      description: 'Design streamlined content creation workflows for X, YouTube, and Instagram that maximize reach and engagement.',
-      tools: ['X (Twitter)', 'YouTube', 'Instagram'],
-      features: ['Content calendars', 'Repurposing systems', 'Publishing workflows']
+      title: 'Content Automation Engine',
+      tagline: 'Turn your ideas into posts automatically.',
+      description: 'Build AI-powered content pipelines that plan, write, and schedule posts while you focus on growth.',
+      tools: ['Content Planning', 'AI Writing', 'Auto-Publishing'],
+      features: ['Content planning', 'Automated writing', 'Multi-platform publishing']
     },
     {
-      icon: Image,
-      title: 'Visual Assets & Automation',
-      description: 'Create professional graphics and automate visual content creation with AI-powered tools and templates.',
-      tools: ['Canva', 'Midjourney', 'Automation'],
-      features: ['Social graphics', 'Video thumbnails', 'Brand assets']
+      icon: Target,
+      title: 'Brand Automation Systems',
+      tagline: 'Keep your brand consistent everywhere.',
+      description: 'Your fonts, colors, and assets update across every platform automatically — no more manual design chaos.',
+      tools: ['Brand Guidelines', 'Asset Management', 'Multi-Platform Sync'],
+      features: ['Brand consistency', 'Automated asset updates', 'Cross-platform sync']
+    },
+    {
+      icon: Palette,
+      title: 'AI Design Systems',
+      tagline: 'Generate visuals instantly with AI.',
+      description: 'Create and organize visuals for your site, campaigns, and socials using the best AI design tools.',
+      tools: ['AI Image Generation', 'Design Automation', 'Asset Libraries'],
+      features: ['AI image generation', 'Visual asset creation', 'Design system management']
     }
   ]
 
@@ -46,7 +50,7 @@ const SolutionsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">Solutions</h2>
+          <h2 className="section-title">Our 4 Core Systems</h2>
           <p className="section-subtitle">
             Comprehensive AI-powered solutions that transform how you work and create
           </p>
@@ -73,9 +77,14 @@ const SolutionsSection = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-semibold text-brand-white mb-4 group-hover:text-brand-gold transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-brand-white mb-2 group-hover:text-brand-gold transition-colors duration-300">
                     {solution.title}
                   </h3>
+
+                  {/* Tagline */}
+                  <p className="text-brand-gold text-sm font-medium mb-4 leading-relaxed">
+                    {solution.tagline}
+                  </p>
 
                   {/* Description */}
                   <p className="text-brand-gray-light mb-6 leading-relaxed">
@@ -117,12 +126,15 @@ const SolutionsSection = () => {
                   {/* CTA Button */}
                   <div className="mt-8">
                     <motion.a
-                      href="#contact"
+                      href={solution.title === 'AI Workflow Systems' ? '/solutions#workflow' : 
+                            solution.title === 'Content Automation Engine' ? '/solutions#content' :
+                            solution.title === 'Brand Automation Systems' ? '/solutions#brand' :
+                            solution.title === 'AI Design Systems' ? '/solutions#design' : '/solutions'}
                       className="inline-block px-6 py-3 bg-brand-gray-dark text-brand-white rounded-lg font-medium hover:bg-brand-gold hover:text-brand-black transition-all duration-300 group-hover:scale-105"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      Learn More
+                      Learn More →
                     </motion.a>
                   </div>
                 </div>

@@ -64,8 +64,8 @@ export default function NotionMakeAutomationGuide() {
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
-                ← Back to Insights
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+                ← Back to Playbook
               </Link>
             </div>
             
@@ -426,10 +426,10 @@ export default function NotionMakeAutomationGuide() {
                 Get a free setup consultation and custom Notion + Make.com automation for your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/industries" className="btn-primary">
+                <Link href="/solutions" className="btn-primary">
                   Book a Free Setup Consultation
                 </Link>
-                <Link href="/insights" className="btn-outline">
+                <Link href="/playbook" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>
