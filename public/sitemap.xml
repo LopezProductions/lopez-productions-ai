@@ -5,78 +5,102 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
-  <!-- Homepage (contains About, Solutions as sections) -->
+  <!-- Homepage -->
   <url>
     <loc>https://lopezproductions.ai/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <!-- Optional hero/og image for richer results:
-    <image:image>
-      <image:loc>https://lopezproductions.ai/og-image.jpg</image:loc>
-      <image:title>Lopez Productions — Creative Systems & Automation</image:title>
-    </image:image>
-    -->
   </url>
 
-  <!-- Industries (the only separate page right now) -->
+  <!-- Main Navigation Pages -->
   <url>
-    <loc>https://lopezproductions.ai/industries</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://lopezproductions.ai/solutions</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Case study (include only if live) -->
   <url>
-    <loc>https://lopezproductions.ai/case-studies/nvidia-competitive-edge</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://lopezproductions.ai/get-started</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/playbook</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <!-- Optional case-study cover image:
-    <image:image>
-      <image:loc>https://lopezproductions.ai/og/nvidia-case-study.jpg</image:loc>
-      <image:title>NVIDIA Competitive Edge — Market Analysis</image:title>
-    </image:image>
-    -->
   </url>
 
-  <!-- Thank-you (include only if accessible directly) -->
+  <!-- Service Pages -->
   <url>
-    <loc>https://lopezproductions.ai/thank-you</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://lopezproductions.ai/ai-portfolio-builder</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Insights Hub -->
   <url>
-    <loc>https://lopezproductions.ai/insights</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://lopezproductions.ai/ai-systems-for-freelancers</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://lopezproductions.ai/blog</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Individual Insight Posts -->
   <url>
-    <loc>https://lopezproductions.ai/insights/ai-workflows-save-time</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://lopezproductions.ai/blog/how-to-build-a-portfolio-website</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/creator-automation-systems</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://lopezproductions.ai/blog/ai-portfolio-builder-vs-traditional</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/notion-make-automation-guide</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://lopezproductions.ai/blog/digital-portfolio-vs-portfolio-website</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Lead Magnet -->
+  <url>
+    <loc>https://lopezproductions.ai/free-portfolio-template</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Systems Showcase -->
+  <url>
+    <loc>https://lopezproductions.ai/systems-in-action</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Case Study -->
+  <url>
+    <loc>https://lopezproductions.ai/case-studies/nvidia-competitive-edge</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
