@@ -35,8 +35,8 @@ export default function IntakePage() {
   // Function to map session metadata to package name
   const getPackageFromMetadata = (metadata: SessionData['metadata']): string => {
     try {
-      const bundleIds = metadata.bundleIds ? JSON.parse(metadata.bundleIds) : []
-      const selectedServiceIds = metadata.selectedServiceIds ? JSON.parse(metadata.selectedServiceIds) : []
+      const bundleIds = metadata.bundleIds ? JSON.parse(metadata.bundleIds) as string[] : []
+      const selectedServiceIds = metadata.selectedServiceIds ? JSON.parse(metadata.selectedServiceIds) as string[] : []
 
       // First, try to match by bundle IDs
       for (const pkg of predefinedPackages) {
@@ -47,8 +47,8 @@ export default function IntakePage() {
         if (pkgBundleIds.length > 0) {
           const bundleMatch = 
             pkgBundleIds.length === bundleIds.length &&
-            pkgBundleIds.every(id => bundleIds.includes(id)) &&
-            bundleIds.every(id => pkgBundleIds.includes(id))
+            pkgBundleIds.every((id: string) => bundleIds.includes(id)) &&
+            bundleIds.every((id: string) => pkgBundleIds.includes(id))
 
           if (bundleMatch) {
             return pkg.name
@@ -59,8 +59,8 @@ export default function IntakePage() {
         if (pkgServiceIds.length > 0) {
           const serviceMatch =
             pkgServiceIds.length === selectedServiceIds.length &&
-            pkgServiceIds.every(id => selectedServiceIds.includes(id)) &&
-            selectedServiceIds.every(id => pkgServiceIds.includes(id))
+            pkgServiceIds.every((id: string) => selectedServiceIds.includes(id)) &&
+            selectedServiceIds.every((id: string) => pkgServiceIds.includes(id))
 
           if (serviceMatch) {
             return pkg.name
