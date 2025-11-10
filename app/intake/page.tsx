@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
@@ -22,7 +22,7 @@ interface SessionData {
   payment_status: string
 }
 
-export default function IntakePage() {
+function IntakePageContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
   const [sessionData, setSessionData] = useState<SessionData | null>(null)
@@ -445,6 +445,22 @@ export default function IntakePage() {
 
       <Footer />
     </main>
+  )
+}
+
+export default function IntakePage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-brand-black">
+        <Navigation />
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-brand-gold text-xl">Loading...</div>
+        </div>
+        <Footer />
+      </main>
+    }>
+      <IntakePageContent />
+    </Suspense>
   )
 }
 

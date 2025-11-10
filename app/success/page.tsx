@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
@@ -8,7 +8,7 @@ import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
 import { CheckCircle, Mail, Calendar } from 'lucide-react'
 
-export default function SuccessPage() {
+function SuccessPageContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
   const [isLoading, setIsLoading] = useState(true)
@@ -181,6 +181,22 @@ export default function SuccessPage() {
 
       <Footer />
     </main>
+  )
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-brand-black">
+        <Navigation />
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-brand-gold text-xl">Loading...</div>
+        </div>
+        <Footer />
+      </main>
+    }>
+      <SuccessPageContent />
+    </Suspense>
   )
 }
 
