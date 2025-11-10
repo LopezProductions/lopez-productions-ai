@@ -6,8 +6,13 @@ if (!process.env.STRIPE_SECRET_KEY) {
   console.error('STRIPE_SECRET_KEY is not set in environment variables')
 }
 
-const stripe = process.env.STRIPE_SECRET_KEY 
-  ? new Stripe(process.env.STRIPE_SECRET_KEY, {
+// Clean the key (remove quotes and whitespace)
+const cleanStripeKey = process.env.STRIPE_SECRET_KEY 
+  ? process.env.STRIPE_SECRET_KEY.trim().replace(/^["']|["']$/g, '')
+  : null
+
+const stripe = cleanStripeKey 
+  ? new Stripe(cleanStripeKey, {
       apiVersion: '2025-10-29.clover',
       typescript: true,
     })

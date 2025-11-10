@@ -7,13 +7,23 @@ import { getServiceById } from '../../data/packages'
 if (!process.env.STRIPE_SECRET_KEY) {
   console.error('STRIPE_SECRET_KEY is not set in environment variables')
 } else {
-  // Log first few characters to verify key is loaded (for debugging only)
-  const keyPreview = process.env.STRIPE_SECRET_KEY.substring(0, 12) + '...'
-  console.log('Stripe secret key loaded:', keyPreview)
+  // Check if key might have quotes or whitespace (without logging the key)
+  const trimmedKey = process.env.STRIPE_SECRET_KEY.trim()
+  if (trimmedKey !== process.env.STRIPE_SECRET_KEY) {
+    console.warn('WARNING: STRIPE_SECRET_KEY has leading/trailing whitespace')
+  }
+  if (trimmedKey.startsWith('"') || trimmedKey.startsWith("'")) {
+    console.warn('WARNING: STRIPE_SECRET_KEY appears to have quotes - remove them from .env file')
+  }
 }
 
-const stripe = process.env.STRIPE_SECRET_KEY 
-  ? new Stripe(process.env.STRIPE_SECRET_KEY, {
+// Clean the key (remove quotes and whitespace)
+const cleanStripeKey = process.env.STRIPE_SECRET_KEY 
+  ? process.env.STRIPE_SECRET_KEY.trim().replace(/^["']|["']$/g, '')
+  : null
+
+const stripe = cleanStripeKey 
+  ? new Stripe(cleanStripeKey, {
       apiVersion: '2025-10-29.clover',
       typescript: true,
     })
@@ -169,10 +179,16 @@ export async function POST(request: NextRequest) {
 
 // Add GET handler for testing
 export async function GET() {
+  const hasKey = !!process.env.STRIPE_SECRET_KEY
+  const keyLength = process.env.STRIPE_SECRET_KEY?.length || 0
+  
   return NextResponse.json({ 
     message: 'Stripe Checkout API endpoint is working',
     stripeConfigured: !!stripe,
-    hasSecretKey: !!process.env.STRIPE_SECRET_KEY
+    hasSecretKey: hasKey,
+    keyLength: keyLength,
+    keyPrefix: hasKey ? 'sk_live' : 'N/A', // Only show prefix, not actual key
+    note: hasKey ? 'If stripeConfigured is false, check that the key is valid and restart the dev server' : 'Add STRIPE_SECRET_KEY to .env.local and restart the dev server'
   })
 }
 
