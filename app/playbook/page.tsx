@@ -8,6 +8,15 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
+    slug: 'content-engine-starter-kit',
+    title: 'AI Tools You Need to Start Your Content Engine (2025 Edition)',
+    tag: 'Content Automation',
+    excerpt: 'Learn how to build your own AI-powered content workflow using tools like ChatGPT, Claude, Perplexity AI, Midjourney, Notion, and Make.com.',
+    readTime: '6 min read',
+    publishedDate: '2025-11-11',
+    exists: true
+  },
+  {
     slug: 'ai-workflows-save-time',
     title: 'AI Workflow Systems That Save You 10 Hours a Week',
     tag: 'Workflow',
