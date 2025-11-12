@@ -5,6 +5,14 @@ import Link from 'next/link'
 
 const insights = [
   {
+    slug: 'stop-chasing-ai-tools',
+    title: 'Stop Chasing Every New AI Tool — Here\'s What\'s Actually Worth Learning (Perplexity AI / ChatGPT / Gemini)',
+    excerpt: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.',
+    readTime: '8 min read',
+    category: 'AI Tools',
+    publishedDate: '2025-11-12'
+  },
+  {
     slug: 'ai-workflows-save-time',
     title: 'How AI Workflows Save SaaS Teams 10 Hours a Week',
     excerpt: 'Discover the specific automation systems that cut project time by 20-30% and why most teams are still doing manual work that AI can handle.',

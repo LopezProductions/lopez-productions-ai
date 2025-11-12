@@ -8,6 +8,15 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
+    slug: 'stop-chasing-ai-tools',
+    title: 'Stop Chasing Every New AI Tool — Here\'s What\'s Actually Worth Learning (Perplexity AI / ChatGPT / Gemini)',
+    tag: 'Workflow',
+    excerpt: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.',
+    readTime: '8 min read',
+    publishedDate: '2025-11-12',
+    exists: true
+  },
+  {
     slug: 'content-engine-starter-kit',
     title: 'AI Tools You Need to Start Your Content Engine (2025 Edition)',
     tag: 'Content Automation',

@@ -48,7 +48,7 @@ export default function AIWorkflowsSaveTime() {
               }
             },
             "datePublished": "2025-01-27",
-            "dateModified": "2025-01-27",
+            "dateModified": "2025-11-13",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://lopezproductions.ai/insights/ai-workflows-save-time"
@@ -86,7 +86,7 @@ export default function AIWorkflowsSaveTime() {
             <div className="flex items-center gap-4 text-sm text-brand-gray-muted">
               <span>By Reuben Lopez</span>
               <span>•</span>
-              <span>January 27, 2025</span>
+              <span>Updated: November 13, 2025</span>
               <span>•</span>
               <span>8 min read</span>
             </div>
@@ -117,6 +117,10 @@ export default function AIWorkflowsSaveTime() {
         <section className="py-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto prose prose-lg">
             
+            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
+              In 2025, AI workflow automation is transforming how SaaS teams operate — yet most are still stuck in manual processes. This guide breaks down the exact automations that save 10+ hours weekly across onboarding, reporting, and content workflows.
+            </p>
+            
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient">
               Why are SaaS teams still doing manual work in 2025?
             </h2>
@@ -135,7 +139,7 @@ export default function AIWorkflowsSaveTime() {
 
             <div className="space-y-8">
               <div className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">1. Customer Onboarding Automation</h4>
+                <h4 className="text-lg font-semibold text-brand-white mb-3">1. Automating SaaS Customer Onboarding</h4>
                 <p className="text-brand-gray-light mb-4">
                   <strong className="text-brand-white">Time Saved:</strong> 3-4 hours per new customer
                 </p>
@@ -150,7 +154,7 @@ export default function AIWorkflowsSaveTime() {
               </div>
 
               <div className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">2. Data Processing & Reporting</h4>
+                <h4 className="text-lg font-semibold text-brand-white mb-3">2. Automating Data Reporting with AI</h4>
                 <p className="text-brand-gray-light mb-4">
                   <strong className="text-brand-white">Time Saved:</strong> 4-5 hours per week
                 </p>
@@ -165,7 +169,7 @@ export default function AIWorkflowsSaveTime() {
               </div>
 
               <div className="rounded-2xl border border-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">3. Content & Communication Automation</h4>
+                <h4 className="text-lg font-semibold text-brand-white mb-3">3. AI Content & Communication Workflows</h4>
                 <p className="text-brand-gray-light mb-4">
                   <strong className="text-brand-white">Time Saved:</strong> 3-4 hours per week
                 </p>
@@ -248,6 +252,19 @@ export default function AIWorkflowsSaveTime() {
                   </p>
                 </details>
               </div>
+            </div>
+
+            {/* New CTA Section */}
+            <div className="mt-16 p-8 bg-brand-gray-dark rounded-2xl">
+              <h3 className="text-2xl font-serif font-bold text-brand-white mb-4">
+                💼 Ready to streamline your SaaS workflows?
+              </h3>
+              <p className="text-brand-gray-light mb-6 leading-relaxed">
+                Lopez Productions helps SaaS teams design AI systems that reduce project time by 20–30%.
+              </p>
+              <p className="text-brand-gray-light mb-6">
+                👉 <Link href="/intake" className="text-brand-gold hover:text-brand-gold-dark underline">Book a consult</Link> to see how automation can save your team 10+ hours a week.
+              </p>
             </div>
 
             {/* CTA */}
