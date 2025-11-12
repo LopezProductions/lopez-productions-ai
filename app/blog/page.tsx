@@ -6,6 +6,40 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
 
+// Helper function to format date consistently
+const formatDate = (dateString: string) => {
+  try {
+    const date = new Date(dateString)
+    if (isNaN(date.getTime())) {
+      return dateString // Return original if invalid
+    }
+    const formatted = date.toLocaleDateString('en-US', { 
+      month: 'short', 
+      day: 'numeric', 
+      year: 'numeric' 
+    })
+    // Ensure we always return a non-empty string
+    if (!formatted || formatted.trim() === '') {
+      // Fallback to manual formatting
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+    }
+    return formatted
+  } catch (error) {
+    // Fallback: try to parse and format manually
+    try {
+      const date = new Date(dateString)
+      if (!isNaN(date.getTime())) {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+      }
+    } catch {
+      // Last resort: return original string
+    }
+    return dateString
+  }
+}
+
 const blogPosts = [
   {
     slug: 'how-to-build-a-portfolio-website',
@@ -77,7 +111,7 @@ export default function BlogPage() {
                     </p>
                     <div className="flex items-center justify-between text-xs text-brand-gray-muted">
                       <span>{post.readTime}</span>
-                      <span>{new Date(post.publishedDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                      <span>{formatDate(post.publishedDate)}</span>
                     </div>
                   </div>
                 </Link>
