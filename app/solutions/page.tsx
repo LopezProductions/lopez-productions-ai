@@ -30,15 +30,31 @@ export default function SolutionsPage() {
             "itemListElement": [
               {
                 "@type": "Service",
-                "name": "AI Workflow Systems",
-                "serviceType": "AI Workflow Automation",
+                "name": "Lead Conversion Automation",
+                "serviceType": "Lead Automation",
                 "provider": { "@type": "Organization", "name": "Lopez Productions" },
                 "areaServed": "Global",
                 "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
               },
               {
                 "@type": "Service",
-                "name": "Content Automation Engine",
+                "name": "Marketing Workflow Automation",
+                "serviceType": "Marketing Automation",
+                "provider": { "@type": "Organization", "name": "Lopez Productions" },
+                "areaServed": "Global",
+                "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+              },
+              {
+                "@type": "Service",
+                "name": "Client & Project Management Automation",
+                "serviceType": "Project Management Automation",
+                "provider": { "@type": "Organization", "name": "Lopez Productions" },
+                "areaServed": "Global",
+                "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+              },
+              {
+                "@type": "Service",
+                "name": "Content Scaling Systems",
                 "serviceType": "Content Automation",
                 "provider": { "@type": "Organization", "name": "Lopez Productions" },
                 "areaServed": "Global",
@@ -46,24 +62,8 @@ export default function SolutionsPage() {
               },
               {
                 "@type": "Service",
-                "name": "Brand Automation Systems",
-                "serviceType": "Brand Automation",
-                "provider": { "@type": "Organization", "name": "Lopez Productions" },
-                "areaServed": "Global",
-                "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
-              },
-              {
-                "@type": "Service",
-                "name": "AI Design Systems",
-                "serviceType": "AI Design Tools",
-                "provider": { "@type": "Organization", "name": "Lopez Productions" },
-                "areaServed": "Global",
-                "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
-              },
-              {
-                "@type": "Service",
-                "name": "Market Research Systems",
-                "serviceType": "AI Market Research",
+                "name": "Analytics & Performance Tracking",
+                "serviceType": "Business Analytics",
                 "provider": { "@type": "Organization", "name": "Lopez Productions" },
                 "areaServed": "Global",
                 "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
@@ -106,7 +106,7 @@ export default function SolutionsPage() {
               transition={{ duration: 0.8 }}
               className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight bg-gradient-to-b from-brand-gold to-brand-gold-dark bg-clip-text text-transparent mb-6"
             >
-              Smarter Systems That Work While You Sleep
+              ⚙️ AI Systems That Grow With You
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
@@ -114,7 +114,7 @@ export default function SolutionsPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl text-brand-gray-light max-w-4xl mx-auto mb-8 leading-relaxed"
             >
-              Explore our five core AI systems — built to connect, create, and scale your business.
+              You don't need more tools — you need better systems. At Lopez Productions, we design AI-powered workflows that automate your most repetitive tasks, help you stay consistent, and give you back the time to focus on what actually moves the needle.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
@@ -126,7 +126,7 @@ export default function SolutionsPage() {
                 onClick={() => setIsModalOpen(true)}
                 className="btn-primary"
               >
-                Book a Free System Audit
+                Book a free consult
               </button>
               <a href="#lead-magnet" className="btn-outline">
                 Download the Free Content Kit
@@ -135,8 +135,8 @@ export default function SolutionsPage() {
             </div>
           </section>
 
-          {/* AI Workflow Systems Section */}
-          <section id="workflow" className="py-16 px-6 md:px-12">
+          {/* Convert More Leads Automatically Section */}
+          <section id="leads" className="py-16 px-6 md:px-12">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -146,53 +146,80 @@ export default function SolutionsPage() {
               className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover"
             >
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-4">
-                AI Workflow Systems
+                💬 Convert More Leads Automatically
               </h2>
-              <p className="text-sm text-brand-gray-light mb-4">
-                <strong className="text-brand-white">Purpose:</strong> The central nervous system of your business
-              </p>
-              <p className="text-sm text-brand-gray-light mb-6">
-                <strong className="text-brand-white">Keywords:</strong> AI workflow automation, AI business systems
-              </p>
               <p className="text-brand-gray-light text-lg mb-6">
-                Automate your operations from the inside out. We connect your favorite tools — Notion, Zapier, Make, and more — into seamless flows that handle admin, scheduling, and follow-ups while you focus on growth.
+                We build simple follow-up systems that reach out to new leads automatically — through email, chat, or text — so no one slips through the cracks. Every message is personalized based on how people interact with your brand, turning curiosity into conversions without extra manual work.
               </p>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  <strong>We build:</strong>
-                </h4>
-                <ul className="space-y-2 text-brand-gray-light">
-                  <li>• Task and content routing automations</li>
-                  <li>• Notion → CRM → Email integrations</li>
-                  <li>• Conditional workflows with human checkpoints</li>
-                </ul>
-              </div>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  ✨ Outcomes:
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  <Pill>→ 10+ hours saved weekly</Pill>
-                  <Pill>→ Unified operations</Pill>
-                  <Pill>→ Fewer manual errors</Pill>
-                </div>
-              </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/playbook" className="btn-primary">
-                  Learn More →
-                </Link>
                 <button 
                   onClick={() => setIsModalOpen(true)}
-                  className="btn-outline"
+                  className="btn-primary"
                 >
-                  Book a System Audit
+                  Book a free consult
                 </button>
               </div>
             </motion.div>
           </div>
         </section>
 
-          {/* Content Automation Engine Section */}
+          {/* Streamline Your Marketing Workflows Section */}
+          <section id="marketing" className="py-16 px-6 md:px-12 bg-brand-gray-dark/50">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover"
+            >
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-4">
+                📈 Streamline Your Marketing Workflows
+              </h2>
+              <p className="text-brand-gray-light text-lg mb-6">
+                Forget juggling five different tools. We connect your website, content calendar, and CRM into one smart flow that publishes, tracks, and learns what's working — so your marketing runs itself while you stay creative.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="btn-primary"
+                >
+                  Book a free consult
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+          {/* Automate Your Client & Project Management Section */}
+          <section id="management" className="py-16 px-6 md:px-12">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover"
+            >
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-4">
+                🧠 Automate Your Client & Project Management
+              </h2>
+              <p className="text-brand-gray-light text-lg mb-6">
+                Stop digging through DMs and spreadsheets. We create AI dashboards that track deliverables, client feedback, and deadlines automatically. You'll know exactly where every project stands, without endless check-ins or reminders.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="btn-primary"
+                >
+                  Book a free consult
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+          {/* Scale Content Without Burning Out Section */}
           <section id="content" className="py-16 px-6 md:px-12 bg-brand-gray-dark/50">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -203,162 +230,25 @@ export default function SolutionsPage() {
               className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover"
             >
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-4">
-                Content Automation Engine
+                ✍️ Scale Content Without Burning Out
               </h2>
-              <p className="text-sm text-brand-gray-light mb-4">
-                <strong className="text-brand-white">Purpose:</strong> Automate how you plan, publish, and distribute content
-              </p>
-              <p className="text-sm text-brand-gray-light mb-6">
-                <strong className="text-brand-white">Keywords:</strong> content automation, AI content engine
-              </p>
               <p className="text-brand-gray-light text-lg mb-6">
-                Turn your ideas into posts automatically. We design AI content engines that draft, format, and schedule your content — so you can post daily without burnout.
+                From social posts to blog drafts, our AI systems help you plan, write, and schedule content that sounds like you. Less staring at blank pages — more time building your brand and connecting with your audience.
               </p>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  <strong>We build:</strong>
-                </h4>
-                <ul className="space-y-2 text-brand-gray-light">
-                  <li>• Notion → Scheduler → Social pipelines</li>
-                  <li>• AI caption + blog generators</li>
-                  <li>• Automated topic + trend discovery</li>
-                </ul>
-              </div>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  ✨ Outcomes:
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  <Pill>→ Consistency across platforms</Pill>
-                  <Pill>→ Higher engagement</Pill>
-                  <Pill>→ More time for creativity</Pill>
-                </div>
-              </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/playbook" className="btn-primary">
-                  See Example →
-                </Link>
-                <a href="#lead-magnet" className="btn-outline">
-                  Get Free Content Kit
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-          {/* Brand Automation Systems Section */}
-          <section id="brand" className="py-16 px-6 md:px-12">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover"
-            >
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-4">
-                Brand Automation Systems
-              </h2>
-              <p className="text-sm text-brand-gray-light mb-4">
-                <strong className="text-brand-white">Purpose:</strong> Keep your identity consistent everywhere
-              </p>
-              <p className="text-sm text-brand-gray-light mb-6">
-                <strong className="text-brand-white">Keywords:</strong> AI branding, brand automation
-              </p>
-              <p className="text-brand-gray-light text-lg mb-6">
-                Your brand, on autopilot. From visuals to tone, we systemize your brand identity so every post, email, and campaign aligns — without micromanaging freelancers or assets.
-              </p>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  <strong>We build:</strong>
-                </h4>
-                <ul className="space-y-2 text-brand-gray-light">
-                  <li>• Brand kit + asset libraries</li>
-                  <li>• Automated design templates</li>
-                  <li>• Centralized color + tone controls</li>
-                </ul>
-              </div>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  ✨ Outcomes:
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  <Pill>→ Unified brand image</Pill>
-                  <Pill>→ Faster creative execution</Pill>
-                  <Pill>→ Zero mismatched visuals</Pill>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/playbook" className="btn-primary">
-                  Learn More →
-                </Link>
-                <Link href="/solutions#design" className="btn-outline">
-                  See Brand Kits
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-          {/* AI Design Systems Section */}
-          <section id="design" className="py-16 px-6 md:px-12 bg-brand-gray-dark/50">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover"
-            >
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-4">
-                AI Design Systems
-              </h2>
-              <p className="text-sm text-brand-gray-light mb-4">
-                <strong className="text-brand-white">Purpose:</strong> Visual creation through automation
-              </p>
-              <p className="text-sm text-brand-gray-light mb-6">
-                <strong className="text-brand-white">Keywords:</strong> AI design tools, AI image generation
-              </p>
-              <p className="text-brand-gray-light text-lg mb-6">
-                Design visuals in minutes — not hours. We integrate AI design tools into your workflow so you can generate branded visuals, thumbnails, and layouts instantly.
-              </p>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  <strong>We build:</strong>
-                </h4>
-                <ul className="space-y-2 text-brand-gray-light">
-                  <li>• AI-powered asset generators</li>
-                  <li>• Brand-specific prompt templates</li>
-                  <li>• Integration with Canva, Figma, and Uizard</li>
-                </ul>
-              </div>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  ✨ Outcomes:
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  <Pill>→ Faster content turnaround</Pill>
-                  <Pill>→ Professional visuals</Pill>
-                  <Pill>→ Repeatable creative systems</Pill>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/systems-in-action" className="btn-primary">
-                  View Gallery →
-                </Link>
                 <button 
                   onClick={() => setIsModalOpen(true)}
-                  className="btn-outline"
+                  className="btn-primary"
                 >
-                  Book a Demo
+                  Book a free consult
                 </button>
               </div>
             </motion.div>
           </div>
         </section>
 
-          {/* Market Research Systems Section */}
-          <section id="research" className="py-16 px-6 md:px-12">
+          {/* Measure, Learn, and Improve Section */}
+          <section id="analytics" className="py-16 px-6 md:px-12">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -368,87 +258,51 @@ export default function SolutionsPage() {
               className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover"
             >
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-4">
-                Market Research Systems
+                ⚡ Measure, Learn, and Improve
               </h2>
-              <p className="text-sm text-brand-gray-light mb-4">
-                <strong className="text-brand-white">Purpose:</strong> Strategic layer that informs every build
-              </p>
-              <p className="text-sm text-brand-gray-light mb-6">
-                <strong className="text-brand-white">Keywords:</strong> AI market research, competitive analysis, consumer psychology
-              </p>
               <p className="text-brand-gray-light text-lg mb-6">
-                Decisions powered by data. We combine traditional market research with AI analysis to help you understand where your opportunities actually are — before building a system.
+                We don't just automate — we help you understand why something works. Every system we design includes analytics that track time saved, engagement rates, and performance metrics, so you can keep optimizing confidently.
               </p>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  <strong>We deliver:</strong>
-                </h4>
-                <ul className="space-y-2 text-brand-gray-light">
-                  <li>• Competitive landscape mapping</li>
-                  <li>• Audience psychology & behavioral data</li>
-                  <li>• Keyword & trend analysis dashboards</li>
-                </ul>
-              </div>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-brand-white mb-3">
-                  ✨ Outcomes:
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  <Pill>→ Clearer positioning</Pill>
-                  <Pill>→ Smarter strategy</Pill>
-                  <Pill>→ Higher ROI on automation</Pill>
-                </div>
-              </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/case-studies/nvidia-competitive-edge" className="btn-primary">
-                  See Market Insights →
-                </a>
                 <button 
                   onClick={() => setIsModalOpen(true)}
-                  className="btn-outline"
+                  className="btn-primary"
                 >
-                  Book Strategy Call
+                  Book a free consult
                 </button>
               </div>
             </motion.div>
           </div>
         </section>
 
-          {/* Our Build Process Section */}
+          {/* Ready to Design Your Workflow Section */}
           <section className="py-16 px-6 md:px-12 bg-brand-gray-dark/50">
           <div className="max-w-6xl mx-auto">
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-2xl md:text-3xl font-serif font-bold text-center mb-12 text-gradient"
+              className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover text-center"
             >
-              Our Build Process
-            </motion.h2>
-            <div className="grid gap-8 md:grid-cols-4">
-              {[
-                { step: "1️⃣", title: "Discover", desc: "30-min audit to map bottlenecks" },
-                { step: "2️⃣", title: "Design", desc: "Pages, dashboards, and automation blueprints" },
-                { step: "3️⃣", title: "Deploy", desc: "Integration, QA, and training" },
-                { step: "4️⃣", title: "Optimize", desc: "Iterate based on data feedback" }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-4">
+                💼 Ready to Design Your Workflow?
+              </h2>
+              <p className="text-brand-gray-light text-lg mb-6 max-w-3xl mx-auto">
+                AI shouldn't feel complicated — it should feel like momentum. Let's build a system around how you work, not the other way around.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="btn-primary"
                 >
-                  <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center text-brand-black font-bold text-xl mx-auto mb-4">
-                    {item.step}
-                  </div>
-                  <h3 className="text-xl font-semibold text-brand-gold mb-2">{item.title}</h3>
-                  <p className="text-brand-gray-light">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
+                  👉 Book a free consult
+                </button>
+              </div>
+              <p className="text-brand-gray-light text-sm mt-4">
+                and we'll map your first automation together.
+              </p>
+            </motion.div>
           </div>
         </section>
 
@@ -471,13 +325,13 @@ export default function SolutionsPage() {
               viewport={{ once: true }}
               className="text-lg text-brand-gray-light text-center mb-12 max-w-2xl mx-auto"
             >
-              Automation isn't a project — it's an upgrade that scales with you.
+              Automation isn't a one-off task — it's your new operating system.
             </motion.p>
             <div className="grid gap-6 md:grid-cols-3">
               {[
-                { icon: "⏱", value: "15+", label: "Hours saved weekly", desc: "Average time reduction per client" },
-                { icon: "📈", value: "40%", label: "Conversion lift", desc: "Typical improvement in trial starts" },
-                { icon: "🔗", value: "8+", label: "Tools unified", desc: "Average integrations per system" }
+                { icon: "⏱", value: "15+ hrs/week", label: "Saved through workflow automation" },
+                { icon: "📊", value: "Consistent growth", label: "From better focus and fewer manual tasks" },
+                { icon: "🔗", value: "8+ tools", label: "Unified into one streamlined system" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -489,8 +343,7 @@ export default function SolutionsPage() {
                 >
                   <div className="text-3xl mb-2">{stat.icon}</div>
                   <div className="text-3xl font-bold text-brand-gold mb-2">{stat.value}</div>
-                  <div className="text-brand-white font-semibold mb-1">{stat.label}</div>
-                  <div className="text-sm text-brand-gray-light">{stat.desc}</div>
+                  <div className="text-brand-white font-semibold">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -513,7 +366,7 @@ export default function SolutionsPage() {
               {[
                 {
                   q: "How can AI automation improve SaaS conversions?",
-                  a: "We connect demo/trial pages to CRM and lifecycle emails, then iterate based on usage and segment data to optimize conversion funnels."
+                  a: "We build simple follow-up systems that reach out to new leads automatically — through email, chat, or text — so no one slips through the cracks. Every message is personalized based on how people interact with your brand, turning curiosity into conversions without extra manual work."
                 },
                 {
                   q: "Can you connect my Notion, Zapier, and social tools?",
