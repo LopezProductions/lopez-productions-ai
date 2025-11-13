@@ -51,10 +51,10 @@ export default function GetStartedPage() {
       <section className="py-20 px-6 md:px-12">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-white mb-6">
-            Custom AI Systems, Built for How You Work.
+            Custom Brand Systems, Built Around How You Create.
           </h1>
           <p className="text-2xl md:text-3xl font-serif font-bold text-gradient mb-4">
-            Start with a package that fits your goals — from automation setups to full AI workflows.
+            Start with a package that fits your goals — from AI-powered websites to full brand systems, content engines, and optional light automations.
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ export default function GetStartedPage() {
               Build Your Package
             </h2>
             <p className="text-brand-gray-light text-lg max-w-2xl mx-auto">
-              Select the services you need. Your total updates in real-time.
+              Choose the services you need. Your total updates in real time.
             </p>
           </div>
           
@@ -107,16 +107,25 @@ export default function GetStartedPage() {
                 What's included in each package?
               </h3>
               <p className="text-brand-gray-light">
-                Each package includes all listed services, plus 1 free revision cycle. Turnaround times vary by package complexity, from 48 hours for Starter to 7-10 days for Full Launch.
+                Each package includes the services listed in the builder, plus one free revision cycle. Turnaround ranges from 48 hours to 21 days depending on complexity.
               </p>
             </div>
             
             <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
               <h3 className="text-xl font-semibold text-brand-white mb-2">
-                How do payments work?
+                Do I need to know AI to work with you?
               </h3>
               <p className="text-brand-gray-light">
-                When you click "Proceed to Checkout", you'll be redirected to our secure Stripe payment page. We accept all major credit cards, Apple Pay, Google Pay, and more. Payment is processed securely and you'll receive a confirmation email immediately after.
+                No — everything is beginner-friendly. I build the system and walk you through it step-by-step.
+              </p>
+            </div>
+            
+            <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
+              <h3 className="text-xl font-semibold text-brand-white mb-2">
+                Can you manage my content?
+              </h3>
+              <p className="text-brand-gray-light">
+                Yes. Ongoing content management is available as an optional retainer. Pricing depends on your posting cadence and support level.
               </p>
             </div>
             
@@ -125,7 +134,7 @@ export default function GetStartedPage() {
                 What if I need something custom?
               </h3>
               <p className="text-brand-gray-light">
-                Use the "Need something not listed?" field in the builder to describe your custom requirements. We'll review it and include it in your quote.
+                Use the 'Need something not listed?' field and I'll include it in your quote.
               </p>
             </div>
             
@@ -134,16 +143,16 @@ export default function GetStartedPage() {
                 Can I mix and match services?
               </h3>
               <p className="text-brand-gray-light">
-                Absolutely! That's the whole point. Pick exactly what you need from each category. The total updates live as you select options.
+                Absolutely — the builder is designed for that. Your total updates live.
               </p>
             </div>
             
             <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
               <h3 className="text-xl font-semibold text-brand-white mb-2">
-                What happens after I complete payment?
+                What happens after payment?
               </h3>
               <p className="text-brand-gray-light">
-                After successful payment, you'll be redirected to a confirmation page and receive an email with your order details. Within 24 hours, we'll reach out to schedule a kickoff call or request any assets we need to get started on your package.
+                You'll receive a confirmation email and within 24 hours I'll reach out with next steps or your kickoff form.
               </p>
             </div>
           </div>

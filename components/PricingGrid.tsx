@@ -42,22 +42,21 @@ const PricingGrid: React.FC<PricingGridProps> = ({ onSelectPackage }) => {
                 {pkg.id === 'launch_page_48h' && (
                   <>
                     <li>• Home/About/Contact landing page</li>
-                    <li>• Viewable contact info (email, phone)</li>
+                    <li>• Clickable contact info (email/phone)</li>
                     <li>• 48-hour turnaround</li>
-                    <li className="text-brand-gray-light italic">• Does not include domain setup or email capture</li>
                   </>
                 )}
                 {pkg.id === 'creator_website' && (
                   <>
                     <li>• 3-page website (Home/About/Contact)</li>
-                    <li>• Email capture or contact button</li>
+                    <li>• Email capture or contact form</li>
+                    <li>• Mobile responsive</li>
                     <li>• Free domain setup</li>
-                    <li>• Mobile responsive design</li>
                   </>
                 )}
                 {pkg.id === 'creator_site' && (
                   <>
-                    <li>• 4-page website (Home/About/Services/Contact)</li>
+                    <li>• 4-page website</li>
                     <li>• Google indexing + sitemap</li>
                     <li>• Lead form integration</li>
                     <li>• Domain + mobile optimization</li>
@@ -65,11 +64,11 @@ const PricingGrid: React.FC<PricingGridProps> = ({ onSelectPackage }) => {
                 )}
                 {pkg.id === 'full_brand' && (
                   <>
-                    <li>• 5+ page site with SEO & GEO optimization</li>
-                    <li>• Automations (Stripe, Notion, or CRM)</li>
-                    <li>• Google Analytics + tracking setup</li>
-                    <li>• Brand Sheet & Color Kit (free)</li>
-                    <li>• 1-Minute Launch Reel (free bonus)</li>
+                    <li>• 5+ page site with SEO + GEO optimization</li>
+                    <li>• Optional automations (Stripe / CRM / Notion)</li>
+                    <li>• Google Analytics setup</li>
+                    <li>• Brand Sheet (free)</li>
+                    <li>• Launch Reel (free)</li>
                   </>
                 )}
               </ul>
@@ -125,10 +124,10 @@ const PricingGrid: React.FC<PricingGridProps> = ({ onSelectPackage }) => {
                   What You Get:
                 </p>
                 <ul className="space-y-1 text-sm text-brand-gray-light">
-                  <li>• 5 basic reel edits</li>
-                  <li>• Basic cuts and color correction</li>
-                  <li>• Get 1 free when you buy 5</li>
-                  <li>• Perfect for batching content</li>
+                  <li>• 5 clean reel edits</li>
+                  <li>• Basic correction + leveling</li>
+                  <li>• Consistent formatting</li>
+                  <li>• Quick turnaround</li>
                 </ul>
               </div>
 

@@ -8,6 +8,15 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
+    slug: 'why-your-first-priority-isnt-automation-its-your-brand-system',
+    title: 'Why Your First Priority Isn\'t Automation — It\'s Your Brand System',
+    tag: 'Brand',
+    excerpt: 'Most people jump into AI thinking automation is the first step. But if you\'re a creator or small business, the real problem is that your brand system isn\'t set up yet.',
+    readTime: '8 min read',
+    publishedDate: '2025-11-13',
+    exists: true
+  },
+  {
     slug: 'stop-chasing-ai-tools',
     title: 'Stop Chasing Every New AI Tool — Here\'s What\'s Actually Worth Learning (Perplexity AI / ChatGPT / Gemini)',
     tag: 'Workflow',
@@ -23,24 +32,6 @@ const articles = [
     excerpt: 'Learn how to build your own AI-powered content workflow using tools like ChatGPT, Claude, Perplexity AI, Midjourney, Notion, and Make.com.',
     readTime: '6 min read',
     publishedDate: '2025-11-11',
-    exists: true
-  },
-  {
-    slug: 'ai-workflows-save-time',
-    title: 'AI Workflow Systems That Save You 10 Hours a Week',
-    tag: 'Workflow',
-    excerpt: 'Discover how AI workflow design eliminates repetitive tasks across Notion, Zapier, and Make.',
-    readTime: '8 min read',
-    publishedDate: '2025-01-27',
-    exists: true
-  },
-  {
-    slug: 'notion-make-automation-guide',
-    title: 'How to Connect Notion, Make & Zapier into One Smart Workflow',
-    tag: 'Workflow',
-    excerpt: 'Step-by-step setup to build a seamless automation chain.',
-    readTime: '12 min read',
-    publishedDate: '2025-01-27',
     exists: true
   },
   {

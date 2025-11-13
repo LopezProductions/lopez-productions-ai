@@ -18,7 +18,7 @@ const insights = [
     excerpt: 'Discover the specific automation systems that cut project time by 20-30% and why most teams are still doing manual work that AI can handle.',
     readTime: '8 min read',
     category: 'AI Automation',
-    publishedDate: '2025-01-27'
+    publishedDate: '2025-11-13'
   },
   {
     slug: 'creator-automation-systems',

@@ -16,7 +16,7 @@ Visit the website at: **http://localhost:3000**
 - **Pulse Animation**: Eye-catching yellow CTA with subtle animations
 
 ### 🔧 Solutions Section
-- **4 Core Services**: AI Workflow Setup, Brand Kit Systems, Content Engine Design, Visual Assets & Automation
+- **4 Core Services**: AI Workflow Systems, Content Automation Engine, Brand Automation Systems, AI Design Systems
 - **Interactive Cards**: Hover effects with soft gold glow
 - **Tool Integration**: Make, Dify, Airtable, X, YouTube, Instagram, Canva, Midjourney
 - **Feature Lists**: Clear breakdown of what's included in each solution

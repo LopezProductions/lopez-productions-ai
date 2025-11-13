@@ -34,31 +34,31 @@ export const serviceCategories: ServiceCategory[] = [
         id: 'reel',
         name: '1-Minute Reel',
         price: 25,
-        description: 'Basic cut + color'
+        description: 'Clean cut + color correction'
       },
       {
         id: 'captioned',
         name: 'Captioned Reel',
         price: 50,
-        description: 'Captions + animations'
+        description: 'Captions + motion text animations'
       },
       {
         id: 'premium_reel',
         name: 'Premium Reel',
         price: 75,
-        description: 'Full package'
+        description: 'Full edit with transitions + effects'
       },
       {
         id: 'overlay',
         name: 'Branded Overlay',
         price: 40,
-        description: 'Animated logo or intro/outro added'
+        description: 'Animated logo, intro, or outro added'
       },
       {
         id: 'reel_bundle',
         name: '5-Reel Special',
         price: 100,
-        description: '5 basic reel edits (get 1 free). Perfect for content creators who batch.',
+        description: '5 basic reel edits (1 free). Perfect for creators who batch content.',
         isBundle: true
       }
     ]
@@ -72,19 +72,19 @@ export const serviceCategories: ServiceCategory[] = [
         id: 'notion_dashboard',
         name: 'Notion Dashboard Setup',
         price: 50,
-        description: 'Custom project/CRM dashboard'
+        description: 'Clean, easy-to-use project or CRM dashboard.'
       },
       {
         id: 'crm_template',
         name: 'CRM Template',
         price: 75,
-        description: 'Pre-built client tracker or task system'
+        description: 'Pre-built client tracker or task system.'
       },
       {
         id: 'automation',
         name: 'Automation Flow (Make/Zapier)',
         price: 100,
-        description: '2-step automation integration'
+        description: 'Simple 2-step automation to remove repetitive work.'
       }
     ]
   },
@@ -97,35 +97,35 @@ export const serviceCategories: ServiceCategory[] = [
         id: 'launch_page_48h',
         name: '48-Hour Launch Page',
         price: 100,
-        description: 'Get online fast — no fluff, just launch. Home/About/Contact combined landing page. Viewable contact info (email address, phone number). Good for starter portfolios or fast launches. Does NOT include: domain setup, custom domain, or email capture.',
+        description: 'Get online fast — no fluff. A clean landing page combining Home, About, and Contact. Perfect for starter portfolios and quick launches. Does NOT include domain or email capture.',
         isBundle: true
       },
       {
         id: 'creator_website_basic',
         name: 'Creator Basic',
         price: 250,
-        description: 'Your personal brand, live in 48 hours. 3-page website (Home, About, Contact) with email capture or contact button. Free domain setup (assuming they have a domain). Great first step for creators who just need to look professional and collect leads.',
+        description: 'A 3-page website (Home/About/Contact) with email capture or a contact button. Mobile responsive and includes free domain setup.',
         isBundle: true
       },
       {
         id: 'creator_site_package',
         name: 'Creator Plus',
         price: 500,
-        description: 'Look professional and start showing up on Google. 4-page website (Home/About/Services/Contact) + Basic Google indexing setup (meta titles + sitemap submission) + Lead form integration + Domain + mobile optimization. Market Research Report add-on recommended.',
+        description: '4-page website (Home/About/Services/Contact) + basic Google indexing (meta titles + sitemap submission) + lead form integration + mobile optimization.',
         isBundle: true
       },
       {
         id: 'full_brand_system',
         name: 'Creator Ultra',
         price: 1500,
-        description: 'Your full creative ecosystem — brand, site, and automation. 5+ page site with SEO & GEO optimization + Automations (Stripe, Notion, or CRM) + Google Analytics + tracking setup + Free Brand Sheet ($100 value) + Free 1-Minute Launch Reel ($25 value). Delivery 14-21 days.',
+        description: 'A full brand ecosystem: 5+ page site with SEO/GEO optimization, optional automations (Stripe, Notion, CRM), Google Analytics, Brand Sheet (free), and Launch Reel (free). Delivery 14–21 days.',
         isBundle: true
       },
       {
         id: 'domain',
         name: 'Domain Setup (Add-on)',
         price: 25,
-        description: 'Connect + host with domain for 1 year (included in all website packages)'
+        description: 'Connect and host your domain for 1 year. Included in all website packages.'
       }
     ]
   },
@@ -138,19 +138,19 @@ export const serviceCategories: ServiceCategory[] = [
         id: 'seo_audit',
         name: 'SEO Audit',
         price: 100,
-        description: 'Keyword and local ranking optimization plan'
+        description: 'Clear, actionable keyword + ranking plan.'
       },
       {
         id: 'market_research',
         name: 'Market Research Report',
         price: 250,
-        description: '10 actionable insights for your niche'
+        description: '10 insights about your niche, audience, and opportunities.'
       },
       {
         id: 'brand_sheet',
         name: 'Brand Sheet & Color Kit',
         price: 100,
-        description: 'Fonts, palette, and logo direction'
+        description: 'Clean visual identity: palette, fonts, and simple brand direction.'
       }
     ]
   }
@@ -161,7 +161,7 @@ export const predefinedPackages: PredefinedPackage[] = [
     id: 'reel_special',
     name: '5-Reel Special',
     price: 100,
-    description: '5 basic reel edits (get 1 free). Perfect for content creators who batch.',
+    description: '5 clean reel edits with basic correction — one free.',
     turnaround: '3–5 days',
     idealFor: 'Content creators wanting fast, consistent posting',
     serviceIds: [],
@@ -171,7 +171,7 @@ export const predefinedPackages: PredefinedPackage[] = [
     id: 'launch_page_48h',
     name: '48-Hour Launch Page',
     price: 100,
-    description: 'Your personal brand, live in 48 hours. Get online fast — no fluff, just launch.',
+    description: 'Your personal brand, live in 48 hours. A fast, clean landing page with Home/About/Contact.',
     turnaround: '48 hours',
     idealFor: 'Starter portfolios or looking to create a fast launch',
     serviceIds: [],
@@ -181,7 +181,7 @@ export const predefinedPackages: PredefinedPackage[] = [
     id: 'creator_website',
     name: 'Creator Basic',
     price: 250,
-    description: 'Your personal brand, live in 48 hours. 3-page website with email capture and free domain setup.',
+    description: 'A polished 3-page site with email capture or a contact form. Free domain setup included.',
     turnaround: '5–7 days',
     idealFor: 'Creators who just need to look professional and collect leads',
     serviceIds: [],
@@ -191,7 +191,7 @@ export const predefinedPackages: PredefinedPackage[] = [
     id: 'creator_site',
     name: 'Creator Plus',
     price: 500,
-    description: 'Look professional and start showing up on Google. 4-page website + Google indexing + lead forms.',
+    description: 'Look professional and start ranking. A 4-page site with basic Google indexing.',
     turnaround: '7–10 days',
     idealFor: 'Creators or small businesses who want to grow beyond "just a site"',
     serviceIds: [],
@@ -201,7 +201,7 @@ export const predefinedPackages: PredefinedPackage[] = [
     id: 'full_brand',
     name: 'Creator Ultra',
     price: 1500,
-    description: 'Your full creative ecosystem — brand, site, and automation. Complete launch system with SEO, automations, and free bonuses.',
+    description: 'A complete brand system — site, identity, SEO, and optional automations.',
     turnaround: '14–21 days',
     idealFor: 'Brands ready for a complete online launch with brand identity and automation',
     serviceIds: [],

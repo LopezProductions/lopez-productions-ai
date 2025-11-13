@@ -16,17 +16,17 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lopezproductions.ai'),
-  title: 'Lopez Productions | AI Workflow & Automation Systems',
-  description: 'We build AI portfolio websites that work while you sleep. Lopez Productions connects tools, automates workflows, and designs AI-powered brand systems.',
+  title: 'AI-Powered Brand Systems for Creators & Small Businesses | Lopez Productions',
+  description: 'Build a professional portfolio, content engine, and digital identity using AI. Modern brand systems for creators, founders, and small businesses.',
   keywords: [
-    'AI Workflow Systems',
-    'Brand Automation Systems',
-    'Content Automation Engine',
-    'AI Design Systems',
-    'AI website builder',
-    'AI portfolio website',
-    'AI automation agency',
-    'AI brand design',
+    'AI brand systems',
+    'AI portfolio builder',
+    'Content engine',
+    'Digital identity',
+    'Brand kit',
+    'Creator website',
+    'Small business branding',
+    'AI content systems',
   ].join(', '),
   authors: [{ name: 'Reuben Lopez' }],
   icons: {
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai',
-    title: 'Lopez Productions | AI Workflow & Automation Systems',
-    description: 'We build AI portfolio websites that work while you sleep. Lopez Productions connects tools, automates workflows, and designs AI-powered brand systems.',
+    title: 'AI-Powered Brand Systems for Creators & Small Businesses | Lopez Productions',
+    description: 'Build a professional portfolio, content engine, and digital identity using AI. Modern brand systems for creators, founders, and small businesses.',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lopez Productions | AI Workflow & Automation Systems',
-    description: 'We build AI portfolio websites that work while you sleep. Lopez Productions connects tools, automates workflows, and designs AI-powered brand systems.',
+    title: 'AI-Powered Brand Systems for Creators & Small Businesses | Lopez Productions',
+    description: 'Build a professional portfolio, content engine, and digital identity using AI. Modern brand systems for creators, founders, and small businesses.',
     images: ['/og-image.jpg'],
   },
 }
