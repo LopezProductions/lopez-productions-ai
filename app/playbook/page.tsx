@@ -8,6 +8,15 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
+    slug: 'notion-creator-dashboard',
+    title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System',
+    tag: 'Creator Tools',
+    excerpt: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
+    readTime: '10 min read',
+    publishedDate: '2025-11-14',
+    exists: true
+  },
+  {
     slug: 'why-your-first-priority-isnt-automation-its-your-brand-system',
     title: 'Why Your First Priority Isn\'t Automation — It\'s Your Brand System',
     tag: 'Brand',
@@ -90,6 +99,8 @@ const getTagColor = (tag: string) => {
     case 'Content Automation':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
     case 'AI Design Tools':
+      return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
+    case 'Creator Tools':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
     default:
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'

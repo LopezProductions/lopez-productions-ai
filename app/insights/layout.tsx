@@ -24,5 +24,32 @@ export default function InsightsLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <div className="relative min-h-screen">
+      {/* Background with blog image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/lp-blog.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.15
+        }}
+      ></div>
+      {/* Dark overlay to create silhouette effect */}
+      <div className="fixed inset-0 bg-gradient-to-br from-brand-black/85 via-brand-gray-dark/80 to-brand-black/85"></div>
+      
+      {/* Subtle gold halo effect */}
+      <div className="fixed inset-0 flex items-center justify-center">
+        <div className="w-96 h-96 rounded-full bg-gradient-radial from-brand-gold/20 via-brand-gold/5 to-transparent blur-3xl"></div>
+      </div>
+      
+      {/* Minimal gold glow overlay */}
+      <div className="fixed inset-0 bg-gradient-radial from-brand-gold/8 via-brand-gold/2 to-transparent"></div>
+      
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  )
 }

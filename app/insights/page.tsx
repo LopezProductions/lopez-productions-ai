@@ -5,6 +5,14 @@ import Link from 'next/link'
 
 const insights = [
   {
+    slug: 'notion-creator-dashboard',
+    title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System',
+    excerpt: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
+    readTime: '10 min read',
+    category: 'Creator Tools',
+    publishedDate: '2025-11-14'
+  },
+  {
     slug: 'stop-chasing-ai-tools',
     title: 'Stop Chasing Every New AI Tool — Here\'s What\'s Actually Worth Learning (Perplexity AI / ChatGPT / Gemini)',
     excerpt: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.',
