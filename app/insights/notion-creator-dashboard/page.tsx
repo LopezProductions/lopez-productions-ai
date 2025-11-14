@@ -119,7 +119,7 @@ export default function NotionCreatorDashboard() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              It's not that you're unorganized — it's that you <strong className="text-brand-white">don't have a brand system.</strong>
+              It's not that you're unorganized — it's that you <strong className="text-brand-white">don't have a brand system.</strong> (If you're wondering why your brand system should come before automation, check out <Link href="/insights/why-your-first-priority-isnt-automation-its-your-brand-system" className="text-brand-gold hover:text-brand-gold-dark underline">this guide</Link>.)
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -200,6 +200,10 @@ export default function NotionCreatorDashboard() {
               <li>your website structure</li>
               <li>your services</li>
             </ul>
+            
+            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
+              Once you have your brand system in place, you can leverage <Link href="/insights/stop-chasing-ai-tools" className="text-brand-gold hover:text-brand-gold-dark underline">the right AI tools</Link> to amplify your content creation.
+            </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
               So inside Notion, create a simple <strong className="text-brand-white">Brand Kit page</strong> with:
@@ -326,7 +330,7 @@ export default function NotionCreatorDashboard() {
             </div>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              This is where AI shines.
+              This is where AI shines. For a deeper dive into building a complete <Link href="/insights/content-engine-starter-kit" className="text-brand-gold hover:text-brand-gold-dark underline">AI-powered content engine</Link>, check out this guide.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -381,7 +385,7 @@ export default function NotionCreatorDashboard() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              <strong className="text-brand-white">These are optional.</strong>
+              <strong className="text-brand-white">These are optional.</strong> When you're ready to build more advanced automations, see <Link href="/insights/build-simple-business-automation-system" className="text-brand-gold hover:text-brand-gold-dark underline">this beginner-friendly automation guide</Link>.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -444,7 +448,7 @@ export default function NotionCreatorDashboard() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              This is what most creators <em>actually</em> need before trying to automate anything else.
+              This is what most creators <em>actually</em> need before trying to automate anything else. For more insights on building creator systems, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our automation and workflow guides</Link>.
             </p>
 
             {/* Email Form Component */}

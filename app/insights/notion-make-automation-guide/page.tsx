@@ -47,8 +47,8 @@ export default function NotionMakeAutomationGuide() {
                 "url": "https://lopezproductions.ai/transparent_logo_lp.png"
               }
             },
-            "datePublished": "2025-01-27",
-            "dateModified": "2025-01-27",
+            "datePublished": "2025-11-09",
+            "dateModified": "2025-11-14",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://lopezproductions.ai/insights/notion-make-automation-guide"
@@ -64,8 +64,8 @@ export default function NotionMakeAutomationGuide() {
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
-                ← Back to Playbook
+              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+                ← Back to Insights
               </Link>
             </div>
             
@@ -86,7 +86,7 @@ export default function NotionMakeAutomationGuide() {
             <div className="flex items-center gap-4 text-sm text-brand-gray-muted">
               <span>By Reuben Lopez</span>
               <span>•</span>
-              <span>January 27, 2025</span>
+              <span>Updated: November 14, 2025</span>
               <span>•</span>
               <span>12 min read</span>
             </div>
@@ -122,7 +122,7 @@ export default function NotionMakeAutomationGuide() {
             </h2>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Most freelancers juggle 5-10 different tools for client management, project tracking, and reporting. Notion + Make.com eliminates this complexity by creating one connected system that handles everything automatically.
+              Most freelancers juggle 5-10 different tools for client management, project tracking, and reporting. Notion + Make.com eliminates this complexity by creating one connected system that handles everything automatically. For a complete guide to building <Link href="/insights/build-simple-business-automation-system" className="text-brand-gold hover:text-brand-gold-dark underline">simple automation systems</Link>, start here.
             </p>
 
             <blockquote className="border-l-4 border-brand-gold pl-6 my-8 italic text-brand-gray-light">
@@ -170,7 +170,7 @@ export default function NotionMakeAutomationGuide() {
             </h3>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              First, create the database structure that will power your automation. Here's the exact setup:
+              First, create the database structure that will power your automation. Here's the exact setup. For creators, see <Link href="/insights/notion-creator-dashboard" className="text-brand-gold hover:text-brand-gold-dark underline">this Notion dashboard guide</Link>.
             </p>
 
             <div className="space-y-6">
@@ -236,7 +236,7 @@ export default function NotionMakeAutomationGuide() {
             </h3>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Now we'll build the automation workflows that connect everything together:
+              Now we'll build the automation workflows that connect everything together. For more automation strategies, see <Link href="/insights/creator-automation-systems" className="text-brand-gold hover:text-brand-gold-dark underline">this creator automation guide</Link>.
             </p>
 
             <div className="space-y-8">
@@ -331,7 +331,7 @@ export default function NotionMakeAutomationGuide() {
             </h3>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Once your basic workflows are running, add these advanced features:
+              Once your basic workflows are running, add these advanced features. Before automating, make sure you have a solid <Link href="/insights/why-your-first-priority-isnt-automation-its-your-brand-system" className="text-brand-gold hover:text-brand-gold-dark underline">brand system foundation</Link> in place.
             </p>
 
             <div className="space-y-6">
@@ -423,13 +423,13 @@ export default function NotionMakeAutomationGuide() {
                 Ready to automate your freelancer workflow?
               </h3>
               <p className="text-brand-gray-light mb-6">
-                Get a free setup consultation and custom Notion + Make.com automation for your business.
+                Get a free setup consultation and custom Notion + Make.com automation for your business. For more automation insights, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/solutions" className="btn-primary">
                   Book a Free Setup Consultation
                 </Link>
-                <Link href="/playbook" className="btn-outline">
+                <Link href="/insights" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

@@ -64,7 +64,7 @@ export default function BrandSystemFirst() {
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
               </Link>
             </div>
@@ -126,7 +126,7 @@ export default function BrandSystemFirst() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              And that begins with <strong className="text-brand-white">your website, your visual identity, and your content system.</strong>
+              And that begins with <strong className="text-brand-white">your website, your visual identity, and your content system.</strong> A great place to start is building a <Link href="/insights/notion-creator-dashboard" className="text-brand-gold hover:text-brand-gold-dark underline">Notion dashboard that runs your entire brand system</Link>.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -203,7 +203,7 @@ export default function BrandSystemFirst() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              It makes you look consistent — which makes you look professional.
+              It makes you look consistent — which makes you look professional. Once your brand system is set up, you can start using <Link href="/insights/stop-chasing-ai-tools" className="text-brand-gold hover:text-brand-gold-dark underline">the right AI tools</Link> to amplify your content.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -255,7 +255,7 @@ export default function BrandSystemFirst() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Creators who <em>don't skip it</em> build content in minutes.
+              Creators who <em>don't skip it</em> build content in minutes. For a complete guide on building your <Link href="/insights/content-engine-starter-kit" className="text-brand-gold hover:text-brand-gold-dark underline">AI-powered content engine</Link>, check out this resource.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
@@ -292,7 +292,7 @@ export default function BrandSystemFirst() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              This is <strong className="text-brand-white">support automation</strong>, not "tech agency" automation.
+              This is <strong className="text-brand-white">support automation</strong>, not "tech agency" automation. When you're ready to build these simple automations, see <Link href="/insights/build-simple-business-automation-system" className="text-brand-gold hover:text-brand-gold-dark underline">this beginner-friendly guide</Link>.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -343,7 +343,7 @@ export default function BrandSystemFirst() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              It's about doing the <strong className="text-brand-white">right foundational things first.</strong>
+              It's about doing the <strong className="text-brand-white">right foundational things first.</strong> For more insights on building creator systems and workflows, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">

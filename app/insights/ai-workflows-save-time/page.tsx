@@ -64,8 +64,8 @@ export default function AIWorkflowsSaveTime() {
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
-                ← Back to Playbook
+              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+                ← Back to Insights
               </Link>
             </div>
             
@@ -118,7 +118,7 @@ export default function AIWorkflowsSaveTime() {
           <div className="max-w-4xl mx-auto prose prose-lg">
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              In 2025, AI workflow automation is transforming how SaaS teams operate — yet most are still stuck in manual processes. This guide breaks down the exact automations that save 10+ hours weekly across onboarding, reporting, and content workflows.
+              In 2025, AI workflow automation is transforming how SaaS teams operate — yet most are still stuck in manual processes. This guide breaks down the exact automations that save 10+ hours weekly across onboarding, reporting, and content workflows. For a beginner-friendly guide to building <Link href="/insights/build-simple-business-automation-system" className="text-brand-gold hover:text-brand-gold-dark underline">simple automation systems</Link>, start here.
             </p>
             
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient">
@@ -126,7 +126,7 @@ export default function AIWorkflowsSaveTime() {
             </h2>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Most SaaS teams spend 15-20 hours weekly on repetitive tasks that AI can handle automatically. The problem isn't lack of tools—it's lack of <strong className="text-brand-white">systematic workflow design</strong>.
+              Most SaaS teams spend 15-20 hours weekly on repetitive tasks that AI can handle automatically. The problem isn't lack of tools—it's lack of <strong className="text-brand-white">systematic workflow design</strong>. Before automating, make sure you have a solid <Link href="/insights/notion-creator-dashboard" className="text-brand-gold hover:text-brand-gold-dark underline">brand system foundation</Link> in place.
             </p>
 
             <blockquote className="border-l-4 border-brand-gold pl-6 my-8 italic text-brand-gray-light">
@@ -189,7 +189,7 @@ export default function AIWorkflowsSaveTime() {
             </h3>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              The difference between successful AI automation and failed implementations comes down to three factors:
+              The difference between successful AI automation and failed implementations comes down to three factors. For creators looking to automate their workflows, see <Link href="/insights/creator-automation-systems" className="text-brand-gold hover:text-brand-gold-dark underline">this guide</Link>.
             </p>
 
             <div className="space-y-6">
@@ -263,7 +263,7 @@ export default function AIWorkflowsSaveTime() {
                 Lopez Productions helps SaaS teams design AI systems that reduce project time by 20–30%.
               </p>
               <p className="text-brand-gray-light mb-6">
-                👉 <Link href="/intake" className="text-brand-gold hover:text-brand-gold-dark underline">Book a consult</Link> to see how automation can save your team 10+ hours a week.
+                👉 <Link href="/intake" className="text-brand-gold hover:text-brand-gold-dark underline">Book a consult</Link> to see how automation can save your team 10+ hours a week. For more automation insights, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
               </p>
             </div>
 
@@ -279,7 +279,7 @@ export default function AIWorkflowsSaveTime() {
                 <Link href="/solutions" className="btn-primary">
                   Book a Free System Audit
                 </Link>
-                <Link href="/playbook" className="btn-outline">
+                <Link href="/insights" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

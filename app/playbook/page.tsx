@@ -156,6 +156,109 @@ export default function PlaybookPage() {
         </div>
       </section>
 
+      {/* Pillars Section */}
+      <section className="py-16 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-serif font-bold mb-8 text-center bg-gradient-to-b from-brand-gold to-brand-gold-dark bg-clip-text text-transparent"
+          >
+            Explore by Topic
+          </motion.h2>
+          <div className="grid gap-8 md:grid-cols-3 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/insights/creator-systems" className="group block">
+                <article className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover h-full">
+                  <div className="mb-4">
+                    <span className="inline-flex items-center rounded-full border border-brand-gold/30 px-3 py-1 text-sm text-brand-gold/90 bg-brand-gold/5">
+                      Creator Systems
+                    </span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-brand-white mb-4 group-hover:text-brand-gold transition-colors">
+                    Creator Systems
+                  </h3>
+                  <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
+                    Build the foundation your brand actually needs.
+                  </p>
+                  <p className="text-brand-gray-light mb-6 leading-relaxed">
+                    Creators don't fail because they lack talent — they fail because they lack systems. Learn about Notion dashboards, brand structure, and the fundamentals of running your creative business without chaos.
+                  </p>
+                  <span className="text-brand-gold group-hover:text-brand-gold-dark transition-colors font-medium">
+                    Explore Pillar →
+                  </span>
+                </article>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/insights/ai-workflows" className="group block">
+                <article className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover h-full">
+                  <div className="mb-4">
+                    <span className="inline-flex items-center rounded-full border border-brand-gold/30 px-3 py-1 text-sm text-brand-gold/90 bg-brand-gold/5">
+                      AI Tools & Workflows
+                    </span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-brand-white mb-4 group-hover:text-brand-gold transition-colors">
+                    AI Tools & Workflows
+                  </h3>
+                  <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
+                    Practical AI systems that help you work smarter every day.
+                  </p>
+                  <p className="text-brand-gray-light mb-6 leading-relaxed">
+                    Not every AI tool matters — but the right systems change everything. Learn about tooling, workflows, and automation fundamentals that improve how you research, plan, and publish.
+                  </p>
+                  <span className="text-brand-gold group-hover:text-brand-gold-dark transition-colors font-medium">
+                    Explore Pillar →
+                  </span>
+                </article>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <Link href="/insights/automation-systems" className="group block">
+                <article className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover h-full">
+                  <div className="mb-4">
+                    <span className="inline-flex items-center rounded-full border border-brand-gold/30 px-3 py-1 text-sm text-brand-gold/90 bg-brand-gold/5">
+                      Business Automation
+                    </span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-brand-white mb-4 group-hover:text-brand-gold transition-colors">
+                    Business Automation
+                  </h3>
+                  <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
+                    Automate the parts of your business that slow you down.
+                  </p>
+                  <p className="text-brand-gray-light mb-6 leading-relaxed">
+                    Most entrepreneurs are drowning in manual work. Learn how to simplify your operations, build smarter processes, and create automations that save time without adding complexity.
+                  </p>
+                  <span className="text-brand-gold group-hover:text-brand-gold-dark transition-colors font-medium">
+                    Explore Pillar →
+                  </span>
+                </article>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Articles Grid */}
       <section className="py-16 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">

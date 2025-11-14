@@ -64,8 +64,8 @@ export default function ContentEngineStarterKit() {
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
-                ← Back to Playbook
+              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+                ← Back to Insights
               </Link>
             </div>
             
@@ -98,7 +98,7 @@ export default function ContentEngineStarterKit() {
           <div className="max-w-4xl mx-auto prose prose-lg">
             
             <p className="text-lg text-brand-gray-light mb-8 leading-relaxed">
-              Building a content engine that runs itself isn't easy — but understanding the five key pillars of AI-powered creation will save you massive amounts of time and energy. Whether you're a solo creator, small agency, or full-stack business, these tools form the foundation of an <strong className="text-brand-white">AI-driven content workflow</strong> that scales with you.
+              Building a content engine that runs itself isn't easy — but understanding the five key pillars of AI-powered creation will save you massive amounts of time and energy. Whether you're a solo creator, small agency, or full-stack business, these tools form the foundation of an <strong className="text-brand-white">AI-driven content workflow</strong> that scales with you. Before building your content engine, make sure you have a solid <Link href="/insights/notion-creator-dashboard" className="text-brand-gold hover:text-brand-gold-dark underline">brand system foundation</Link> in place.
             </p>
 
             <hr className="border-brand-gray-dark my-12" />
@@ -116,7 +116,7 @@ export default function ContentEngineStarterKit() {
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Tools like <strong className="text-brand-white">ChatGPT</strong> and <strong className="text-brand-white">Claude</strong> are the most trusted <strong className="text-brand-white">large language models (LLMs)</strong> for drafting, editing, and polishing copy. Think of them as an extra set of eyes to help your writing hit just right.
+              Tools like <strong className="text-brand-white">ChatGPT</strong> and <strong className="text-brand-white">Claude</strong> are the most trusted <strong className="text-brand-white">large language models (LLMs)</strong> for drafting, editing, and polishing copy. Think of them as an extra set of eyes to help your writing hit just right. For a deeper dive into which AI tools are actually worth your time, see <Link href="/insights/stop-chasing-ai-tools" className="text-brand-gold hover:text-brand-gold-dark underline">this guide</Link>.
             </p>
 
             <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
@@ -144,7 +144,7 @@ export default function ContentEngineStarterKit() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Relying on one AI model for everything limits your perspective. Tools like <strong className="text-brand-white">Perplexity AI</strong> and <strong className="text-brand-white">Grok</strong> are purpose-built for deep research. They can summarize long articles, compare opinions, and help you identify trends before they peak.
+              Relying on one AI model for everything limits your perspective. Tools like <strong className="text-brand-white">Perplexity AI</strong> and <strong className="text-brand-white">Grok</strong> are purpose-built for deep research. They can summarize long articles, compare opinions, and help you identify trends before they peak. These are part of the <Link href="/insights/stop-chasing-ai-tools" className="text-brand-gold hover:text-brand-gold-dark underline">three AI tools that actually matter</Link> for creators.
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -225,9 +225,9 @@ export default function ContentEngineStarterKit() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Automation is where your content engine truly scales. It's also where most creators get stuck — because it's the most technical.
+              Automation is where your content engine truly scales. It's also where most creators get stuck — because it's the most technical. For a beginner-friendly guide to building <Link href="/insights/build-simple-business-automation-system" className="text-brand-gold hover:text-brand-gold-dark underline">simple automation systems</Link>, check out this resource.
             </p>
-
+            
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
               Start simple with <strong className="text-brand-white">Zapier</strong> (great UI, but limited free plan). When you're ready for more complex workflows, <strong className="text-brand-white">Make.com</strong> offers multi-step automation on free tiers.
             </p>
@@ -255,15 +255,15 @@ export default function ContentEngineStarterKit() {
             </h2>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              These five pillars — Copy, Research, Images, Productivity, and Automation — form the <strong className="text-brand-white">AI Content Creation Stack</strong> that powers modern creators and small studios alike.
+              These five pillars — Copy, Research, Images, Productivity, and Automation — form the <strong className="text-brand-white">AI Content Creation Stack</strong> that powers modern creators and small studios alike. Remember that your <Link href="/insights/why-your-first-priority-isnt-automation-its-your-brand-system" className="text-brand-gold hover:text-brand-gold-dark underline">brand system should come before automation</Link>.
             </p>
-
+            
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
               If you found this guide helpful and want to learn how to automate your own system, reach out through the <Link href="/" className="text-brand-gold hover:text-brand-gold-dark transition-colors">contact form</Link> on the homepage for a 1-on-1 setup session.
             </p>
-
+            
             <p className="text-lg text-brand-gray-light mb-8 leading-relaxed">
-              Thanks for reading — and remember: <strong className="text-brand-white">build once, automate forever.</strong>
+              Thanks for reading — and remember: <strong className="text-brand-white">build once, automate forever.</strong> For more insights on AI tools and workflows, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
             </p>
 
             <div className="mt-12 p-6 bg-brand-gray-dark/50 rounded-xl border border-brand-gray-dark">
@@ -287,7 +287,7 @@ export default function ContentEngineStarterKit() {
                 <Link href="/solutions" className="btn-primary">
                   Book a Free System Audit
                 </Link>
-                <Link href="/playbook" className="btn-outline">
+                <Link href="/insights" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

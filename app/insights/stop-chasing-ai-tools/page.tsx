@@ -106,9 +106,9 @@ export default function StopChasingAITools() {
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              When you're just getting started with AI, the main goal isn't to collect every shiny new app; it's to <strong className="text-brand-white">find one or two reliable tools that actually help you get work done.</strong>
+              When you're just getting started with AI, the main goal isn't to collect every shiny new app; it's to <strong className="text-brand-white">find one or two reliable tools that actually help you get work done.</strong> Before diving into tools, make sure you have a solid <Link href="/insights/notion-creator-dashboard" className="text-brand-gold hover:text-brand-gold-dark underline">brand system foundation</Link> in place.
             </p>
-
+            
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
               In this post, I'll break down <strong className="text-brand-white">three of the most popular AI tools — Perplexity, ChatGPT, and Gemini —</strong> and show how I use each one to stay focused and productive every day.
             </p>
@@ -190,18 +190,22 @@ export default function StopChasingAITools() {
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
               That said, I rarely use ChatGPT for research. I prefer getting multiple perspectives from Perplexity instead. ChatGPT shines when it comes to:
             </p>
-
+            
             <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
               <li>Drafting copy and blog posts</li>
               <li>Building content strategies</li>
               <li>Mapping workflows and automation systems</li>
               <li>Brainstorming branding ideas</li>
             </ul>
-
+            
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              If you're serious about AI workflows, <strong className="text-brand-white">get one paid subscription.</strong>
+              For a complete guide on building your <Link href="/insights/content-engine-starter-kit" className="text-brand-gold hover:text-brand-gold-dark underline">AI-powered content engine</Link> with these tools, check out this resource.
             </p>
 
+            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
+              If you're serious about AI workflows, <strong className="text-brand-white">get one paid subscription.</strong> Once you have the right tools, you can start building <Link href="/insights/build-simple-business-automation-system" className="text-brand-gold hover:text-brand-gold-dark underline">simple automation systems</Link> that save hours every week.
+            </p>
+            
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
               Free models are great for testing, but they're slower and limit your ability to scale. Having one reliable AI assistant that's fast and always available is worth the small monthly cost.
             </p>
@@ -261,11 +265,11 @@ export default function StopChasingAITools() {
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              <strong className="text-brand-white">Pick a few tools, learn them deeply, and master how they fit your workflow.</strong>
+              <strong className="text-brand-white">Pick a few tools, learn them deeply, and master how they fit your workflow.</strong> If you're building a brand system, make sure to check out <Link href="/insights/why-your-first-priority-isnt-automation-its-your-brand-system" className="text-brand-gold hover:text-brand-gold-dark underline">why your brand system should come first</Link>.
             </p>
-
+            
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              The people who win with AI aren't the ones who try everything — they're the ones who execute consistently with what works.
+              The people who win with AI aren't the ones who try everything — they're the ones who execute consistently with what works. For more insights on AI tools and workflows, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">

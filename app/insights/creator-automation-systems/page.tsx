@@ -64,8 +64,8 @@ export default function CreatorAutomationSystems() {
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
-              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
-                ← Back to Playbook
+              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+                ← Back to Insights
               </Link>
             </div>
             
@@ -122,12 +122,16 @@ export default function CreatorAutomationSystems() {
             </h2>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Most creators spend more time on admin work than actual content creation. Planning, scheduling, cross-posting, and tracking analytics shouldn't consume 15+ hours of your week.
+              Most creators spend more time on admin work than actual content creation. Planning, scheduling, cross-posting, and tracking analytics shouldn't consume 15+ hours of your week. For a complete guide to building <Link href="/insights/build-simple-business-automation-system" className="text-brand-gold hover:text-brand-gold-dark underline">simple automation systems</Link>, start here.
             </p>
 
             <blockquote className="border-l-4 border-brand-gold pl-6 my-8 italic text-brand-gray-light">
               "The best creators focus on what only they can do—the creative work. Everything else should be automated." — Reuben Lopez, Lopez Productions
             </blockquote>
+            
+            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
+              Before automating, make sure you have a solid <Link href="/insights/why-your-first-priority-isnt-automation-its-your-brand-system" className="text-brand-gold hover:text-brand-gold-dark underline">brand system foundation</Link> in place.
+            </p>
 
             <h3 className="text-xl md:text-2xl font-semibold text-brand-gold mb-4">
               System 1: Content Planning & Ideation Automation
@@ -141,7 +145,7 @@ export default function CreatorAutomationSystems() {
               
               <h4 className="text-lg font-semibold text-brand-white mb-3">The Solution</h4>
               <p className="text-brand-gray-light mb-4">
-                <strong className="text-brand-white">Notion + AI-powered content planning:</strong>
+                <strong className="text-brand-white">Notion + AI-powered content planning:</strong> For a complete guide to setting up your <Link href="/insights/notion-creator-dashboard" className="text-brand-gold hover:text-brand-gold-dark underline">Notion creator dashboard</Link>, see this resource.
               </p>
               <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-4">
                 <li>Automated content calendar with trending topics</li>
@@ -218,7 +222,7 @@ export default function CreatorAutomationSystems() {
             </h3>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              The key is starting with one system, getting it working perfectly, then expanding. Here's the implementation order that works:
+              The key is starting with one system, getting it working perfectly, then expanding. Here's the implementation order that works. For connecting Notion with Make.com, see <Link href="/insights/notion-make-automation-guide" className="text-brand-gold hover:text-brand-gold-dark underline">this step-by-step guide</Link>.
             </p>
 
             <div className="space-y-6">
@@ -298,13 +302,13 @@ export default function CreatorAutomationSystems() {
                 Ready to automate your creator workflow?
               </h3>
               <p className="text-brand-gray-light mb-6">
-                Get a free audit of your current content process and discover which systems you can automate today.
+                Get a free audit of your current content process and discover which systems you can automate today. For more automation insights, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/solutions" className="btn-primary">
                   Book a Free Creator Audit
                 </Link>
-                <Link href="/playbook" className="btn-outline">
+                <Link href="/insights" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

@@ -2,49 +2,9 @@ import React from 'react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import { allInsights } from './insights-data'
 
-const insights = [
-  {
-    slug: 'notion-creator-dashboard',
-    title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System',
-    excerpt: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
-    readTime: '10 min read',
-    category: 'Creator Tools',
-    publishedDate: '2025-11-14'
-  },
-  {
-    slug: 'stop-chasing-ai-tools',
-    title: 'Stop Chasing Every New AI Tool — Here\'s What\'s Actually Worth Learning (Perplexity AI / ChatGPT / Gemini)',
-    excerpt: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.',
-    readTime: '8 min read',
-    category: 'AI Tools',
-    publishedDate: '2025-11-12'
-  },
-  {
-    slug: 'ai-workflows-save-time',
-    title: 'How AI Workflows Save SaaS Teams 10 Hours a Week',
-    excerpt: 'Discover the specific automation systems that cut project time by 20-30% and why most teams are still doing manual work that AI can handle.',
-    readTime: '8 min read',
-    category: 'AI Automation',
-    publishedDate: '2025-11-13'
-  },
-  {
-    slug: 'creator-automation-systems',
-    title: '3 Systems Every Creator Should Automate in 2025',
-    excerpt: 'The essential automation stack for content creators: from Notion planning to cross-platform posting. Stop spending 15+ hours weekly on admin work.',
-    readTime: '6 min read',
-    category: 'Creator Tools',
-    publishedDate: '2025-01-27'
-  },
-  {
-    slug: 'notion-make-automation-guide',
-    title: 'Notion + Make.com: The Ultimate Automation Stack for Freelancers',
-    excerpt: 'Step-by-step guide to connecting Notion databases with Make.com workflows. Automate client intake, project tracking, and reporting.',
-    readTime: '12 min read',
-    category: 'Workflow Design',
-    publishedDate: '2025-01-27'
-  }
-]
+const insights = allInsights
 
 export default function InsightsPage() {
   return (
