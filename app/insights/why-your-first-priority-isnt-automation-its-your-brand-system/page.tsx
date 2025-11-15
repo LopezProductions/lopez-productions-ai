@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata = {
   title: 'Why Your First Priority Isn\'t Automation — It\'s Your Brand System | Lopez Productions',
@@ -63,6 +64,11 @@ export default function BrandSystemFirst() {
         {/* Hero */}
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
+            <Breadcrumbs 
+              title="Why Your First Priority Isn't Automation — It's Your Brand System" 
+              slug="why-your-first-priority-isnt-automation-its-your-brand-system" 
+            />
+            
             <div className="mb-6">
               <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights

@@ -16,8 +16,8 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lopezproductions.ai'),
-  title: 'AI-Powered Brand Systems for Creators & Small Businesses | Lopez Productions',
-  description: 'Build a professional portfolio, content engine, and digital identity using AI. Modern brand systems for creators, founders, and small businesses.',
+  title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
+  description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
   keywords: [
     'AI brand systems',
     'AI portfolio builder',
@@ -39,14 +39,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai',
-    title: 'AI-Powered Brand Systems for Creators & Small Businesses | Lopez Productions',
-    description: 'Build a professional portfolio, content engine, and digital identity using AI. Modern brand systems for creators, founders, and small businesses.',
-    images: ['/og-image.jpg'],
+    siteName: 'Lopez Productions',
+    title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
+    description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Lopez Productions – AI Brand Systems',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI-Powered Brand Systems for Creators & Small Businesses | Lopez Productions',
-    description: 'Build a professional portfolio, content engine, and digital identity using AI. Modern brand systems for creators, founders, and small businesses.',
+    title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
+    description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
     images: ['/og-image.jpg'],
   },
 }
@@ -59,6 +67,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        {/* Viewport Meta Tag */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://lopezproductions.ai/" />
+        
         {/* Organization Schema */}
         <script
           type="application/ld+json"
@@ -70,8 +84,10 @@ export default function RootLayout({
               "url": "https://lopezproductions.ai",
               "logo": "https://lopezproductions.ai/transparent_logo_lp.png",
               "sameAs": [
+                "https://www.instagram.com/lopezproductions_",
                 "https://www.youtube.com/@LopezWorkflows",
-                "https://www.linkedin.com/company/lopez-productions"
+                "https://www.linkedin.com/company/lopez-productions",
+                "https://x.com/lopezproductions"
               ]
             })
           }}

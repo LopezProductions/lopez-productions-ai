@@ -9,11 +9,30 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+    // Use Intersection Observer instead of scroll listener for better INP performance
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // When the sentinel is not visible, we've scrolled past it
+        setIsScrolled(!entries[0].isIntersecting)
+      },
+      { threshold: 0, rootMargin: '-50px 0px 0px 0px' }
+    )
+    
+    // Create a sentinel element to observe
+    const sentinel = document.createElement('div')
+    sentinel.id = 'nav-scroll-sentinel'
+    sentinel.style.cssText = 'position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;'
+    document.body.insertBefore(sentinel, document.body.firstChild)
+    
+    observer.observe(sentinel)
+    
+    return () => {
+      observer.disconnect()
+      const element = document.getElementById('nav-scroll-sentinel')
+      if (element && element.parentNode) {
+        element.parentNode.removeChild(element)
+      }
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const navItems = [
@@ -56,7 +75,7 @@ const Navigation = () => {
           >
             <img 
               src="/lp_closeup.png" 
-              alt="Lopez Productions" 
+              alt="Lopez Productions logo" 
               className="w-8 h-8 rounded-full object-cover border border-brand-gold/50"
             />
             <a href="/" className="text-2xl font-serif font-bold text-gradient">

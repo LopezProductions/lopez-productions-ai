@@ -50,6 +50,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Insights -->
+  <url>
+    <loc>https://lopezproductions.ai/insights</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://lopezproductions.ai/blog</loc>

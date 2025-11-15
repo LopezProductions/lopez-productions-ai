@@ -1,87 +1,25 @@
 'use client'
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import ContactFormModal from './ContactFormModal'
+import React from 'react'
+import HeroButtons from './HeroButtons'
+import { useModal } from './HomePageClient'
 
-const HeroSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
+export default function HeroSection() {
+  const { openModal } = useModal()
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background with logo - very dark silhouette */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/transparent_logo_lp.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.15
-        }}
-      ></div>
-      {/* Dark overlay to create silhouette effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-black/85 via-brand-gray-dark/80 to-brand-black/85"></div>
-      
-      {/* Subtle gold halo effect around the logo */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-96 h-96 rounded-full bg-gradient-radial from-brand-gold/20 via-brand-gold/5 to-transparent blur-3xl"></div>
+    <section className="pt-20 pb-16 px-6 md:px-12 min-h-screen flex items-center justify-center">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-gradient mb-6 leading-tight">
+          Build a Brand That Actually Looks Professional
+        </h1>
+        <p className="text-xl md:text-2xl text-brand-gray-light max-w-4xl mx-auto mb-4 leading-relaxed">
+          AI-Powered Portfolios, Content Systems & Digital Identity — designed for creators, founders, and small businesses.
+        </p>
+        <p className="text-lg md:text-xl text-brand-gold font-semibold mb-12">
+          Launch sharper. Create faster. Stand out everywhere.
+        </p>
+        <HeroButtons onOpenModal={openModal} />
       </div>
-      
-      {/* Minimal gold glow overlay */}
-      <div className="absolute inset-0 bg-gradient-radial from-brand-gold/8 via-brand-gold/2 to-transparent"></div>
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="text-center">
-          {/* Main Hero Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-16"
-          >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 text-gradient leading-tight">
-              We Build AI Portfolio Websites That Work While You Sleep.
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-brand-gray-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Lopez Productions designs AI-powered systems that connect tools, automate workflows, and scale small businesses.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  href="/get-started"
-                  className="btn-primary"
-                >
-                  Build My Portfolio
-                </Link>
-              </motion.div>
-              
-              <motion.button
-                onClick={() => setIsModalOpen(true)}
-                className="btn-outline"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contact Now – Free Consultation
-              </motion.button>
-            </div>
-          </motion.div>
-
-        </div>
-      </div>
-      
-      {/* Contact Form Modal */}
-      <ContactFormModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-      />
     </section>
   )
 }
-
-export default HeroSection 

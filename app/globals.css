@@ -16,15 +16,15 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-gold text-brand-black px-8 py-4 rounded-lg font-semibold 
+    @apply bg-gradient-gold text-brand-black px-8 py-2 md:py-4 rounded-lg font-semibold 
            hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl
-           animate-pulse-slow;
+           animate-pulse-slow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold;
   }
   
   .btn-outline {
-    @apply border-2 border-brand-gold text-brand-white px-8 py-4 rounded-lg font-semibold
+    @apply border-2 border-brand-gold text-brand-white px-8 py-2 md:py-4 rounded-lg font-semibold
            hover:bg-brand-gold hover:text-brand-black transition-all duration-300
-           hover:scale-105;
+           hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold;
   }
   
   .section-title {

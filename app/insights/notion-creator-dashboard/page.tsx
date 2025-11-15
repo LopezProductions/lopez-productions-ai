@@ -3,6 +3,7 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import IdeaBankDownloadForm from '../../../components/IdeaBankDownloadForm'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata = {
   title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System | Lopez Productions',
@@ -64,6 +65,11 @@ export default function NotionCreatorDashboard() {
         {/* Hero */}
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
+            <Breadcrumbs 
+              title="Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System" 
+              slug="notion-creator-dashboard" 
+            />
+            
             <div className="mb-6">
               <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
