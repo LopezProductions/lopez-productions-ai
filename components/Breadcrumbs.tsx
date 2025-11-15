@@ -42,7 +42,7 @@ export default function Breadcrumbs({ title, slug }: BreadcrumbsProps) {
   const isPillarPage = slug === 'creator-systems' || slug === 'ai-workflows' || slug === 'automation-systems'
   
   // Build breadcrumb items
-  const items = [
+  const items: Array<{ name: string; href: string | null }> = [
     { name: 'Home', href: '/' },
     { name: 'Insights', href: '/insights' },
   ]
