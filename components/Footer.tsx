@@ -37,7 +37,7 @@ const Footer = () => {
             <li className="py-2"><a href="https://www.instagram.com/lopezproductions_" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">Instagram</a></li>
             <li className="py-2"><a href="https://www.youtube.com/@LopezWorkflows" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">YouTube Channel</a></li>
             <li className="py-2"><a href="https://www.linkedin.com/company/lopez-productions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">LinkedIn</a></li>
-            <li className="py-2"><a href="https://x.com/lopezproductions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">X (Twitter)</a></li>
+            <li className="py-2"><a href="https://x.com/LopezProdx" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">X (Twitter)</a></li>
             <li className="py-2"><a href="https://linktr.ee/lopezproductions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">Linktree</a></li>
           </ul>
         </div>

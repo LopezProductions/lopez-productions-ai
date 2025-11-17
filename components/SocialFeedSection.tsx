@@ -29,7 +29,7 @@ const SocialFeedSection = () => {
   const xPosts = [
     {
       content: "Just automated my entire content calendar with @Make and @Notion. What used to take 3 hours now takes 15 minutes. Game changer for creators! 🚀",
-      author: "@lopezproductions",
+      author: "@LopezProdx",
       timestamp: "2h ago",
       likes: 47,
       replies: 12,
@@ -127,7 +127,7 @@ const SocialFeedSection = () => {
                   Latest on X
                 </h3>
                 <a 
-                  href="https://twitter.com/lopezproductions" 
+                  href="https://x.com/LopezProdx" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors duration-300"
@@ -183,7 +183,7 @@ const SocialFeedSection = () => {
 
               <div className="mt-8 text-center">
                 <a 
-                  href="https://twitter.com/lopezproductions" 
+                  href="https://x.com/LopezProdx" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-brand-gray-dark text-brand-white rounded-lg font-medium hover:bg-brand-gold hover:text-brand-black transition-all duration-300"

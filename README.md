@@ -208,7 +208,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Website**: [lopezproductions.ai](https://lopezproductions.ai)
 - **Email**: hello@lopezproductions.ai
-- **X (Twitter)**: [@lopezproductions](https://twitter.com/lopezproductions)
+- **X (Twitter)**: [@LopezProdx](https://x.com/LopezProdx)
 - **YouTube**: [@LopezWorkflows](https://www.youtube.com/@LopezWorkflows)
 
 ---

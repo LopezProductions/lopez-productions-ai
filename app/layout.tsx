@@ -87,7 +87,7 @@ export default function RootLayout({
                 "https://www.instagram.com/lopezproductions_",
                 "https://www.youtube.com/@LopezWorkflows",
                 "https://www.linkedin.com/company/lopez-productions",
-                "https://x.com/lopezproductions"
+                "https://x.com/LopezProdx"
               ]
             })
           }}
