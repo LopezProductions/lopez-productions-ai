@@ -13,13 +13,13 @@ export const metadata = {
     url: 'https://lopezproductions.ai/insights/content-engine-starter-kit',
     title: 'AI Tools You Need to Start Your Content Engine (2025 Edition)',
     description: 'Learn how to build your own AI-powered content workflow using tools like ChatGPT, Claude, Perplexity AI, Midjourney, Notion, and Make.com.',
-    images: ['/og-image.jpg'],
+    images: ['/content-engine.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Tools You Need to Start Your Content Engine (2025 Edition)',
     description: 'Learn how to build your own AI-powered content workflow using tools like ChatGPT, Claude, Perplexity AI, Midjourney, Notion, and Make.com.',
-    images: ['/og-image.jpg'],
+    images: ['/content-engine.png'],
   },
 }
 
@@ -95,6 +95,19 @@ export default function ContentEngineStarterKit() {
               <span>November 11, 2025</span>
               <span>•</span>
               <span>6 min read</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Cover Image */}
+        <section className="py-8 px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="rounded-2xl overflow-hidden border border-brand-gray-dark">
+              <img 
+                src="/content-engine.png" 
+                alt="AI Tools You Need to Start Your Content Engine" 
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </section>

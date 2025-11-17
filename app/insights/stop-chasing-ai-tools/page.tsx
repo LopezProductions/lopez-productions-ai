@@ -13,13 +13,13 @@ export const metadata = {
     url: 'https://lopezproductions.ai/insights/stop-chasing-ai-tools',
     title: 'Stop Chasing Every AI Tool — Learn Perplexity, ChatGPT, and Gemini (2025 Guide)',
     description: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.',
-    images: ['/og-image.jpg'],
+    images: ['/stop-chasing.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Stop Chasing Every AI Tool — Learn Perplexity, ChatGPT, and Gemini (2025 Guide)',
     description: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini.',
-    images: ['/og-image.jpg'],
+    images: ['/stop-chasing.png'],
   },
 }
 
@@ -95,6 +95,19 @@ export default function StopChasingAITools() {
               <span>November 12, 2025</span>
               <span>•</span>
               <span>8 min read</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Cover Image */}
+        <section className="py-8 px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="rounded-2xl overflow-hidden border border-brand-gray-dark">
+              <img 
+                src="/stop-chasing.png" 
+                alt="Stop Chasing Every New AI Tool" 
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </section>

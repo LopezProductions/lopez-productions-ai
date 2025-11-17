@@ -10,6 +10,11 @@ import WhyChooseSection from '../components/WhyChooseSection'
 import FinalCTASection from '../components/FinalCTASection'
 
 // Lazy load below-the-fold sections
+const AboutSection = dynamic(() => import('../components/AboutSection'), {
+  ssr: false,
+  loading: () => null,
+})
+
 const RecentWorkSection = dynamic(() => import('../components/RecentWorkSection'), {
   ssr: false,
   loading: () => null,
@@ -64,6 +69,9 @@ export default function Home() {
 
           {/* Why Choose Section */}
           <WhyChooseSection />
+
+          {/* About Section - Lazy Loaded */}
+          <AboutSection />
 
           {/* Recent Work Section - Lazy Loaded */}
           <RecentWorkSection />

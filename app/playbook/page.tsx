@@ -8,13 +8,24 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
+    slug: 'ai-notion-weekly-organization',
+    title: 'How I Use AI to Organize My Week Inside Notion',
+    tag: 'AI Workflows',
+    excerpt: 'A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.',
+    readTime: '8 min read',
+    publishedDate: '2025-11-16',
+    exists: true,
+    coverImage: '/notion-weekly-cover.png'
+  },
+  {
     slug: 'notion-creator-dashboard',
     title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System',
     tag: 'Creator Tools',
     excerpt: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
     readTime: '10 min read',
     publishedDate: '2025-11-14',
-    exists: true
+    exists: true,
+    coverImage: '/notion-creator-dashboard.png'
   },
   {
     slug: 'why-your-first-priority-isnt-automation-its-your-brand-system',
@@ -23,7 +34,8 @@ const articles = [
     excerpt: 'Most people jump into AI thinking automation is the first step. But if you\'re a creator or small business, the real problem is that your brand system isn\'t set up yet.',
     readTime: '8 min read',
     publishedDate: '2025-11-13',
-    exists: true
+    exists: true,
+    coverImage: '/first-priority.png'
   },
   {
     slug: 'stop-chasing-ai-tools',
@@ -32,7 +44,8 @@ const articles = [
     excerpt: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.',
     readTime: '8 min read',
     publishedDate: '2025-11-12',
-    exists: true
+    exists: true,
+    coverImage: '/stop-chasing.png'
   },
   {
     slug: 'content-engine-starter-kit',
@@ -41,7 +54,8 @@ const articles = [
     excerpt: 'Learn how to build your own AI-powered content workflow using tools like ChatGPT, Claude, Perplexity AI, Midjourney, Notion, and Make.com.',
     readTime: '6 min read',
     publishedDate: '2025-11-11',
-    exists: true
+    exists: true,
+    coverImage: '/content-engine.png'
   },
   {
     slug: 'top-5-ai-workflow-tools',
@@ -93,6 +107,8 @@ const articles = [
 const getTagColor = (tag: string) => {
   switch (tag) {
     case 'Workflow':
+      return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
+    case 'AI Workflows':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
     case 'Brand':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
@@ -284,10 +300,20 @@ export default function PlaybookPage() {
                       </span>
                     </div>
                     
-                    {/* Thumbnail Placeholder */}
-                    <div className="mb-4 h-32 bg-gradient-to-br from-brand-gold/20 to-brand-gray-dark rounded-lg flex items-center justify-center">
-                      <span className="text-4xl">🎯</span>
-                    </div>
+                    {/* Thumbnail / Cover Image */}
+                    {article.coverImage ? (
+                      <div className="mb-4 h-32 rounded-lg overflow-hidden">
+                        <img 
+                          src={article.coverImage} 
+                          alt={article.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="mb-4 h-32 bg-gradient-to-br from-brand-gold/20 to-brand-gray-dark rounded-lg flex items-center justify-center">
+                        <span className="text-4xl">🎯</span>
+                      </div>
+                    )}
                     
                     {/* Title */}
                     <h2 className="text-xl md:text-2xl font-serif font-bold text-brand-white mb-4 group-hover:text-brand-gold transition-colors">

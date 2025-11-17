@@ -26,3 +26,4 @@ export default function HeroButtons({ onOpenModal }: HeroButtonsProps) {
   )
 }
 
+

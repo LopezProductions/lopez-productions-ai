@@ -9,6 +9,14 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'ai-notion-weekly-organization',
+    title: 'How I Use AI to Organize My Week Inside Notion',
+    excerpt: 'A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.',
+    readTime: '8 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-11-16'
+  },
+  {
     slug: 'build-simple-business-automation-system',
     title: 'How To Build a Simple Automation System for Your Business (Beginner-Friendly Guide)',
     excerpt: 'A plain-English guide to automating your business without overthinking it — using simple systems, AI tools, and lightweight workflows that save time every single week.',
@@ -78,7 +86,8 @@ export const allInsights: Insight[] = [
 export const pillarMappings = {
   'creator-systems': [
     'notion-creator-dashboard',
-    'why-your-first-priority-isnt-automation-its-your-brand-system'
+    'why-your-first-priority-isnt-automation-its-your-brand-system',
+    'ai-notion-weekly-organization'
   ],
   'ai-workflows': [
     'stop-chasing-ai-tools',
@@ -91,4 +100,5 @@ export const pillarMappings = {
     'notion-make-automation-guide'
   ]
 }
+
 

@@ -1,12 +1,16 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useRouter, usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     // Use Intersection Observer instead of scroll listener for better INP performance
@@ -38,8 +42,8 @@ const Navigation = () => {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/solutions', label: 'Solutions' },
-    { href: '/get-started', label: 'Get Started' },
     { href: '/playbook', label: 'Playbook' },
+    { href: '/get-started', label: 'Get Started' },
     { href: '/#about', label: 'About' },
   ]
 
@@ -47,15 +51,46 @@ const Navigation = () => {
     e.preventDefault()
     setIsOpen(false)
     
-    if (href.startsWith('/')) {
-      // Handle page navigation (including homepage anchor links like /#about)
-      window.location.href = href
-    } else {
-      // Handle anchor links on current page
-      const element = document.querySelector(href)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
+    if (href.includes('#')) {
+      // Handle anchor links
+      const [path, hash] = href.split('#')
+      
+      if (path === pathname || (path === '/' && pathname === '/')) {
+        // Same page anchor - scroll to element
+        setTimeout(() => {
+          const element = document.querySelector(`#${hash}`)
+          if (element) {
+            const offset = 80 // Account for fixed navbar
+            const elementPosition = element.getBoundingClientRect().top
+            const offsetPosition = elementPosition + window.pageYOffset - offset
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            })
+          }
+        }, 100)
+      } else {
+        // Different page with anchor - navigate then scroll
+        router.push(href)
+        // Wait for navigation, then scroll
+        setTimeout(() => {
+          const element = document.querySelector(`#${hash}`)
+          if (element) {
+            const offset = 80
+            const elementPosition = element.getBoundingClientRect().top
+            const offsetPosition = elementPosition + window.pageYOffset - offset
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            })
+          }
+        }, 500)
       }
+    } else {
+      // Regular page navigation
+      router.push(href)
     }
   }
 
@@ -78,27 +113,30 @@ const Navigation = () => {
               alt="Lopez Productions logo" 
               className="w-8 h-8 rounded-full object-cover border border-brand-gold/50"
             />
-            <a href="/" className="text-2xl font-serif font-bold text-gradient">
+            <Link href="/" className="text-2xl font-serif font-bold text-gradient">
               Lopez Productions
-            </a>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item, index) => (
-                <motion.a
+                <motion.div
                   key={item.href}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(item.href, e)}
-                  className="text-brand-gray-light hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
-                </motion.a>
+                  <Link
+                    href={item.href}
+                    onClick={(e) => handleNavClick(item.href, e)}
+                    className="text-brand-gray-light hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group block"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -126,17 +164,20 @@ const Navigation = () => {
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item, index) => (
-                <motion.a
+                <motion.div
                   key={item.href}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(item.href, e)}
-                  className="text-brand-gray-light hover:text-brand-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  {item.label}
-                </motion.a>
+                  <Link
+                    href={item.href}
+                    onClick={(e) => handleNavClick(item.href, e)}
+                    className="text-brand-gray-light hover:text-brand-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>
