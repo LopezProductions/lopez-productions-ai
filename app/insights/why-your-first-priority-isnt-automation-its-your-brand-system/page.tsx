@@ -13,13 +13,13 @@ export const metadata = {
     url: 'https://lopezproductions.ai/insights/why-your-first-priority-isnt-automation-its-your-brand-system',
     title: 'Why Your First Priority Isn\'t Automation — It\'s Your Brand System',
     description: 'Most people jump into AI thinking automation is the first step. But if you\'re a creator or small business, the real problem is that your brand system isn\'t set up yet.',
-    images: ['/first-priority.png'],
+    images: ['/brand-system.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Why Your First Priority Isn\'t Automation — It\'s Your Brand System',
     description: 'Most people jump into AI thinking automation is the first step. But if you\'re a creator or small business, the real problem is that your brand system isn\'t set up yet.',
-    images: ['/first-priority.png'],
+    images: ['/brand-system.png'],
   },
 }
 
@@ -104,7 +104,7 @@ export default function BrandSystemFirst() {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden border border-brand-gray-dark">
               <img 
-                src="/first-priority.png" 
+                src="/brand-system.png" 
                 alt="Why Your First Priority Isn't Automation — It's Your Brand System" 
                 className="w-full h-auto"
               />

@@ -5,6 +5,7 @@ export interface Insight {
   readTime: string
   category: string
   publishedDate: string
+  coverImage?: string
 }
 
 export const allInsights: Insight[] = [
@@ -14,7 +15,8 @@ export const allInsights: Insight[] = [
     excerpt: 'A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.',
     readTime: '8 min read',
     category: 'AI Workflows',
-    publishedDate: '2025-11-16'
+    publishedDate: '2025-11-16',
+    coverImage: '/organize-notion.png'
   },
   {
     slug: 'build-simple-business-automation-system',
@@ -30,7 +32,8 @@ export const allInsights: Insight[] = [
     excerpt: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
     readTime: '10 min read',
     category: 'Creator Tools',
-    publishedDate: '2025-11-14'
+    publishedDate: '2025-11-14',
+    coverImage: '/notion-dashboard.png'
   },
   {
     slug: 'stop-chasing-ai-tools',
@@ -38,7 +41,8 @@ export const allInsights: Insight[] = [
     excerpt: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.',
     readTime: '8 min read',
     category: 'AI Tools',
-    publishedDate: '2025-11-12'
+    publishedDate: '2025-11-12',
+    coverImage: '/stop-chasing.png'
   },
   {
     slug: 'ai-workflows-save-time',
@@ -70,7 +74,8 @@ export const allInsights: Insight[] = [
     excerpt: 'Learn how to build your own AI-powered content workflow using tools like ChatGPT, Claude, Perplexity AI, Midjourney, Notion, and Make.com.',
     readTime: '6 min read',
     category: 'Content Automation',
-    publishedDate: '2025-11-11'
+    publishedDate: '2025-11-11',
+    coverImage: '/content-engine.png'
   },
   {
     slug: 'why-your-first-priority-isnt-automation-its-your-brand-system',
@@ -78,7 +83,8 @@ export const allInsights: Insight[] = [
     excerpt: 'Most people jump into AI thinking automation is the first step. But if you\'re a creator or small business, the real problem is that your brand system isn\'t set up yet.',
     readTime: '8 min read',
     category: 'Brand Strategy',
-    publishedDate: '2025-11-13'
+    publishedDate: '2025-11-13',
+    coverImage: '/brand-system.png'
   }
 ]
 

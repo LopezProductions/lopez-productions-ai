@@ -13,13 +13,13 @@ export const metadata = {
     url: 'https://lopezproductions.ai/insights/ai-notion-weekly-organization',
     title: 'How I Use AI to Organize My Week Inside Notion',
     description: 'A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.',
-    images: ['/notion-weekly-cover.png'],
+    images: ['/organize-notion.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How I Use AI to Organize My Week Inside Notion',
     description: 'A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.',
-    images: ['/notion-weekly-cover.png'],
+    images: ['/organize-notion.png'],
   },
 }
 
@@ -104,7 +104,7 @@ export default function AINotionWeeklyOrganization() {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden border border-brand-gray-dark">
               <img 
-                src="/notion-weekly-cover.png" 
+                src="/organize-notion.png" 
                 alt="AI Notion Weekly Organization System" 
                 className="w-full h-auto"
               />

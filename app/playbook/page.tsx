@@ -15,7 +15,7 @@ const articles = [
     readTime: '8 min read',
     publishedDate: '2025-11-16',
     exists: true,
-    coverImage: '/notion-weekly-cover.png'
+    coverImage: '/organize-notion.png'
   },
   {
     slug: 'notion-creator-dashboard',
@@ -25,7 +25,7 @@ const articles = [
     readTime: '10 min read',
     publishedDate: '2025-11-14',
     exists: true,
-    coverImage: '/notion-creator-dashboard.png'
+    coverImage: '/notion-dashboard.png'
   },
   {
     slug: 'why-your-first-priority-isnt-automation-its-your-brand-system',
@@ -35,7 +35,7 @@ const articles = [
     readTime: '8 min read',
     publishedDate: '2025-11-13',
     exists: true,
-    coverImage: '/first-priority.png'
+    coverImage: '/brand-system.png'
   },
   {
     slug: 'stop-chasing-ai-tools',

@@ -14,13 +14,13 @@ export const metadata = {
     url: 'https://lopezproductions.ai/insights/notion-creator-dashboard',
     title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System',
     description: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
-    images: ['/notion-creator-dashboard.png'],
+    images: ['/notion-dashboard.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System',
     description: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
-    images: ['/notion-creator-dashboard.png'],
+    images: ['/notion-dashboard.png'],
   },
 }
 
@@ -105,7 +105,7 @@ export default function NotionCreatorDashboard() {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden border border-brand-gray-dark">
               <img 
-                src="/notion-creator-dashboard.png" 
+                src="/notion-dashboard.png" 
                 alt="Notion Creator Dashboard System" 
                 className="w-full h-auto"
               />

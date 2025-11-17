@@ -81,6 +81,21 @@ export default function CreatorSystemsPage() {
                       </span>
                     </div>
                     
+                    {/* Thumbnail / Cover Image */}
+                    {insight.coverImage ? (
+                      <div className="mb-4 h-32 rounded-lg overflow-hidden">
+                        <img 
+                          src={insight.coverImage} 
+                          alt={insight.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="mb-4 h-32 bg-gradient-to-br from-brand-gold/20 to-brand-gray-dark rounded-lg flex items-center justify-center">
+                        <span className="text-4xl">🎯</span>
+                      </div>
+                    )}
+                    
                     <h2 className="text-xl md:text-2xl font-serif font-bold text-brand-white mb-4 group-hover:text-brand-gold transition-colors">
                       {insight.title}
                     </h2>
@@ -89,9 +104,14 @@ export default function CreatorSystemsPage() {
                       {insight.excerpt}
                     </p>
                     
-                    <div className="flex items-center justify-between text-sm text-brand-gray-muted">
-                      <span>{insight.readTime}</span>
-                      <span>{insight.publishedDate}</span>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4 text-sm text-brand-gray-muted">
+                        <span>{insight.readTime}</span>
+                        <span>{insight.publishedDate}</span>
+                      </div>
+                      <span className="text-brand-gold group-hover:text-brand-gold-dark transition-colors font-medium">
+                        Read →
+                      </span>
                     </div>
                   </article>
                 </Link>
