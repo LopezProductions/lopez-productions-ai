@@ -426,8 +426,110 @@ export default function SolutionsPage() {
             </div>
           </section>
 
-          {/* Section 5 - Final CTA */}
+          {/* Section 5 - What You Get */}
           <section className="py-16 px-6 md:px-12 bg-brand-gray-dark/50">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-4xl font-serif font-bold text-center mb-12 text-gradient"
+              >
+                🚀 What You Get With Lopez Productions
+              </motion.h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Done-for-You Setup",
+                    description: "Websites, workflows, automations"
+                  },
+                  {
+                    title: "Done-with-You Coaching",
+                    description: "Screenshare sessions + templates"
+                  },
+                  {
+                    title: "AI-Powered Systems",
+                    description: "Notion dashboards, automation scripts"
+                  },
+                  {
+                    title: "Creator-Focused Tools",
+                    description: "Publishing workflows & content engines"
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-6 card-hover"
+                  >
+                    <h3 className="text-xl font-serif font-bold text-brand-gold mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-brand-gray-light leading-relaxed">
+                      {item.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Section 6 - Who This Is Best For */}
+          <section className="py-16 px-6 md:px-12">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-4xl font-serif font-bold text-center mb-12 text-gradient"
+              >
+                🧠 Who This Is Best For
+              </motion.h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Creators trying to automate content",
+                    description: "Stop spending hours on repetitive tasks and focus on what you do best."
+                  },
+                  {
+                    title: "Small teams drowning in repetitive work",
+                    description: "Streamline operations without hiring more people or learning complex tools."
+                  },
+                  {
+                    title: "Coaches/consultants needing a simple backend",
+                    description: "Professional systems that handle client intake, scheduling, and follow-ups."
+                  },
+                  {
+                    title: "Solo founders who want to scale without hiring",
+                    description: "Build systems that grow with you, not against you."
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-6 card-hover"
+                  >
+                    <h3 className="text-xl font-serif font-bold text-brand-gold mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-brand-gray-light leading-relaxed">
+                      {item.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Section 7 - Final CTA */}
+          <section className="py-16 px-6 md:px-12">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}

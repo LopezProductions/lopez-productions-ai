@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AI Systems & Automation Solutions | Lopez Productions',
-  description: 'Explore Lopez Productions\' AI systems — from workflow automation to content, brand, and design engines — plus market research that powers it all.',
+  title: 'AI Automation & Workflow Systems for Creators and Small Teams | Lopez Productions',
+  description: 'Build smarter systems without tech overwhelm. Websites, Notion dashboards, and AI-powered workflows for creators, consultants, and small businesses.',
   keywords: [
     'AI workflow systems',
     'content automation engine',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai/solutions',
-    title: 'AI Systems & Automation Solutions | Lopez Productions',
-    description: 'Explore Lopez Productions\' AI systems — from workflow automation to content, brand, and design engines — plus market research that powers it all.',
+    title: 'AI Automation & Workflow Systems for Creators and Small Teams | Lopez Productions',
+    description: 'Build smarter systems without tech overwhelm. Websites, Notion dashboards, and AI-powered workflows for creators, consultants, and small businesses.',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Systems & Automation Solutions | Lopez Productions',
-    description: 'Explore Lopez Productions\' AI systems — from workflow automation to content, brand, and design engines — plus market research that powers it all.',
+    title: 'AI Automation & Workflow Systems for Creators and Small Teams | Lopez Productions',
+    description: 'Build smarter systems without tech overwhelm. Websites, Notion dashboards, and AI-powered workflows for creators, consultants, and small businesses.',
     images: ['/og-image.jpg'],
   },
 }

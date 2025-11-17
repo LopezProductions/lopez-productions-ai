@@ -24,7 +24,8 @@ export const allInsights: Insight[] = [
     excerpt: 'A plain-English guide to automating your business without overthinking it — using simple systems, AI tools, and lightweight workflows that save time every single week.',
     readTime: '12 min read',
     category: 'AI Automation',
-    publishedDate: '2025-11-14'
+    publishedDate: '2025-11-15',
+    coverImage: '/simple-automation.png'
   },
   {
     slug: 'notion-creator-dashboard',
@@ -85,6 +86,15 @@ export const allInsights: Insight[] = [
     category: 'Brand Strategy',
     publishedDate: '2025-11-13',
     coverImage: '/brand-system.png'
+  },
+  {
+    slug: 'ai-prompting-essentials',
+    title: 'AI Prompting Essentials — The Skills Every Creator Needs in 2025',
+    excerpt: 'A practical guide to the core prompting skills that help creators build faster, communicate clearly with AI, and run a smoother content engine.',
+    readTime: '7 min read',
+    category: 'AI Tools',
+    publishedDate: '2025-11-17',
+    coverImage: '/ai-prompting.png'
   }
 ]
 
@@ -97,7 +107,8 @@ export const pillarMappings = {
   ],
   'ai-workflows': [
     'stop-chasing-ai-tools',
-    'content-engine-starter-kit'
+    'content-engine-starter-kit',
+    'ai-prompting-essentials'
   ],
   'automation-systems': [
     'build-simple-business-automation-system',

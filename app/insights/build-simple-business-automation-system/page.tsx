@@ -48,8 +48,8 @@ export default function BuildSimpleBusinessAutomationSystem() {
                 "url": "https://lopezproductions.ai/transparent_logo_lp.png"
               }
             },
-            "datePublished": "2025-11-14",
-            "dateModified": "2025-11-14",
+            "datePublished": "2025-11-15",
+            "dateModified": "2025-11-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://lopezproductions.ai/insights/build-simple-business-automation-system"
@@ -96,9 +96,22 @@ export default function BuildSimpleBusinessAutomationSystem() {
             <div className="flex items-center gap-4 text-sm text-brand-gray-muted">
               <span>By Reuben Lopez</span>
               <span>•</span>
-              <span>November 14, 2025</span>
+              <span>November 15, 2025</span>
               <span>•</span>
               <span>12 min read</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Cover Image */}
+        <section className="py-8 px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="rounded-2xl overflow-hidden border border-brand-gray-dark">
+              <img 
+                src="/simple-automation.png" 
+                alt="Simple Business Automation System" 
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </section>
@@ -593,6 +606,10 @@ export default function BuildSimpleBusinessAutomationSystem() {
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
               If you want the <strong className="text-brand-white">exact setup in this article</strong> built for you — from Notion to buffer to Make — I can do it start-to-finish.
+            </p>
+
+            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
+              If you want me to help build your workflow, visit my <Link href="/solutions" className="text-brand-gold hover:text-brand-gold-dark underline font-semibold">Solutions page</Link>.
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">

@@ -8,6 +8,16 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
+    slug: 'ai-prompting-essentials',
+    title: 'AI Prompting Essentials — The Skills Every Creator Needs in 2025',
+    tag: 'Workflow',
+    excerpt: 'A practical guide to the core prompting skills that help creators build faster, communicate clearly with AI, and run a smoother content engine.',
+    readTime: '7 min read',
+    publishedDate: '2025-11-17',
+    exists: true,
+    coverImage: '/ai-prompting.png'
+  },
+  {
     slug: 'ai-notion-weekly-organization',
     title: 'How I Use AI to Organize My Week Inside Notion',
     tag: 'AI Workflows',

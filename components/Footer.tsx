@@ -22,7 +22,7 @@ const Footer = () => {
             <li className="py-2"><Link href="/insights/creator-systems" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Creator Systems</Link></li>
             <li className="py-2"><Link href="/insights/ai-workflows" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">AI Workflows</Link></li>
             <li className="py-2"><Link href="/insights/automation-systems" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Business Automation</Link></li>
-            <li className="py-2"><Link href="/get-started" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Solutions</Link></li>
+            <li className="py-2"><Link href="/solutions" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Solutions</Link></li>
             <li className="py-2"><Link href="/contact" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Contact</Link></li>
           </ul>
         </div>

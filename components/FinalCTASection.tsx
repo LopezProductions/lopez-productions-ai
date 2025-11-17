@@ -23,6 +23,12 @@ export default function FinalCTASection() {
             Start Your Build
           </button>
           <Link
+            href="/solutions"
+            className="btn-outline"
+          >
+            View Solutions
+          </Link>
+          <Link
             href="/get-started"
             className="btn-outline"
           >

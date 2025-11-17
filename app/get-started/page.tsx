@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import PackageBuilder from '../../components/PackageBuilder'
@@ -55,6 +56,9 @@ export default function GetStartedPage() {
           </h1>
           <p className="text-2xl md:text-3xl font-serif font-bold text-gradient mb-4">
             Start with a package that fits your goals — from AI-powered websites to full brand systems, content engines, and optional light automations.
+          </p>
+          <p className="text-lg text-brand-gray-light mt-6">
+            Want to learn more about our approach? <Link href="/solutions" className="text-brand-gold hover:text-brand-gold-dark underline font-semibold">Visit our Solutions page</Link>.
           </p>
         </div>
       </section>

@@ -8,6 +8,7 @@ import ValuePropsSection from '../components/ValuePropsSection'
 import PackagesSection from '../components/PackagesSection'
 import WhyChooseSection from '../components/WhyChooseSection'
 import FinalCTASection from '../components/FinalCTASection'
+import LatestPosts from '../components/LatestPosts'
 
 // Lazy load below-the-fold sections
 const AboutSection = dynamic(() => import('../components/AboutSection'), {
@@ -66,6 +67,9 @@ export default function Home() {
 
           {/* What I Do / Packages Section */}
           <PackagesSection />
+
+          {/* Latest Posts Section */}
+          <LatestPosts />
 
           {/* Why Choose Section */}
           <WhyChooseSection />

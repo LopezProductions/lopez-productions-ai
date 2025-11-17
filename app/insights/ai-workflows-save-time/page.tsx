@@ -266,7 +266,7 @@ export default function AIWorkflowsSaveTime() {
                 💼 Ready to streamline your SaaS workflows?
               </h3>
               <p className="text-brand-gray-light mb-6 leading-relaxed">
-                Lopez Productions helps SaaS teams design AI systems that reduce project time by 20–30%.
+                Lopez Productions helps SaaS teams design AI systems that reduce project time by 20–30%. If you want me to help build your workflow, visit my <Link href="/solutions" className="text-brand-gold hover:text-brand-gold-dark underline font-semibold">Solutions page</Link>.
               </p>
               <p className="text-brand-gray-light mb-6">
                 👉 <Link href="/intake" className="text-brand-gold hover:text-brand-gold-dark underline">Book a consult</Link> to see how automation can save your team 10+ hours a week. For more automation insights, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
