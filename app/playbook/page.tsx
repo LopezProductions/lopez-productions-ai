@@ -8,6 +8,16 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
+    slug: 'ai-technical-jargon-glossary',
+    title: 'AI Technical Jargon Explained — A Beginner-Friendly Glossary (2025)',
+    tag: 'Glossary',
+    excerpt: 'A simple, practical glossary of common AI and automation terms—like RAG, Chain of Thought, One-Shot Prompting, and Vector Databases—explained in plain English for creators and beginners.',
+    readTime: '8 min read',
+    publishedDate: '2025-11-19',
+    exists: true,
+    coverImage: '/ai-tech-jargon.png'
+  },
+  {
     slug: 'ai-prompting-essentials',
     title: 'AI Prompting Essentials — The Skills Every Creator Needs in 2025',
     tag: 'Workflow',
@@ -127,6 +137,8 @@ const getTagColor = (tag: string) => {
     case 'AI Design Tools':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
     case 'Creator Tools':
+      return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
+    case 'Glossary':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
     default:
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'

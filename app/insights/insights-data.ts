@@ -10,6 +10,24 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'ai-technical-jargon-glossary',
+    title: 'AI Technical Jargon Explained — A Beginner-Friendly Glossary (2025)',
+    excerpt: 'A simple, practical glossary of common AI and automation terms—like RAG, Chain of Thought, One-Shot Prompting, and Vector Databases—explained in plain English for creators and beginners.',
+    readTime: '8 min read',
+    category: 'Glossary',
+    publishedDate: '2025-11-19',
+    coverImage: '/ai-tech-jargon.png'
+  },
+  {
+    slug: 'ai-prompting-essentials',
+    title: 'AI Prompting Essentials — The Skills Every Creator Needs in 2025',
+    excerpt: 'A practical guide to the core prompting skills that help creators build faster, communicate clearly with AI, and run a smoother content engine.',
+    readTime: '7 min read',
+    category: 'AI Tools',
+    publishedDate: '2025-11-17',
+    coverImage: '/ai-prompting.png'
+  },
+  {
     slug: 'ai-notion-weekly-organization',
     title: 'How I Use AI to Organize My Week Inside Notion',
     excerpt: 'A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.',
@@ -86,15 +104,6 @@ export const allInsights: Insight[] = [
     category: 'Brand Strategy',
     publishedDate: '2025-11-13',
     coverImage: '/brand-system.png'
-  },
-  {
-    slug: 'ai-prompting-essentials',
-    title: 'AI Prompting Essentials — The Skills Every Creator Needs in 2025',
-    excerpt: 'A practical guide to the core prompting skills that help creators build faster, communicate clearly with AI, and run a smoother content engine.',
-    readTime: '7 min read',
-    category: 'AI Tools',
-    publishedDate: '2025-11-17',
-    coverImage: '/ai-prompting.png'
   }
 ]
 
@@ -106,6 +115,7 @@ export const pillarMappings = {
     'ai-notion-weekly-organization'
   ],
   'ai-workflows': [
+    'ai-technical-jargon-glossary',
     'stop-chasing-ai-tools',
     'content-engine-starter-kit',
     'ai-prompting-essentials'
