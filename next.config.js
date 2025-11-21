@@ -20,6 +20,22 @@ const nextConfig = {
         destination: '/#about',
         permanent: true,
       },
+      // Redirect non-existent case studies to systems-in-action page
+      {
+        source: '/case-studies/ai-notion-dashboards',
+        destination: '/systems-in-action',
+        permanent: false,
+      },
+      {
+        source: '/case-studies/automation-workflows',
+        destination: '/systems-in-action',
+        permanent: false,
+      },
+      {
+        source: '/case-studies/ai-marketing-systems',
+        destination: '/systems-in-action',
+        permanent: false,
+      },
     ]
   },
 }

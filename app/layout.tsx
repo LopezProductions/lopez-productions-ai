@@ -70,8 +70,6 @@ export default function RootLayout({
         {/* Viewport Meta Tag */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://lopezproductions.ai/" />
         
         {/* Organization Schema */}
         <script

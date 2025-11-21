@@ -82,6 +82,13 @@
 
   <!-- Insight Articles -->
   <url>
+    <loc>https://lopezproductions.ai/insights/ai-technical-jargon-glossary</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://lopezproductions.ai/insights/ai-prompting-essentials</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -176,6 +183,13 @@
   <url>
     <loc>https://lopezproductions.ai/blog/digital-portfolio-vs-portfolio-website</loc>
     <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/blog/design-technical-jargon-explained</loc>
+    <lastmod>2025-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

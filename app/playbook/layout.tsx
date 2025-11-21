@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     'Notion Make Zapier automation',
     'AI design systems',
   ].join(', '),
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook',
+  },
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai/playbook',

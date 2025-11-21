@@ -1,5 +1,6 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
+import type { Metadata } from 'next'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import HomePageClient from '../components/HomePageClient'
@@ -9,6 +10,35 @@ import PackagesSection from '../components/PackagesSection'
 import WhyChooseSection from '../components/WhyChooseSection'
 import FinalCTASection from '../components/FinalCTASection'
 import LatestPosts from '../components/LatestPosts'
+
+export const metadata: Metadata = {
+  title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
+  description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
+  alternates: {
+    canonical: 'https://lopezproductions.ai',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://lopezproductions.ai',
+    siteName: 'Lopez Productions',
+    title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
+    description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Lopez Productions – AI Brand Systems',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
+    description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
+    images: ['/og-image.jpg'],
+  },
+}
 
 // Lazy load below-the-fold sections
 const AboutSection = dynamic(() => import('../components/AboutSection'), {
