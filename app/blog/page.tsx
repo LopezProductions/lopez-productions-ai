@@ -42,6 +42,14 @@ const formatDate = (dateString: string) => {
 
 const blogPosts = [
   {
+    slug: 'design-technical-jargon-explained',
+    title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators',
+    excerpt: 'A simple, practical guide that breaks down essential design terms—aspect ratio, resolution, safe zones, export settings, and common social sizes—so beginners can design clean, professional content without overwhelm.',
+    readTime: '8 min read',
+    category: 'Design',
+    publishedDate: '2025-11-21'
+  },
+  {
     slug: 'how-to-build-a-portfolio-website',
     title: 'How to Build a Portfolio Website That Actually Gets You Clients (2025 Guide)',
     excerpt: 'Learn how to plan, design, and launch a high-converting portfolio website — plus how AI can automate updates and analytics.',

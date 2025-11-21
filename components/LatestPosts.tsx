@@ -32,8 +32,13 @@ export default function LatestPosts() {
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8">
-        {posts.map((post) => (
-          <Link key={post.slug} href={`/insights/${post.slug}`} className="group">
+        {posts.map((post) => {
+          // Check if this is a blog post
+          const isBlogPost = post.slug === 'design-technical-jargon-explained'
+          const href = isBlogPost ? `/blog/${post.slug}` : `/insights/${post.slug}`
+          
+          return (
+          <Link key={post.slug} href={href} className="group">
             <div
               className="
                 rounded-xl overflow-hidden 
@@ -76,9 +81,11 @@ export default function LatestPosts() {
               </div>
             </div>
           </Link>
-        ))}
+          )
+        })}
       </div>
     </section>
   );
 }
+
 

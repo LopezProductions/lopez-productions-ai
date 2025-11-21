@@ -8,6 +8,17 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
+    slug: 'design-technical-jargon-explained',
+    title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators',
+    tag: 'Design',
+    excerpt: 'A simple, practical guide that breaks down essential design terms—aspect ratio, resolution, safe zones, export settings, and common social sizes—so beginners can design clean, professional content without overwhelm.',
+    readTime: '8 min read',
+    publishedDate: '2025-11-21',
+    exists: true,
+    coverImage: '/design-jargon.png',
+    isBlogPost: true
+  },
+  {
     slug: 'ai-technical-jargon-glossary',
     title: 'AI Technical Jargon Explained — A Beginner-Friendly Glossary (2025)',
     tag: 'Glossary',
@@ -135,6 +146,8 @@ const getTagColor = (tag: string) => {
     case 'Content Automation':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
     case 'AI Design Tools':
+      return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
+    case 'Design':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
     case 'Creator Tools':
       return 'bg-brand-gold/10 border-brand-gold/30 text-brand-gold'
@@ -310,7 +323,7 @@ export default function PlaybookPage() {
                 viewport={{ once: true }}
               >
                 <Link
-                  href={article.placeholder ? '#' : `/insights/${article.slug}`}
+                  href={article.placeholder ? '#' : (article.isBlogPost ? `/blog/${article.slug}` : `/insights/${article.slug}`)}
                   className={`group block ${article.placeholder ? 'cursor-not-allowed opacity-75' : ''}`}
                   onClick={article.placeholder ? (e) => e.preventDefault() : undefined}
                 >

@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'design-technical-jargon-explained',
+    title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators',
+    excerpt: 'A simple, practical guide that breaks down essential design terms—aspect ratio, resolution, safe zones, export settings, and common social sizes—so beginners can design clean, professional content without overwhelm.',
+    readTime: '8 min read',
+    category: 'Design',
+    publishedDate: '2025-11-21',
+    coverImage: '/design-jargon.png'
+  },
+  {
     slug: 'ai-technical-jargon-glossary',
     title: 'AI Technical Jargon Explained — A Beginner-Friendly Glossary (2025)',
     excerpt: 'A simple, practical glossary of common AI and automation terms—like RAG, Chain of Thought, One-Shot Prompting, and Vector Databases—explained in plain English for creators and beginners.',
@@ -115,6 +124,7 @@ export const pillarMappings = {
     'ai-notion-weekly-organization'
   ],
   'ai-workflows': [
+    'design-technical-jargon-explained',
     'ai-technical-jargon-glossary',
     'stop-chasing-ai-tools',
     'content-engine-starter-kit',

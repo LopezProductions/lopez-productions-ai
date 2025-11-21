@@ -68,10 +68,15 @@ export default function AIWorkflowsPage() {
         <div className="max-w-6xl mx-auto">
           {pillarPosts.length > 0 ? (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {pillarPosts.map((insight) => (
+              {pillarPosts.map((insight) => {
+                // Check if this is a blog post (design-technical-jargon-explained is a blog post)
+                const isBlogPost = insight.slug === 'design-technical-jargon-explained'
+                const href = isBlogPost ? `/blog/${insight.slug}` : `/insights/${insight.slug}`
+                
+                return (
                 <Link
                   key={insight.slug}
-                  href={`/insights/${insight.slug}`}
+                  href={href}
                   className="group block"
                 >
                   <article className="rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-8 card-hover h-full">
@@ -115,7 +120,8 @@ export default function AIWorkflowsPage() {
                     </div>
                   </article>
                 </Link>
-              ))}
+                )
+              })}
             </div>
           ) : (
             <p className="text-brand-gray-light text-center py-12">
