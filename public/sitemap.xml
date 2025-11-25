@@ -8,7 +8,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://lopezproductions.ai/</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -16,21 +16,21 @@
   <!-- Main Navigation Pages -->
   <url>
     <loc>https://lopezproductions.ai/solutions</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/get-started</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://lopezproductions.ai/pricing</loc>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://lopezproductions.ai/playbook</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,146 +50,151 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Insights Hub -->
+  <!-- Playbook Articles -->
   <url>
-    <loc>https://lopezproductions.ai/insights</loc>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Insight Pillar Pages -->
-  <url>
-    <loc>https://lopezproductions.ai/insights/creator-systems</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://lopezproductions.ai/playbook/creator-systems</loc>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/ai-workflows</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://lopezproductions.ai/playbook/ai-workflows</loc>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/automation-systems</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://lopezproductions.ai/playbook/automation-systems</loc>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Insight Articles -->
   <url>
-    <loc>https://lopezproductions.ai/insights/ai-technical-jargon-glossary</loc>
+    <loc>https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/playbook/ai-technical-jargon-glossary</loc>
     <lastmod>2025-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/ai-prompting-essentials</loc>
+    <loc>https://lopezproductions.ai/playbook/ai-prompting-essentials</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/ai-notion-weekly-organization</loc>
+    <loc>https://lopezproductions.ai/playbook/ai-notion-weekly-organization</loc>
     <lastmod>2025-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/build-simple-business-automation-system</loc>
+    <loc>https://lopezproductions.ai/playbook/build-simple-business-automation-system</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/notion-creator-dashboard</loc>
+    <loc>https://lopezproductions.ai/playbook/notion-creator-dashboard</loc>
     <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/why-your-first-priority-isnt-automation-its-your-brand-system</loc>
+    <loc>https://lopezproductions.ai/playbook/why-your-first-priority-isnt-automation-its-your-brand-system</loc>
     <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/ai-workflows-save-time</loc>
+    <loc>https://lopezproductions.ai/playbook/ai-workflows-save-time</loc>
     <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/stop-chasing-ai-tools</loc>
+    <loc>https://lopezproductions.ai/playbook/stop-chasing-ai-tools</loc>
     <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/content-engine-starter-kit</loc>
+    <loc>https://lopezproductions.ai/playbook/content-engine-starter-kit</loc>
     <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/notion-make-automation-guide</loc>
+    <loc>https://lopezproductions.ai/playbook/notion-make-automation-guide</loc>
     <lastmod>2025-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/insights/creator-automation-systems</loc>
+    <loc>https://lopezproductions.ai/playbook/creator-automation-systems</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog -->
   <url>
-    <loc>https://lopezproductions.ai/blog</loc>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://lopezproductions.ai/blog/how-to-build-a-portfolio-website</loc>
+    <loc>https://lopezproductions.ai/playbook/how-to-build-a-portfolio-website</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/blog/ai-portfolio-builder-vs-traditional</loc>
+    <loc>https://lopezproductions.ai/playbook/ai-portfolio-builder-vs-traditional</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/blog/digital-portfolio-vs-portfolio-website</loc>
+    <loc>https://lopezproductions.ai/playbook/digital-portfolio-vs-portfolio-website</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/blog/design-technical-jargon-explained</loc>
+    <loc>https://lopezproductions.ai/playbook/design-technical-jargon-explained</loc>
     <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About & Contact -->
+  <url>
+    <loc>https://lopezproductions.ai/about</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/contact</loc>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -197,7 +202,7 @@
   <!-- Lead Magnet -->
   <url>
     <loc>https://lopezproductions.ai/free-portfolio-template</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -205,7 +210,7 @@
   <!-- Systems Showcase -->
   <url>
     <loc>https://lopezproductions.ai/systems-in-action</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -213,7 +218,7 @@
   <!-- Case Study -->
   <url>
     <loc>https://lopezproductions.ai/case-studies/nvidia-competitive-edge</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
