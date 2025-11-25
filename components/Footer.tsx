@@ -18,11 +18,12 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-sm md:text-base mb-2 md:mb-3">Explore</h4>
           <ul className="space-y-2 md:space-y-2">
-            <li className="py-2"><Link href="/insights" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Insights</Link></li>
-            <li className="py-2"><Link href="/insights/creator-systems" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Creator Systems</Link></li>
-            <li className="py-2"><Link href="/insights/ai-workflows" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">AI Workflows</Link></li>
-            <li className="py-2"><Link href="/insights/automation-systems" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Business Automation</Link></li>
+            <li className="py-2"><Link href="/" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Home</Link></li>
             <li className="py-2"><Link href="/solutions" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Solutions</Link></li>
+            <li className="py-2"><Link href="/pricing" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Pricing</Link></li>
+            <li className="py-2"><Link href="/templates" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Templates</Link></li>
+            <li className="py-2"><Link href="/playbook" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Playbook</Link></li>
+            <li className="py-2"><Link href="/about" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">About</Link></li>
             <li className="py-2"><Link href="/contact" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Contact</Link></li>
           </ul>
         </div>

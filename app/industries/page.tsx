@@ -154,7 +154,7 @@ export default function IndustriesPage() {
                 <p className="text-sm text-brand-gray-light mb-2">
                   <strong className="text-brand-gold">Related insights:</strong>
                 </p>
-                <Link href="/insights/ai-workflows-save-time" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+                <Link href="/playbook/ai-workflows-save-time" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
                   How AI Workflows Save SaaS Teams 10 Hours a Week →
                 </Link>
               </div>
@@ -198,7 +198,7 @@ export default function IndustriesPage() {
                 <p className="text-sm text-brand-gray-light mb-2">
                   <strong className="text-brand-gold">Related insights:</strong>
                 </p>
-                <Link href="/insights/creator-automation-systems" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+                <Link href="/playbook/creator-automation-systems" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
                   3 Systems Every Creator Should Automate in 2025 →
                 </Link>
               </div>
@@ -242,7 +242,7 @@ export default function IndustriesPage() {
                 <p className="text-sm text-brand-gray-light mb-2">
                   <strong className="text-brand-gold">Related insights:</strong>
                 </p>
-                <Link href="/insights/notion-make-automation-guide" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
+                <Link href="/playbook/notion-make-automation-guide" className="text-brand-gold hover:text-brand-gold-dark text-sm transition-colors">
                   Notion + Make.com: The Ultimate Automation Stack →
                 </Link>
               </div>

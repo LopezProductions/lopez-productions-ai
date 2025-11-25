@@ -2,10 +2,8 @@
 
 import React from 'react'
 import HeroButtons from './HeroButtons'
-import { useModal } from './HomePageClient'
 
 export default function HeroSection() {
-  const { openModal } = useModal()
   return (
     <section className="pt-20 pb-16 px-6 md:px-12 min-h-screen flex items-center justify-center">
       <div className="max-w-6xl mx-auto text-center">
@@ -18,7 +16,7 @@ export default function HeroSection() {
         <p className="text-lg md:text-xl text-brand-gold font-semibold mb-12">
           Launch sharper. Create faster. Stand out everywhere.
         </p>
-        <HeroButtons onOpenModal={openModal} />
+        <HeroButtons />
       </div>
     </section>
   )

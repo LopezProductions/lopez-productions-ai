@@ -147,7 +147,7 @@ function SuccessPageContent() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
-              href="/get-started"
+              href="/pricing"
               className="btn-outline px-8 py-3"
             >
               Build Another Package

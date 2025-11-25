@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { pillarMappings } from '../app/insights/insights-data'
+import { pillarMappings } from '../app/playbook/insights-data'
 
 interface BreadcrumbsProps {
   title: string
@@ -48,7 +48,7 @@ export default function Breadcrumbs({ title, slug }: BreadcrumbsProps) {
   ]
 
   if (pillar) {
-    items.push({ name: pillar.name, href: `/insights/${pillar.path}` })
+    items.push({ name: pillar.name, href: `/playbook/${pillar.path}` })
   }
 
   // For blog posts, add the post title (no link)

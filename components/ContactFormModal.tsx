@@ -11,21 +11,12 @@ interface ContactFormModalProps {
 
 const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-    
-    return () => {
-      document.body.style.overflow = 'unset'
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : 'unset'
+    return () => { document.body.style.overflow = 'unset' }
   }, [isOpen])
 
   const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      onClose()
-    }
+    if (e.target === e.currentTarget) onClose()
   }
 
   return (
@@ -38,24 +29,22 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           onClick={handleBackdropClick}
         >
-          {/* Backdrop */}
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
-          
-          {/* Modal Content */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             className="relative bg-brand-gray-dark rounded-xl border border-brand-gray-dark shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
           >
-            {/* Header */}
+            {/* HEADER */}
             <div className="flex items-center justify-between p-6 border-b border-brand-gray-dark">
               <div>
                 <h2 className="text-2xl font-serif font-bold text-brand-white">
-                  Let's Get You Unstuck
+                  Tell Me What You're Building
                 </h2>
                 <p className="text-brand-gray-light text-sm mt-1">
-                  AI-powered workflows and creative strategies for non-techies who want results — without the overwhelm.
+                  Whether you need a system, a template, or a complete transformation — 
+                  this form helps me understand exactly how to help.
                 </p>
               </div>
               <button
@@ -66,13 +55,14 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
               </button>
             </div>
 
-            {/* Form */}
+            {/* FORM */}
             <form 
-              action="https://formspree.io/f/xldpoywb" 
-              method="POST" 
+              action="https://formspree.io/f/xldpoywb"
+              method="POST"
               className="p-6 space-y-6"
             >
               <input type="hidden" name="_next" value="https://lopezproductions.ai/thank-you" />
+
               {/* Full Name */}
               <div>
                 <label className="block text-brand-white text-sm font-medium mb-2">
@@ -82,7 +72,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
                   type="text"
                   name="name"
                   required
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold focus:outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition"
                   placeholder="Your full name"
                 />
               </div>
@@ -96,41 +86,47 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
                   type="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold focus:outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition"
                   placeholder="your.email@example.com"
                 />
               </div>
 
-              {/* Current Focus */}
+              {/* Primary Focus */}
               <div>
                 <label className="block text-brand-white text-sm font-medium mb-2">
-                  What best describes your current focus? *
+                  What are you trying to achieve right now? *
                 </label>
                 <select
                   name="focus"
                   required
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold focus:outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
                 >
                   <option value="" disabled selected>Choose one</option>
-                  <option value="Starting a business">Starting a business</option>
-                  <option value="Growing my brand">Growing my brand</option>
-                  <option value="Building systems/workflows">Building systems/workflows</option>
-                  <option value="Launching a product or service">Launching a product or service</option>
-                  <option value="Just exploring options">Just exploring options</option>
+                  <option value="Launch or improve my website">Launch or improve my website</option>
+                  <option value="Set up a professional brand system">Set up a professional brand system</option>
+                  <option value="Build a content engine (Notion + AI)">Build a content engine (Notion + AI)</option>
+                  <option value="Customize a template from your library">Customize a template from your library</option>
+                  <option value="Automate or organize my workflow">Automate or organize my workflow</option>
+                  <option value="Get clarity and a plan">Get clarity and a plan</option>
+                  <option value="Not sure yet — exploring options">Not sure yet — exploring options</option>
                 </select>
               </div>
 
-              {/* Help Needed */}
+              {/* Help Needed — Updated */}
               <div>
                 <label className="block text-brand-white text-sm font-medium mb-3">
-                  What kind of help are you looking for?
+                  What do you need help with?
                 </label>
+
                 <div className="space-y-2">
                   {[
-                    'Custom landing page',
-                    'Content strategy',
+                    'Website template (Next.js)',
+                    'Portfolio or landing page',
+                    'Brand blueprint + identity system',
+                    'Notion dashboard setup',
+                    'Content engine (AI-assisted)',
                     'Workflow automation',
-                    'Marketing audit',
+                    'Custom template build',
                     'Something else'
                   ].map((option) => (
                     <label key={option} className="flex items-center space-x-3 cursor-pointer">
@@ -138,7 +134,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
                         type="checkbox"
                         name="help[]"
                         value={option}
-                        className="w-4 h-4 text-brand-gold bg-brand-black border-brand-gray-dark rounded focus:ring-brand-gold focus:ring-2"
+                        className="w-4 h-4 text-brand-gold bg-brand-black border-brand-gray-dark rounded focus:ring-brand-gold"
                       />
                       <span className="text-brand-gray-light text-sm">{option}</span>
                     </label>
@@ -149,30 +145,31 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
               {/* Description */}
               <div>
                 <label className="block text-brand-white text-sm font-medium mb-2">
-                  Briefly describe your current situation or challenge
+                  Describe what you're trying to build
                 </label>
                 <textarea
                   name="description"
                   rows={4}
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold focus:outline-none transition-colors duration-200 resize-none"
-                  placeholder="Tell me about your current situation, challenges, or what you're hoping to achieve..."
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition resize-none"
+                  placeholder="Tell me as much or as little as you'd like..."
                 />
               </div>
 
               {/* Timeline */}
               <div>
                 <label className="block text-brand-white text-sm font-medium mb-2">
-                  What's your timeline? *
+                  Timeline *
                 </label>
                 <select
                   name="timeline"
                   required
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold focus:outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
                 >
                   <option value="" disabled selected>Choose one</option>
-                  <option value="ASAP (this week)">ASAP (this week)</option>
-                  <option value="Within 2 weeks">Within 2 weeks</option>
+                  <option value="ASAP">ASAP</option>
+                  <option value="Within 1–2 weeks">Within 1–2 weeks</option>
                   <option value="This month">This month</option>
+                  <option value="Flexible">Flexible</option>
                   <option value="Just exploring">Just exploring</option>
                 </select>
               </div>
@@ -184,14 +181,14 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
                 </label>
                 <select
                   name="budget"
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold focus:outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
                 >
                   <option value="" disabled selected>Choose one</option>
                   <option value="$100–$300">$100–$300</option>
                   <option value="$300–$750">$300–$750</option>
                   <option value="$750–$1,500">$750–$1,500</option>
                   <option value="Over $1,500">Over $1,500</option>
-                  <option value="Not sure yet">Not sure yet</option>
+                  <option value="Not sure">Not sure</option>
                 </select>
               </div>
 
@@ -203,18 +200,18 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
                 <input
                   type="text"
                   name="referral"
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold focus:outline-none transition-colors duration-200"
-                  placeholder="Social media, referral, search, etc."
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition"
+                  placeholder="Social media, search, referral, etc."
                 />
               </div>
 
-              {/* Submit Button */}
+              {/* Submit */}
               <div className="pt-4">
                 <button
                   type="submit"
                   className="w-full btn-primary py-3 text-lg font-medium"
                 >
-                  Submit Consultation Request
+                  Submit Request
                 </button>
               </div>
             </form>

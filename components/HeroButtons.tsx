@@ -3,27 +3,24 @@
 import React from 'react'
 import Link from 'next/link'
 
-interface HeroButtonsProps {
-  onOpenModal: () => void
-}
-
-export default function HeroButtons({ onOpenModal }: HeroButtonsProps) {
+export default function HeroButtons() {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <button
-        onPointerDown={onOpenModal}
+      <Link
+        href="/solutions"
         className="btn-primary"
       >
-        Get Started
-      </button>
+        View Solutions
+      </Link>
       <Link
-        href="/get-started"
+        href="/templates"
         className="btn-outline"
       >
-        Browse Packages
+        Browse Templates
       </Link>
     </div>
   )
 }
+
 
 

@@ -142,10 +142,10 @@ function IntakePageContent() {
               {error || 'Unable to load session data. Please contact support.'}
             </p>
             <a
-              href="/get-started"
+              href="/pricing"
               className="btn-primary px-8 py-3 inline-block"
             >
-              Return to Get Started
+              Return to Pricing
             </a>
           </div>
         </section>

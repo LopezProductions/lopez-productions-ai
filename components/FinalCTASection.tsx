@@ -29,10 +29,10 @@ export default function FinalCTASection() {
             View Solutions
           </Link>
           <Link
-            href="/get-started"
+            href="/pricing"
             className="btn-outline"
           >
-            View Packages
+            View Pricing
           </Link>
         </div>
       </div>

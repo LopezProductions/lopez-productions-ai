@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { allInsights } from "@/app/insights/insights-data";
+import { allInsights } from "@/app/playbook/insights-data";
 
 interface InsightPost {
   slug: string;
@@ -35,7 +35,7 @@ export default function LatestPosts() {
         {posts.map((post) => {
           // Check if this is a blog post
           const isBlogPost = post.slug === 'design-technical-jargon-explained'
-          const href = isBlogPost ? `/blog/${post.slug}` : `/insights/${post.slug}`
+          const href = isBlogPost ? `/playbook/${post.slug}` : `/playbook/${post.slug}`
           
           return (
           <Link key={post.slug} href={href} className="group">

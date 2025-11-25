@@ -1,12 +1,13 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import HomePageClient from '../components/HomePageClient'
 import HeroSection from '../components/HeroSection'
-import ValuePropsSection from '../components/ValuePropsSection'
-import PackagesSection from '../components/PackagesSection'
+import PillarsSection from '../components/PillarsSection'
+import TemplatesPreviewSection from '../components/TemplatesPreviewSection'
 import WhyChooseSection from '../components/WhyChooseSection'
 import FinalCTASection from '../components/FinalCTASection'
 import LatestPosts from '../components/LatestPosts'
@@ -46,11 +47,6 @@ const AboutSection = dynamic(() => import('../components/AboutSection'), {
   loading: () => null,
 })
 
-const RecentWorkSection = dynamic(() => import('../components/RecentWorkSection'), {
-  ssr: false,
-  loading: () => null,
-})
-
 const HowItWorksSection = dynamic(() => import('../components/HowItWorksSection'), {
   ssr: false,
   loading: () => null,
@@ -62,9 +58,21 @@ const FAQSection = dynamic(() => import('../components/FAQSection'), {
 })
 
 export default function Home() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': ['WebSite', 'WebPage'],
+    name: 'Lopez Productions',
+    url: 'https://lopezproductions.ai',
+    description: 'AI-powered systems, templates, and workflows for creators, founders, and small businesses.',
+  }
+
   return (
     <HomePageClient>
       <main className="min-h-screen bg-brand-black relative overflow-x-hidden">
+        <Script id="lp-home-schema" type="application/ld+json">
+          {JSON.stringify(schema)}
+        </Script>
+
         {/* Background with logo - very dark silhouette */}
         <div 
           className="fixed inset-0 bg-cover bg-center bg-no-repeat"
@@ -92,11 +100,11 @@ export default function Home() {
           {/* Hero Section */}
           <HeroSection />
 
-          {/* Value Props Section */}
-          <ValuePropsSection />
+          {/* What I Build (3 Pillars) */}
+          <PillarsSection />
 
-          {/* What I Do / Packages Section */}
-          <PackagesSection />
+          {/* Templates Preview Section */}
+          <TemplatesPreviewSection />
 
           {/* Latest Posts Section */}
           <LatestPosts />
@@ -106,9 +114,6 @@ export default function Home() {
 
           {/* About Section - Lazy Loaded */}
           <AboutSection />
-
-          {/* Recent Work Section - Lazy Loaded */}
-          <RecentWorkSection />
 
           {/* How It Works Section - Lazy Loaded */}
           <HowItWorksSection />

@@ -136,7 +136,7 @@ export async function POST(request: NextRequest) {
       line_items: lineItems,
       mode: 'payment',
       success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${baseUrl}/get-started`,
+      cancel_url: `${baseUrl}/pricing`,
       metadata: {
         selectedServiceIds: JSON.stringify(selectedServiceIds),
         bundleIds: JSON.stringify(bundleIds),

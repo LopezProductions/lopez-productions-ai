@@ -16,8 +16,23 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/about',
-        destination: '/#about',
+        source: '/insights/:path*',
+        destination: '/playbook/:path*',
+        permanent: true,
+      },
+      {
+        source: '/blog',
+        destination: '/playbook',
+        permanent: true,
+      },
+      {
+        source: '/blog/:path*',
+        destination: '/playbook/:path*',
+        permanent: true,
+      },
+      {
+        source: '/get-started',
+        destination: '/pricing',
         permanent: true,
       },
       // Redirect non-existent case studies to systems-in-action page

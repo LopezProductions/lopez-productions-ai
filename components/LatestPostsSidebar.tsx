@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { allInsights } from "@/app/insights/insights-data";
+import { allInsights } from "@/app/playbook/insights-data";
 
 interface InsightPost {
   slug: string;
@@ -31,7 +31,7 @@ export default function LatestPostsSidebar() {
 
       <div className="space-y-5">
         {posts.map((post) => (
-          <Link key={post.slug} href={`/insights/${post.slug}`} className="block group">
+          <Link key={post.slug} href={`/playbook/${post.slug}`} className="block group">
             <div
               className="
                 bg-[#0B0B0B]
@@ -56,4 +56,5 @@ export default function LatestPostsSidebar() {
     </aside>
   );
 }
+
 
