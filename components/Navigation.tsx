@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
+  const [isSolutionsMobileOpen, setIsSolutionsMobileOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
 
@@ -40,16 +42,25 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/solutions', label: 'Solutions' },
+    { href: '/templates', label: 'Templates' },
     { href: '/playbook', label: 'Playbook' },
-    { href: '/get-started', label: 'Get Started' },
-    { href: '/#about', label: 'About' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
   ]
+
+  const solutionsSubItems = [
+    { href: '/solutions', label: 'Solutions Overview' },
+    { href: '/pricing', label: 'Pricing' },
+  ]
+
+  // Check if current path is Solutions or Pricing
+  const isSolutionsActive = pathname === '/solutions' || pathname === '/pricing'
 
   const handleNavClick = (href: string, e: React.MouseEvent) => {
     e.preventDefault()
     setIsOpen(false)
+    setIsSolutionsOpen(false)
+    setIsSolutionsMobileOpen(false)
     
     if (href.includes('#')) {
       // Handle anchor links
@@ -94,6 +105,24 @@ const Navigation = () => {
     }
   }
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (!target.closest('.solutions-dropdown')) {
+        setIsSolutionsOpen(false)
+      }
+    }
+
+    if (isSolutionsOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isSolutionsOpen])
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
@@ -121,17 +150,88 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
+              {/* Home */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0 }}
+              >
+                <Link
+                  href="/"
+                  onClick={(e) => handleNavClick('/', e)}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group block ${
+                    pathname === '/' ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                  }`}
+                >
+                  Home
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </motion.div>
+
+              {/* Solutions Dropdown */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="relative solutions-dropdown"
+                onMouseEnter={() => setIsSolutionsOpen(true)}
+                onMouseLeave={() => setIsSolutionsOpen(false)}
+              >
+                <button
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group flex items-center gap-1 ${
+                    isSolutionsActive ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                  }`}
+                >
+                  Solutions
+                  <ChevronDown 
+                    size={16} 
+                    className={`transition-transform duration-200 ${isSolutionsOpen ? 'rotate-180' : ''}`}
+                  />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </button>
+
+                <AnimatePresence>
+                  {isSolutionsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-1 w-48 bg-brand-gray-dark border border-brand-gray-dark rounded-lg shadow-lg overflow-hidden z-50"
+                    >
+                      {solutionsSubItems.map((subItem) => (
+                        <Link
+                          key={subItem.href}
+                          href={subItem.href}
+                          onClick={(e) => handleNavClick(subItem.href, e)}
+                          className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                            pathname === subItem.href
+                              ? 'text-brand-gold bg-brand-black/50'
+                              : 'text-brand-gray-light hover:text-brand-gold hover:bg-brand-black/30'
+                          }`}
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+
+              {/* Other Nav Items */}
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: (index + 2) * 0.1 }}
                 >
                   <Link
                     href={item.href}
                     onClick={(e) => handleNavClick(item.href, e)}
-                    className="text-brand-gray-light hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group block"
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group block ${
+                      pathname === item.href ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                    }`}
                   >
                     {item.label}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
@@ -163,17 +263,82 @@ const Navigation = () => {
             className="md:hidden bg-brand-gray-dark/95 backdrop-blur-md border-t border-brand-gray-dark"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
+              {/* Home */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0 }}
+              >
+                <Link
+                  href="/"
+                  onClick={(e) => handleNavClick('/', e)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                    pathname === '/' ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                  }`}
+                >
+                  Home
+                </Link>
+              </motion.div>
+
+              {/* Solutions with Dropdown */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                <button
+                  onClick={() => setIsSolutionsMobileOpen(!isSolutionsMobileOpen)}
+                  className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                    isSolutionsActive ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                  }`}
+                >
+                  Solutions
+                  <ChevronDown 
+                    size={20} 
+                    className={`transition-transform duration-200 ${isSolutionsMobileOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {isSolutionsMobileOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="pl-4 space-y-1"
+                    >
+                      {solutionsSubItems.map((subItem) => (
+                        <Link
+                          key={subItem.href}
+                          href={subItem.href}
+                          onClick={(e) => handleNavClick(subItem.href, e)}
+                          className={`block px-3 py-2 rounded-md text-sm transition-colors duration-200 ${
+                            pathname === subItem.href
+                              ? 'text-brand-gold'
+                              : 'text-brand-gray-light hover:text-brand-gold'
+                          }`}
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+
+              {/* Other Nav Items */}
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: (index + 2) * 0.1 }}
                 >
                   <Link
                     href={item.href}
                     onClick={(e) => handleNavClick(item.href, e)}
-                    className="text-brand-gray-light hover:text-brand-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                      pathname === item.href ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                    }`}
                   >
                     {item.label}
                   </Link>
