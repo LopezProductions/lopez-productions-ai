@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'why-llms-perform-better-in-italian-french-and-polish-than-in-english',
+    title: 'Why LLMs Perform Better in Italian, French, and Polish Than in English',
+    excerpt: 'New multilingual AI research shows that Romance and Slavic languages outperform English in long-context reasoning. Here\'s why fusional morphology and information-dense grammar give LLMs clearer signals and higher accuracy.',
+    readTime: '10 min read',
+    category: 'AI',
+    publishedDate: '2025-11-25',
+    coverImage: '/why-llms.png'
+  },
+  {
     slug: 'nano-banana-pro-vs-gpt-5-1',
     title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?',
     excerpt: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
