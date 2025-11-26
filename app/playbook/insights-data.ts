@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'zapiers-npm-account-hacked',
+    title: 'Zapier’s NPM Account Hacked — Should You Be Worried About Your Automations?',
+    excerpt: 'Zapier’s NPM account was breached and several packages shipped self-propagating malware—but unless you write custom JS integrations, your everyday automations are outside the blast radius.',
+    readTime: '9 min read',
+    category: 'Security',
+    publishedDate: '2025-11-26',
+    coverImage: '/zapier-breach.png'
+  },
+  {
     slug: 'why-llms-perform-better-in-italian-french-and-polish-than-in-english',
     title: 'Why LLMs Perform Better in Italian, French, and Polish Than in English',
     excerpt: 'New multilingual AI research shows that Romance and Slavic languages outperform English in long-context reasoning. Here\'s why fusional morphology and information-dense grammar give LLMs clearer signals and higher accuracy.',

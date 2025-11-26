@@ -5,14 +5,31 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // INDUSTRIES → SOLUTIONS full redirect cascade
       {
         source: '/industries',
         destination: '/solutions',
         permanent: true,
       },
       {
+        source: '/industries/:slug',
+        destination: '/solutions/:slug',
+        permanent: true,
+      },
+      {
+        source: '/industries/:path*',
+        destination: '/solutions',
+        permanent: true,
+      },
+      // Redirect entire Insights section to Playbook
+      {
         source: '/insights',
         destination: '/playbook',
+        permanent: true,
+      },
+      {
+        source: '/insights/:slug',
+        destination: '/playbook/:slug',
         permanent: true,
       },
       {
@@ -20,14 +37,21 @@ const nextConfig = {
         destination: '/playbook/:path*',
         permanent: true,
       },
+      // Redirect any old Blog structure
       {
         source: '/blog',
         destination: '/playbook',
         permanent: true,
       },
       {
+        source: '/blog/:slug',
+        destination: '/playbook/:slug',
+        permanent: true,
+      },
+      // Catch-all for anything left
+      {
         source: '/blog/:path*',
-        destination: '/playbook/:path*',
+        destination: '/playbook',
         permanent: true,
       },
       {
