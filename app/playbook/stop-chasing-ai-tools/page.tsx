@@ -70,7 +70,7 @@ export default function StopChasingAITools() {
             />
             
             <div className="mb-6">
-              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
               </Link>
             </div>
@@ -288,7 +288,7 @@ export default function StopChasingAITools() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              The people who win with AI aren't the ones who try everything — they're the ones who execute consistently with what works. For more insights on AI tools and workflows, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
+              The people who win with AI aren't the ones who try everything — they're the ones who execute consistently with what works. For more insights on AI tools and workflows, explore <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
@@ -352,7 +352,7 @@ export default function StopChasingAITools() {
                 <Link href="/intake" className="btn-primary">
                   Book a Free Consult
                 </Link>
-                <Link href="/insights" className="btn-outline">
+                <Link href="/playbook" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

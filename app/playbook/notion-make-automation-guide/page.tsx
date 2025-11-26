@@ -70,7 +70,7 @@ export default function NotionMakeAutomationGuide() {
             />
             
             <div className="mb-6">
-              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
               </Link>
             </div>
@@ -429,13 +429,13 @@ export default function NotionMakeAutomationGuide() {
                 Ready to automate your freelancer workflow?
               </h3>
               <p className="text-brand-gray-light mb-6">
-                Get a free setup consultation and custom Notion + Make.com automation for your business. For more automation insights, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
+                Get a free setup consultation and custom Notion + Make.com automation for your business. For more automation insights, explore <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/solutions" className="btn-primary">
                   Book a Free Setup Consultation
                 </Link>
-                <Link href="/insights" className="btn-outline">
+                <Link href="/playbook" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

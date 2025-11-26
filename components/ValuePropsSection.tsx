@@ -28,7 +28,7 @@ const ValuePropsSection = React.memo(function ValuePropsSection() {
           What Makes Us Different
         </h2>
         <p className="text-center text-brand-gray-light mb-8">
-          Learn more about our approach in our <Link href="/insights" className="text-brand-gold hover:underline">insights</Link> or <Link href="/playbook" className="text-brand-gold hover:underline">explore our playbook</Link>.
+          Learn more about our approach in our <Link href="/playbook" className="text-brand-gold hover:underline">insights</Link> or <Link href="/playbook" className="text-brand-gold hover:underline">explore our playbook</Link>.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           {props.map((prop, index) => (

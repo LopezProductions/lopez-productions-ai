@@ -70,7 +70,7 @@ export default function ContentEngineStarterKit() {
             />
             
             <div className="mb-6">
-              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
               </Link>
             </div>
@@ -282,7 +282,7 @@ export default function ContentEngineStarterKit() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-8 leading-relaxed">
-              Thanks for reading — and remember: <strong className="text-brand-white">build once, automate forever.</strong> For more insights on AI tools and workflows, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
+              Thanks for reading — and remember: <strong className="text-brand-white">build once, automate forever.</strong> For more insights on AI tools and workflows, explore <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
             </p>
 
             <div className="mt-12 p-6 bg-brand-gray-dark/50 rounded-xl border border-brand-gray-dark">
@@ -306,7 +306,7 @@ export default function ContentEngineStarterKit() {
                 <Link href="/solutions" className="btn-primary">
                   Book a Free System Audit
                 </Link>
-                <Link href="/insights" className="btn-outline">
+                <Link href="/playbook" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

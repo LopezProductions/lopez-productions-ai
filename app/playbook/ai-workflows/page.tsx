@@ -44,7 +44,7 @@ export default function AIWorkflowsPage() {
           />
           
           <div className="mb-6">
-            <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+            <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
               ← Back to Insights
             </Link>
           </div>
@@ -160,7 +160,7 @@ export default function AIWorkflowsPage() {
             Explore all articles in the Insights hub.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/insights" className="btn-primary">
+            <Link href="/playbook" className="btn-primary">
               Explore All Insights
             </Link>
           </div>

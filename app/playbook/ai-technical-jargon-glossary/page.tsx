@@ -70,7 +70,7 @@ export default function AITechnicalJargonGlossary() {
             />
             
             <div className="mb-6">
-              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
               </Link>
             </div>
@@ -563,7 +563,7 @@ export default function AITechnicalJargonGlossary() {
                 <Link href="/solutions" className="btn-primary">
                   Book a Free System Audit
                 </Link>
-                <Link href="/insights" className="btn-outline">
+                <Link href="/playbook" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

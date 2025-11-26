@@ -70,7 +70,7 @@ export default function AINotionWeeklyOrganization() {
             />
             
             <div className="mb-6">
-              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
               </Link>
             </div>
@@ -381,7 +381,7 @@ export default function AINotionWeeklyOrganization() {
                 <Link href="/pricing" className="btn-primary">
                   View Pricing
                 </Link>
-                <Link href="/insights" className="btn-outline">
+                <Link href="/playbook" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

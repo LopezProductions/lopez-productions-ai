@@ -71,7 +71,7 @@ export default function NotionCreatorDashboard() {
             />
             
             <div className="mb-6">
-              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
               </Link>
             </div>
@@ -467,7 +467,7 @@ export default function NotionCreatorDashboard() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              This is what most creators <em>actually</em> need before trying to automate anything else. For more insights on building creator systems, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our automation and workflow guides</Link>.
+              This is what most creators <em>actually</em> need before trying to automate anything else. For more insights on building creator systems, explore <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark underline">all our automation and workflow guides</Link>.
             </p>
 
             {/* Email Form Component */}

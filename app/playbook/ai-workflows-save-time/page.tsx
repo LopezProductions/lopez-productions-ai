@@ -70,7 +70,7 @@ export default function AIWorkflowsSaveTime() {
             />
             
             <div className="mb-6">
-              <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
                 ← Back to Insights
               </Link>
             </div>
@@ -269,7 +269,7 @@ export default function AIWorkflowsSaveTime() {
                 Lopez Productions helps SaaS teams design AI systems that reduce project time by 20–30%. If you want me to help build your workflow, visit my <Link href="/solutions" className="text-brand-gold hover:text-brand-gold-dark underline font-semibold">Solutions page</Link>.
               </p>
               <p className="text-brand-gray-light mb-6">
-                👉 <Link href="/intake" className="text-brand-gold hover:text-brand-gold-dark underline">Book a consult</Link> to see how automation can save your team 10+ hours a week. For more automation insights, explore <Link href="/insights" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
+                👉 <Link href="/intake" className="text-brand-gold hover:text-brand-gold-dark underline">Book a consult</Link> to see how automation can save your team 10+ hours a week. For more automation insights, explore <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark underline">all our guides</Link>.
               </p>
             </div>
 
@@ -285,7 +285,7 @@ export default function AIWorkflowsSaveTime() {
                 <Link href="/solutions" className="btn-primary">
                   Book a Free System Audit
                 </Link>
-                <Link href="/insights" className="btn-outline">
+                <Link href="/playbook" className="btn-outline">
                   Read More Insights
                 </Link>
               </div>

@@ -44,7 +44,7 @@ export default function Breadcrumbs({ title, slug }: BreadcrumbsProps) {
   // Build breadcrumb items
   const items: Array<{ name: string; href: string | null }> = [
     { name: 'Home', href: '/' },
-    { name: 'Insights', href: '/insights' },
+    { name: 'Playbook', href: '/playbook' },
   ]
 
   if (pillar) {
