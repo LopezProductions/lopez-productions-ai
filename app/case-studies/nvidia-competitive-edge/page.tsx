@@ -280,8 +280,8 @@ export default function NvidiaCaseStudy() {
               >
                 Book My Free Audit
               </button>
-              <a href="/industries" className="btn-outline">
-                View Industries
+              <a href="/solutions" className="btn-outline">
+                View Solutions
               </a>
             </div>
           </div>
