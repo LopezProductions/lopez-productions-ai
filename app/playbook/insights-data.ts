@@ -15,7 +15,7 @@ export const allInsights: Insight[] = [
     excerpt: 'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
     readTime: '9 min read',
     category: 'AI Workflows',
-    publishedDate: '2025-11-25',
+    publishedDate: '2025-11-27',
     coverImage: '/how-to-brand-images.png',
   },
   {

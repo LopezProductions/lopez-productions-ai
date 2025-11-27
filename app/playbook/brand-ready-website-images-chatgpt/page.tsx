@@ -54,8 +54,8 @@ export default function BrandReadyWebsiteImages() {
                 url: 'https://lopezproductions.ai/transparent_logo_lp.png',
               },
             },
-            datePublished: '2025-11-25',
-            dateModified: '2025-11-25',
+    datePublished: '2025-11-27',
+    dateModified: '2025-11-27',
             mainEntityOfPage: {
               '@type': 'WebPage',
               '@id': 'https://lopezproductions.ai/playbook/brand-ready-website-images-chatgpt',
@@ -100,7 +100,7 @@ export default function BrandReadyWebsiteImages() {
             <div className="flex flex-wrap items-center gap-4 text-sm text-brand-gray-muted">
               <span>By Reuben Lopez</span>
               <span>•</span>
-              <span>November 25, 2025</span>
+              <span>November 27, 2025</span>
               <span>•</span>
               <span>9 min read</span>
             </div>
