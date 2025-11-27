@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'brand-ready-website-images-chatgpt',
+    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT',
+    excerpt: 'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
+    readTime: '9 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-11-25',
+    coverImage: '/og/ai-brand-ready-images.png',
+  },
+  {
     slug: 'zapiers-npm-account-hacked',
     title: 'Zapier’s NPM Account Hacked — Should You Be Worried About Your Automations?',
     excerpt: 'Zapier’s NPM account was breached and several packages shipped self-propagating malware—but unless you write custom JS integrations, your everyday automations are outside the blast radius.',
