@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT',
     description:
       'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
-    images: ['/og/ai-brand-ready-images.png'],
+    images: ['/how-to-brand-images.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT',
     description:
       'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
-    images: ['/og/ai-brand-ready-images.png'],
+    images: ['/how-to-brand-images.png'],
   },
 }
 
@@ -112,7 +112,7 @@ export default function BrandReadyWebsiteImages() {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden border border-brand-gray-dark shadow-[0_0_45px_rgba(0,0,0,0.45)]">
               <img
-                src="/og/ai-brand-ready-images.png"
+                src="/how-to-brand-images.png"
                 alt="Abstract beige and charcoal hero background"
                 className="w-full h-auto"
               />

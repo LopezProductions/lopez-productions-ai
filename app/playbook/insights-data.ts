@@ -16,7 +16,7 @@ export const allInsights: Insight[] = [
     readTime: '9 min read',
     category: 'AI Workflows',
     publishedDate: '2025-11-25',
-    coverImage: '/og/ai-brand-ready-images.png',
+    coverImage: '/how-to-brand-images.png',
   },
   {
     slug: 'zapiers-npm-account-hacked',
