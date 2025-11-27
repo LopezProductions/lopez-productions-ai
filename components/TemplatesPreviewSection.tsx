@@ -32,7 +32,7 @@ const TemplatesPreviewSection = React.memo(function TemplatesPreviewSection() {
               Templates You Can Use Today
             </h2>
             <p className="text-sm text-brand-gray-light max-w-xl">
-              Pre-built systems for portfolios, content engines, and simple automations — designed so you can plug in your brand and launch fast.
+              Pre-built, production-ready templates for portfolios, content engines, and simple automations — designed so you can plug in your brand and launch fast.
             </p>
           </div>
           <Link

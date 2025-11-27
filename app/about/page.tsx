@@ -67,11 +67,10 @@ export default function AboutPage() {
               </h1>
 
               <p className="text-lg text-brand-gray-light mb-12 leading-relaxed max-w-3xl">
-                Lopez Productions is a modern AI-driven studio built for creators,
-                founders, and small businesses who don&apos;t want complexity — just clean
-                systems, sharp design, and consistent output. This isn&apos;t a corporate
-                agency. It&apos;s a creator-led operation focused on clarity, speed, and
-                execution.
+                Lopez Productions is led by Reuben Lopez — a creator, marketing strategist, and AI systems designer who builds clean, professional digital identities for creators, founders, and small businesses.
+              </p>
+              <p className="text-lg text-brand-gray-light mb-12 leading-relaxed max-w-3xl">
+                This is not a corporate agency. It’s a creator-driven studio focused on clarity, speed, and execution — without the complexity or overhead.
               </p>
 
               {/* Section: The Mission */}
@@ -80,12 +79,26 @@ export default function AboutPage() {
                   The Mission
                 </h2>
                 <p className="text-lg text-brand-gray-light leading-relaxed">
-                  The goal is simple: help people build a professional digital identity,
-                  stay organized with clean workflows, and create more content with less
-                  effort. Modern branding isn&apos;t just visuals — it&apos;s systems,
-                  storytelling, consistency, and the ability to execute daily without
-                  burning out.
+                  The mission is simple: help people build a professional digital identity, stay organized with clean workflows, and create more content with less effort.
                 </p>
+                <div className="mt-6 space-y-3 text-lg text-brand-gray-light">
+                  <p>Modern branding is no longer just visuals. It&apos;s:</p>
+                  <ul className="space-y-2">
+                    <li className="flex gap-2">
+                      <span className="text-brand-gold">•</span> Systems that remove friction
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-brand-gold">•</span> Workflows that support consistency
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-brand-gold">•</span> Content processes that scale your output
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-brand-gold">•</span> A portfolio that looks credible from day one
+                    </li>
+                  </ul>
+                  <p>You don&apos;t need more apps. You need systems that make overwhelm obsolete.</p>
+                </div>
               </section>
 
               {/* Section: What Lopez Productions Actually Builds */}
@@ -100,10 +113,10 @@ export default function AboutPage() {
                       AI Systems & Workflows
                     </h3>
                     <p className="text-brand-gray-light">
-                      Structure, clarity, and simplicity — operational systems built in
-                      Notion, supported by AI workflows for drafting, publishing, and
-                      planning. Designed for creators who want less chaos and more
-                      momentum.
+                      AI Systems &amp; Workflows are operational structures built in Notion and powered by automation. These systems draft content, organize tasks, support onboarding, and eliminate repetitive admin so you can stay focused on the work that matters.
+                    </p>
+                    <p className="text-brand-gray-light mt-3">
+                      Designed for creators who want less chaos and more momentum.
                     </p>
                   </div>
 
@@ -112,9 +125,10 @@ export default function AboutPage() {
                       Website & Portfolio Templates
                     </h3>
                     <p className="text-brand-gray-light">
-                      Modern, minimal, fast-loading website templates built on Next.js +
-                      Tailwind. Perfect for creators and small brands needing a clean,
-                      professional presence without the agency price tag.
+                      Premium Vite and Next.js templates that load fast, look professional, and are simple to customize. Perfect for creators and small brands who need a credible digital presence without the agency price tag or development backlog.
+                    </p>
+                    <p className="text-brand-gray-light mt-3">
+                      Launch your site in 48 hours — not 3 months.
                     </p>
                   </div>
 
@@ -123,10 +137,10 @@ export default function AboutPage() {
                       Content Engines
                     </h3>
                     <p className="text-brand-gray-light">
-                      Repeatable content workflows that blend AI and structure. These
-                      systems help creators avoid blank-page syndrome and stay
-                      consistent across X, Instagram, TikTok, YouTube, and long-form
-                      content.
+                      Repeatable content systems that blend AI, structure, and scheduling automation. Turn one idea into 30+ posts across X, Instagram, TikTok, YouTube, and LinkedIn — without the blank-page stress or hours of writing.
+                    </p>
+                    <p className="text-brand-gray-light mt-3">
+                      Consistency becomes effortless.
                     </p>
                   </div>
                 </div>
@@ -139,28 +153,21 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="text-lg text-brand-gray-light leading-relaxed mb-6">
-                  This studio isn&apos;t built around billable hours, fluff retainers, or
-                  over-engineered corporate frameworks. Everything is built around the
-                  creator perspective — fast iteration, clean output, and solutions that
-                  make sense in the real world, not in a boardroom diagram.
+                  Lopez Productions isn’t built around retainers, bloated frameworks, or over-engineered automation chains. It’s built around the creator mindset:
                 </p>
 
                 <ul className="space-y-3 text-lg text-brand-gray-light">
                   <li className="flex gap-2">
-                    <span className="text-brand-gold">•</span> Simple, modern workflows
-                    over complicated automation chains
+                    <span className="text-brand-gold">•</span> Simple, modern workflows instead of complicated tech stacks
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-brand-gold">•</span> Professional design
-                    without agency overhead
+                    <span className="text-brand-gold">•</span> Professional design without agency overhead
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-brand-gold">•</span> Practical systems that
-                    stay usable — not forgotten
+                    <span className="text-brand-gold">•</span> Practical systems that stay usable — not forgotten
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-brand-gold">•</span> Build once, use forever
-                    templates
+                    <span className="text-brand-gold">•</span> Templates you build once and use forever
                   </li>
                 </ul>
               </section>
@@ -171,18 +178,28 @@ export default function AboutPage() {
                   Behind the Studio
                 </h2>
 
-                <p className="text-lg text-brand-gray-light leading-relaxed mb-6">
-                  Lopez Productions is run by an independent creator who merges design,
-                  AI systems, automation, and brand strategy into a single unified
-                  process. Every template, workflow, and system is tested in-house
-                  before it&apos;s ever offered to clients.
+                <h3 className="text-xl font-serif font-bold text-brand-gold mb-4">
+                  Behind the Studio — Meet Reuben Lopez
+                </h3>
+                <p className="text-lg text-brand-gray-light leading-relaxed mb-4">
+                  Lopez Productions is founded and run by Reuben Lopez, an independent creator who merges design, automation, and strategy into one unified process.
                 </p>
-
+                <p className="text-brand-gray-light leading-relaxed mb-4">
+                  Reuben&apos;s background blends:
+                </p>
+                <ul className="space-y-2 text-lg text-brand-gray-light mb-6">
+                  <li className="flex gap-2"><span className="text-brand-gold">•</span> Content creation</li>
+                  <li className="flex gap-2"><span className="text-brand-gold">•</span> Design systems</li>
+                  <li className="flex gap-2"><span className="text-brand-gold">•</span> Marketing strategy</li>
+                  <li className="flex gap-2"><span className="text-brand-gold">•</span> AI workflows</li>
+                  <li className="flex gap-2"><span className="text-brand-gold">•</span> UX thinking</li>
+                  <li className="flex gap-2"><span className="text-brand-gold">•</span> Process automation</li>
+                </ul>
+                <p className="text-lg text-brand-gray-light leading-relaxed mb-6">
+                  Every template, workflow, and system offered through Lopez Productions began as a solution built internally — tested, refined, and proven before being used by clients.
+                </p>
                 <p className="text-lg text-brand-gray-light leading-relaxed">
-                  The goal isn&apos;t to look big — it&apos;s to build things that work. Things
-                  that creators can actually use. Things that remove friction and give
-                  people the confidence to look professional, stay organized, and show
-                  up online consistently.
+                  The goal isn&apos;t to look big. The goal is to build things that work — things creators can actually use, things that remove friction, and things that help you show up consistently and professionally.
                 </p>
               </section>
 
@@ -221,4 +238,5 @@ export default function AboutPage() {
     </>
   )
 }
+
 

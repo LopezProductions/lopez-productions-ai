@@ -5,19 +5,19 @@ const WhyChooseSection = React.memo(function WhyChooseSection() {
   const benefits = [
     {
       title: "Aesthetic + Strategy",
-      description: "You get content, visuals, systems, and structure that feel premium — not cookie-cutter."
+      description: "Premium visuals, clear systems, and structured workflows that support real growth — not cookie-cutter templates."
     },
     {
       title: "Built With You, Not At You",
-      description: "I collaborate. I guide. I teach you the system so you're not dependent on anyone to maintain it."
+      description: "We collaborate. I guide the strategy and teach you the system so you stay independent long after delivery."
     },
     {
       title: "Beginner Friendly",
-      description: "Even if you're brand new to AI or Web3, everything is explained in simple breakdowns."
+      description: "Everything is explained in simple, actionable steps."
     },
     {
       title: "Fast Turnaround",
-      description: "Most systems ship in 48–72 hours depending on scope."
+      description: "Most builds ship in 48–72 hours."
     }
   ]
 
@@ -28,7 +28,7 @@ const WhyChooseSection = React.memo(function WhyChooseSection() {
           Why Choose Lopez Productions?
         </h2>
         <p className="text-center text-sm text-brand-gray-light mb-8 max-w-2xl mx-auto">
-          You don't need another bloated "AI transformation" project. You need a clean system that fits the way you already work — with just enough automation to feel like a superpower.
+          You don’t need another overwhelming “AI transformation project.” You need clean systems, simple workflows, and design that actually works.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (

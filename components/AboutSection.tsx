@@ -105,6 +105,10 @@ const AboutSection = () => {
               
               <div className="space-y-6 text-brand-gray-light leading-relaxed">
                 <p>
+                  Lopez Productions is led by <strong>Reuben Lopez</strong>, a marketing strategist and AI systems designer focused on helping creators and small businesses simplify their workflows and launch professional digital brands.
+                </p>
+                
+                <p>
                   My journey began back in 2017, when I started editing videos for my gaming YouTube channel as a passion project. 
                   I had no formal training — just curiosity, creativity, and a deep interest in how content worked.
                 </p>

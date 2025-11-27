@@ -80,8 +80,15 @@ export default function PlaybookPage() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-lg md:text-xl text-brand-gray-light max-w-3xl mx-auto leading-relaxed"
         >
-          Practical guides that help creators and small businesses build better systems —
-          with AI, automation, and smart design.
+          Learn the exact AI workflows and automations that save creators 5–10 hours a week — without adding complexity.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-base md:text-lg text-brand-gray-light max-w-2xl mx-auto leading-relaxed mt-4"
+        >
+          Simple, practical breakdowns for building a smoother, faster, more scalable business.
         </motion.p>
       </section>
 

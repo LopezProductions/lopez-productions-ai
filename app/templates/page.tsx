@@ -109,8 +109,14 @@ export default function TemplatesPage() {
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-6">
                 Template Library
               </h1>
-              <p className="text-lg text-brand-gray-light mb-12 max-w-3xl">
-                Professional website templates ready to customize and launch. Each template is fast, clean, and designed for creators and small businesses.
+              <p className="text-2xl font-serif text-brand-gray-light mb-4 max-w-3xl">
+                Your Website Is Costing You Clients. Fix That This Weekend.
+              </p>
+              <p className="text-lg text-brand-gray-light mb-4 max-w-3xl leading-relaxed">
+                These high-performance Vite &amp; Next.js templates give you a $1k-quality website without waiting months on a designer.
+              </p>
+              <p className="text-lg text-brand-gray-light mb-12 max-w-3xl leading-relaxed">
+                Clean design, fast loads, and simple editing—so you go live in hours, not weeks.
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

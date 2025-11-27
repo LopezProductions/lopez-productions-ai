@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <footer className="border-t pt-8 pb-12 md:pt-10 md:pb-16 text-sm">
-      <div className="container space-y-8 md:grid md:grid-cols-4 md:gap-10 md:space-y-0 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto space-y-8 md:grid md:grid-cols-4 md:gap-10 md:space-y-0 px-4 sm:px-6">
         
         {/* Brand */}
         <div>
@@ -49,7 +49,12 @@ const Footer = () => {
           <p className="opacity-80 leading-relaxed">
             If my content helps you, consider supporting the work:
           </p>
-          <a href="https://paymyinterns.sol" target="_blank" className="underline mt-2 inline-block py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">
+          <a
+            href="https://buy.stripe.com/28E8wQdnw79GbcIbzzcs802"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline mt-2 inline-block py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded"
+          >
             Tip Jar →
           </a>
         </div>
@@ -57,9 +62,11 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <p className="text-center mt-8 md:mt-12 opacity-60 text-sm md:text-xs">
-        © 2025 Lopez Productions — All Rights Reserved
-      </p>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <p className="text-center mt-8 md:mt-12 opacity-60 text-sm md:text-xs">
+          © 2025 Lopez Productions — All Rights Reserved
+        </p>
+      </div>
     </footer>
   )
 }
