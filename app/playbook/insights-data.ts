@@ -11,7 +11,7 @@ export interface Insight {
 export const allInsights: Insight[] = [
   {
     slug: 'brand-ready-website-images-chatgpt',
-    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT',
+    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
     excerpt: 'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
     readTime: '9 min read',
     category: 'AI Workflows',

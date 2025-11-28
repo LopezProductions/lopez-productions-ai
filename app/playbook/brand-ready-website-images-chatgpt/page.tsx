@@ -7,7 +7,7 @@ import Footer from '../../../components/Footer'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT',
+  title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
   description:
     'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
   keywords:
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/brand-ready-website-images-chatgpt',
-    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT',
+    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
     description:
       'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
     images: ['/how-to-brand-images.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT',
+    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
     description:
       'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
     images: ['/how-to-brand-images.png'],
@@ -38,7 +38,7 @@ export default function BrandReadyWebsiteImages() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Article',
-            headline: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT',
+            headline: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
             description:
               'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
             author: {
@@ -71,7 +71,7 @@ export default function BrandReadyWebsiteImages() {
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <Breadcrumbs
-              title="How to Generate Clean, Brand-Ready Website Images Using ChatGPT"
+              title="How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1"
               slug="brand-ready-website-images-chatgpt"
             />
 
@@ -88,7 +88,7 @@ export default function BrandReadyWebsiteImages() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight bg-gradient-to-b from-brand-gold to-brand-gold-dark bg-clip-text text-transparent mb-6">
-              How to Generate Clean, Brand-Ready Website Images Using ChatGPT
+              How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1
             </h1>
 
             <p className="text-xl text-brand-gray-light mb-8 leading-relaxed">
