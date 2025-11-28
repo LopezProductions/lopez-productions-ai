@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'nano-banana-for-teachers-visualizing-curriculum',
+    title: 'How to Use Nano Banana for Teachers: Visualizing the Curriculum (Step-by-Step Guide)',
+    excerpt: 'A practical guide for teachers on using Nano Banana Pro to create clean, accurate, classroom-ready visual materials for science, history, and English.',
+    readTime: '7 min read',
+    category: 'AI for Education',
+    publishedDate: '2025-11-28',
+    coverImage: '/nano-banana-for-teachers.png',
+  },
+  {
     slug: 'brand-ready-website-images-chatgpt',
     title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
     excerpt: 'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
