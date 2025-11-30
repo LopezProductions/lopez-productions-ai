@@ -60,8 +60,9 @@ const articles = allInsights
 
 export default function PlaybookPage() {
   return (
-    <main className="min-h-screen bg-brand-black relative">
-      <Navigation />
+    <main className="min-h-screen bg-brand-black relative overflow-x-hidden">
+      <div className="relative z-10">
+        <Navigation />
 
       {/* Hero */}
       <section className="pt-24 pb-12 px-6 md:px-12 text-center">
@@ -185,6 +186,7 @@ export default function PlaybookPage() {
       </section>
 
       <Footer />
+      </div>
     </main>
   )
 }
