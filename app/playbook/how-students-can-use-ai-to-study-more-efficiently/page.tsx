@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import StudentAssignmentDownloadForm from '../../../components/StudentAssignmentDownloadForm'
 import type { Metadata } from 'next'
@@ -153,10 +154,13 @@ export default function HowStudentsCanUseAIToStudyMoreEfficiently() {
         <section className="py-8 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden border border-brand-gray-dark">
-              <img
+              <Image
                 src="/ai-student-study.png"
                 alt="How Students Can Use AI to Study More Efficiently"
+                width={1200}
+                height={630}
                 className="w-full h-auto"
+                priority
               />
             </div>
           </div>
@@ -209,9 +213,11 @@ export default function HowStudentsCanUseAIToStudyMoreEfficiently() {
 
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-brand-gray-dark mb-4">
-                <img
+                <Image
                   src="/gemini-lecture-example.png"
                   alt="Example of Gemini breaking down a YouTube lecture into organized study notes with key viewpoints and details"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto"
                 />
               </div>
@@ -267,9 +273,11 @@ export default function HowStudentsCanUseAIToStudyMoreEfficiently() {
 
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-brand-gray-dark mb-4">
-                <img
+                <Image
                   src="/adobe-acrobat-example.png"
                   alt="Example of using Adobe Acrobat AI to summarize and analyze PDF documents"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto"
                 />
               </div>
@@ -318,9 +326,11 @@ export default function HowStudentsCanUseAIToStudyMoreEfficiently() {
 
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-brand-gray-dark mb-4">
-                <img
+                <Image
                   src="/notion-student-template-example.png"
                   alt="Example of a Notion student template with organized class folders and pages"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto"
                 />
               </div>
@@ -338,9 +348,11 @@ export default function HowStudentsCanUseAIToStudyMoreEfficiently() {
 
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-brand-gray-dark mb-4">
-                <img
+                <Image
                   src="/gpt-workspace-folder.png"
                   alt="Example of organizing ChatGPT conversations into class workspace folders"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto"
                 />
               </div>

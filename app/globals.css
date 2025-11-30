@@ -5,15 +5,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
+  :root {
+    --brand-black: #0F0F0F;
+    --brand-gray-dark: #111111;
+    --brand-white: #F5F5F0;
+    --brand-gray-light: #CCCCCC;
+    --brand-gray-muted: #888888;
+    --brand-gold: #C5A059;
+    --brand-gold-dark: #9A7A3F;
+  }
+  
   html {
     scroll-behavior: smooth;
-    background-color: #0F0F0F; /* brand-black - explicit hex for consistency */
+    background-color: var(--brand-black);
+    color: var(--brand-white);
   }
   
   body {
     @apply text-brand-white font-sans;
-    background-color: #0F0F0F; /* brand-black - explicit hex for consistency */
+    background-color: var(--brand-black);
+    color: var(--brand-white);
     min-height: 100vh;
+  }
+  
+  /* Ensure all text elements use correct colors */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--brand-white);
+  }
+  
+  p {
+    color: var(--brand-gray-light);
   }
 }
 
