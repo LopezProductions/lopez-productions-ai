@@ -4,6 +4,9 @@ const nextConfig = {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
     unoptimized: false,
   },
+  // Ensure proper static file generation
+  trailingSlash: false,
+  poweredByHeader: false,
   async redirects() {
     return [
       // INDUSTRIES → SOLUTIONS full redirect cascade
