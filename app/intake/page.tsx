@@ -7,6 +7,7 @@ import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
 import { Info } from 'lucide-react'
 import { predefinedPackages } from '../data/packages'
+import { formatPurchasedServices, getServiceName, allServices, anyRequiresIntake } from '../data/service-mapping'
 
 interface SessionData {
   id: string
@@ -38,7 +39,7 @@ function IntakePageContent() {
       const bundleIds = metadata.bundleIds ? JSON.parse(metadata.bundleIds) as string[] : []
       const selectedServiceIds = metadata.selectedServiceIds ? JSON.parse(metadata.selectedServiceIds) as string[] : []
 
-      // First, try to match by bundle IDs
+      // First, try to match by bundle IDs in predefined packages
       for (const pkg of predefinedPackages) {
         const pkgBundleIds = pkg.bundleServiceIds || []
         const pkgServiceIds = pkg.serviceIds || []
@@ -77,10 +78,24 @@ function IntakePageContent() {
         if (pkg) return pkg.name
       }
 
-      return 'Custom Package'
+      // Use the new service mapping to format purchased services
+      return formatPurchasedServices(selectedServiceIds, bundleIds)
     } catch (err) {
       console.error('Error parsing metadata:', err)
       return 'Custom Package'
+    }
+  }
+
+  // Get all purchased service IDs for display
+  const getPurchasedServiceIds = (): string[] => {
+    if (!sessionData) return []
+    try {
+      const bundleIds = sessionData.metadata.bundleIds ? JSON.parse(sessionData.metadata.bundleIds) as string[] : []
+      const selectedServiceIds = sessionData.metadata.selectedServiceIds ? JSON.parse(sessionData.metadata.selectedServiceIds) as string[] : []
+      return [...selectedServiceIds, ...bundleIds]
+    } catch (err) {
+      console.error('Error parsing service IDs:', err)
+      return []
     }
   }
 
@@ -102,6 +117,17 @@ function IntakePageContent() {
 
         const data: SessionData = await response.json()
         setSessionData(data)
+        
+        // Check if intake form is needed
+        const bundleIds = data.metadata.bundleIds ? JSON.parse(data.metadata.bundleIds) as string[] : []
+        const selectedServiceIds = data.metadata.selectedServiceIds ? JSON.parse(data.metadata.selectedServiceIds) as string[] : []
+        const allServiceIds = [...selectedServiceIds, ...bundleIds]
+        
+        // If no services require intake, redirect to success page
+        if (!anyRequiresIntake(allServiceIds)) {
+          window.location.href = `/success?session_id=${sessionId}`
+          return
+        }
         
         // Determine package from metadata
         const packageName = getPackageFromMetadata(data.metadata)
@@ -232,13 +258,39 @@ function IntakePageContent() {
                       onChange={(e) => setSelectedPackage(e.target.value)}
                       className="w-full p-3 rounded-lg bg-brand-black border border-brand-gray-dark text-brand-white focus:outline-none focus:border-brand-gold transition-colors"
                     >
-                      {predefinedPackages.map((pkg) => (
-                        <option key={pkg.id} value={pkg.name}>
-                          {pkg.name}
-                        </option>
-                      ))}
-                      <option value="Custom Package">Custom Package</option>
+                      {/* Show the auto-detected package first */}
+                      <option value={selectedPackage}>{selectedPackage}</option>
+                      
+                      {/* Show all predefined packages */}
+                      {predefinedPackages
+                        .filter(pkg => pkg.name !== selectedPackage)
+                        .map((pkg) => (
+                          <option key={pkg.id} value={pkg.name}>
+                            {pkg.name}
+                          </option>
+                        ))}
+                      
+                      {/* Show all services that require intake */}
+                      {allServices
+                        .filter(s => s.requiresIntake && s.name !== selectedPackage)
+                        .filter(s => !predefinedPackages.some(pkg => pkg.name === s.name))
+                        .map((service) => (
+                          <option key={service.id} value={service.name}>
+                            {service.name}
+                          </option>
+                        ))}
+                      
+                      {/* Custom package option */}
+                      {selectedPackage !== 'Custom Package' && (
+                        <option value="Custom Package">Custom Package</option>
+                      )}
                     </select>
+                    {/* Display purchased services for reference */}
+                    {sessionData && getPurchasedServiceIds().length > 0 && (
+                      <p className="text-sm text-brand-gray-muted mt-2">
+                        Purchased: {getPurchasedServiceIds().map(id => getServiceName(id)).join(', ')}
+                      </p>
+                    )}
                   </label>
                 </div>
               </div>

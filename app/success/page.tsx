@@ -6,18 +6,71 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
-import { CheckCircle, Mail, Calendar } from 'lucide-react'
+import { CheckCircle, Mail, Calendar, Download } from 'lucide-react'
+import { anyRequiresIntake, formatPurchasedServices, getServiceName } from '../data/service-mapping'
+
+interface SessionData {
+  id: string
+  customer_email: string | null
+  metadata: {
+    selectedServiceIds?: string
+    bundleIds?: string
+    total?: string
+    customNotes?: string
+  }
+  amount_total: number | null
+  currency: string | null
+  payment_status: string
+}
 
 function SuccessPageContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
   const [isLoading, setIsLoading] = useState(true)
+  const [sessionData, setSessionData] = useState<SessionData | null>(null)
+  const [requiresIntakeForm, setRequiresIntakeForm] = useState(false)
+  const [purchasedServices, setPurchasedServices] = useState<string>('')
 
   useEffect(() => {
-    // Simulate loading state
-    const timer = setTimeout(() => setIsLoading(false), 500)
-    return () => clearTimeout(timer)
-  }, [])
+    if (!sessionId) {
+      setIsLoading(false)
+      return
+    }
+
+    const fetchSession = async () => {
+      try {
+        const response = await fetch(`/api/get-session?session_id=${sessionId}`)
+        
+        if (!response.ok) {
+          console.error('Failed to fetch session data')
+          setIsLoading(false)
+          return
+        }
+
+        const data: SessionData = await response.json()
+        setSessionData(data)
+        
+        // Parse purchased services
+        const bundleIds = data.metadata.bundleIds ? JSON.parse(data.metadata.bundleIds) as string[] : []
+        const selectedServiceIds = data.metadata.selectedServiceIds ? JSON.parse(data.metadata.selectedServiceIds) as string[] : []
+        const allServiceIds = [...selectedServiceIds, ...bundleIds]
+        
+        // Check if intake form is required
+        const needsIntake = anyRequiresIntake(allServiceIds)
+        setRequiresIntakeForm(needsIntake)
+        
+        // Format purchased services for display
+        const formatted = formatPurchasedServices(selectedServiceIds, bundleIds)
+        setPurchasedServices(formatted)
+      } catch (err) {
+        console.error('Error fetching session:', err)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchSession()
+  }, [sessionId])
 
   if (isLoading) {
     return (
@@ -52,8 +105,16 @@ function SuccessPageContent() {
             </h1>
             
             <p className="text-xl text-brand-gray-light mb-8">
-              Thank you for your purchase. We've received your payment and will begin working on your package.
+              {requiresIntakeForm 
+                ? "Thank you for your purchase. We've received your payment and will begin working on your package."
+                : "Thank you for your purchase! Your digital product is ready for download."}
             </p>
+            
+            {purchasedServices && (
+              <p className="text-lg text-brand-gold mb-4">
+                {purchasedServices}
+              </p>
+            )}
           </motion.div>
 
           <motion.div
@@ -81,33 +142,51 @@ function SuccessPageContent() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
-                  <Calendar className="w-5 h-5 text-brand-gold" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-white mb-2">
-                    Project Kickoff
-                  </h3>
-                  <p className="text-brand-gray-light">
-                    Within 24 hours, we'll reach out to schedule a kickoff call or request any assets we need to get started.
-                  </p>
-                </div>
-              </div>
+              {requiresIntakeForm ? (
+                <>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                      <Calendar className="w-5 h-5 text-brand-gold" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-brand-white mb-2">
+                        Project Kickoff
+                      </h3>
+                      <p className="text-brand-gray-light">
+                        Within 24 hours, we'll reach out to schedule a kickoff call or request any assets we need to get started.
+                      </p>
+                    </div>
+                  </div>
 
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
-                  <span className="text-brand-gold text-xl">⚡</span>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                      <span className="text-brand-gold text-xl">⚡</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-brand-white mb-2">
+                        Get Started
+                      </h3>
+                      <p className="text-brand-gray-light">
+                        We'll begin working on your package based on the turnaround time specified. You'll receive regular updates throughout the process.
+                      </p>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-brand-gold/20 rounded-full flex items-center justify-center">
+                    <Download className="w-5 h-5 text-brand-gold" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-brand-white mb-2">
+                      Instant Download
+                    </h3>
+                    <p className="text-brand-gray-light">
+                      Your digital product is available immediately. Check your email for download instructions and access links.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-white mb-2">
-                    Get Started
-                  </h3>
-                  <p className="text-brand-gray-light">
-                    We'll begin working on your package based on the turnaround time specified. You'll receive regular updates throughout the process.
-                  </p>
-                </div>
-              </div>
+              )}
             </div>
           </motion.div>
 
@@ -124,7 +203,7 @@ function SuccessPageContent() {
             </motion.div>
           )}
 
-          {sessionId && (
+          {sessionId && requiresIntakeForm && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
