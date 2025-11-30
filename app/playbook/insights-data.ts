@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'how-students-can-use-ai-to-study-more-efficiently',
+    title: 'How Students Can Use AI to Study More Efficiently',
+    excerpt: 'A simple guide to using AI tools for smarter studying, better organization, and faster research—without breaking academic rules or relying on AI to write your papers.',
+    readTime: '8 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-11-29',
+    coverImage: '/ai-student-study.png',
+  },
+  {
     slug: 'nano-banana-for-teachers-visualizing-curriculum',
     title: 'How to Use Nano Banana for Teachers: Visualizing the Curriculum (Step-by-Step Guide)',
     excerpt: 'A practical guide for teachers on using Nano Banana Pro to create clean, accurate, classroom-ready visual materials for science, history, and English.',

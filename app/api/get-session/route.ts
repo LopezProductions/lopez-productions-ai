@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 
+// Mark this route as dynamic
+export const dynamic = 'force-dynamic'
+
 // Initialize Stripe with error handling
 if (!process.env.STRIPE_SECRET_KEY) {
   console.error('STRIPE_SECRET_KEY is not set in environment variables')
