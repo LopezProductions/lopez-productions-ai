@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { getStripePriceId, validateStripePriceIds } from '../../data/stripe-prices'
+import { getStripePriceId, validateStripePriceIds, stripePriceIds } from '../../data/stripe-prices'
 import { getServiceById } from '../../data/packages'
 
 // Initialize Stripe with error handling
@@ -71,7 +71,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Combine all service IDs (individual services + bundles)
+    // Filter out empty strings and null/undefined values
     const allServiceIds = [...selectedServiceIds, ...bundleIds]
+      .filter(id => id && typeof id === 'string' && id.trim().length > 0)
+      .map(id => id.trim())
 
     // Validate that we have at least one service
     if (allServiceIds.length === 0 && !customNotes) {
@@ -81,12 +84,17 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Log all service IDs being checked for debugging
+    console.log('Checking Stripe Price IDs for service IDs:', allServiceIds)
+
     // Validate that all service IDs have corresponding Stripe Price IDs
     const missingPriceIds = validateStripePriceIds(allServiceIds)
     if (missingPriceIds.length > 0) {
+      console.error('Missing Stripe Price IDs for services:', missingPriceIds)
+      console.error('Available Stripe Price IDs:', Object.keys(stripePriceIds))
       return NextResponse.json(
         { 
-          error: `Missing Stripe Price IDs for services: ${missingPriceIds.join(', ')}` 
+          error: `Missing Stripe Price IDs for services: ${missingPriceIds.join(', ')}. Please contact support if this error persists.` 
         },
         { status: 400 }
       )
@@ -97,25 +105,41 @@ export async function POST(request: NextRequest) {
 
     // Add individual services
     for (const serviceId of selectedServiceIds) {
-      const priceId = getStripePriceId(serviceId)
+      if (!serviceId || typeof serviceId !== 'string' || !serviceId.trim()) {
+        console.warn('Skipping invalid service ID:', serviceId)
+        continue
+      }
+      const trimmedId = serviceId.trim()
+      const priceId = getStripePriceId(trimmedId)
       if (priceId) {
-        const service = getServiceById(serviceId)
+        const service = getServiceById(trimmedId)
         lineItems.push({
           price: priceId,
           quantity: 1,
         })
+        console.log(`Added line item for service ${trimmedId}: ${priceId}`)
+      } else {
+        console.error(`No Stripe Price ID found for service: ${trimmedId}`)
       }
     }
 
     // Add bundles
     for (const bundleId of bundleIds) {
-      const priceId = getStripePriceId(bundleId)
+      if (!bundleId || typeof bundleId !== 'string' || !bundleId.trim()) {
+        console.warn('Skipping invalid bundle ID:', bundleId)
+        continue
+      }
+      const trimmedId = bundleId.trim()
+      const priceId = getStripePriceId(trimmedId)
       if (priceId) {
-        const bundle = getServiceById(bundleId)
+        const bundle = getServiceById(trimmedId)
         lineItems.push({
           price: priceId,
           quantity: 1,
         })
+        console.log(`Added line item for bundle ${trimmedId}: ${priceId}`)
+      } else {
+        console.error(`No Stripe Price ID found for bundle: ${trimmedId}`)
       }
     }
 

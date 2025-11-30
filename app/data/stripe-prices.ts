@@ -4,30 +4,52 @@
  */
 
 export const stripePriceIds: Record<string, string> = {
-  // Video & Media
+  // Digital Shop - Instant Downloads
+  'prompt-library': 'price_1SYxxjLq5JCtXEO7bEHAgcon', // Prompt Library - $9
+  'student-dashboard': 'price_1SYwIwLq5JCtXEO78OmKNfhm', // Student Dashboard - $19
+  'travel-planner': 'price_1SYwUPLq5JCtXEO7Ey7nUcFJ', // Travel Planner OS - $19
+  'classroom-os': 'price_1SYwTSLq5JCtXEO7VgRxFtFW', // Classroom OS - $29
+  'case-tracker': 'price_1SYwbTLq5JCtXEO7mQJ2NcEt', // Solo-Firm Case Tracker - $49
+
+  // Websites
+  'grad-portfolio': 'price_1SYx2oLq5JCtXEO79pYsLCGV', // The "Grad" Portfolio - $150
+  'travel-portfolio': 'price_1SYxydLq5JCtXEO7HXpy2PGp', // Travel Portfolio Website - $150
+  'creator-site': 'price_1SYxzWLq5JCtXEO7yAQ9nmEI', // Creator Site - $250
+
+  // Packages
+  'academic-creator': 'price_1SYy23Lq5JCtXEO7PfABZHbC', // Academic Creator Package - $500
+  'travel-creator': 'price_1SYy2PLq5JCtXEO7VHRbJQJp', // Travel Creator Package - $500
+  'creator-ultra': 'price_1SYy4BLq5JCtXEO7je1pqfik', // Creator Ultra - $1,500
+
+  // Professional Services
+  'client-onboarding': 'price_1SYy5uLq5JCtXEO7h8fo5xdh', // Client Onboarding Engine - $750
+  'firm-authority': 'price_1SYxgXLq5JCtXEO7Pe48Gmpd', // Firm Authority Package - $2,500+
+
+  // Add-Ons
+  'school-spirit': 'price_1SYy6pLq5JCtXEO7cddA2Itz', // School Spirit Add-On - $10
+  'domain-setup': 'price_1SYy7ILq5JCtXEO70XM4hrrA', // Domain Setup - $25
+  'reel-edit': 'price_1SYy8MLq5JCtXEO75IYM4y0N', // Reel Edit (1 Minute) - $25
+  'concept-art': 'price_1SYyF2Lq5JCtXEO71d7yRsGo', // Concept Art Pack - $50
+  'social-audit': 'price_1SYyScLq5JCtXEO7RM1twmzs', // Social Strategy Audit - $100
+  'brand-sheet': 'price_1SYyTULq5JCtXEO7T4PxUvSw', // Professional Brand Sheet - $135
+  'market-research': 'price_1SYyUNLq5JCtXEO742ESoU7T', // Market Research Add-On - $350
+
+  // Legacy/Other (keeping for backwards compatibility)
   'reel': 'price_1SQy73Lq5JCtXEO7isNcwQUj', // 1-Minute Reel - $25
   'captioned': 'price_1SQyJILq5JCtXEO7VXlGbLUJ', // Captioned Reel - $50
   'premium_reel': 'price_1SQyK0Lq5JCtXEO7yyP2go0O', // Premium Reel - $75
   'overlay': 'price_1SQyKGLq5JCtXEO73HnnDnXM', // Branded Overlay - $40
   'reel_bundle': 'price_1SQyPGLq5JCtXEO7AlQKmyGW', // 5-Reel Special - $100
-
-  // Notion & Automation
   'notion_dashboard': 'price_1SQy7XLq5JCtXEO7pYjaLVxb', // Notion Dashboard Setup - $50
   'crm_template': 'price_1SQySxLq5JCtXEO7dAPAvMvb', // CRM Template - $75
   'automation': 'price_1SQyTnLq5JCtXEO7EkjY49AC', // Automation Flow - $100
-
-  // Web & Branding (Tier Packages)
   'launch_page_48h': 'price_1SQyGPLq5JCtXEO7nTMTX9w5', // 48-Hour Launch Page - $100
   'creator_website_basic': 'price_1SQyVmLq5JCtXEO7dPSxDO8s', // Creator Basic - $250
   'creator_site_package': 'price_1SQyWBLq5JCtXEO7bO6adj1t', // Creator Plus - $500
   'full_brand_system': 'price_1SQyWhLq5JCtXEO7DLrSMULR', // Creator Ultra - $1,500+
-  'domain': 'price_1SQyaqLq5JCtXEO7LvmvJmNu', // Domain Setup (Add-on) - $25
+  'domain': 'price_1SYy7ILq5JCtXEO70XM4hrrA', // Domain Setup (legacy) - $25
   'black_friday_special': 'price_1SQyX4Lq5JCtXEO7hhIJcEM0', // $50 launch page special
-
-  // Strategy Add-ons
   'seo_audit': 'price_1SQyIjLq5JCtXEO7Di4VggZ1', // SEO Audit - $100
-  'market_research': 'price_1SQybxLq5JCtXEO7AZuvBD3Y', // Market Research Report - $250
-  'brand_sheet': 'price_1SQycNLq5JCtXEO76JHmZk8h', // Brand Sheet & Color Kit - $100
 }
 /**
  * Get Stripe Price ID for a service
