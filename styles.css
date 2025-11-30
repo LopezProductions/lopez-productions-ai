@@ -6,20 +6,20 @@
 }
 
 :root {
-    --primary-color: #FFD700;
-    --secondary-color: #B8860B;
-    --background-color: #000000;
+    --primary-color: #C5A059;
+    --secondary-color: #9A7A3F;
+    --background-color: #0F0F0F;
     --surface-color: #111111;
-    --text-primary: #FFFFFF;
+    --text-primary: #F5F5F0;
     --text-secondary: #CCCCCC;
     --text-muted: #888888;
     --border-color: #333333;
-    --accent-color: #FFD700;
-    --gradient-primary: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
-    --gradient-secondary: linear-gradient(135deg, #111111 0%, #000000 100%);
-    --shadow-light: 0 4px 6px rgba(255, 215, 0, 0.1);
-    --shadow-medium: 0 8px 25px rgba(255, 215, 0, 0.15);
-    --shadow-heavy: 0 15px 35px rgba(255, 215, 0, 0.2);
+    --accent-color: #C5A059;
+    --gradient-primary: linear-gradient(135deg, #C5A059 0%, #9A7A3F 100%);
+    --gradient-secondary: linear-gradient(135deg, #111111 0%, #0F0F0F 100%);
+    --shadow-light: 0 4px 6px rgba(197, 160, 89, 0.1);
+    --shadow-medium: 0 8px 25px rgba(197, 160, 89, 0.15);
+    --shadow-heavy: 0 15px 35px rgba(197, 160, 89, 0.2);
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -212,7 +212,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 20%, rgba(197, 160, 89, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -585,7 +585,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 70% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 70% 80%, rgba(197, 160, 89, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -652,7 +652,7 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
 }
 
 .form-group label {
@@ -1623,7 +1623,7 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
 }
 
 .checkbox-label {
@@ -1803,7 +1803,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 20%, rgba(197, 160, 89, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 

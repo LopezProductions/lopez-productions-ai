@@ -27,7 +27,7 @@ export default function LatestPosts() {
 
   return (
     <section className="max-w-6xl mx-auto mt-20 px-4">
-      <h2 className="text-3xl font-bold tracking-tight text-[#FFFFFF] mb-8">
+      <h2 className="text-3xl font-bold tracking-tight text-brand-white mb-8">
         Latest Guides &amp; Playbooks
       </h2>
 
@@ -42,13 +42,13 @@ export default function LatestPosts() {
             <div
               className="
                 rounded-xl overflow-hidden 
-                bg-[#0B0B0B]
+                bg-brand-gray-dark
                 border border-[#2E2E2E]
                 shadow-[0_0_18px_rgba(0,0,0,0.35)]
                 transform transition-all duration-300
                 group-hover:-translate-y-1
-                group-hover:border-[#F5C84B]
-                group-hover:shadow-[0_0_26px_rgba(245,200,75,0.35)]
+                group-hover:border-brand-gold
+                group-hover:shadow-[0_0_26px_rgba(197,160,89,0.35)]
               "
             >
               {post.coverImage && (
@@ -62,8 +62,8 @@ export default function LatestPosts() {
               <div className="p-5">
                 <h3
                   className="
-                    text-lg font-semibold text-[#FFFFFF]
-                    group-hover:text-[#F5C84B] transition-colors
+                    text-lg font-semibold text-brand-white
+                    group-hover:text-brand-gold transition-colors
                   "
                 >
                   {post.title}
