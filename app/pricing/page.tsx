@@ -1,84 +1,129 @@
 'use client'
 
 import React, { useState } from 'react'
-import Link from 'next/link'
 import Script from 'next/script'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
-import PackageBuilder from '../../components/PackageBuilder'
-import PricingGrid from '../../components/PricingGrid'
 import PackageRequestForm from '../../components/PackageRequestForm'
-import BlackFridayPopup from '../../components/BlackFridayPopup'
+import PricingFAQ from '../../components/PricingFAQ'
 
 export default function PricingPage() {
   const [isFormOpen, setIsFormOpen] = useState(false)
-  const [packageData, setPackageData] = useState<{
-    selectedServiceIds: string[]
-    bundleIds: string[]
-    total: number
-    customNotes: string
-    packageSelection: string
-  } | null>(null)
-
-  const handleRequestPackage = (data: {
-    selectedServiceIds: string[]
-    bundleIds: string[]
-    total: number
-    customNotes: string
-    packageSelection: string
-  }) => {
-    setPackageData(data)
-    setIsFormOpen(true)
-  }
-
-  const handleSelectPresetPackage = (packageId: string) => {
-    // Scroll to builder section
-    const builderSection = document.getElementById('package-builder')
-    if (builderSection) {
-      builderSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      
-      // Trigger preset selection in builder (this will be handled by the PackageBuilder component's state)
-      setTimeout(() => {
-        const event = new CustomEvent('selectPackage', { detail: { packageId } })
-        window.dispatchEvent(event)
-      }, 100)
-    }
-  }
+  const [packageData, setPackageData] = useState(null)
+  const [selectedBuilderItems, setSelectedBuilderItems] = useState<Set<string>>(new Set())
 
   const schema = {
     '@context': 'https://schema.org',
     '@type': ['Offer', 'Product', 'Service'],
     name: 'Lopez Productions Pricing',
-    description: 'AI-powered brand systems, templates, and automation packages for creators, founders, and small businesses.',
+    description: 'Pricing for AI-powered websites, templates, automations, and digital products.',
     provider: {
       '@type': 'Organization',
       name: 'Lopez Productions',
-      url: 'https://lopezproductions.ai',
-    },
-    areaServed: 'Global',
-    offers: {
-      '@type': 'AggregateOffer',
-      offerCount: 3,
-      availability: 'https://schema.org/InStock',
-    },
-    breadcrumb: {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://lopezproductions.ai',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Pricing',
-          item: 'https://lopezproductions.ai/pricing',
-        },
-      ],
     },
   }
+
+  // Package Builder items that require intake forms
+  const builderItems = [
+    // Done-for-you websites
+    { id: 'grad-portfolio', name: 'Grad Portfolio Website', price: 150, category: 'Websites', description: '1-Page website for internships and job apps — About, Resume, Contact.' },
+    { id: 'travel-portfolio', name: 'Travel Portfolio Website', price: 150, category: 'Websites', description: '1-Page travel résumé + gallery + contact.' },
+    { id: 'creator-site', name: 'Creator Site', price: 250, category: 'Websites', description: '3-Page website for creators, coaches, tutors, and freelancers.' },
+    
+    // Packages
+    { id: 'academic-creator', name: 'Academic Creator Package', price: 500, category: 'Packages', description: 'Website + newsletter setup + 1 month content plan for teachers.' },
+    { id: 'travel-creator', name: 'Travel Creator Package', price: 500, category: 'Packages', description: 'Website + affiliate setup + 1 month travel content plan.' },
+    { id: 'creator-ultra', name: 'Creator Ultra', price: 1500, category: 'Packages', description: 'Full brand system + website + automation + content strategy.' },
+    
+    // Professional services
+    { id: 'client-onboarding', name: 'Client Onboarding Engine', price: 750, category: 'Automation', description: 'Automated intake → contract → invoice → client portal.' },
+    { id: 'firm-authority', name: 'Firm Authority Package', price: 2500, category: 'Professional', description: '5-Page website + SEO + blog plan for dominating local search.' },
+    
+    // Add-ons
+    { id: 'school-spirit', name: 'School Spirit Add-On', price: 10, category: 'Add-Ons', description: 'Add your school logo & colors to any dashboard. (Requires school info — added during checkout)' },
+    { id: 'domain-setup', name: 'Domain Setup', price: 25, category: 'Add-Ons', description: 'Custom domain setup and configuration.' },
+    { id: 'reel-edit', name: 'Reel Edit (1 Minute)', price: 25, category: 'Add-Ons', description: 'Quick edit + transistions.' },
+    { id: 'concept-art', name: 'Concept Art Pack', price: 50, category: 'Add-Ons', description: '5 custom AI-generated Nano Banana images designed specifically for your website, branding, or content needs.' },
+    { id: 'social-audit', name: 'Social Strategy Audit', price: 100, category: 'Add-Ons', description: 'A personalized evaluation of your social media presence with clear recommendations, a profile upgrade, and a 30-day tactical posting plan.' },
+    { id: 'brand-sheet', name: 'Professional Brand Sheet', price: 135, category: 'Add-Ons', description: 'Receive a clean, modern brand sheet that defines your visual identity in one place — colors, fonts, logo variations, spacing rules, and brand tone. Ideal for creators launching a website, businesses formalizing their look, and anyone who wants a consistent, professional appearance online.' },
+    { id: 'market-research', name: 'Market Research Add-On', price: 350, category: 'Add-Ons', description: 'A deep-dive analysis into your niche, audience, competitors, keywords, and industry trends. Perfect for creators, businesses, or professionals who want strategic clarity before launching or scaling.' },
+  ]
+
+  const toggleBuilderItem = (itemId: string) => {
+    setSelectedBuilderItems(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(itemId)) {
+        newSet.delete(itemId)
+      } else {
+        newSet.add(itemId)
+      }
+      return newSet
+    })
+  }
+
+  const builderTotal = builderItems
+    .filter(item => selectedBuilderItems.has(item.id))
+    .reduce((sum, item) => sum + item.price, 0)
+
+  const handleBuilderCheckout = async () => {
+    if (selectedBuilderItems.size === 0) {
+      alert('Please select at least one item to checkout.')
+      return
+    }
+
+    const selectedIds = Array.from(selectedBuilderItems)
+    const selectedProducts = builderItems.filter(item => selectedIds.includes(item.id))
+    const productNames = selectedProducts.map(p => p.name).join(', ')
+    const hasSchoolSpirit = selectedIds.includes('school-spirit')
+    const customNotes = `Package Builder: ${productNames}${hasSchoolSpirit ? ' | School Spirit Add-On: true' : ''}`
+
+    try {
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          selectedServiceIds: selectedIds,
+          bundleIds: [],
+          total: builderTotal,
+          customNotes: customNotes,
+        }),
+      })
+
+      const contentType = response.headers.get('content-type')
+      if (!contentType || !contentType.includes('application/json')) {
+        const text = await response.text()
+        console.error('Non-JSON response received:', text.substring(0, 200))
+        throw new Error('Server returned an error. Please check the console for details.')
+      }
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to create checkout session')
+      }
+
+      if (data.url) {
+        // Redirect to Stripe Checkout
+        window.location.href = data.url
+      } else {
+        throw new Error('No checkout URL received')
+      }
+    } catch (err) {
+      console.error('Error creating checkout session:', err)
+      alert(err instanceof Error ? err.message : 'Something went wrong. Please try again or contact support.')
+    }
+  }
+
+  // Group builder items by category
+  const groupedBuilderItems = builderItems.reduce((acc, item) => {
+    if (!acc[item.category]) {
+      acc[item.category] = []
+    }
+    acc[item.category].push(item)
+    return acc
+  }, {} as Record<string, typeof builderItems>)
 
   return (
     <>
@@ -87,135 +132,250 @@ export default function PricingPage() {
       </Script>
       <main className="min-h-screen bg-brand-black">
         <Navigation />
-        
-        {/* Hero Section */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-white mb-6">
-              Custom Brand Systems, Built Around How You Create.
-            </h1>
-            <p className="text-2xl md:text-3xl font-serif font-bold text-gradient mb-4">
-              Start with a package that fits your goals — from AI-powered websites to full brand systems, content engines, and optional light automations.
-            </p>
-            <p className="text-lg text-brand-gray-light mt-6">
-              Want to learn more about our approach? <Link href="/solutions" className="text-brand-gold hover:text-brand-gold-dark underline font-semibold">Visit our Solutions page</Link>.
-            </p>
-          </div>
+
+        {/* ----------------------------- */}
+        {/* HERO SECTION */}
+        {/* ----------------------------- */}
+        <section className="py-20 px-6 md:px-12 text-center">
+          <h1 className="text-5xl md:text-6xl font-serif font-bold text-brand-white">
+            Build Your System. Own Your Niche.
+          </h1>
+          <p className="text-xl text-brand-gray-light mt-6 max-w-3xl mx-auto">
+            Whether you&apos;re studying, teaching, creating, traveling, or running a law firm —
+            these tools help you organize, present, and automate your work with ease.
+          </p>
         </section>
 
-        {/* Package Builder Section */}
-        <section id="package-builder" className="py-16 px-6 md:px-12 bg-brand-gray-dark">
-          <div className="container mx-auto max-w-5xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-white mb-4">
-                Build Your Package
-              </h2>
-              <p className="text-brand-gray-light text-lg max-w-2xl mx-auto">
-                Choose the services you need. Your total updates in real time.
-              </p>
-            </div>
-            
-            <PackageBuilder onRequestPackage={handleRequestPackage} />
-          </div>
-        </section>
-
-        {/* Visual Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-brand-gold to-transparent my-16" />
-
-        {/* Pricing Grid Section */}
-        <section className="py-16 px-6 md:px-12">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-white mb-4">
-                Simple pricing. Zero hidden fees.
-              </h2>
-              <p className="text-brand-gray-light text-lg max-w-2xl mx-auto">
-                Choose a preset package or build your own above.
-              </p>
-            </div>
-            
-            <PricingGrid onSelectPackage={handleSelectPresetPackage} />
-          </div>
-        </section>
-
-        {/* FAQ Section */}
+        {/* ===================================================================== */}
+        {/* SECTION 1 — DIGITAL SHOP (Instant Downloads) */}
+        {/* ===================================================================== */}
         <section className="py-16 px-6 md:px-12 bg-brand-gray-dark">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-white mb-12 text-center">
-              Common Questions
-            </h2>
-            
-            <div className="space-y-6">
-              <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
-                <h3 className="text-xl font-semibold text-brand-white mb-2">
-                  What's included in each package?
-                </h3>
-                <p className="text-brand-gray-light">
-                  Each package includes the services listed in the builder, plus one free revision cycle. Turnaround ranges from 48 hours to 21 days depending on complexity.
-                </p>
-              </div>
-              
-              <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
-                <h3 className="text-xl font-semibold text-brand-white mb-2">
-                  Do I need to know AI to work with you?
-                </h3>
-                <p className="text-brand-gray-light">
-                  No — everything is beginner-friendly. I build the system and walk you through it step-by-step.
-                </p>
-              </div>
-              
-              <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
-                <h3 className="text-xl font-semibold text-brand-white mb-2">
-                  Can you manage my content?
-                </h3>
-                <p className="text-brand-gray-light">
-                  Yes. Ongoing content management is available as an optional retainer. Pricing depends on your posting cadence and support level.
-                </p>
-              </div>
-              
-              <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
-                <h3 className="text-xl font-semibold text-brand-white mb-2">
-                  What if I need something custom?
-                </h3>
-                <p className="text-brand-gray-light">
-                  Use the 'Need something not listed?' field and I'll include it in your quote.
-                </p>
-              </div>
-              
-              <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
-                <h3 className="text-xl font-semibold text-brand-white mb-2">
-                  Can I mix and match services?
-                </h3>
-                <p className="text-brand-gray-light">
-                  Absolutely — the builder is designed for that. Your total updates live.
-                </p>
-              </div>
-              
-              <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
-                <h3 className="text-xl font-semibold text-brand-white mb-2">
-                  What happens after payment?
-                </h3>
-                <p className="text-brand-gray-light">
-                  You'll receive a confirmation email and within 24 hours I'll reach out with next steps or your kickoff form.
-                </p>
-              </div>
-            </div>
+          <h2 className="text-4xl font-serif text-brand-white text-center mb-4">
+            Digital Shop — Instant Downloads
+          </h2>
+          <p className="text-brand-gray-light text-center mb-12 max-w-2xl mx-auto">
+            Templates and tools you can start using today. No wait times. One-click checkout.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Prompt Library */}
+            <DigitalShopCard
+              title="100+ Prompt Library (PDF)"
+              price="$9"
+              description="Universal AI prompt library for students, creators, teachers, and travelers."
+              serviceId="prompt-library"
+            />
+
+            {/* Student Dashboard */}
+            <DigitalShopCard
+              title="Student Dashboard"
+              price="$19"
+              description="Semester OS — assignments, study prompts, grade calculator."
+              serviceId="student-dashboard"
+            />
+
+            {/* Travel Planner */}
+            <DigitalShopCard
+              title="Travel Planner OS"
+              price="$19"
+              description="AI-ready itinerary builder for Gemini/ChatGPT travel suggestions."
+              serviceId="travel-planner"
+            />
+
+            {/* Classroom OS */}
+            <DigitalShopCard
+              title="Classroom OS"
+              price="$29"
+              description="Lesson planner, gradebook, and curriculum visualizer for educators."
+              serviceId="classroom-os"
+            />
+
+            {/* Case Tracker */}
+            <DigitalShopCard
+              title="Solo-Firm Case Tracker"
+              price="$49"
+              description="Simple, professional Notion system for solo attorneys tracking clients."
+              serviceId="case-tracker"
+            />
           </div>
         </section>
 
-        {/* Package Request Form Modal */}
+        {/* ===================================================================== */}
+        {/* SECTION 2 — PACKAGE BUILDER (Services & Add-Ons) */}
+        {/* ===================================================================== */}
+        <section className="py-16 px-6 md:px-12 bg-brand-black">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-serif text-brand-white text-center mb-4">
+              Package Builder — Services & Add-Ons
+            </h2>
+            <p className="text-brand-gray-light text-center mb-12 max-w-3xl mx-auto">
+              Build your custom package. All services include intake form and project kickoff.
+            </p>
+
+            {/* Builder Items by Category */}
+            <div className="space-y-12">
+              {Object.entries(groupedBuilderItems).map(([category, items]) => (
+                <div key={category}>
+                  <h3 className="text-2xl font-serif text-brand-white mb-6">{category}</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((item) => (
+                      <BuilderItemCard
+                        key={item.id}
+                        item={item}
+                        isSelected={selectedBuilderItems.has(item.id)}
+                        onToggle={() => toggleBuilderItem(item.id)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Checkout Summary */}
+            {selectedBuilderItems.size > 0 && (
+              <div className="mt-12 bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div>
+                    <p className="text-brand-gray-light mb-2">
+                      Selected: {selectedBuilderItems.size} item{selectedBuilderItems.size > 1 ? 's' : ''}
+                    </p>
+                    <p className="text-brand-gold text-3xl font-bold">
+                      Total: ${builderTotal.toLocaleString()}
+                    </p>
+                  </div>
+                  <button
+                    onClick={handleBuilderCheckout}
+                    className="btn-primary px-8 py-4 text-lg whitespace-nowrap"
+                  >
+                    Proceed to Checkout →
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <PricingFAQ />
+
+        <Footer />
+
+        {/* Modal */}
         <PackageRequestForm
           isOpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
           packageData={packageData}
         />
-
-        {/* Black Friday Promotional Popup */}
-        <BlackFridayPopup />
-
-        <Footer />
       </main>
     </>
   )
 }
 
+/* ===================================================================== */
+/* COMPONENTS */
+/* ===================================================================== */
+
+interface DigitalShopCardProps {
+  title: string
+  price: string
+  description: string
+  serviceId: string
+}
+
+function DigitalShopCard({ title, price, description, serviceId }: DigitalShopCardProps) {
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleCheckout = async () => {
+    setIsLoading(true)
+    try {
+      const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
+
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          selectedServiceIds: [serviceId],
+          bundleIds: [],
+          total: numericPrice,
+          customNotes: `Digital Shop: ${title}`,
+        }),
+      })
+
+      const contentType = response.headers.get('content-type')
+      if (!contentType || !contentType.includes('application/json')) {
+        const text = await response.text()
+        console.error('Non-JSON response received:', text.substring(0, 200))
+        throw new Error('Server returned an error. Please check the console for details.')
+      }
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to create checkout session')
+      }
+
+      if (data.url) {
+        window.location.href = data.url
+      } else {
+        throw new Error('No checkout URL received')
+      }
+    } catch (err) {
+      console.error('Error creating checkout session:', err)
+      alert(err instanceof Error ? err.message : 'Something went wrong. Please try again or contact support.')
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    <div className="bg-brand-black p-6 rounded-xl border border-brand-gray-dark flex flex-col justify-between">
+      <div>
+        <h3 className="text-2xl font-serif text-brand-white">{title}</h3>
+        <p className="text-brand-gold font-bold mt-2">{price}</p>
+        <p className="text-brand-gray-light mt-3">{description}</p>
+      </div>
+      <button
+        onClick={handleCheckout}
+        disabled={isLoading}
+        className="mt-6 bg-brand-gold text-brand-black py-3 px-4 rounded-lg font-semibold hover:bg-brand-gold-dark transition disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {isLoading ? 'Processing...' : 'Buy Now'}
+      </button>
+    </div>
+  )
+}
+
+interface BuilderItemCardProps {
+  item: {
+    id: string
+    name: string
+    price: number
+    category: string
+    description: string
+  }
+  isSelected: boolean
+  onToggle: () => void
+}
+
+function BuilderItemCard({ item, isSelected, onToggle }: BuilderItemCardProps) {
+  return (
+    <div
+      className={`bg-brand-gray-dark p-6 rounded-xl border cursor-pointer transition-all ${
+        isSelected ? 'border-brand-gold' : 'border-brand-gray-dark hover:border-brand-gray-light'
+      }`}
+      onClick={onToggle}
+    >
+      <div className="flex items-start justify-between mb-4">
+        <h3 className="text-xl font-serif text-brand-white flex-1">{item.name}</h3>
+        <input
+          type="checkbox"
+          checked={isSelected}
+          onChange={onToggle}
+          onClick={(e) => e.stopPropagation()}
+          className="w-5 h-5 rounded border-brand-gray-light text-brand-gold focus:ring-brand-gold focus:ring-2 cursor-pointer ml-4 flex-shrink-0"
+        />
+      </div>
+      <p className="text-brand-gold font-bold text-lg mb-3">${item.price.toLocaleString()}</p>
+      <p className="text-brand-gray-light text-sm">{item.description}</p>
+    </div>
+  )
+}
