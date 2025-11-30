@@ -8,7 +8,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://lopezproductions.ai/</loc>
-    <lastmod>2025-11-25</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -16,21 +16,28 @@
   <!-- Main Navigation Pages -->
   <url>
     <loc>https://lopezproductions.ai/solutions</loc>
-    <lastmod>2025-11-25</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://lopezproductions.ai/pricing</loc>
-    <lastmod>2025-11-25</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://lopezproductions.ai/playbook</loc>
-    <lastmod>2025-11-25</lastmod>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/templates</loc>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -38,38 +45,45 @@
   <!-- Service Pages -->
   <url>
     <loc>https://lopezproductions.ai/ai-portfolio-builder</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://lopezproductions.ai/ai-systems-for-freelancers</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Playbook Articles -->
   <url>
-    <loc>https://lopezproductions.ai/playbook/creator-systems</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://lopezproductions.ai/playbook/how-students-can-use-ai-to-study-more-efficiently</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/playbook/ai-workflows</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://lopezproductions.ai/playbook/nano-banana-for-teachers-visualizing-curriculum</loc>
+    <lastmod>2025-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/playbook/automation-systems</loc>
-    <lastmod>2025-11-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://lopezproductions.ai/playbook/brand-ready-website-images-chatgpt</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/playbook/zapiers-npm-account-hacked</loc>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
@@ -82,6 +96,13 @@
   <url>
     <loc>https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1</loc>
     <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/playbook/design-technical-jargon-explained</loc>
+    <lastmod>2025-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -185,23 +206,80 @@
   </url>
 
   <url>
-    <loc>https://lopezproductions.ai/playbook/design-technical-jargon-explained</loc>
-    <lastmod>2025-11-21</lastmod>
+    <loc>https://lopezproductions.ai/playbook/creator-systems</loc>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/playbook/ai-workflows</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/playbook/automation-systems</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Template Pages -->
+  <url>
+    <loc>https://lopezproductions.ai/templates/polaris-blue</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/templates/polaris-light</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/templates/law-crest</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/templates/roamline</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/templates/shieldcare</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://lopezproductions.ai/templates/revive-pt</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- About & Contact -->
   <url>
     <loc>https://lopezproductions.ai/about</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://lopezproductions.ai/contact</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -209,7 +287,7 @@
   <!-- Lead Magnet -->
   <url>
     <loc>https://lopezproductions.ai/free-portfolio-template</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -217,7 +295,7 @@
   <!-- Systems Showcase -->
   <url>
     <loc>https://lopezproductions.ai/systems-in-action</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -225,7 +303,7 @@
   <!-- Case Study -->
   <url>
     <loc>https://lopezproductions.ai/case-studies/nvidia-competitive-edge</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
