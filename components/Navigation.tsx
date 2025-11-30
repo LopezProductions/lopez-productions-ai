@@ -126,8 +126,8 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-brand-black/95 backdrop-blur-md shadow-lg' 
-        : 'bg-brand-black/80 backdrop-blur-sm'
+        ? 'bg-[#0F0F0F]/95 backdrop-blur-md shadow-lg' 
+        : 'bg-[#0F0F0F]/80 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -197,7 +197,7 @@ const Navigation = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 w-48 bg-brand-gray-dark border border-brand-gray-dark rounded-lg shadow-lg overflow-hidden z-50"
+                      className="absolute top-full left-0 mt-1 w-48 bg-[#111111] border border-[#111111] rounded-lg shadow-lg overflow-hidden z-50"
                     >
                       {solutionsSubItems.map((subItem) => (
                         <Link
@@ -260,7 +260,7 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-brand-gray-dark/95 backdrop-blur-md border-t border-brand-gray-dark"
+            className="md:hidden bg-[#111111]/95 backdrop-blur-md border-t border-[#111111]"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {/* Home */}
