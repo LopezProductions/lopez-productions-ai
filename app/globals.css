@@ -7,10 +7,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: #0F0F0F; /* brand-black - explicit hex for consistency */
   }
   
   body {
-    @apply bg-brand-black text-brand-white font-sans;
+    @apply text-brand-white font-sans;
+    background-color: #0F0F0F; /* brand-black - explicit hex for consistency */
+    min-height: 100vh;
   }
 }
 
