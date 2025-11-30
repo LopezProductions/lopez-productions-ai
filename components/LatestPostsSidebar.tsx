@@ -46,7 +46,7 @@ export default function LatestPostsSidebar() {
                 {post.title}
               </h4>
 
-              <p className="text-xs text-[#D4D4D4]/70 mt-1">
+              <p className="text-xs text-brand-gray-light/70 mt-1">
                 {post.publishedDate}
               </p>
             </div>

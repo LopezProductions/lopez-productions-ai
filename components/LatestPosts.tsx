@@ -69,13 +69,13 @@ export default function LatestPosts() {
                   {post.title}
                 </h3>
 
-                <p className="text-sm text-[#D4D4D4] mt-3 line-clamp-3">
+                <p className="text-sm text-brand-gray-light mt-3 line-clamp-3">
                   {post.excerpt}
                 </p>
 
-                <div className="mt-4 text-xs text-[#D4D4D4]/70 flex items-center gap-2">
+                <div className="mt-4 text-xs text-brand-gray-light/70 flex items-center gap-2">
                   <span>{post.publishedDate}</span>
-                  <span className="text-[#2E2E2E]">•</span>
+                  <span className="text-brand-gray-dark">•</span>
                   <span>{post.readTime || "5 min read"}</span>
                 </div>
               </div>

@@ -80,11 +80,11 @@ export default function Home() {
             backgroundImage: 'url(/transparent_logo_lp.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.15
+            opacity: 0.1
           }}
         ></div>
-        {/* Dark overlay to create silhouette effect */}
-        <div className="fixed inset-0 bg-gradient-to-br from-brand-black/85 via-brand-gray-dark/80 to-brand-black/85"></div>
+        {/* Light overlay to maintain charcoal color */}
+        <div className="fixed inset-0 bg-gradient-to-br from-brand-black/60 via-brand-gray-dark/40 to-brand-black/60"></div>
         
         {/* Subtle gold halo effect around the logo */}
         <div className="fixed inset-0 flex items-center justify-center">
