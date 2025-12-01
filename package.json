@@ -17,6 +17,7 @@
     "stripe": "^19.2.1"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
