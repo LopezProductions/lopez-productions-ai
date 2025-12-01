@@ -108,7 +108,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-[#0F0F0F] text-[#F5F5F0] font-sans" style={{ backgroundColor: '#0F0F0F', color: '#F5F5F0' }}>
+      <body className="bg-background text-text-primary font-sans">
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8MR5FQDTBY"

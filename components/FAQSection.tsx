@@ -17,7 +17,7 @@ const FAQSection = React.memo(function FAQSection() {
   ]
 
   return (
-    <section className="py-16 px-6 md:px-12 bg-brand-gray-dark/50">
+    <section className="py-16 px-6 md:px-12 bg-surface/50">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-center mb-12 text-gradient">
           FAQ
@@ -26,12 +26,12 @@ const FAQSection = React.memo(function FAQSection() {
           {faqs.map((item, index) => (
             <details
               key={index}
-              className="rounded-xl border border-brand-gray-dark p-6 open:bg-white/5 transition-all duration-300"
+              className="rounded-xl border border-border p-6 open:bg-white/5 transition-all duration-300"
             >
-              <summary className="cursor-pointer font-semibold text-brand-white hover:text-brand-gold transition-colors">
+              <summary className="cursor-pointer font-semibold text-text-primary hover:text-accent transition-colors">
                 {item.q}
               </summary>
-              <p className="mt-3 text-brand-gray-light leading-relaxed">{item.a}</p>
+              <p className="mt-3 text-text-secondary leading-relaxed">{item.a}</p>
             </details>
           ))}
         </div>

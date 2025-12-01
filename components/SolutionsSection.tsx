@@ -41,7 +41,7 @@ const SolutionsSection = () => {
   ]
 
   return (
-    <section id="solutions" className="py-20 bg-brand-gray-dark">
+    <section id="solutions" className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -66,41 +66,41 @@ const SolutionsSection = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-brand-black rounded-xl p-8 h-full card-hover relative overflow-hidden">
+              <div className="bg-background rounded-xl p-8 h-full card-hover relative overflow-hidden">
                 {/* Background glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className="w-16 h-16 bg-gradient-gold rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <solution.icon className="w-8 h-8 text-brand-black" />
+                    <solution.icon className="w-8 h-8 text-background" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-semibold text-brand-white mb-2 group-hover:text-brand-gold transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-accent transition-colors duration-300">
                     {solution.title}
                   </h3>
 
                   {/* Tagline */}
-                  <p className="text-brand-gold text-sm font-medium mb-4 leading-relaxed">
+                  <p className="text-accent text-sm font-medium mb-4 leading-relaxed">
                     {solution.tagline}
                   </p>
 
                   {/* Description */}
-                  <p className="text-brand-gray-light mb-6 leading-relaxed">
+                  <p className="text-text-secondary mb-6 leading-relaxed">
                     {solution.description}
                   </p>
 
                   {/* Tools */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-brand-gold mb-3 uppercase tracking-wide">
+                    <h4 className="text-sm font-semibold text-accent mb-3 uppercase tracking-wide">
                       Tools & Platforms
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {solution.tools.map((tool) => (
                         <span
                           key={tool}
-                          className="px-3 py-1 bg-brand-gray-dark text-brand-gray-light text-xs rounded-full border border-brand-gray-dark group-hover:border-brand-gold transition-colors duration-300"
+                          className="px-3 py-1 bg-surface text-text-secondary text-xs rounded-full border border-brand-gray-dark group-hover:border-accent transition-colors duration-300"
                         >
                           {tool}
                         </span>
@@ -110,13 +110,13 @@ const SolutionsSection = () => {
 
                   {/* Features */}
                   <div>
-                    <h4 className="text-sm font-semibold text-brand-gold mb-3 uppercase tracking-wide">
+                    <h4 className="text-sm font-semibold text-accent mb-3 uppercase tracking-wide">
                       What's Included
                     </h4>
                     <ul className="space-y-2">
                       {solution.features.map((feature) => (
-                        <li key={feature} className="text-brand-gray-light text-sm flex items-center">
-                          <span className="text-brand-gold mr-2">✓</span>
+                        <li key={feature} className="text-text-secondary text-sm flex items-center">
+                          <span className="text-accent mr-2">✓</span>
                           {feature}
                         </li>
                       ))}
@@ -130,7 +130,7 @@ const SolutionsSection = () => {
                             solution.title === 'Content Automation Engine' ? '/solutions#content' :
                             solution.title === 'Brand Automation Systems' ? '/solutions#brand' :
                             solution.title === 'AI Design Systems' ? '/solutions#design' : '/solutions'}
-                      className="inline-block px-6 py-3 bg-brand-gray-dark text-brand-white rounded-lg font-medium hover:bg-brand-gold hover:text-brand-black transition-all duration-300 group-hover:scale-105"
+                      className="inline-block px-6 py-3 bg-surface text-text-primary rounded-lg font-medium hover:bg-primary hover:text-background transition-all duration-300 group-hover:scale-105"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >

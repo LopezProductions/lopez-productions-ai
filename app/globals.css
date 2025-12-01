@@ -26,15 +26,6 @@
 
 @layer base {
   :root {
-    /* Brand variables (backward compatibility) */
-    --brand-black: #0F0F0F;
-    --brand-gray-dark: #111111;
-    --brand-white: #F5F5F0;
-    --brand-gray-light: #CCCCCC;
-    --brand-gray-muted: #888888;
-    --brand-gold: #C5A059;
-    --brand-gold-dark: #9A7A3F;
-    
     /* Primary theme variables (duplicated for redundancy to prevent tree-shaking) */
     --primary-color: #C5A059;
     --secondary-color: #9A7A3F;
@@ -52,56 +43,65 @@
     --shadow-heavy: 0 15px 35px rgba(197, 160, 89, 0.2);
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Brand variables mapped to new variables (backward compatibility) */
+    --brand-black: var(--background-color);
+    --brand-gray-dark: var(--surface-color);
+    --brand-white: var(--text-primary);
+    --brand-gray-light: var(--text-secondary);
+    --brand-gray-muted: var(--text-muted);
+    --brand-gold: var(--primary-color);
+    --brand-gold-dark: var(--secondary-color);
   }
   
   html {
     scroll-behavior: smooth;
-    background-color: var(--brand-black);
-    color: var(--brand-white);
+    background-color: var(--background-color);
+    color: var(--text-primary);
   }
   
   body {
-    @apply text-brand-white font-sans;
-    background-color: var(--brand-black);
-    color: var(--brand-white);
+    @apply text-text-primary font-sans;
+    background-color: var(--background-color);
+    color: var(--text-primary);
     min-height: 100vh;
   }
   
   /* Ensure all text elements use correct colors */
   h1, h2, h3, h4, h5, h6 {
-    color: var(--brand-white);
+    color: var(--text-primary);
   }
   
   p {
-    color: var(--brand-gray-light);
+    color: var(--text-secondary);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-gold text-brand-black px-8 py-2 md:py-4 rounded-lg font-semibold 
+    @apply bg-gradient-gold text-background px-8 py-2 md:py-4 rounded-lg font-semibold 
            hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl
-           animate-pulse-slow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold;
+           animate-pulse-slow focus:outline-none focus-visible:ring-2 focus-visible:ring-primary;
   }
   
   .btn-outline {
-    @apply border-2 border-brand-gold text-brand-white px-8 py-2 md:py-4 rounded-lg font-semibold
-           hover:bg-brand-gold hover:text-brand-black transition-all duration-300
-           hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold;
+    @apply border-2 border-primary text-text-primary px-8 py-2 md:py-4 rounded-lg font-semibold
+           hover:bg-primary hover:text-background transition-all duration-300
+           hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary;
   }
   
   .section-title {
     @apply text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-center
-           bg-gradient-to-r from-brand-white to-brand-gold bg-clip-text text-transparent;
+           bg-gradient-to-r from-text-primary to-primary bg-clip-text text-transparent;
   }
   
   .section-subtitle {
-    @apply text-xl text-brand-gray-light text-center max-w-3xl mx-auto mt-4;
+    @apply text-xl text-text-secondary text-center max-w-3xl mx-auto mt-4;
   }
   
   .card-hover {
-    @apply hover:scale-105 hover:shadow-2xl hover:shadow-brand-gold/20 
-           transition-all duration-300 border border-brand-gray-dark hover:border-brand-gold;
+    @apply hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 
+           transition-all duration-300 border border-border hover:border-primary;
   }
   
   .gradient-border {
@@ -110,7 +110,7 @@
   
   .gradient-border::before {
     content: '';
-    @apply absolute inset-0 rounded-lg p-[2px] bg-gradient-to-r from-brand-gold to-brand-gold-dark;
+    @apply absolute inset-0 rounded-lg p-[2px] bg-gradient-to-r from-primary to-secondary;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
   }

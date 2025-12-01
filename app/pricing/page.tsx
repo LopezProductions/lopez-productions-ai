@@ -130,7 +130,7 @@ export default function PricingPage() {
       <Script id="pricing-schema" type="application/ld+json">
         {JSON.stringify(schema)}
       </Script>
-      <main className="min-h-screen bg-brand-black relative overflow-x-hidden">
+      <main className="min-h-screen bg-background relative overflow-x-hidden">
         {/* Background with logo - very dark silhouette */}
         <div 
           className="fixed inset-0 bg-cover bg-center bg-no-repeat"
@@ -159,10 +159,10 @@ export default function PricingPage() {
         {/* HERO SECTION */}
         {/* ----------------------------- */}
         <section className="py-20 px-6 md:px-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-brand-white">
+          <h1 className="text-5xl md:text-6xl font-serif font-bold text-text-primary">
             Build Your System. Own Your Niche.
           </h1>
-          <p className="text-xl text-brand-gray-light mt-6 max-w-3xl mx-auto">
+          <p className="text-xl text-text-secondary mt-6 max-w-3xl mx-auto">
             Whether you&apos;re studying, teaching, creating, traveling, or running a law firm —
             these tools help you organize, present, and automate your work with ease.
           </p>
@@ -171,11 +171,11 @@ export default function PricingPage() {
         {/* ===================================================================== */}
         {/* SECTION 1 — DIGITAL SHOP (Instant Downloads) */}
         {/* ===================================================================== */}
-        <section className="py-16 px-6 md:px-12 bg-brand-gray-dark">
-          <h2 className="text-4xl font-serif text-brand-white text-center mb-4">
+        <section className="py-16 px-6 md:px-12 bg-surface">
+          <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
             Digital Shop — Instant Downloads
           </h2>
-          <p className="text-brand-gray-light text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-text-secondary text-center mb-12 max-w-2xl mx-auto">
             Templates and tools you can start using today. No wait times. One-click checkout.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -224,12 +224,12 @@ export default function PricingPage() {
         {/* ===================================================================== */}
         {/* SECTION 2 — PACKAGE BUILDER (Services & Add-Ons) */}
         {/* ===================================================================== */}
-        <section className="py-16 px-6 md:px-12 bg-brand-black">
+        <section className="py-16 px-6 md:px-12 bg-background">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-serif text-brand-white text-center mb-4">
+            <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
               Package Builder — Services & Add-Ons
             </h2>
-            <p className="text-brand-gray-light text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto">
               Build your custom package. All services include intake form and project kickoff.
             </p>
 
@@ -237,7 +237,7 @@ export default function PricingPage() {
             <div className="space-y-12">
               {Object.entries(groupedBuilderItems).map(([category, items]) => (
                 <div key={category}>
-                  <h3 className="text-2xl font-serif text-brand-white mb-6">{category}</h3>
+                  <h3 className="text-2xl font-serif text-text-primary mb-6">{category}</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {items.map((item) => (
                       <BuilderItemCard
@@ -254,13 +254,13 @@ export default function PricingPage() {
 
             {/* Checkout Summary */}
             {selectedBuilderItems.size > 0 && (
-              <div className="mt-12 bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark">
+              <div className="mt-12 bg-surface rounded-xl p-8 border border-border">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                   <div>
-                    <p className="text-brand-gray-light mb-2">
+                    <p className="text-text-secondary mb-2">
                       Selected: {selectedBuilderItems.size} item{selectedBuilderItems.size > 1 ? 's' : ''}
                     </p>
-                    <p className="text-brand-gold text-3xl font-bold">
+                    <p className="text-accent text-3xl font-bold">
                       Total: ${builderTotal.toLocaleString()}
                     </p>
                   </div>
@@ -350,16 +350,16 @@ function DigitalShopCard({ title, price, description, serviceId }: DigitalShopCa
   }
 
   return (
-    <div className="bg-brand-black p-6 rounded-xl border border-brand-gray-dark flex flex-col justify-between">
+    <div className="bg-background p-6 rounded-xl border border-border flex flex-col justify-between">
       <div>
-        <h3 className="text-2xl font-serif text-brand-white">{title}</h3>
-        <p className="text-brand-gold font-bold mt-2">{price}</p>
-        <p className="text-brand-gray-light mt-3">{description}</p>
+        <h3 className="text-2xl font-serif text-text-primary">{title}</h3>
+        <p className="text-accent font-bold mt-2">{price}</p>
+        <p className="text-text-secondary mt-3">{description}</p>
       </div>
       <button
         onClick={handleCheckout}
         disabled={isLoading}
-        className="mt-6 bg-brand-gold text-brand-black py-3 px-4 rounded-lg font-semibold hover:bg-brand-gold-dark transition disabled:opacity-50 disabled:cursor-not-allowed"
+        className="mt-6 bg-brand-gold text-brand-black py-3 px-4 rounded-lg font-semibold hover:bg-primary-dark transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isLoading ? 'Processing...' : 'Buy Now'}
       </button>
@@ -382,23 +382,23 @@ interface BuilderItemCardProps {
 function BuilderItemCard({ item, isSelected, onToggle }: BuilderItemCardProps) {
   return (
     <div
-      className={`bg-brand-gray-dark p-6 rounded-xl border cursor-pointer transition-all ${
-        isSelected ? 'border-brand-gold' : 'border-brand-gray-dark hover:border-brand-gray-light'
+      className={`bg-surface p-6 rounded-xl border cursor-pointer transition-all ${
+        isSelected ? 'border-accent' : 'border-border hover:border-brand-gray-light'
       }`}
       onClick={onToggle}
     >
       <div className="flex items-start justify-between mb-4">
-        <h3 className="text-xl font-serif text-brand-white flex-1">{item.name}</h3>
+        <h3 className="text-xl font-serif text-text-primary flex-1">{item.name}</h3>
         <input
           type="checkbox"
           checked={isSelected}
           onChange={onToggle}
           onClick={(e) => e.stopPropagation()}
-          className="w-5 h-5 rounded border-brand-gray-light text-brand-gold focus:ring-brand-gold focus:ring-2 cursor-pointer ml-4 flex-shrink-0"
+          className="w-5 h-5 rounded border-brand-gray-light text-accent focus:ring-brand-gold focus:ring-2 cursor-pointer ml-4 flex-shrink-0"
         />
       </div>
-      <p className="text-brand-gold font-bold text-lg mb-3">${item.price.toLocaleString()}</p>
-      <p className="text-brand-gray-light text-sm">{item.description}</p>
+      <p className="text-accent font-bold text-lg mb-3">${item.price.toLocaleString()}</p>
+      <p className="text-text-secondary text-sm">{item.description}</p>
     </div>
   )
 }

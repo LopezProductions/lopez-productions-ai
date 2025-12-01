@@ -27,7 +27,7 @@ export default function LatestPosts() {
 
   return (
     <section className="max-w-6xl mx-auto mt-20 px-4">
-      <h2 className="text-3xl font-bold tracking-tight text-brand-white mb-8">
+      <h2 className="text-3xl font-bold tracking-tight text-text-primary mb-8">
         Latest Guides &amp; Playbooks
       </h2>
 
@@ -42,12 +42,12 @@ export default function LatestPosts() {
             <div
               className="
                 rounded-xl overflow-hidden 
-                bg-brand-gray-dark
-                border border-[#2E2E2E]
+                bg-surface
+                border border-border
                 shadow-[0_0_18px_rgba(0,0,0,0.35)]
                 transform transition-all duration-300
                 group-hover:-translate-y-1
-                group-hover:border-brand-gold
+                group-hover:border-accent
                 group-hover:shadow-[0_0_26px_rgba(197,160,89,0.35)]
               "
             >
@@ -62,20 +62,20 @@ export default function LatestPosts() {
               <div className="p-5">
                 <h3
                   className="
-                    text-lg font-semibold text-brand-white
-                    group-hover:text-brand-gold transition-colors
+                    text-lg font-semibold text-text-primary
+                    group-hover:text-accent transition-colors
                   "
                 >
                   {post.title}
                 </h3>
 
-                <p className="text-sm text-brand-gray-light mt-3 line-clamp-3">
+                <p className="text-sm text-text-secondary mt-3 line-clamp-3">
                   {post.excerpt}
                 </p>
 
-                <div className="mt-4 text-xs text-brand-gray-light/70 flex items-center gap-2">
+                <div className="mt-4 text-xs text-text-secondary/70 flex items-center gap-2">
                   <span>{post.publishedDate}</span>
-                  <span className="text-brand-gray-dark">•</span>
+                  <span className="text-surface">•</span>
                   <span>{post.readTime || "5 min read"}</span>
                 </div>
               </div>

@@ -34,22 +34,22 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative bg-brand-gray-dark rounded-xl border border-brand-gray-dark shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            className="relative bg-surface rounded-xl border border-border shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
           >
             {/* HEADER */}
-            <div className="flex items-center justify-between p-6 border-b border-brand-gray-dark">
+            <div className="flex items-center justify-between p-6 border-b border-border">
               <div>
-                <h2 className="text-2xl font-serif font-bold text-brand-white">
+                <h2 className="text-2xl font-serif font-bold text-text-primary">
                   Tell Me What You're Building
                 </h2>
-                <p className="text-brand-gray-light text-sm mt-1">
+                <p className="text-text-secondary text-sm mt-1">
                   Whether you need a system, a template, or a complete transformation — 
                   this form helps me understand exactly how to help.
                 </p>
               </div>
               <button
                 onClick={onClose}
-                className="text-brand-gray-light hover:text-brand-gold transition-colors duration-200"
+                className="text-text-secondary hover:text-accent transition-colors duration-200"
               >
                 <X size={24} />
               </button>
@@ -65,41 +65,41 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
 
               {/* Full Name */}
               <div>
-                <label className="block text-brand-white text-sm font-medium mb-2">
+                <label className="block text-text-primary text-sm font-medium mb-2">
                   Full Name *
                 </label>
                 <input
                   type="text"
                   name="name"
                   required
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary placeholder-text-secondary focus:border-accent transition"
                   placeholder="Your full name"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-brand-white text-sm font-medium mb-2">
+                <label className="block text-text-primary text-sm font-medium mb-2">
                   Email Address *
                 </label>
                 <input
                   type="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary placeholder-text-secondary focus:border-accent transition"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               {/* Primary Focus */}
               <div>
-                <label className="block text-brand-white text-sm font-medium mb-2">
+                <label className="block text-text-primary text-sm font-medium mb-2">
                   What are you trying to achieve right now? *
                 </label>
                 <select
                   name="focus"
                   required
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary focus:border-accent transition"
                 >
                   <option value="" disabled selected>Choose one</option>
                   <option value="Launch or improve my website">Launch or improve my website</option>
@@ -114,7 +114,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
 
               {/* Help Needed — Updated */}
               <div>
-                <label className="block text-brand-white text-sm font-medium mb-3">
+                <label className="block text-text-primary text-sm font-medium mb-3">
                   What do you need help with?
                 </label>
 
@@ -134,9 +134,9 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
                         type="checkbox"
                         name="help[]"
                         value={option}
-                        className="w-4 h-4 text-brand-gold bg-brand-black border-brand-gray-dark rounded focus:ring-brand-gold"
+                        className="w-4 h-4 text-accent bg-background border-border rounded focus:ring-brand-gold"
                       />
-                      <span className="text-brand-gray-light text-sm">{option}</span>
+                      <span className="text-text-secondary text-sm">{option}</span>
                     </label>
                   ))}
                 </div>
@@ -144,26 +144,26 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
 
               {/* Description */}
               <div>
-                <label className="block text-brand-white text-sm font-medium mb-2">
+                <label className="block text-text-primary text-sm font-medium mb-2">
                   Describe what you're trying to build
                 </label>
                 <textarea
                   name="description"
                   rows={4}
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition resize-none"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary placeholder-text-secondary focus:border-accent transition resize-none"
                   placeholder="Tell me as much or as little as you'd like..."
                 />
               </div>
 
               {/* Timeline */}
               <div>
-                <label className="block text-brand-white text-sm font-medium mb-2">
+                <label className="block text-text-primary text-sm font-medium mb-2">
                   Timeline *
                 </label>
                 <select
                   name="timeline"
                   required
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary focus:border-accent transition"
                 >
                   <option value="" disabled selected>Choose one</option>
                   <option value="ASAP">ASAP</option>
@@ -176,12 +176,12 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
 
               {/* Budget */}
               <div>
-                <label className="block text-brand-white text-sm font-medium mb-2">
+                <label className="block text-text-primary text-sm font-medium mb-2">
                   Budget Range
                 </label>
                 <select
                   name="budget"
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary focus:border-accent transition"
                 >
                   <option value="" disabled selected>Choose one</option>
                   <option value="$100–$300">$100–$300</option>
@@ -194,13 +194,13 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
 
               {/* Referral */}
               <div>
-                <label className="block text-brand-white text-sm font-medium mb-2">
+                <label className="block text-text-primary text-sm font-medium mb-2">
                   How did you hear about Lopez Productions?
                 </label>
                 <input
                   type="text"
                   name="referral"
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition"
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary placeholder-text-secondary focus:border-accent transition"
                   placeholder="Social media, search, referral, etc."
                 />
               </div>

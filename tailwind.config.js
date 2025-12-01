@@ -8,7 +8,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
+        // New CSS variable-based theme colors
+        background: 'var(--background-color)',
+        surface: 'var(--surface-color)',
+        primary: 'var(--primary-color)',
+        secondary: 'var(--secondary-color)',
+        text: {
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted: 'var(--text-muted)',
+        },
+        border: 'var(--border-color)',
+        accent: 'var(--accent-color)',
+        // Legacy primary scale (keep for compatibility if needed)
+        'primary-scale': {
           50: '#fffbf0',
           100: '#fef3c7',
           200: '#fde68a',
@@ -20,14 +33,17 @@ module.exports = {
           800: '#92400e',
           900: '#78350f',
         },
+        // Brand colors mapped to CSS variables for backward compatibility
         brand: {
-          gold: '#FFD700',
-          'gold-dark': '#B8860B',
-          black: '#000000',
-          'gray-dark': '#111111',
-          white: '#FFFFFF',
-          'gray-light': '#CCCCCC',
-          'gray-muted': '#888888',
+          gold: 'var(--primary-color)',
+          'gold-dark': 'var(--secondary-color)',
+          black: 'var(--background-color)',
+          'gray-dark': 'var(--surface-color)',
+          white: 'var(--text-primary)',
+          'gray-light': 'var(--text-secondary)',
+          'gray-muted': 'var(--text-muted)',
+          indigo: '#6366F1',
+          cyan: '#22D3EE',
         }
       },
       fontFamily: {
@@ -43,8 +59,8 @@ module.exports = {
       },
       keyframes: {
         glow: {
-          '0%': { boxShadow: '0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700' },
-          '100%': { boxShadow: '0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700' },
+          '0%': { boxShadow: '0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color)' },
+          '100%': { boxShadow: '0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color)' },
         },
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
@@ -62,7 +78,7 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-gold': 'linear-gradient(135deg, #FFD700 0%, #B8860B 100%)',
+        'gradient-gold': 'var(--gradient-primary)',
       },
     },
   },

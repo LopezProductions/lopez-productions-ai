@@ -30,7 +30,7 @@ const SystemsInActionSection = () => {
   ]
 
   return (
-    <section id="systems-in-action" className="py-20 bg-brand-black">
+    <section id="systems-in-action" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,15 +56,15 @@ const SystemsInActionSection = () => {
               className="group"
             >
               {system.comingSoon ? (
-                <div className="bg-brand-gray-dark rounded-xl p-8 h-full relative overflow-hidden border border-brand-gray-dark opacity-75">
+                <div className="bg-surface rounded-xl p-8 h-full relative overflow-hidden border border-border opacity-75">
                   <div className="relative z-10">
                     {/* Title */}
-                    <h3 className="text-xl font-semibold text-brand-white mb-4">
+                    <h3 className="text-xl font-semibold text-text-primary mb-4">
                       {system.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-brand-gray-light mb-6 leading-relaxed">
+                    <p className="text-text-secondary mb-6 leading-relaxed">
                       {system.description}
                     </p>
 
@@ -73,7 +73,7 @@ const SystemsInActionSection = () => {
                       {system.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 bg-brand-black text-brand-gold text-xs rounded-full border border-brand-gold/30"
+                          className="px-3 py-1 bg-background text-accent text-xs rounded-full border border-accent/30"
                         >
                           {tag}
                         </span>
@@ -81,25 +81,25 @@ const SystemsInActionSection = () => {
                     </div>
 
                     {/* Coming Soon indicator */}
-                    <div className="mt-6 flex items-center text-brand-gray-muted text-sm font-medium">
+                    <div className="mt-6 flex items-center text-text-muted text-sm font-medium">
                       Coming Soon
                     </div>
                   </div>
                 </div>
               ) : (
                 <Link href={`/case-studies/${system.slug}`}>
-                  <div className="bg-brand-gray-dark rounded-xl p-8 h-full card-hover relative overflow-hidden border border-brand-gray-dark hover:border-brand-gold transition-all duration-300">
+                  <div className="bg-surface rounded-xl p-8 h-full card-hover relative overflow-hidden border border-border hover:border-accent transition-all duration-300">
                     {/* Background glow effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
                     <div className="relative z-10">
                       {/* Title */}
-                      <h3 className="text-xl font-semibold text-brand-white mb-4 group-hover:text-brand-gold transition-colors duration-300">
+                      <h3 className="text-xl font-semibold text-text-primary mb-4 group-hover:text-accent transition-colors duration-300">
                         {system.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-brand-gray-light mb-6 leading-relaxed">
+                      <p className="text-text-secondary mb-6 leading-relaxed">
                         {system.description}
                       </p>
 
@@ -108,7 +108,7 @@ const SystemsInActionSection = () => {
                         {system.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-3 py-1 bg-brand-black text-brand-gold text-xs rounded-full border border-brand-gold/30 group-hover:border-brand-gold transition-colors duration-300"
+                            className="px-3 py-1 bg-background text-accent text-xs rounded-full border border-accent/30 group-hover:border-accent transition-colors duration-300"
                           >
                             {tag}
                           </span>
@@ -116,7 +116,7 @@ const SystemsInActionSection = () => {
                       </div>
 
                       {/* Link indicator */}
-                      <div className="mt-6 flex items-center text-brand-gold text-sm font-medium group-hover:translate-x-2 transition-transform duration-300">
+                      <div className="mt-6 flex items-center text-accent text-sm font-medium group-hover:translate-x-2 transition-transform duration-300">
                         View Case Study
                         <span className="ml-2">→</span>
                       </div>

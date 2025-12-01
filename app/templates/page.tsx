@@ -79,7 +79,7 @@ export default function TemplatesPage() {
       <Script id="templates-schema" type="application/ld+json">
         {JSON.stringify(schema)}
       </Script>
-      <main className="min-h-screen bg-brand-black relative overflow-hidden">
+      <main className="min-h-screen bg-background relative overflow-hidden">
         {/* Background with logo - very dark silhouette */}
         <div
           className="fixed inset-0 bg-cover bg-center bg-no-repeat"
@@ -109,13 +109,13 @@ export default function TemplatesPage() {
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-6">
                 Template Library
               </h1>
-              <p className="text-2xl font-serif text-brand-gray-light mb-4 max-w-3xl">
+              <p className="text-2xl font-serif text-text-secondary mb-4 max-w-3xl">
                 Your Website Is Costing You Clients. Fix That This Weekend.
               </p>
-              <p className="text-lg text-brand-gray-light mb-4 max-w-3xl leading-relaxed">
+              <p className="text-lg text-text-secondary mb-4 max-w-3xl leading-relaxed">
                 These high-performance Vite &amp; Next.js templates give you a $1k-quality website without waiting months on a designer.
               </p>
-              <p className="text-lg text-brand-gray-light mb-12 max-w-3xl leading-relaxed">
+              <p className="text-lg text-text-secondary mb-12 max-w-3xl leading-relaxed">
                 Clean design, fast loads, and simple editing—so you go live in hours, not weeks.
               </p>
               
@@ -128,17 +128,17 @@ export default function TemplatesPage() {
                     <Link
                       key={template.slug}
                       href={`/templates/${template.slug}`}
-                      className="group rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-hover relative"
+                      className="group rounded-2xl border border-border bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-hover relative"
                     >
                       {/* Preview iframe */}
-                      <div className="aspect-square relative bg-brand-black">
+                      <div className="aspect-square relative bg-background">
                         {!hasError ? (
                           <>
                             {isLoading && (
-                              <div className="absolute inset-0 flex items-center justify-center bg-brand-gray-dark/50 z-10">
+                              <div className="absolute inset-0 flex items-center justify-center bg-surface/50 z-10">
                                 <div className="text-center">
                                   <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-                                  <p className="text-brand-gray-light text-sm">Loading preview...</p>
+                                  <p className="text-text-secondary text-sm">Loading preview...</p>
                                 </div>
                               </div>
                             )}
@@ -155,10 +155,10 @@ export default function TemplatesPage() {
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-gray-dark to-brand-black">
                             <div className="text-center p-6">
-                              <p className="text-brand-gray-light text-sm mb-4">
+                              <p className="text-text-secondary text-sm mb-4">
                                 Preview unavailable
                               </p>
-                              <span className="text-brand-gold text-sm">
+                              <span className="text-accent text-sm">
                                 View Template →
                               </span>
                             </div>
@@ -169,13 +169,13 @@ export default function TemplatesPage() {
                       {/* Overlay with title and link */}
                       <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                         <div className="absolute bottom-0 left-0 right-0 p-6">
-                          <p className="text-xs uppercase tracking-[0.2em] text-brand-gold mb-2">
+                          <p className="text-xs uppercase tracking-[0.2em] text-accent mb-2">
                             {template.category}
                           </p>
-                          <h3 className="text-xl md:text-2xl font-serif font-bold text-brand-white mb-2">
+                          <h3 className="text-xl md:text-2xl font-serif font-bold text-text-primary mb-2">
                             {template.title}
                           </h3>
-                          <span className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark text-sm font-medium">
+                          <span className="inline-flex items-center text-accent hover:text-accent-dark text-sm font-medium">
                             <span className="mr-2">View Template</span>
                             <span>→</span>
                           </span>
@@ -184,10 +184,10 @@ export default function TemplatesPage() {
 
                       {/* Always visible title at bottom */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-brand-black/60 to-transparent pointer-events-none">
-                        <p className="text-xs uppercase tracking-[0.2em] text-brand-gold mb-1">
+                        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-1">
                           {template.category}
                         </p>
-                        <h3 className="text-lg font-serif font-bold text-brand-white">
+                        <h3 className="text-lg font-serif font-bold text-text-primary">
                           {template.title}
                         </h3>
                       </div>

@@ -126,8 +126,8 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-[#0F0F0F]/95 backdrop-blur-md shadow-lg' 
-        : 'bg-[#0F0F0F]/80 backdrop-blur-sm'
+        ? 'bg-background/95 backdrop-blur-md shadow-lg' 
+        : 'bg-background/80 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -140,7 +140,7 @@ const Navigation = () => {
             <img 
               src="/lp_closeup.png" 
               alt="Lopez Productions logo" 
-              className="w-8 h-8 rounded-full object-cover border border-brand-gold/50"
+              className="w-8 h-8 rounded-full object-cover border border-accent/50"
             />
             <Link href="/" className="text-2xl font-serif font-bold text-gradient">
               Lopez Productions
@@ -160,11 +160,11 @@ const Navigation = () => {
                   href="/"
                   onClick={(e) => handleNavClick('/', e)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group block ${
-                    pathname === '/' ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                    pathname === '/' ? 'text-accent' : 'text-text-secondary hover:text-accent'
                   }`}
                 >
                   Home
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </motion.div>
 
@@ -179,7 +179,7 @@ const Navigation = () => {
               >
                 <button
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group flex items-center gap-1 ${
-                    isSolutionsActive ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                    isSolutionsActive ? 'text-accent' : 'text-text-secondary hover:text-accent'
                   }`}
                 >
                   Solutions
@@ -187,7 +187,7 @@ const Navigation = () => {
                     size={16} 
                     className={`transition-transform duration-200 ${isSolutionsOpen ? 'rotate-180' : ''}`}
                   />
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </button>
 
                 <AnimatePresence>
@@ -197,7 +197,7 @@ const Navigation = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 w-48 bg-[#111111] border border-[#111111] rounded-lg shadow-lg overflow-hidden z-50"
+                      className="absolute top-full left-0 mt-1 w-48 bg-surface border border-surface rounded-lg shadow-lg overflow-hidden z-50"
                     >
                       {solutionsSubItems.map((subItem) => (
                         <Link
@@ -206,8 +206,8 @@ const Navigation = () => {
                           onClick={(e) => handleNavClick(subItem.href, e)}
                           className={`block px-4 py-2 text-sm transition-colors duration-200 ${
                             pathname === subItem.href
-                              ? 'text-brand-gold bg-brand-black/50'
-                              : 'text-brand-gray-light hover:text-brand-gold hover:bg-brand-black/30'
+                              ? 'text-accent bg-background/50'
+                              : 'text-text-secondary hover:text-accent hover:bg-background/30'
                           }`}
                         >
                           {subItem.label}
@@ -230,11 +230,11 @@ const Navigation = () => {
                     href={item.href}
                     onClick={(e) => handleNavClick(item.href, e)}
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group block ${
-                      pathname === item.href ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                      pathname === item.href ? 'text-accent' : 'text-text-secondary hover:text-accent'
                     }`}
                   >
                     {item.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </motion.div>
               ))}
@@ -245,7 +245,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-brand-gray-light hover:text-brand-gold focus:outline-none focus:text-brand-gold transition-colors duration-200"
+              className="text-text-secondary hover:text-accent focus:outline-none focus:text-accent transition-colors duration-200"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -260,7 +260,7 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#111111]/95 backdrop-blur-md border-t border-[#111111]"
+            className="md:hidden bg-surface/95 backdrop-blur-md border-t border-surface"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {/* Home */}
@@ -273,7 +273,7 @@ const Navigation = () => {
                   href="/"
                   onClick={(e) => handleNavClick('/', e)}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    pathname === '/' ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                    pathname === '/' ? 'text-accent' : 'text-text-secondary hover:text-accent'
                   }`}
                 >
                   Home
@@ -289,7 +289,7 @@ const Navigation = () => {
                 <button
                   onClick={() => setIsSolutionsMobileOpen(!isSolutionsMobileOpen)}
                   className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    isSolutionsActive ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                    isSolutionsActive ? 'text-accent' : 'text-text-secondary hover:text-accent'
                   }`}
                 >
                   Solutions
@@ -313,8 +313,8 @@ const Navigation = () => {
                           onClick={(e) => handleNavClick(subItem.href, e)}
                           className={`block px-3 py-2 rounded-md text-sm transition-colors duration-200 ${
                             pathname === subItem.href
-                              ? 'text-brand-gold'
-                              : 'text-brand-gray-light hover:text-brand-gold'
+                              ? 'text-accent'
+                              : 'text-text-secondary hover:text-accent'
                           }`}
                         >
                           {subItem.label}
@@ -337,7 +337,7 @@ const Navigation = () => {
                     href={item.href}
                     onClick={(e) => handleNavClick(item.href, e)}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                      pathname === item.href ? 'text-brand-gold' : 'text-brand-gray-light hover:text-brand-gold'
+                      pathname === item.href ? 'text-accent' : 'text-text-secondary hover:text-accent'
                     }`}
                   >
                     {item.label}

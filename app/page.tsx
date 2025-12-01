@@ -68,7 +68,7 @@ export default function Home() {
 
   return (
     <HomePageClient>
-      <main className="min-h-screen bg-brand-black relative overflow-x-hidden">
+      <main className="min-h-screen bg-background relative overflow-x-hidden">
         <Script id="lp-home-schema" type="application/ld+json">
           {JSON.stringify(schema)}
         </Script>

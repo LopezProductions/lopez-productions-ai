@@ -18,13 +18,13 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-sm md:text-base mb-2 md:mb-3">Explore</h4>
           <ul className="space-y-2 md:space-y-2">
-            <li className="py-2"><Link href="/" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Home</Link></li>
-            <li className="py-2"><Link href="/solutions" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Solutions</Link></li>
-            <li className="py-2"><Link href="/pricing" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Pricing</Link></li>
-            <li className="py-2"><Link href="/templates" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Templates</Link></li>
-            <li className="py-2"><Link href="/playbook" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Playbook</Link></li>
-            <li className="py-2"><Link href="/about" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">About</Link></li>
-            <li className="py-2"><Link href="/contact" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded">Contact</Link></li>
+            <li className="py-2"><Link href="/" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Home</Link></li>
+            <li className="py-2"><Link href="/solutions" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Solutions</Link></li>
+            <li className="py-2"><Link href="/pricing" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Pricing</Link></li>
+            <li className="py-2"><Link href="/templates" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Templates</Link></li>
+            <li className="py-2"><Link href="/playbook" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Playbook</Link></li>
+            <li className="py-2"><Link href="/about" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">About</Link></li>
+            <li className="py-2"><Link href="/contact" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Contact</Link></li>
           </ul>
         </div>
 
@@ -35,11 +35,11 @@ const Footer = () => {
             <li className="py-2">Free Notion Templates</li>
             <li className="py-2">Creator OS Checklist</li>
             <li className="py-2">AI Tools Starter Guide</li>
-            <li className="py-2"><a href="https://www.instagram.com/lopezproductions_" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">Instagram</a></li>
-            <li className="py-2"><a href="https://www.youtube.com/@LopezWorkflows" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">YouTube Channel</a></li>
-            <li className="py-2"><a href="https://www.linkedin.com/company/lopez-productions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">LinkedIn</a></li>
-            <li className="py-2"><a href="https://x.com/LopezProdx" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">X (Twitter)</a></li>
-            <li className="py-2"><a href="https://linktr.ee/lopezproductions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded inline-block">Linktree</a></li>
+            <li className="py-2"><a href="https://www.instagram.com/lopezproductions_" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">Instagram</a></li>
+            <li className="py-2"><a href="https://www.youtube.com/@LopezWorkflows" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">YouTube Channel</a></li>
+            <li className="py-2"><a href="https://www.linkedin.com/company/lopez-productions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">LinkedIn</a></li>
+            <li className="py-2"><a href="https://x.com/LopezProdx" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">X (Twitter)</a></li>
+            <li className="py-2"><a href="https://linktr.ee/lopezproductions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">Linktree</a></li>
           </ul>
         </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
             href="https://buy.stripe.com/28E8wQdnw79GbcIbzzcs802"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline mt-2 inline-block py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold rounded"
+            className="underline mt-2 inline-block py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
           >
             Tip Jar →
           </a>

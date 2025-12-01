@@ -47,12 +47,12 @@ const RecentWorkSection = React.memo(function RecentWorkSection() {
   }
 
   return (
-    <section className="py-16 px-6 md:px-12 bg-brand-gray-dark/50">
+    <section className="py-16 px-6 md:px-12 bg-surface/50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-4 text-gradient">
           Recent Work
         </h2>
-        <p className="text-lg text-brand-gray-light text-center mb-12 max-w-3xl mx-auto">
+        <p className="text-lg text-text-secondary text-center mb-12 max-w-3xl mx-auto">
           A preview of recent brand systems, visuals, and portfolio builds.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -63,17 +63,17 @@ const RecentWorkSection = React.memo(function RecentWorkSection() {
             return (
               <div
                 key={template.url}
-                className="group rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-hover relative"
+                className="group rounded-2xl border border-border bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-hover relative"
               >
                 {/* Preview iframe */}
-                <div className="aspect-square relative bg-brand-black">
+                <div className="aspect-square relative bg-background">
                   {!hasError ? (
                     <>
                       {isLoading && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-brand-gray-dark/50 z-10">
+                        <div className="absolute inset-0 flex items-center justify-center bg-surface/50 z-10">
                           <div className="text-center">
-                            <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-                            <p className="text-brand-gray-light text-sm">Loading preview...</p>
+                            <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+                            <p className="text-text-secondary text-sm">Loading preview...</p>
                           </div>
                         </div>
                       )}
@@ -90,14 +90,14 @@ const RecentWorkSection = React.memo(function RecentWorkSection() {
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-gray-dark to-brand-black">
                       <div className="text-center p-6">
-                        <p className="text-brand-gray-light text-sm mb-4">
+                        <p className="text-text-secondary text-sm mb-4">
                           Preview unavailable
                         </p>
                         <a
                           href={template.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-brand-gold hover:text-brand-gold-dark text-sm underline"
+                          className="text-accent hover:text-accent-dark text-sm underline"
                         >
                           View Live Site →
                         </a>
@@ -109,14 +109,14 @@ const RecentWorkSection = React.memo(function RecentWorkSection() {
                 {/* Overlay with title and link */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-xl md:text-2xl font-serif font-bold text-brand-white mb-2">
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-text-primary mb-2">
                       {template.title}
                     </h3>
                     <a
                       href={template.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark text-sm font-medium pointer-events-auto"
+                      className="inline-flex items-center text-accent hover:text-accent-dark text-sm font-medium pointer-events-auto"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <span className="mr-2">View Live Site</span>
@@ -127,7 +127,7 @@ const RecentWorkSection = React.memo(function RecentWorkSection() {
 
                 {/* Always visible title at bottom */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-brand-black/60 to-transparent pointer-events-none">
-                  <h3 className="text-lg font-serif font-bold text-brand-white">
+                  <h3 className="text-lg font-serif font-bold text-text-primary">
                     {template.title}
                   </h3>
                 </div>

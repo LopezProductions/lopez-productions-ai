@@ -159,7 +159,7 @@ export default function SolutionsPage() {
       <Script id="solutions-schema" type="application/ld+json">
         {JSON.stringify(schema)}
       </Script>
-      <main className="min-h-screen bg-brand-black relative overflow-hidden">
+      <main className="min-h-screen bg-background relative overflow-hidden">
         {/* Background with logo - very dark silhouette */}
         <div
           className="fixed inset-0 bg-cover bg-center bg-no-repeat"
@@ -188,16 +188,16 @@ export default function SolutionsPage() {
             <div className="max-w-6xl mx-auto space-y-24">
               {/* Hero Section */}
               <section className="text-center md:text-left">
-                <p className="text-xs uppercase tracking-[0.2em] text-brand-gold mb-3">
+                <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">
                   Lopez Productions • Solutions
                 </p>
                 <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-6 max-w-4xl mx-auto md:mx-0">
                   Build a Business That Runs Itself.
                 </h1>
-                <p className="text-2xl text-brand-gray-light font-serif mb-8">
+                <p className="text-2xl text-text-secondary font-serif mb-8">
                   Automate Your Work. Launch Faster. Create More.
                 </p>
-                <p className="text-lg text-brand-gray-light mb-10 max-w-3xl leading-relaxed mx-auto md:mx-0">
+                <p className="text-lg text-text-secondary mb-10 max-w-3xl leading-relaxed mx-auto md:mx-0">
                   Lopez Productions helps creators, consultants, and small teams automate their operations, scale their content output, and launch premium digital identities — without burnout or bottlenecks.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
@@ -209,7 +209,7 @@ export default function SolutionsPage() {
                   </Link>
                   <Link
                     href="/contact?service=ai-systems"
-                    className="inline-flex items-center justify-center rounded-full px-8 py-3 border border-brand-gold/60 text-brand-gold hover:bg-brand-gold/10 transition"
+                    className="inline-flex items-center justify-center rounded-full px-8 py-3 border border-accent/60 text-accent hover:bg-brand-gold/10 transition"
                   >
                     Install Your AI System →
                   </Link>
@@ -218,13 +218,13 @@ export default function SolutionsPage() {
 
               {/* Problem Section */}
               <section className="space-y-6 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-brand-gold/80">
+                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
                   The Real Problem
                 </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold max-w-3xl mx-auto md:mx-0">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent max-w-3xl mx-auto md:mx-0">
                   You&apos;re not overwhelmed because the work is hard. You&apos;re overwhelmed because the process is broken.
                 </h2>
-                <div className="space-y-4 text-brand-gray-light text-lg leading-relaxed max-w-3xl mx-auto md:mx-0 text-left">
+                <div className="space-y-4 text-text-secondary text-lg leading-relaxed max-w-3xl mx-auto md:mx-0 text-left">
                   <p>Every growing creator or solopreneur hits the same wall:</p>
                   <ul className="space-y-2">
                     {[
@@ -234,7 +234,7 @@ export default function SolutionsPage() {
                       'Too little time to build the digital presence that actually gets clients',
                     ].map((problem) => (
                       <li key={problem} className="flex gap-2">
-                        <span className="text-brand-gold">•</span>
+                        <span className="text-accent">•</span>
                         <span>{problem}</span>
                       </li>
                     ))}
@@ -248,10 +248,10 @@ export default function SolutionsPage() {
 
               {/* Solutions Intro */}
               <section className="space-y-4 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-brand-gold/80">
+                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
                   The Solution
                 </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold max-w-4xl mx-auto md:mx-0">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent max-w-4xl mx-auto md:mx-0">
                   Here are the three systems that give you your time back, increase your revenue, and let you operate like a real digital business — not a burnout machine.
                 </h2>
               </section>
@@ -261,15 +261,15 @@ export default function SolutionsPage() {
                 {services.map((service) => (
                   <div key={service.id} id={service.id} className="p-8 rounded-3xl border border-white/5 bg-white/5 backdrop-blur-sm space-y-8">
                     <div className="space-y-4 text-center md:text-left">
-                      <h3 className="text-3xl font-serif font-bold text-brand-gold">{service.title}</h3>
-                      <p className="text-lg text-brand-gray-light leading-relaxed mx-auto md:mx-0">{service.description}</p>
+                      <h3 className="text-3xl font-serif font-bold text-accent">{service.title}</h3>
+                      <p className="text-lg text-text-secondary leading-relaxed mx-auto md:mx-0">{service.description}</p>
                     </div>
                     <div>
-                      <p className="text-brand-gold font-semibold mb-4 uppercase tracking-wide">{service.bulletTitle}</p>
+                      <p className="text-accent font-semibold mb-4 uppercase tracking-wide">{service.bulletTitle}</p>
                       <div className="grid md:grid-cols-2 gap-4">
                         {service.bullets.map((bullet) => (
-                          <div key={bullet} className="flex gap-3 text-brand-gray-light">
-                            <span className="text-brand-gold">•</span>
+                          <div key={bullet} className="flex gap-3 text-text-secondary">
+                            <span className="text-accent">•</span>
                             <span>{bullet}</span>
                           </div>
                         ))}
@@ -287,15 +287,15 @@ export default function SolutionsPage() {
 
               {/* Benefits */}
               <section className="space-y-10 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-brand-gold/80">
+                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
                   Why These Systems Work
                 </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold">Benefits</h2>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent">Benefits</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   {benefits.map((benefit) => (
                     <div key={benefit.title} className="p-6 rounded-2xl border border-white/5 bg-white/5">
-                      <p className="text-xl font-serif text-brand-gold mb-3">{benefit.title}</p>
-                      <p className="text-brand-gray-light">{benefit.body}</p>
+                      <p className="text-xl font-serif text-accent mb-3">{benefit.title}</p>
+                      <p className="text-text-secondary">{benefit.body}</p>
                     </div>
                   ))}
                 </div>
@@ -303,38 +303,38 @@ export default function SolutionsPage() {
 
               {/* Sample Workflow */}
               <section className="space-y-6 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-brand-gold/80">
+                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
                   Sample Workflow
                 </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent">
                   “Idea → Multi-Platform Content in 30 Seconds”
                 </h2>
-                <div className="space-y-3 text-brand-gray-light text-left">
+                <div className="space-y-3 text-text-secondary text-left">
                   {workflowSteps.map((step, index) => (
                     <div key={step} className="flex items-start gap-4">
-                      <span className="w-10 h-10 flex items-center justify-center rounded-full border border-brand-gold/60 text-brand-gold font-semibold">
+                      <span className="w-10 h-10 flex items-center justify-center rounded-full border border-accent/60 text-accent font-semibold">
                         {index + 1}
                       </span>
                       <p className="text-lg">{step}</p>
                     </div>
                   ))}
                 </div>
-                <p className="text-brand-gray-light max-w-3xl mx-auto md:mx-0 text-left">
+                <p className="text-text-secondary max-w-3xl mx-auto md:mx-0 text-left">
                   This is the automation that saves you the most time and sells the fastest.
                 </p>
               </section>
 
               {/* FAQ */}
               <section className="space-y-10 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-brand-gold/80">
+                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
                   FAQ
                 </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold">Answers to your biggest questions</h2>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent">Answers to your biggest questions</h2>
                 <div className="space-y-6">
                   {faqs.map((faq) => (
                     <div key={faq.question} className="border border-white/5 rounded-2xl p-6 bg-white/5">
-                      <p className="text-brand-gold text-xl font-serif mb-2">{faq.question}</p>
-                      <p className="text-brand-gray-light">{faq.answer}</p>
+                      <p className="text-accent text-xl font-serif mb-2">{faq.question}</p>
+                      <p className="text-text-secondary">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -342,13 +342,13 @@ export default function SolutionsPage() {
 
               {/* Final CTA */}
               <section className="text-center p-10 rounded-3xl border border-white/5 bg-brand-gold/10 space-y-6">
-                <p className="text-sm uppercase tracking-[0.3em] text-brand-gold/80">
+                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
                   Final Call
                 </p>
-                <h3 className="text-3xl font-serif font-bold text-brand-gold">
+                <h3 className="text-3xl font-serif font-bold text-accent">
                   Ready to Build a Digital Business That Runs Itself?
                 </h3>
-                <p className="text-brand-gray-light max-w-2xl mx-auto">
+                <p className="text-text-secondary max-w-2xl mx-auto">
                   Launch your portfolio, install your systems, and scale the work that actually pays you.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
@@ -360,7 +360,7 @@ export default function SolutionsPage() {
                   </Link>
                   <Link
                     href="/contact?service=ai-systems"
-                    className="inline-flex items-center justify-center rounded-full px-8 py-3 border border-brand-gold/60 text-brand-gold hover:bg-brand-gold/10 transition"
+                    className="inline-flex items-center justify-center rounded-full px-8 py-3 border border-accent/60 text-accent hover:bg-brand-gold/10 transition"
                   >
                     Install My AI System →
                   </Link>

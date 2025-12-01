@@ -81,21 +81,21 @@ export default function Breadcrumbs({ title, slug }: BreadcrumbsProps) {
 
       {/* Breadcrumb Navigation */}
       <nav aria-label="Breadcrumb" className="mb-6">
-        <ol className="flex items-center gap-1 text-sm text-brand-gray-muted/70 flex-wrap">
+        <ol className="flex items-center gap-1 text-sm text-text-muted/70 flex-wrap">
           {items.map((item, index) => (
             <li key={index} className="flex items-center">
               {index > 0 && (
-                <span className="mx-1 text-brand-gray-muted/50">→</span>
+                <span className="mx-1 text-text-muted/50">→</span>
               )}
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="hover:text-brand-gold hover:underline transition-colors"
+                  className="hover:text-accent hover:underline transition-colors"
                 >
                   {item.name}
                 </Link>
               ) : (
-                <span className="text-brand-gray-light">{item.name}</span>
+                <span className="text-text-secondary">{item.name}</span>
               )}
             </li>
           ))}

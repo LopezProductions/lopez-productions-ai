@@ -21,24 +21,24 @@ const PricingGrid: React.FC<PricingGridProps> = ({ onSelectPackage }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark hover:border-brand-gold transition-all duration-300 card-hover"
+            className="bg-surface rounded-xl p-6 border border-border hover:border-accent transition-all duration-300 card-hover"
           >
-            <h3 className="text-2xl font-serif font-bold text-brand-white mb-2">{pkg.name}</h3>
+            <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">{pkg.name}</h3>
             <div className="mb-4">
-              <span className="text-4xl font-serif font-bold text-brand-gold">
+              <span className="text-4xl font-serif font-bold text-accent">
                 ${pkg.price}
               </span>
               {pkg.id === 'full_brand' && (
-                <span className="text-brand-gray-light text-lg">+</span>
+                <span className="text-text-secondary text-lg">+</span>
               )}
             </div>
-            <p className="text-brand-gray-light mb-4 text-sm">{pkg.description}</p>
+            <p className="text-text-secondary mb-4 text-sm">{pkg.description}</p>
             
             <div className="mb-4">
-              <p className="text-xs text-brand-gray-light mb-2 font-semibold uppercase tracking-wide">
+              <p className="text-xs text-text-secondary mb-2 font-semibold uppercase tracking-wide">
                 Includes:
               </p>
-              <ul className="space-y-1 text-sm text-brand-gray-light">
+              <ul className="space-y-1 text-sm text-text-secondary">
                 {pkg.id === 'launch_page_48h' && (
                   <>
                     <li>• Home/About/Contact landing page</li>
@@ -74,11 +74,11 @@ const PricingGrid: React.FC<PricingGridProps> = ({ onSelectPackage }) => {
               </ul>
             </div>
 
-            <div className="mb-4 pt-4 border-t border-brand-gray-dark">
-              <p className="text-xs text-brand-gray-light">
+            <div className="mb-4 pt-4 border-t border-border">
+              <p className="text-xs text-text-secondary">
                 <span className="font-semibold">Turnaround:</span> {pkg.turnaround}
               </p>
-              <p className="text-xs text-brand-gray-light mt-1">
+              <p className="text-xs text-text-secondary mt-1">
                 <span className="font-semibold">Ideal for:</span> {pkg.idealFor}
               </p>
             </div>
@@ -99,31 +99,31 @@ const PricingGrid: React.FC<PricingGridProps> = ({ onSelectPackage }) => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="relative bg-gradient-to-br from-brand-gold/20 to-brand-gold-dark/20 rounded-xl p-6 border-2 border-brand-gold"
+          className="relative bg-gradient-to-br from-brand-gold/20 to-brand-gold-dark/20 rounded-xl p-6 border-2 border-accent"
         >
           <div className="absolute top-4 right-4">
-            <span className="bg-brand-gold text-brand-black px-3 py-1 rounded-full text-xs font-bold">
+            <span className="bg-primary text-background px-3 py-1 rounded-full text-xs font-bold">
               🔥 Limited Bundle
             </span>
           </div>
           
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="flex-1">
-              <h3 className="text-2xl font-serif font-bold text-brand-white mb-2">
+              <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
                 {reelSpecial.name}
               </h3>
               <div className="mb-4">
-                <span className="text-4xl font-serif font-bold text-brand-gold">
+                <span className="text-4xl font-serif font-bold text-accent">
                   ${reelSpecial.price}
                 </span>
               </div>
-              <p className="text-brand-gray-light mb-4">{reelSpecial.description}</p>
+              <p className="text-text-secondary mb-4">{reelSpecial.description}</p>
               
               <div className="mb-4">
-                <p className="text-xs text-brand-gray-light mb-2 font-semibold uppercase tracking-wide">
+                <p className="text-xs text-text-secondary mb-2 font-semibold uppercase tracking-wide">
                   What You Get:
                 </p>
-                <ul className="space-y-1 text-sm text-brand-gray-light">
+                <ul className="space-y-1 text-sm text-text-secondary">
                   <li>• 5 clean reel edits</li>
                   <li>• Basic correction + leveling</li>
                   <li>• Consistent formatting</li>
@@ -131,11 +131,11 @@ const PricingGrid: React.FC<PricingGridProps> = ({ onSelectPackage }) => {
                 </ul>
               </div>
 
-              <div className="pt-4 border-t border-brand-gold/30">
-                <p className="text-xs text-brand-gray-light">
+              <div className="pt-4 border-t border-accent/30">
+                <p className="text-xs text-text-secondary">
                   <span className="font-semibold">Turnaround:</span> {reelSpecial.turnaround}
                 </p>
-                <p className="text-xs text-brand-gray-light mt-1">
+                <p className="text-xs text-text-secondary mt-1">
                   <span className="font-semibold">Ideal for:</span> {reelSpecial.idealFor}
                 </p>
               </div>

@@ -21,12 +21,12 @@ const PillarsSection = React.memo(function PillarsSection() {
   ]
 
   return (
-    <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
+    <section className="py-16 px-6 md:px-12 border-t border-border">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-4 text-gradient">
           What I Build for You
         </h2>
-        <p className="text-sm text-brand-gray-light text-center mb-8 max-w-2xl mx-auto">
+        <p className="text-sm text-text-secondary text-center mb-8 max-w-2xl mx-auto">
           Lopez Productions is a systems-first studio. Everything starts with fixing the process — then design, then automation. You're not stuck because your brand is unclear — you're stuck because your systems don’t support your output.
         </p>
         <div className="grid gap-6 md:grid-cols-3">
@@ -34,17 +34,17 @@ const PillarsSection = React.memo(function PillarsSection() {
             <Link
               key={index}
               href={pillar.href}
-              className="group rounded-2xl border border-brand-gray-dark bg-gradient-to-b from-white/5 to-transparent p-6 card-hover flex flex-col justify-between hover:border-brand-gold/70 transition"
+              className="group rounded-2xl border border-border bg-gradient-to-b from-white/5 to-transparent p-6 card-hover flex flex-col justify-between hover:border-accent/70 transition"
             >
               <div className="space-y-3">
-                <h3 className="text-xl font-serif font-bold text-brand-gold group-hover:text-brand-gold-dark transition-colors">
+                <h3 className="text-xl font-serif font-bold text-accent group-hover:text-accent-dark transition-colors">
                   {pillar.title}
                 </h3>
-                <p className="text-brand-gray-light text-sm leading-relaxed">
+                <p className="text-text-secondary text-sm leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
-              <span className="mt-4 text-xs font-medium text-brand-gold group-hover:text-brand-gold-dark transition-colors">
+              <span className="mt-4 text-xs font-medium text-accent group-hover:text-accent-dark transition-colors">
                 Learn more →
               </span>
             </Link>

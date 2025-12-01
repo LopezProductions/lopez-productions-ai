@@ -63,7 +63,7 @@ const AboutSection = () => {
   ]
 
   return (
-    <section id="about" className="py-20 bg-brand-black">
+    <section id="about" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -86,24 +86,24 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark">
+            <div className="bg-surface rounded-xl p-8 border border-border">
               <div className="flex items-start space-x-6 mb-6">
                 <div className="flex-shrink-0">
                   <img 
                     src="/rl_pfp.png" 
                     alt="Reuben Lopez" 
-                    className="w-20 h-20 rounded-full object-cover border-2 border-brand-gold"
+                    className="w-20 h-20 rounded-full object-cover border-2 border-accent"
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-serif font-bold text-brand-white mb-2">
+                  <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
                     My Origin Story
                   </h3>
-                  <p className="text-brand-gold font-medium">Reuben Lopez, Founder</p>
+                  <p className="text-accent font-medium">Reuben Lopez, Founder</p>
                 </div>
               </div>
               
-              <div className="space-y-6 text-brand-gray-light leading-relaxed">
+              <div className="space-y-6 text-text-secondary leading-relaxed">
                 <p>
                   Lopez Productions is led by <strong>Reuben Lopez</strong>, a marketing strategist and AI systems designer focused on helping creators and small businesses simplify their workflows and launch professional digital brands.
                 </p>
@@ -132,7 +132,7 @@ const AboutSection = () => {
                 
                 <div className="flex items-center mb-4 mt-8">
                   <span className="text-2xl mr-2">⚙️</span>
-                  <h4 className="text-xl font-serif font-bold text-brand-white">What I Do Now</h4>
+                  <h4 className="text-xl font-serif font-bold text-text-primary">What I Do Now</h4>
                 </div>
                 
                 <p>
@@ -150,16 +150,16 @@ const AboutSection = () => {
                   Let's move forward, one smart step at a time.
                 </p>
                 
-                <div className="bg-brand-black rounded-lg p-4 border border-brand-gray-dark mt-6">
-                  <p className="text-sm text-brand-gray-light">
-                    <strong className="text-brand-gold">Coming Soon:</strong> Lopez Productions is transitioning to 
-                    <span className="text-brand-gold font-semibold"> lpx.so</span> - a new brand identity that better 
+                <div className="bg-background rounded-lg p-4 border border-border mt-6">
+                  <p className="text-sm text-text-secondary">
+                    <strong className="text-accent">Coming Soon:</strong> Lopez Productions is transitioning to 
+                    <span className="text-accent font-semibold"> lpx.so</span> - a new brand identity that better 
                     reflects our expanded vision and services.
                   </p>
                 </div>
                 
                 <div className="text-right mt-6">
-                  <p className="text-brand-gold font-medium italic">– Reuben</p>
+                  <p className="text-accent font-medium italic">– Reuben</p>
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@ const AboutSection = () => {
           >
             {/* Skills Grid */}
             <div>
-              <h3 className="text-xl font-serif font-bold text-brand-white mb-6">
+              <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
                 Core Expertise
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -186,20 +186,20 @@ const AboutSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-brand-gray-dark rounded-lg p-4 border border-brand-gray-dark hover:border-brand-gold transition-colors duration-300"
+                    className="bg-surface rounded-lg p-4 border border-border hover:border-accent transition-colors duration-300"
                   >
                     <div className="flex items-center mb-3">
                       <div className="w-8 h-8 bg-gradient-gold rounded-lg flex items-center justify-center mr-3">
-                        <skill.icon className="w-4 h-4 text-brand-black" />
+                        <skill.icon className="w-4 h-4 text-background" />
                       </div>
-                      <h4 className="text-brand-white font-semibold">{skill.title}</h4>
+                      <h4 className="text-text-primary font-semibold">{skill.title}</h4>
                     </div>
-                    <p className="text-brand-gray-light text-sm mb-3">{skill.description}</p>
+                    <p className="text-text-secondary text-sm mb-3">{skill.description}</p>
                     <div className="flex flex-wrap gap-1">
                       {skill.tools.map((tool) => (
                         <span
                           key={tool}
-                          className="px-2 py-1 bg-brand-black text-brand-gray-light text-xs rounded border border-brand-gray-dark"
+                          className="px-2 py-1 bg-background text-text-secondary text-xs rounded border border-border"
                         >
                           {tool}
                         </span>
@@ -212,7 +212,7 @@ const AboutSection = () => {
 
             {/* Timeline */}
             <div>
-              <h3 className="text-xl font-serif font-bold text-brand-white mb-6">
+              <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
                 Journey Timeline
               </h3>
               <div className="space-y-4">
@@ -227,12 +227,12 @@ const AboutSection = () => {
                   >
                     <div className="flex-shrink-0">
                       <div className="w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center">
-                        <span className="text-brand-black font-bold text-sm">{item.year}</span>
+                        <span className="text-background font-bold text-sm">{item.year}</span>
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-brand-white font-semibold mb-1">{item.title}</h4>
-                      <p className="text-brand-gray-light text-sm">{item.description}</p>
+                      <h4 className="text-text-primary font-semibold mb-1">{item.title}</h4>
+                      <p className="text-text-secondary text-sm">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -249,11 +249,11 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark max-w-4xl mx-auto">
-            <h3 className="text-2xl font-serif font-bold text-brand-white mb-4">
+          <div className="bg-surface rounded-xl p-8 border border-border max-w-4xl mx-auto">
+            <h3 className="text-2xl font-serif font-bold text-text-primary mb-4">
               Ready to Transform Your Workflow?
             </h3>
-            <p className="text-brand-gray-light mb-8 max-w-2xl mx-auto">
+            <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
               Let's discuss your project and create a custom solution that fits your needs and budget. 
               No pressure, just practical advice.
             </p>
