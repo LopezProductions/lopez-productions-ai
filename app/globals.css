@@ -100,8 +100,11 @@
   }
   
   .card-hover {
-    @apply hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 
-           transition-all duration-300 border border-border hover:border-primary;
+    @apply hover:scale-105 transition-all duration-300 border border-border hover:border-primary;
+  }
+  
+  .card-hover:hover {
+    box-shadow: 0 25px 50px -12px rgba(197, 160, 89, 0.2);
   }
   
   .gradient-border {
