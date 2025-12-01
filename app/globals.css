@@ -1,3 +1,23 @@
+/* Global CSS Variables - Standalone :root block to prevent tree-shaking */
+:root {
+  --primary-color: #C5A059;
+  --secondary-color: #9A7A3F;
+  --background-color: #0F0F0F;
+  --surface-color: #111111;
+  --text-primary: #F5F5F0;
+  --text-secondary: #CCCCCC;
+  --text-muted: #888888;
+  --border-color: #333333;
+  --accent-color: #C5A059;
+  --gradient-primary: linear-gradient(135deg, #C5A059 0%, #9A7A3F 100%);
+  --gradient-secondary: linear-gradient(135deg, #111111 0%, #0F0F0F 100%);
+  --shadow-light: 0 4px 6px rgba(197, 160, 89, 0.1);
+  --shadow-medium: 0 8px 25px rgba(197, 160, 89, 0.15);
+  --shadow-heavy: 0 15px 35px rgba(197, 160, 89, 0.2);
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +26,7 @@
 
 @layer base {
   :root {
+    /* Brand variables (backward compatibility) */
     --brand-black: #0F0F0F;
     --brand-gray-dark: #111111;
     --brand-white: #F5F5F0;
@@ -13,6 +34,24 @@
     --brand-gray-muted: #888888;
     --brand-gold: #C5A059;
     --brand-gold-dark: #9A7A3F;
+    
+    /* Primary theme variables (duplicated for redundancy to prevent tree-shaking) */
+    --primary-color: #C5A059;
+    --secondary-color: #9A7A3F;
+    --background-color: #0F0F0F;
+    --surface-color: #111111;
+    --text-primary: #F5F5F0;
+    --text-secondary: #CCCCCC;
+    --text-muted: #888888;
+    --border-color: #333333;
+    --accent-color: #C5A059;
+    --gradient-primary: linear-gradient(135deg, #C5A059 0%, #9A7A3F 100%);
+    --gradient-secondary: linear-gradient(135deg, #111111 0%, #0F0F0F 100%);
+    --shadow-light: 0 4px 6px rgba(197, 160, 89, 0.1);
+    --shadow-medium: 0 8px 25px rgba(197, 160, 89, 0.15);
+    --shadow-heavy: 0 15px 35px rgba(197, 160, 89, 0.2);
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   html {
