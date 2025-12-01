@@ -59,6 +59,13 @@
 
   <!-- Playbook Articles -->
   <url>
+    <loc>https://lopezproductions.ai/playbook/gemini-3-vs-claude-4-5-research-workflow</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://lopezproductions.ai/playbook/how-students-can-use-ai-to-study-more-efficiently</loc>
     <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>

@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'gemini-3-vs-claude-4-5-research-workflow',
+    title: 'Gemini 3 Pro vs. Claude 4.5: The Ultimate Workflow for Research & Academic Writing',
+    excerpt: 'A practical comparison of Gemini 3 Pro and Claude 4.5 for academic research and writing, with a hybrid workflow that leverages each model\'s strengths for better results.',
+    readTime: '10 min read',
+    category: 'AI for Education',
+    publishedDate: '2025-12-01',
+    coverImage: '/gemini-vs-claude.png',
+  },
+  {
     slug: 'how-students-can-use-ai-to-study-more-efficiently',
     title: 'How Students Can Use AI to Study More Efficiently',
     excerpt: 'A simple guide to using AI tools for smarter studying, better organization, and faster research—without breaking academic rules or relying on AI to write your papers.',
