@@ -46,17 +46,23 @@ const Footer = () => {
         {/* Support */}
         <div>
           <h4 className="font-semibold text-sm md:text-base mb-2 md:mb-3">Support</h4>
-          <p className="opacity-80 leading-relaxed">
-            If my content helps you, consider supporting the work:
-          </p>
-          <a
-            href="https://buy.stripe.com/28E8wQdnw79GbcIbzzcs802"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline mt-2 inline-block py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
-          >
-            Tip Jar →
-          </a>
+          <ul className="space-y-2 md:space-y-2">
+            <li className="py-2">
+              <a href="mailto:contact@lopezproductions.ai" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">
+                📧 contact@lopezproductions.ai
+              </a>
+            </li>
+            <li className="py-2">
+              <a href="mailto:support@lopezproductions.ai" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">
+                📧 support@lopezproductions.ai
+              </a>
+            </li>
+            <li className="py-2">
+              <Link href="/contact" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">
+                🔗 Contact Page
+              </Link>
+            </li>
+          </ul>
         </div>
 
       </div>

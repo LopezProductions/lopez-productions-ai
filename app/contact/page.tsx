@@ -20,7 +20,7 @@ export default function ContactPage() {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "email": "reuben@lopezproductions.ai",
+        "email": "contact@lopezproductions.ai",
         "url": "https://lopezproductions.ai/contact",
       },
     },
@@ -49,50 +49,70 @@ export default function ContactPage() {
         </p>
 
         {/* Contact Options */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="rounded-2xl border border-brand-gray-dark p-6 bg-white/5">
-            <h3 className="text-xl font-serif font-bold text-brand-gold mb-2">
-              Email
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
+            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
+              General Inquiries
             </h3>
-            <p className="text-brand-gray-light text-sm mb-3 leading-relaxed">
-              Prefer to message directly? Email me anytime.
+            <p className="text-brand-gray-light mb-6 leading-relaxed">
+              New project inquiries, consultation requests, questions about services, or general messages.
             </p>
             <a
-              href="mailto:reuben@lopezproductions.ai"
-              className="text-brand-gold hover:underline text-sm"
+              href="mailto:contact@lopezproductions.ai"
+              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
             >
-              reuben@lopezproductions.ai →
+              <span>contact@lopezproductions.ai</span>
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </a>
           </div>
 
-          <div className="rounded-2xl border border-brand-gray-dark p-6 bg-white/5">
-            <h3 className="text-xl font-serif font-bold text-brand-gold mb-2">
+          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
+            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
+              Customer Support
+            </h3>
+            <p className="text-brand-gray-light mb-6 leading-relaxed">
+              Download issues, billing problems, template help, installation questions, or any customer service needs.
+            </p>
+            <a
+              href="mailto:support@lopezproductions.ai"
+              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
+            >
+              <span>support@lopezproductions.ai</span>
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+
+          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
+            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
               X (Twitter)
             </h3>
-            <p className="text-brand-gray-light text-sm mb-3 leading-relaxed">
+            <p className="text-brand-gray-light mb-6 leading-relaxed">
               You can also DM me on X for quick questions.
             </p>
             <a
               href="https://x.com/LopezProdx"
               target="_blank"
-              className="text-brand-gold hover:underline text-sm"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
             >
-              @LopezProdx →
+              <span>@LopezProdx</span>
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </a>
           </div>
 
-          <div className="rounded-2xl border border-brand-gray-dark p-6 bg-white/5">
-            <h3 className="text-xl font-serif font-bold text-brand-gold mb-2">
+          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
+            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
               Intake Form
             </h3>
-            <p className="text-brand-gray-light text-sm mb-3 leading-relaxed">
+            <p className="text-brand-gray-light mb-6 leading-relaxed">
               Not sure what you need yet? Tell me your goals.
             </p>
             <a
               href="#contact-form"
-              className="text-brand-gold hover:underline text-sm"
+              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
             >
-              Scroll to form ↓
+              <span>Scroll to form</span>
+              <span className="ml-2 group-hover:translate-y-1 transition-transform">↓</span>
             </a>
           </div>
         </div>
@@ -108,11 +128,17 @@ export default function ContactPage() {
           </p>
 
           {/* Formspree form */}
-          <form
-            action="https://formspree.io/f/xldpoywb"
-            method="POST"
-            className="space-y-6"
-          >
+          <div className="relative">
+            {/* Left side glow */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-gold/20 via-brand-gold/5 to-transparent blur-2xl -z-10"></div>
+            {/* Right side glow */}
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-gold/20 via-brand-gold/5 to-transparent blur-2xl -z-10"></div>
+            
+            <form
+              action="https://formspree.io/f/xldpoywb"
+              method="POST"
+              className="space-y-6 relative bg-brand-black/30 rounded-xl p-8 border border-brand-gray-dark"
+            >
             <input
               type="hidden"
               name="_next"
@@ -230,7 +256,8 @@ export default function ContactPage() {
                 Submit Request
               </button>
             </div>
-          </form>
+            </form>
+          </div>
         </div>
         </div>
       </div>

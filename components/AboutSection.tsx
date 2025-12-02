@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Bot, Palette, FileText, Zap, Target, Users } from 'lucide-react'
 import ContactFormModal from './ContactFormModal'
@@ -266,21 +267,17 @@ const AboutSection = () => {
               >
                 Start Free Consultation
               </motion.button>
-              <motion.a
-                href="#lead-magnet"
-                className="btn-outline"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={(e) => {
-                  e.preventDefault()
-                  const element = document.querySelector('#lead-magnet')
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' })
-                  }
-                }}
               >
-                Get the Template
-              </motion.a>
+                <Link
+                  href="/templates"
+                  className="btn-outline inline-block"
+                >
+                  Get the Template
+                </Link>
+              </motion.div>
             </div>
           </div>
         </motion.div>

@@ -70,7 +70,17 @@ export default function AboutPage() {
                 Lopez Productions is led by Reuben Lopez — a creator, marketing strategist, and AI systems designer who builds clean, professional digital identities for creators, founders, and small businesses.
               </p>
               <p className="text-lg text-text-secondary mb-12 leading-relaxed max-w-3xl">
-                This is not a corporate agency. It’s a creator-driven studio focused on clarity, speed, and execution — without the complexity or overhead.
+                This is not a corporate agency. It's a creator-driven studio focused on clarity, speed, and execution — without the complexity or overhead.
+              </p>
+              
+              <p className="text-base text-text-secondary mb-12 max-w-3xl">
+                Business inquiries:{' '}
+                <a
+                  href="mailto:contact@lopezproductions.ai"
+                  className="text-accent hover:underline"
+                >
+                  contact@lopezproductions.ai
+                </a>
               </p>
 
               {/* Section: The Mission */}
