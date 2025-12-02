@@ -41,7 +41,7 @@ const TEMPLATE_DATA: Record<
       'Professional services',
       'Consulting firms',
     ],
-    buyLink: 'https://buy.stripe.com/XXXXXXXX', // Replace with Stripe link
+    buyLink: 'https://buy.stripe.com/8x26oI1EOdy42Gc333cs806',
     previewUrl: 'https://polaris-blue.netlify.app/',
   },
   'polaris-light': {
@@ -67,7 +67,7 @@ const TEMPLATE_DATA: Record<
       'Minimalist businesses',
       'Personal brands',
     ],
-    buyLink: 'https://buy.stripe.com/YYYYYYYY',
+    buyLink: 'https://buy.stripe.com/8x26oI1EOdy42Gc333cs806',
     previewUrl: 'https://polaris-light.netlify.app/',
   },
   'law-crest': {
@@ -93,7 +93,7 @@ const TEMPLATE_DATA: Record<
       'Legal consultants',
       'Paralegal services',
     ],
-    buyLink: 'https://buy.stripe.com/ZZZZZZZZ',
+    buyLink: 'https://buy.stripe.com/8x26oI1EOdy42Gc333cs806',
     previewUrl: 'https://law-crest.netlify.app/',
   },
   'roamline': {
@@ -119,7 +119,7 @@ const TEMPLATE_DATA: Record<
       'Travel bloggers',
       'Adventure companies',
     ],
-    buyLink: 'https://buy.stripe.com/AAAAAAAA',
+    buyLink: 'https://buy.stripe.com/8x26oI1EOdy42Gc333cs806',
     previewUrl: 'https://roamline.netlify.app/',
   },
   'shieldcare': {
@@ -145,7 +145,7 @@ const TEMPLATE_DATA: Record<
       'Dental offices',
       'Wellness centers',
     ],
-    buyLink: 'https://buy.stripe.com/BBBBBBBB',
+    buyLink: 'https://buy.stripe.com/8x26oI1EOdy42Gc333cs806',
     previewUrl: 'https://shieldcare.netlify.app/',
   },
   'revive-pt': {
@@ -171,7 +171,7 @@ const TEMPLATE_DATA: Record<
       'Wellness centers',
       'Rehabilitation facilities',
     ],
-    buyLink: 'https://buy.stripe.com/CCCCCCCC',
+    buyLink: 'https://buy.stripe.com/8x26oI1EOdy42Gc333cs806',
     previewUrl: 'https://revive-pt.netlify.app/',
   },
 }
@@ -431,7 +431,7 @@ export default async function TemplatePage({
                       <li>• Lifetime updates</li>
                     </ul>
                     <a
-                      href="https://buy.stripe.com/base50"
+                      href="https://buy.stripe.com/8x26oI1EOdy42Gc333cs806"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full text-center rounded-full px-6 py-3 text-base font-semibold bg-brand-gold text-brand-black hover:bg-brand-gold/90 transition"
@@ -457,7 +457,7 @@ export default async function TemplatePage({
                       <li>• Social media header pack</li>
                     </ul>
                     <a
-                      href="https://buy.stripe.com/popular125"
+                      href="https://buy.stripe.com/4gMaEYfvEgKga8E8nncs803"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full text-center rounded-full px-6 py-3 text-base font-semibold bg-brand-gold text-brand-black hover:bg-brand-gold/90 transition"
@@ -482,7 +482,7 @@ export default async function TemplatePage({
                       <li>• Intake form included</li>
                     </ul>
                     <a
-                      href="https://buy.stripe.com/premium250"
+                      href="https://buy.stripe.com/8x214oabkbpWbcIfPPcs804"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full text-center rounded-full px-6 py-3 text-base font-semibold bg-brand-gold text-brand-black hover:bg-brand-gold/90 transition"
@@ -506,7 +506,7 @@ export default async function TemplatePage({
                       <li>• Deployment done for you</li>
                     </ul>
                     <a
-                      href="https://buy.stripe.com/elite450"
+                      href="https://buy.stripe.com/5kQcN66Z88dK4Ok5bbcs805"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full text-center rounded-full px-6 py-3 text-base font-semibold bg-brand-gold text-brand-black hover:bg-brand-gold/90 transition"
