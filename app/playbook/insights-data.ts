@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'the-worst-thing-about-gemini-3-pro',
+    title: 'The Worst Thing About Gemini 3 Pro (That No One Talks About)',
+    excerpt: 'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
+    readTime: '6 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-12-02',
+    coverImage: '/worst-gemini-feature.png',
+  },
+  {
     slug: 'gemini-3-vs-claude-4-5-research-workflow',
     title: 'Gemini 3 Pro vs. Claude 4.5: The Ultimate Workflow for Research & Academic Writing',
     excerpt: 'A practical comparison of Gemini 3 Pro and Claude 4.5 for academic research and writing, with a hybrid workflow that leverages each model\'s strengths for better results.',
@@ -187,6 +196,7 @@ export const pillarMappings = {
     'ai-notion-weekly-organization'
   ],
   'ai-workflows': [
+    'the-worst-thing-about-gemini-3-pro',
     'gemini-3-vs-claude-4-5-research-workflow',
     'how-students-can-use-ai-to-study-more-efficiently',
     'nano-banana-for-teachers-visualizing-curriculum',

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import StudentAssignmentDownloadForm from '../../../components/StudentAssignmentDownloadForm'
+import Related from '../../../components/Related'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -261,6 +262,12 @@ export default function Gemini3ProVsClaude45ResearchWorkflow() {
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
               Claude turns scattered research into clean, structured reasoning.
             </p>
+
+            <Related
+              title="How Students Can Use AI to Study More Efficiently"
+              description="A simple guide to using AI tools for smarter studying, better organization, and faster research—without breaking academic rules or relying on AI to write your papers."
+              href="/playbook/how-students-can-use-ai-to-study-more-efficiently"
+            />
 
             <hr className="my-12 border-border" />
 

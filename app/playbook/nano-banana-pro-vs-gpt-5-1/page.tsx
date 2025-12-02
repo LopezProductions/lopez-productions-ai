@@ -4,6 +4,7 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import ConceptArtCheckoutButton from '../../../components/ConceptArtCheckoutButton'
+import Related from '../../../components/Related'
 
 export const metadata = {
   title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better? | Lopez Productions',
@@ -215,6 +216,12 @@ export default function NanoBananaProVsGPT51() {
               </div>
             </div>
 
+            <Related
+              title="The Worst Thing About Gemini 3 Pro (That No One Talks About)"
+              description="Does Gemini 3 Pro have project folders? No. Here's why the lack of folders makes multi-project work harder and the best workaround for organizing your research."
+              href="/playbook/the-worst-thing-about-gemini-3-pro"
+            />
+
             <hr className="my-12 border-brand-gray-dark" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
@@ -395,10 +402,10 @@ export default function NanoBananaProVsGPT51() {
             </p>
 
             <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
-              <li><Link href="/playbook/stop-chasing-ai-tools" className="text-brand-gold hover:text-brand-gold-dark underline">Stop Chasing Every New AI Tool — Here's What's Actually Worth Learning (Perplexity AI / ChatGPT / Gemini)</Link></li>
-              <li><Link href="/playbook/ai-prompting-essentials" className="text-brand-gold hover:text-brand-gold-dark underline">AI Prompting Essentials — The Skills Every Creator Needs in 2025</Link></li>
-              <li><Link href="/playbook/design-technical-jargon-explained" className="text-brand-gold hover:text-brand-gold-dark underline">Design Technical Jargon Explained — A Beginner's Guide for Canva, Photoshop, and Social Creators</Link></li>
-              <li><Link href="/playbook/content-engine-starter-kit" className="text-brand-gold hover:text-brand-gold-dark underline">AI Tools You Need to Start Your Content Engine (2025 Edition)</Link></li>
+              <li><Link href="/playbook/gemini-3-vs-claude-4-5-research-workflow" className="text-brand-gold hover:text-brand-gold-dark underline">Gemini 3 Pro vs. Claude 4.5: The Ultimate Workflow for Research & Academic Writing</Link></li>
+              <li><Link href="/playbook/brand-ready-website-images-chatgpt" className="text-brand-gold hover:text-brand-gold-dark underline">How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1</Link></li>
+              <li><Link href="/playbook/how-students-can-use-ai-to-study-more-efficiently" className="text-brand-gold hover:text-brand-gold-dark underline">How Students Can Use AI to Study More Efficiently</Link></li>
+              <li><Link href="/playbook/nano-banana-for-teachers-visualizing-curriculum" className="text-brand-gold hover:text-brand-gold-dark underline">How to Use Nano Banana for Teachers: Visualizing the Curriculum (Step-by-Step Guide)</Link></li>
             </ul>
 
             {/* Concept Art Pack CTA */}
