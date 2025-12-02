@@ -3,6 +3,7 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import ConceptArtCheckoutButton from '../../../components/ConceptArtCheckoutButton'
 
 export const metadata = {
   title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better? | Lopez Productions',
@@ -400,8 +401,24 @@ export default function NanoBananaProVsGPT51() {
               <li><Link href="/playbook/content-engine-starter-kit" className="text-brand-gold hover:text-brand-gold-dark underline">AI Tools You Need to Start Your Content Engine (2025 Edition)</Link></li>
             </ul>
 
+            {/* Concept Art Pack CTA */}
+            <div className="mt-16 p-8 bg-brand-gray-dark rounded-2xl text-center border border-brand-gold/20">
+              <h3 className="text-2xl font-serif font-bold text-brand-white mb-4">
+                Need Custom AI-Generated Images?
+              </h3>
+              <p className="text-brand-gray-light mb-6">
+                Get 5 custom AI-generated Nano Banana images designed specifically for your website, branding, or content needs. Perfect for OG cards, social media, presentations, and more.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <ConceptArtCheckoutButton />
+                <Link href="/playbook" className="btn-outline">
+                  Read More Insights
+                </Link>
+              </div>
+            </div>
+
             {/* CTA */}
-            <div className="mt-16 p-8 bg-brand-gray-dark rounded-2xl text-center">
+            <div className="mt-8 p-8 bg-brand-gray-dark rounded-2xl text-center">
               <h3 className="text-2xl font-serif font-bold text-brand-white mb-4">
                 Ready to build your content engine?
               </h3>
