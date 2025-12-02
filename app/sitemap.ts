@@ -28,8 +28,6 @@ const templates = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const today = new Date().toISOString().split('T')[0]
-  
   // Static pages
   const staticUrls: MetadataRoute.Sitemap = staticPages.map((page) => ({
     url: page.url,
