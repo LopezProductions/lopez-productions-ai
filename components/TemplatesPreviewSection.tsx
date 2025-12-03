@@ -1,5 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+// Helper function to map slug to image filename
+function getTemplateImage(slug: string): string {
+  const imageMap: Record<string, string> = {
+    'polaris-blue': 'polarisblue-preview.png',
+    'polaris-light': 'polarislight-preview.png',
+    'law-crest': 'lawcrest-preview.png',
+    'roamline': 'roamline-preview.png',
+    'shieldcare': 'shieldcare-preview.png',
+    'revive-pt': 'revivept-preview.png',
+  }
+  return imageMap[slug] || `${slug}-preview.png`
+}
 
 const TemplatesPreviewSection = React.memo(function TemplatesPreviewSection() {
   const templates = [
@@ -44,30 +58,73 @@ const TemplatesPreviewSection = React.memo(function TemplatesPreviewSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {templates.map((template, index) => (
-            <Link
-              key={index}
-              href={`/templates/${template.slug}`}
-              className="group rounded-2xl border border-border bg-gradient-to-b from-white/5 to-transparent p-6 flex flex-col justify-between card-hover"
-            >
-              <div className="space-y-3">
-                {template.label && (
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-text-muted">
-                    {template.label}
-                  </p>
-                )}
-                <h3 className="text-lg font-serif font-bold text-accent group-hover:text-accent-dark transition-colors">
-                  {template.title}
-                </h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
-                  {template.description}
-                </p>
-              </div>
-              <p className="mt-4 text-[11px] text-accent group-hover:text-accent-dark transition-colors font-medium">
-                View template →
-              </p>
-            </Link>
-          ))}
+          {templates.map((template, index) => {
+            const imageFilename = getTemplateImage(template.slug)
+
+            return (
+              <Link
+                key={index}
+                href={`/templates/${template.slug}`}
+                className="group rounded-2xl border border-border bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-hover relative"
+              >
+                {/* Preview image */}
+                <div className="aspect-square relative bg-background overflow-hidden">
+                  <Image
+                    src={`/${imageFilename}`}
+                    alt={`${template.title} preview`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+
+                {/* Overlay with title and link (hover state) */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                    <div className="bg-black/60 backdrop-blur-sm rounded-lg p-4 md:p-5">
+                      {template.label && (
+                        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-2">
+                          {template.label}
+                        </p>
+                      )}
+                      <h3 className="text-xl md:text-2xl font-serif font-bold text-text-primary mb-2">
+                        {template.title}
+                      </h3>
+                      <span className="inline-flex items-center text-accent hover:text-accent-dark text-sm font-medium">
+                        <span className="mr-2">View Template</span>
+                        <span>→</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Always visible title at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 pointer-events-none">
+                  <div className="bg-black/60 backdrop-blur-sm rounded-lg p-3 md:p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      {template.label && (
+                        <span className="text-xs uppercase tracking-[0.2em] text-accent">
+                          {template.label}
+                        </span>
+                      )}
+                      <span className="text-xs bg-brand-gold text-brand-black px-2 py-1 rounded font-semibold">
+                        Starting at $50
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-serif font-bold text-text-primary mb-1">
+                      {template.title}
+                    </h3>
+                    <p className="text-xs text-brand-gray-light mb-2 line-clamp-2">
+                      {template.description}
+                    </p>
+                    <span className="inline-flex items-center text-accent text-sm font-medium">
+                      View Template →
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
         </div>
 
         <div className="mt-6 md:hidden text-center">

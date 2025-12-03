@@ -200,6 +200,19 @@ export async function generateMetadata({
   }
 }
 
+// Helper function to map slug to image filename
+function getTemplateImage(slug: string): string {
+  const imageMap: Record<string, string> = {
+    'polaris-blue': 'polarisblue-preview.png',
+    'polaris-light': 'polarislight-preview.png',
+    'law-crest': 'lawcrest-preview.png',
+    'roamline': 'roamline-preview.png',
+    'shieldcare': 'shieldcare-preview.png',
+    'revive-pt': 'revivept-preview.png',
+  }
+  return imageMap[slug] || `${slug}-preview.png`
+}
+
 export default async function TemplatePage({
   params,
 }: {
@@ -212,12 +225,16 @@ export default async function TemplatePage({
     notFound()
   }
 
+  const imageFilename = getTemplateImage(slug)
+  const imageUrl = `https://lopezproductions.ai/${imageFilename}`
+
   const schema = {
     '@context': 'https://schema.org/',
     '@type': 'Product',
-    name: template.title,
+    name: `${template.title} — Web Template`,
     description: template.description,
-    image: `https://lopezproductions.ai/images/${slug}.jpg`,
+    image: [imageUrl],
+    sku: slug,
     brand: {
       '@type': 'Brand',
       name: 'Lopez Productions',

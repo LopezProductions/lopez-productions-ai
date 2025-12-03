@@ -130,14 +130,14 @@ export default function ContactPage() {
           {/* Formspree form */}
           <div className="relative">
             {/* Left side glow */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-gold/20 via-brand-gold/5 to-transparent blur-2xl -z-10"></div>
+            <div className="absolute -left-16 top-0 bottom-0 w-48 bg-gradient-to-r from-brand-gold/30 via-brand-gold/10 to-transparent blur-3xl pointer-events-none"></div>
             {/* Right side glow */}
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-gold/20 via-brand-gold/5 to-transparent blur-2xl -z-10"></div>
+            <div className="absolute -right-16 top-0 bottom-0 w-48 bg-gradient-to-l from-brand-gold/30 via-brand-gold/10 to-transparent blur-3xl pointer-events-none"></div>
             
             <form
               action="https://formspree.io/f/xldpoywb"
               method="POST"
-              className="space-y-6 relative bg-brand-black/30 rounded-xl p-8 border border-brand-gray-dark"
+              className="space-y-6 relative bg-brand-black/30 rounded-xl p-8 border border-brand-gray-dark z-10"
             >
             <input
               type="hidden"
@@ -180,9 +180,10 @@ export default function ContactPage() {
               </label>
               <select
                 name="focus"
+                defaultValue=""
                 className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
               >
-                <option disabled selected>
+                <option value="" disabled>
                   Choose one
                 </option>
                 <option>Website or Portfolio Template</option>
@@ -214,9 +215,10 @@ export default function ContactPage() {
               </label>
               <select
                 name="timeline"
+                defaultValue=""
                 className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
               >
-                <option disabled selected>
+                <option value="" disabled>
                   Choose one
                 </option>
                 <option>ASAP</option>
@@ -234,9 +236,10 @@ export default function ContactPage() {
               </label>
               <select
                 name="budget"
+                defaultValue=""
                 className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
               >
-                <option disabled selected>
+                <option value="" disabled>
                   Choose one
                 </option>
                 <option>$100–$300</option>

@@ -1,10 +1,25 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
+import Image from 'next/image'
+import { Zap, Palette, Smartphone, Wrench, RefreshCw, Headphones } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+
+// Helper function to map slug to image filename
+function getTemplateImage(slug: string): string {
+  const imageMap: Record<string, string> = {
+    'polaris-blue': 'polarisblue-preview.png',
+    'polaris-light': 'polarislight-preview.png',
+    'law-crest': 'lawcrest-preview.png',
+    'roamline': 'roamline-preview.png',
+    'shieldcare': 'shieldcare-preview.png',
+    'revive-pt': 'revivept-preview.png',
+  }
+  return imageMap[slug] || `${slug}-preview.png`
+}
 
 const templates = [
   {
@@ -52,16 +67,6 @@ const templates = [
 ]
 
 export default function TemplatesPage() {
-  const [loadedFrames, setLoadedFrames] = useState<Set<string>>(new Set())
-  const [errorFrames, setErrorFrames] = useState<Set<string>>(new Set())
-
-  const handleIframeLoad = (url: string) => {
-    setLoadedFrames((prev) => new Set(prev).add(url))
-  }
-
-  const handleIframeError = (url: string) => {
-    setErrorFrames((prev) => new Set(prev).add(url))
-  }
 
   const schema = {
     '@context': 'https://schema.org',
@@ -124,30 +129,54 @@ export default function TemplatesPage() {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl mb-2">⚡</div>
-                  <p className="text-sm text-brand-gray-light">Lightning-fast performance</p>
-                  <p className="text-xs text-brand-gray-muted mt-1">Vite / Next.js</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
+                      <Zap className="w-7 h-7 text-brand-gold" />
+                    </div>
+                  </div>
+                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Lightning-fast performance</p>
+                  <p className="text-xs text-brand-gray-muted">Vite / Next.js</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl mb-2">🎨</div>
-                  <p className="text-sm text-brand-gray-light">Clean, modern designs</p>
-                  <p className="text-xs text-brand-gray-muted mt-1">React + Tailwind</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
+                      <Palette className="w-7 h-7 text-brand-gold" />
+                    </div>
+                  </div>
+                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Clean, modern designs</p>
+                  <p className="text-xs text-brand-gray-muted">React + Tailwind</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl mb-2">📱</div>
-                  <p className="text-sm text-brand-gray-light">Responsive out of the box</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
+                      <Smartphone className="w-7 h-7 text-brand-gold" />
+                    </div>
+                  </div>
+                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Responsive out of the box</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl mb-2">🔧</div>
-                  <p className="text-sm text-brand-gray-light">Easy to customize</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
+                      <Wrench className="w-7 h-7 text-brand-gold" />
+                    </div>
+                  </div>
+                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Easy to customize</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl mb-2">🔄</div>
-                  <p className="text-sm text-brand-gray-light">Lifetime updates</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
+                      <RefreshCw className="w-7 h-7 text-brand-gold" />
+                    </div>
+                  </div>
+                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Lifetime updates</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl mb-2">💬</div>
-                  <p className="text-sm text-brand-gray-light">24-hour support</p>
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
+                      <Headphones className="w-7 h-7 text-brand-gold" />
+                    </div>
+                  </div>
+                  <p className="text-sm font-semibold text-brand-gray-light mb-1">24-hour support</p>
                 </div>
               </div>
             </div>
@@ -158,8 +187,7 @@ export default function TemplatesPage() {
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {templates.map((template) => {
-                  const hasError = errorFrames.has(template.url)
-                  const isLoading = !loadedFrames.has(template.url) && !hasError
+                  const imageFilename = getTemplateImage(template.slug)
 
                   return (
                     <Link
@@ -167,77 +195,56 @@ export default function TemplatesPage() {
                       href={`/templates/${template.slug}`}
                       className="group rounded-2xl border border-border bg-gradient-to-b from-white/5 to-transparent overflow-hidden card-hover relative"
                     >
-                      {/* Preview iframe */}
-                      <div className="aspect-square relative bg-background">
-                        {!hasError ? (
-                          <>
-                            {isLoading && (
-                              <div className="absolute inset-0 flex items-center justify-center bg-surface/50 z-10">
-                                <div className="text-center">
-                                  <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
-                                  <p className="text-text-secondary text-sm">Loading preview...</p>
-                                </div>
-                              </div>
-                            )}
-                            <iframe
-                              src={template.url}
-                              title={`${template.title} preview`}
-                              className="w-full h-full border-0 pointer-events-none"
-                              loading="lazy"
-                              onLoad={() => handleIframeLoad(template.url)}
-                              onError={() => handleIframeError(template.url)}
-                              sandbox="allow-same-origin allow-scripts"
-                            />
-                          </>
-                        ) : (
-                          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-gray-dark to-brand-black">
-                            <div className="text-center p-6">
-                              <p className="text-text-secondary text-sm mb-4">
-                                Preview unavailable
-                              </p>
-                              <span className="text-accent text-sm">
-                                View Template →
-                              </span>
-                            </div>
-                          </div>
-                        )}
+                      {/* Preview image */}
+                      <div className="aspect-square relative bg-background overflow-hidden">
+                        <Image
+                          src={`/${imageFilename}`}
+                          alt={`${template.title} preview`}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
                       </div>
 
-                      {/* Overlay with title and link */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        <div className="absolute bottom-0 left-0 right-0 p-6">
-                          <p className="text-xs uppercase tracking-[0.2em] text-accent mb-2">
-                            {template.category}
-                          </p>
-                          <h3 className="text-xl md:text-2xl font-serif font-bold text-text-primary mb-2">
-                            {template.title}
-                          </h3>
-                          <span className="inline-flex items-center text-accent hover:text-accent-dark text-sm font-medium">
-                            <span className="mr-2">View Template</span>
-                            <span>→</span>
-                          </span>
+                      {/* Overlay with title and link (hover state) */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                          <div className="bg-black/60 backdrop-blur-sm rounded-lg p-4 md:p-5">
+                            <p className="text-xs uppercase tracking-[0.2em] text-accent mb-2">
+                              {template.category}
+                            </p>
+                            <h3 className="text-xl md:text-2xl font-serif font-bold text-text-primary mb-2">
+                              {template.title}
+                            </h3>
+                            <span className="inline-flex items-center text-accent hover:text-accent-dark text-sm font-medium">
+                              <span className="mr-2">View Template</span>
+                              <span>→</span>
+                            </span>
+                          </div>
                         </div>
                       </div>
 
                       {/* Always visible title at bottom */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-brand-black/80 to-transparent pointer-events-none">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs uppercase tracking-[0.2em] text-accent">
-                            {template.category}
-                          </span>
-                          <span className="text-xs bg-brand-gold text-brand-black px-2 py-1 rounded font-semibold">
-                            Starting at $50
+                      <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 pointer-events-none">
+                        <div className="bg-black/60 backdrop-blur-sm rounded-lg p-3 md:p-4">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-xs uppercase tracking-[0.2em] text-accent">
+                              {template.category}
+                            </span>
+                            <span className="text-xs bg-brand-gold text-brand-black px-2 py-1 rounded font-semibold">
+                              Starting at $50
+                            </span>
+                          </div>
+                          <h3 className="text-lg font-serif font-bold text-text-primary mb-1">
+                            {template.title}
+                          </h3>
+                          <p className="text-xs text-brand-gray-light mb-2 line-clamp-2">
+                            {template.description}
+                          </p>
+                          <span className="inline-flex items-center text-accent text-sm font-medium">
+                            View Template →
                           </span>
                         </div>
-                        <h3 className="text-lg font-serif font-bold text-text-primary mb-1">
-                          {template.title}
-                        </h3>
-                        <p className="text-xs text-brand-gray-light mb-2">
-                          {template.description}
-                        </p>
-                        <span className="inline-flex items-center text-accent text-sm font-medium">
-                          View Template →
-                        </span>
                       </div>
                     </Link>
                   )

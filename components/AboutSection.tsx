@@ -151,14 +151,6 @@ const AboutSection = () => {
                   Let's move forward, one smart step at a time.
                 </p>
                 
-                <div className="bg-background rounded-lg p-4 border border-border mt-6">
-                  <p className="text-sm text-text-secondary">
-                    <strong className="text-accent">Coming Soon:</strong> Lopez Productions is transitioning to 
-                    <span className="text-accent font-semibold"> lpx.so</span> - a new brand identity that better 
-                    reflects our expanded vision and services.
-                  </p>
-                </div>
-                
                 <div className="text-right mt-6">
                   <p className="text-accent font-medium italic">– Reuben</p>
                 </div>
