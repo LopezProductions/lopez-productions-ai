@@ -8,6 +8,7 @@ export const stripePriceIds: Record<string, string> = {
   'prompt-library': 'price_1SYxxjLq5JCtXEO7bEHAgcon', // Prompt Library - $9
   'student-dashboard': 'price_1SYwIwLq5JCtXEO78OmKNfhm', // Student Dashboard - $19
   'travel-planner': 'price_1SYwUPLq5JCtXEO7Ey7nUcFJ', // Travel Planner OS - $19
+  'creator-system-os': 'price_1SaKJaLq5JCtXEO7GGe2Vgfl', // Creator System OS - $24
   'classroom-os': 'price_1SYwTSLq5JCtXEO7VgRxFtFW', // Classroom OS - $29
   'case-tracker': 'price_1SYwbTLq5JCtXEO7mQJ2NcEt', // Solo-Firm Case Tracker - $49
 

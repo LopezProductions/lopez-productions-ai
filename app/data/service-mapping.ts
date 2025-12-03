@@ -31,6 +31,12 @@ export const allServices: ServiceMapping[] = [
     requiresIntake: false,
   },
   {
+    id: 'creator-system-os',
+    name: 'The Creator System OS',
+    category: 'Digital Product',
+    requiresIntake: false,
+  },
+  {
     id: 'classroom-os',
     name: 'Classroom OS',
     category: 'Digital Product',

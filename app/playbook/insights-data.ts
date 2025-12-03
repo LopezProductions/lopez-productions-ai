@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'gpt-5-1-vs-gemini-3-creative-workflows',
+    title: 'GPT-5.1 vs Gemini 3: Which AI Model Is Better for Real Creative Workflows?',
+    excerpt: 'A practical breakdown of GPT-5.1 vs. Gemini 3 written specifically for creators, students, small teams, and automation-focused professionals. Covers workflow reliability, PDF handling, creativity, citation accuracy, and tool integrations like Notion and Make.com.',
+    readTime: '11 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-12-03',
+    coverImage: '/gpt5.1-vs-gemini3.png',
+  },
+  {
     slug: 'the-worst-thing-about-gemini-3-pro',
     title: 'The Worst Thing About Gemini 3 Pro (That No One Talks About)',
     excerpt: 'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
@@ -196,6 +205,7 @@ export const pillarMappings = {
     'ai-notion-weekly-organization'
   ],
   'ai-workflows': [
+    'gpt-5-1-vs-gemini-3-creative-workflows',
     'the-worst-thing-about-gemini-3-pro',
     'gemini-3-vs-claude-4-5-research-workflow',
     'how-students-can-use-ai-to-study-more-efficiently',

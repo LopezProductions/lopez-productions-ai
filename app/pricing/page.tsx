@@ -181,41 +181,49 @@ export default function PricingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Prompt Library */}
             <DigitalShopCard
-              title="100+ Prompt Library (PDF)"
+              title="The 100+ Prompt Library"
               price="$9"
-              description="Universal AI prompt library for students, creators, teachers, and travelers."
+              description="Universal AI prompt library. Stop guessing and start generating."
               serviceId="prompt-library"
             />
 
             {/* Student Dashboard */}
             <DigitalShopCard
-              title="Student Dashboard"
+              title="🎓 The Student Dashboard"
               price="$19"
-              description="Semester OS — assignments, study prompts, grade calculator."
+              description="Semester OS. Track assignments, summarize lectures, and calculate grades."
               serviceId="student-dashboard"
             />
 
             {/* Travel Planner */}
             <DigitalShopCard
-              title="Travel Planner OS"
+              title="✈️ The Smart Travel Planner"
               price="$19"
-              description="AI-ready itinerary builder for Gemini/ChatGPT travel suggestions."
+              description="AI-ready itinerary builder. Drag-and-drop your Gemini suggestions into a real schedule."
               serviceId="travel-planner"
+            />
+
+            {/* Creator System OS */}
+            <DigitalShopCard
+              title="🎨 The Creator System OS"
+              price="$24"
+              description="The missing 'Folders' for your AI workflow. Content calendar + Brand asset library."
+              serviceId="creator-system-os"
             />
 
             {/* Classroom OS */}
             <DigitalShopCard
-              title="Classroom OS"
+              title="🍎 The Classroom OS"
               price="$29"
-              description="Lesson planner, gradebook, and curriculum visualizer for educators."
+              description="Lesson planner, gradebook, and curriculum visualizer. Stop using 5 different apps."
               serviceId="classroom-os"
             />
 
             {/* Case Tracker */}
             <DigitalShopCard
-              title="Solo-Firm Case Tracker"
+              title="⚖️ The Solo-Firm Case Tracker"
               price="$49"
-              description="Simple, professional Notion system for solo attorneys tracking clients."
+              description="Simple, professional client & case management for independent attorneys."
               serviceId="case-tracker"
             />
           </div>

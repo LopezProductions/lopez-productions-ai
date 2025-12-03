@@ -16,9 +16,10 @@
   --shadow-light: 0 4px 6px rgba(197, 160, 89, 0.1);
   --shadow-medium: 0 8px 25px rgba(197, 160, 89, 0.15);
   --shadow-heavy: 0 15px 35px rgba(197, 160, 89, 0.2);
-  --border-radius: 12px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --click-driver-color: #6366F1;
+  }
 
 @tailwind base;
 @tailwind components;
@@ -43,6 +44,7 @@
     --shadow-heavy: 0 15px 35px rgba(197, 160, 89, 0.2);
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --click-driver-color: #6366F1;
     
     /* Brand variables mapped to new variables (backward compatibility) */
     --brand-black: var(--background-color);
@@ -82,12 +84,118 @@
     @apply bg-gradient-gold text-background px-8 py-2 md:py-4 rounded-lg font-semibold 
            hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl
            animate-pulse-slow focus:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.2);
   }
   
   .btn-outline {
     @apply border-2 border-primary text-text-primary px-8 py-2 md:py-4 rounded-lg font-semibold
            hover:bg-primary hover:text-background transition-all duration-300
            hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-outline:hover::before {
+    left: 100%;
+  }
+  
+  .btn-outline:hover {
+    border-color: var(--click-driver-color);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4), 0 0 30px rgba(99, 102, 241, 0.2);
+  }
+  
+  /* Click Driver effect for custom gold buttons */
+  button[class*="bg-brand-gold"],
+  a[class*="bg-brand-gold"] {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button[class*="bg-brand-gold"]::before,
+  a[class*="bg-brand-gold"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), transparent);
+    transition: left 0.5s;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  button[class*="bg-brand-gold"]:hover::before,
+  a[class*="bg-brand-gold"]:hover::before {
+    left: 100%;
+  }
+  
+  button[class*="bg-brand-gold"]:hover,
+  a[class*="bg-brand-gold"]:hover {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.2);
+  }
+  
+  /* Click Driver effect for border buttons with accent */
+  a[class*="border-accent"],
+  button[class*="border-accent"] {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  a[class*="border-accent"]::before,
+  button[class*="border-accent"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+    transition: left 0.5s;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  a[class*="border-accent"]:hover::before,
+  button[class*="border-accent"]:hover::before {
+    left: 100%;
+  }
+  
+  a[class*="border-accent"]:hover,
+  button[class*="border-accent"]:hover {
+    border-color: var(--click-driver-color) !important;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4), 0 0 30px rgba(99, 102, 241, 0.2);
   }
   
   .section-title {
