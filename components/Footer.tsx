@@ -48,6 +48,16 @@ const Footer = () => {
           <h4 className="font-semibold text-sm md:text-base mb-2 md:mb-3">Support</h4>
           <ul className="space-y-2 md:space-y-2">
             <li className="py-2">
+              <a 
+                href="https://calendly.com/reuben-lopezproductions/intro" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded font-medium text-accent"
+              >
+                📅 Schedule a Call
+              </a>
+            </li>
+            <li className="py-2">
               <a href="mailto:contact@lopezproductions.ai" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">
                 📧 contact@lopezproductions.ai
               </a>

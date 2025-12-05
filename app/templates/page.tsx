@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
 import Image from 'next/image'
-import { Zap, Palette, Smartphone, Wrench, RefreshCw, Headphones } from 'lucide-react'
+import { Zap, Palette, Smartphone, Wrench, RefreshCw, Shield } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
@@ -27,47 +27,46 @@ const templates = [
     url: 'https://polaris-blue.netlify.app/',
     title: 'Polaris Blue',
     category: 'Web Template',
-    description: 'A modern, professional website template with a clean blue aesthetic.',
+    description: 'Modern, professional blue aesthetic for tech companies, agencies, and creators.',
   },
   {
     slug: 'polaris-light',
     url: 'https://polaris-light.netlify.app/',
     title: 'Polaris Light',
     category: 'Web Template',
-    description: 'A light, airy website template perfect for modern brands.',
+    description: 'Clean, airy layout built for modern brands and service businesses.',
   },
   {
     slug: 'law-crest',
     url: 'https://law-crest.netlify.app/',
     title: 'Law Crest',
     category: 'Web Template',
-    description: 'A professional legal services website template with elegant design.',
+    description: 'Elegant, professional design for law firms, legal services, and consultants.',
   },
   {
     slug: 'roamline',
     url: 'https://roamline.netlify.app/',
     title: 'Roamline',
     category: 'Web Template',
-    description: 'A travel and adventure-focused website template.',
+    description: 'Travel and adventure focus; gallery support and smooth layouts.',
   },
   {
     slug: 'shieldcare',
     url: 'https://shieldcare.netlify.app/',
     title: 'Shieldcare',
     category: 'Web Template',
-    description: 'A healthcare and medical services website template.',
+    description: 'Polished medical or wellness layout for clinics and healthcare providers.',
   },
   {
     slug: 'revive-pt',
     url: 'https://revive-pt.netlify.app/',
     title: 'Revive PT',
     category: 'Web Template',
-    description: 'A physical therapy and wellness website template.',
+    description: 'Performance-driven template for physical therapists, trainers, and wellness brands.',
   },
 ]
 
 export default function TemplatesPage() {
-
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -116,75 +115,79 @@ export default function TemplatesPage() {
                 Template Library
               </h1>
               <p className="text-2xl font-serif text-text-secondary mb-4 max-w-3xl">
-                Your Website Is Costing You Clients. Fix That This Weekend.
+                Launch a modern, high-performance website this weekend — without paying for a full custom build.
               </p>
-              <p className="text-lg text-text-secondary mb-12 max-w-3xl leading-relaxed">
-                Clean, fast, and modern Vite &amp; Next.js templates built to launch your site in hours—not weeks. No coding overwhelm. No design bottlenecks. Just a high-performance website that looks like you paid $1,000+.
+              <p className="text-lg text-text-secondary mb-4 max-w-3xl leading-relaxed">
+                Clean, fast React &amp; Next.js templates that look and perform like a $1,000+ site, but start at just $50.
+              </p>
+              <p className="text-base text-text-secondary mb-12 max-w-3xl leading-relaxed">
+                No code overwhelm. No design bottlenecks. Just pick, customize, and publish.
               </p>
             </div>
           </section>
 
-          {/* 2. Quick Benefit Bar */}
+          {/* 2. Why These Templates Work */}
           <section className="py-12 px-6 md:px-12 border-t border-brand-gray-dark">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-3">
-                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
-                      <Zap className="w-7 h-7 text-brand-gold" />
-                    </div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-8">
+                Why these templates work
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Zap className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-lg font-serif font-bold text-brand-white">Lightning-fast performance</h3>
                   </div>
-                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Lightning-fast performance</p>
-                  <p className="text-xs text-brand-gray-muted">Vite / Next.js</p>
+                  <p className="text-brand-gray-light text-sm">Built on Vite or Next.js</p>
                 </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-3">
-                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
-                      <Palette className="w-7 h-7 text-brand-gold" />
-                    </div>
+                <div className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Palette className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-lg font-serif font-bold text-brand-white">Clean, modern UI</h3>
                   </div>
-                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Clean, modern designs</p>
-                  <p className="text-xs text-brand-gray-muted">React + Tailwind</p>
+                  <p className="text-brand-gray-light text-sm">React + Tailwind</p>
                 </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-3">
-                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
-                      <Smartphone className="w-7 h-7 text-brand-gold" />
-                    </div>
+                <div className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Smartphone className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-lg font-serif font-bold text-brand-white">Fully responsive</h3>
                   </div>
-                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Responsive out of the box</p>
+                  <p className="text-brand-gray-light text-sm">Out of the box</p>
                 </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-3">
-                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
-                      <Wrench className="w-7 h-7 text-brand-gold" />
-                    </div>
+                <div className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Wrench className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-lg font-serif font-bold text-brand-white">Easy to customize</h3>
                   </div>
-                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Easy to customize</p>
+                  <p className="text-brand-gray-light text-sm">And extend</p>
                 </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-3">
-                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
-                      <RefreshCw className="w-7 h-7 text-brand-gold" />
-                    </div>
+                <div className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <div className="flex items-center gap-3 mb-3">
+                    <RefreshCw className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-lg font-serif font-bold text-brand-white">Lifetime updates</h3>
                   </div>
-                  <p className="text-sm font-semibold text-brand-gray-light mb-1">Lifetime updates</p>
+                  <p className="text-brand-gray-light text-sm">And support</p>
                 </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-3">
-                    <div className="w-14 h-14 rounded-full bg-white/6 border border-white/10 backdrop-blur-sm flex items-center justify-center drop-shadow-md">
-                      <Headphones className="w-7 h-7 text-brand-gold" />
-                    </div>
+                <div className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Shield className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-lg font-serif font-bold text-brand-white">SEO-friendly structure</h3>
                   </div>
-                  <p className="text-sm font-semibold text-brand-gray-light mb-1">24-hour support</p>
+                  <p className="text-brand-gray-light text-sm">Not bloated page builders</p>
                 </div>
               </div>
+              <p className="text-center text-brand-gray-light mt-8 max-w-3xl mx-auto">
+                Each template ships with 3–5 page layouts, a complete codebase, and clear setup instructions — so you can launch quickly or upgrade later.
+              </p>
             </div>
           </section>
 
-          {/* 3. Template Gallery */}
+          {/* 3. Browse Templates */}
           <section id="templates" className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
             <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-12">
+                Browse templates
+              </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {templates.map((template) => {
                   const imageFilename = getTemplateImage(template.slug)
@@ -236,7 +239,7 @@ export default function TemplatesPage() {
                             </span>
                           </div>
                           <h3 className="text-lg font-serif font-bold text-text-primary mb-1">
-                            {template.title}
+                            {template.title} — Web Template
                           </h3>
                           <p className="text-xs text-brand-gray-light mb-2 line-clamp-2">
                             {template.description}
@@ -253,12 +256,15 @@ export default function TemplatesPage() {
             </div>
           </section>
 
-          {/* 4. What You Get */}
+          {/* 4. What's Included */}
           <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark bg-brand-gray-dark/30">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-8">
-                What&apos;s Included
+                What&apos;s included
               </h2>
+              <p className="text-brand-gray-light text-center mb-8 max-w-2xl mx-auto">
+                Every template includes:
+              </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
                   <ul className="space-y-3 text-brand-gray-light">
@@ -268,11 +274,11 @@ export default function TemplatesPage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-brand-gold mt-1">✓</span>
-                      <span>3–5 page layouts</span>
+                      <span>3–5 prebuilt page layouts</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-brand-gold mt-1">✓</span>
-                      <span>Responsive base styling</span>
+                      <span>Mobile-first responsive design</span>
                     </li>
                   </ul>
                 </div>
@@ -293,59 +299,161 @@ export default function TemplatesPage() {
                   </ul>
                 </div>
               </div>
+              <p className="text-center text-brand-gray-light mt-8 max-w-2xl mx-auto">
+                That&apos;s everything you need to launch a professional, modern website quickly.
+              </p>
             </div>
           </section>
 
-          {/* 5. Pricing Breakdown */}
+          {/* 5. Simple Pricing — Three Launch Paths */}
           <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-8">
-                Simple Pricing
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-4">
+                Simple pricing — three launch paths
               </h2>
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
-                  <h3 className="text-2xl font-serif font-bold text-brand-gold mb-2">
-                    Starter Template — $50
-                  </h3>
-                  <p className="text-brand-gray-light mb-4">
-                    DIY version with everything included. Install, edit, deploy.
+              
+              <div className="grid md:grid-cols-3 gap-8 mt-12">
+                {/* Starter Template — $50 */}
+                <div className="bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark">
+                  <div className="mb-6">
+                    <span className="text-sm uppercase tracking-wider text-brand-gold mb-2 block">1) Starter Template</span>
+                    <h3 className="text-3xl font-serif font-bold text-brand-gold mb-4">$50</h3>
+                    <p className="text-brand-gray-light text-sm mb-4">
+                      DIY option for the budget-minded or hands-on user.
+                    </p>
+                  </div>
+                  <ul className="space-y-3 text-brand-gray-light text-sm mb-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Download, install, and customize yourself</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Full codebase + 3–5 page layouts + instructions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Lifetime updates</span>
+                    </li>
+                  </ul>
+                  <p className="text-brand-gray-light text-sm italic">
+                    Perfect if you want total control and minimal spend.
                   </p>
                 </div>
-                <div className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
-                  <h3 className="text-2xl font-serif font-bold text-brand-gold mb-2">
-                    Done-For-You Website — $250
-                  </h3>
-                  <p className="text-brand-gray-light mb-4">
-                    I customize the template for you (up to 3 pages).
+
+                {/* Template + Installation — $150 */}
+                <div className="bg-brand-gray-dark rounded-xl p-8 border-2 border-brand-gold">
+                  <div className="mb-6">
+                    <span className="text-sm uppercase tracking-wider text-brand-gold mb-2 block">2) Template + Installation</span>
+                    <h3 className="text-3xl font-serif font-bold text-brand-gold mb-4">$150</h3>
+                    <p className="text-brand-gray-light text-sm mb-4">
+                      Fast launch, minimal effort.
+                    </p>
+                  </div>
+                  <ul className="space-y-3 text-brand-gray-light text-sm mb-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Everything in Starter</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Template installed on your domain</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Basic colors and text applied</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Ready to publish</span>
+                    </li>
+                  </ul>
+                  <p className="text-brand-gray-light text-sm italic">
+                    Great when you want a live site quickly, without doing any setup.
                   </p>
                 </div>
-              </div>
-              <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark mb-6">
-                <h4 className="text-xl font-serif font-bold text-brand-white mb-4">
-                  Optional Add-Ons
-                </h4>
-                <ul className="space-y-2 text-brand-gray-light">
-                  <li>• Custom Image Pack (+$25)</li>
-                  <li>• Mobile Optimization (+$50)</li>
-                  <li>• Extra Page Build (+$60/page)</li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <Link
-                  href="/template-intake"
-                  className="inline-block bg-brand-gold hover:bg-brand-gold-dark text-brand-black px-6 py-3 rounded-lg font-semibold transition-colors"
-                >
-                  Get Started with Intake Form →
-                </Link>
+
+                {/* Full Customization — $450 */}
+                <div className="bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark">
+                  <div className="mb-6">
+                    <span className="text-sm uppercase tracking-wider text-brand-gold mb-2 block">3) Full Customization</span>
+                    <h3 className="text-3xl font-serif font-bold text-brand-gold mb-4">$450</h3>
+                    <p className="text-brand-gray-light text-sm mb-4">
+                      Highest polish without paying for a full custom site.
+                    </p>
+                  </div>
+                  <ul className="space-y-3 text-brand-gray-light text-sm mb-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Everything in Installation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Up to 5 fully customized pages</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Brand colors, fonts, imagery, layout tweaks</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Content placement and UI polish</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand-gold mt-1">•</span>
+                      <span>Final deployment handled for you</span>
+                    </li>
+                  </ul>
+                  <p className="text-brand-gray-light text-sm italic">
+                    A complete, premium look + performance — still far below typical $1,000+ custom builds.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* 6. How It Works */}
+          {/* 6. Optional Add-Ons */}
           <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark bg-brand-gray-dark/30">
             <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-4">
+                Optional add-ons
+              </h2>
+              <p className="text-brand-gray-light text-center mb-8 max-w-2xl mx-auto">
+                Add extra polish if needed:
+              </p>
+              <div className="bg-brand-black rounded-xl p-8 border border-brand-gray-dark">
+                <ul className="space-y-4 text-brand-gray-light">
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-gold mt-1">•</span>
+                    <div>
+                      <strong className="text-brand-white">Custom Image Pack +$25</strong> — 5 branded hero or banner images
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-gold mt-1">•</span>
+                    <div>
+                      <strong className="text-brand-white">Mobile Optimization +$50</strong> — extra fine-tuning for small screens
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-brand-gold mt-1">•</span>
+                    <div>
+                      <strong className="text-brand-white">Extra Page Build +$60/page</strong> — add more pages at launch
+                    </div>
+                  </li>
+                </ul>
+                <p className="text-brand-gray-light text-sm mt-6 italic">
+                  These are optional upgrades, not required. You choose how much polish you want.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* 7. How It Works */}
+          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
+            <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-12">
-                How It Works
+                How it works
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
@@ -356,7 +464,7 @@ export default function TemplatesPage() {
                     Choose a template
                   </h3>
                   <p className="text-brand-gray-light">
-                    Pick the design you like best.
+                    Pick the design that matches your brand style and content needs.
                   </p>
                 </div>
                 <div className="text-center">
@@ -364,10 +472,10 @@ export default function TemplatesPage() {
                     <span className="text-2xl font-bold text-brand-gold">2</span>
                   </div>
                   <h3 className="text-xl font-serif font-bold text-brand-white mb-2">
-                    Choose DIY or Done-For-You
+                    Pick your launch path
                   </h3>
                   <p className="text-brand-gray-light">
-                    Either edit it yourself or I set everything up.
+                    DIY, install, or full customization — whatever fits your timeline and budget.
                   </p>
                 </div>
                 <div className="text-center">
@@ -375,54 +483,60 @@ export default function TemplatesPage() {
                     <span className="text-2xl font-bold text-brand-gold">3</span>
                   </div>
                   <h3 className="text-xl font-serif font-bold text-brand-white mb-2">
-                    Launch your new website
+                    Launch your site
                   </h3>
                   <p className="text-brand-gray-light">
-                    Deploy on Netlify/Vercel and go live this weekend.
+                    Deploy on Netlify or Vercel and go live this weekend.
                   </p>
                 </div>
               </div>
+              <p className="text-center text-brand-gray-light mt-8">
+                Simple, fast, and professional.
+              </p>
             </div>
           </section>
 
-          {/* 7. Trust Section */}
-          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
+          {/* 8. Why These Templates Beat Typical Page Builders */}
+          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark bg-brand-gray-dark/30">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-8">
-                Why These Templates Work
+                Why these templates beat typical page builders
               </h2>
               <div className="bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark">
                 <ul className="space-y-4 text-brand-gray-light">
                   <li className="flex items-start gap-3">
                     <span className="text-brand-gold mt-1">•</span>
-                    <span><strong className="text-brand-white">Built for speed</strong> (no bloated page builders)</span>
+                    <span><strong className="text-brand-white">No bloated plugins or slow load times</strong></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-brand-gold mt-1">•</span>
-                    <span><strong className="text-brand-white">Tailwind-coded</strong> for consistent UI</span>
+                    <span><strong className="text-brand-white">Truly modern UX patterns</strong> and clean Tailwind components</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-brand-gold mt-1">•</span>
-                    <span><strong className="text-brand-white">Designed with modern UX patterns</strong></span>
+                    <span><strong className="text-brand-white">SEO-friendly heading structure</strong> and metadata</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-brand-gold mt-1">•</span>
-                    <span><strong className="text-brand-white">SEO-friendly structure</strong></span>
+                    <span><strong className="text-brand-white">Code developers actually want to work with</strong></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-brand-gold mt-1">•</span>
-                    <span><strong className="text-brand-white">Actually easy to edit</strong> (clear class names, clean layout)</span>
+                    <span><strong className="text-brand-white">Easy to scale later</strong> into a full custom build or larger site</span>
                   </li>
                 </ul>
+                <p className="text-brand-gray-light mt-6">
+                  You get speed, flexibility, and long-term value, not just a quick one-off page.
+                </p>
               </div>
             </div>
           </section>
 
-          {/* 8. Testimonials */}
-          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark bg-brand-gray-dark/30">
+          {/* 9. Testimonials */}
+          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-12">
-                What People Are Saying
+                Testimonials
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-brand-black rounded-xl p-6 border border-brand-gray-dark">
@@ -438,14 +552,17 @@ export default function TemplatesPage() {
                   <p className="text-brand-gold font-semibold">— Template User</p>
                 </div>
               </div>
+              <p className="text-center text-brand-gray-light text-sm mt-6">
+                Social proof like this adds credibility and shows the template path actually works.
+              </p>
             </div>
           </section>
 
-          {/* 9. FAQ */}
-          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
+          {/* 10. FAQ */}
+          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark bg-brand-gray-dark/30">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white text-center mb-8">
-                Frequently Asked Questions
+                Frequently asked questions
               </h2>
               <div className="space-y-4">
                 <details className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
@@ -453,23 +570,25 @@ export default function TemplatesPage() {
                     Do I need coding experience?
                   </summary>
                   <p className="mt-3 text-brand-gray-light">
-                    Not necessarily. Beginners can use the templates with minimal editing, and developers can customize them deeply. If you&apos;d rather not touch code, the $250 Done-For-You package handles everything for you.
+                    No. The Starter option includes everything you need, and the higher tiers handle setup or full customization for you.
                   </p>
                 </details>
                 <details className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
                   <summary className="cursor-pointer font-semibold text-brand-white hover:text-brand-gold transition-colors">
-                    Is the template mobile-friendly?
+                    Are the templates mobile-friendly?
                   </summary>
                   <p className="mt-3 text-brand-gray-light">
-                    Yes. All templates include baseline responsive styling out of the box. The Mobile Optimization add-on provides extra refinement for perfect spacing and typography scaling.
+                    Yes — they&apos;re built responsive out of the box. Optional Mobile Optimization adds extra refinement.
                   </p>
                 </details>
                 <details className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
                   <summary className="cursor-pointer font-semibold text-brand-white hover:text-brand-gold transition-colors">
-                    What&apos;s the difference between $50 and $250?
+                    What&apos;s the difference between the pricing tiers?
                   </summary>
                   <p className="mt-3 text-brand-gray-light">
-                    $50 Template — DIY: You receive the full codebase and customize it yourself. $250 Done-For-You — Assisted Build: I customize up to 3 pages for you, apply your branding, help shape your layout, and handle deployment.
+                    $50 = DIY template download<br />
+                    $150 = installation + basic setup<br />
+                    $450 = full customization up to 5 pages, final deployment
                   </p>
                 </details>
                 <details className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
@@ -477,35 +596,51 @@ export default function TemplatesPage() {
                     How long does Done-For-You take?
                   </summary>
                   <p className="mt-3 text-brand-gray-light">
-                    Most builds are completed within 24–72 hours, depending on complexity and the number of customizations requested. You&apos;ll receive an intake form immediately after purchase so we can start quickly.
+                    Most builds are completed in 24–72 hours depending on customizations and pages.
                   </p>
                 </details>
-              </div>
-              <div className="text-center mt-8">
-                <Link
-                  href="/templates/polaris-blue#faq"
-                  className="text-brand-gold hover:text-brand-gold-dark transition-colors underline"
-                >
-                  View full FAQ on template pages →
-                </Link>
+                <details className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <summary className="cursor-pointer font-semibold text-brand-white hover:text-brand-gold transition-colors">
+                    Can you build a full custom website instead?
+                  </summary>
+                  <p className="mt-3 text-brand-gray-light">
+                    Yes — fully custom builds start at $1,000+ on the pricing page. Templates are the low-ticket entry; custom builds are the premium upgrade.
+                  </p>
+                </details>
+                <details className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <summary className="cursor-pointer font-semibold text-brand-white hover:text-brand-gold transition-colors">
+                    Do you offer refunds?
+                  </summary>
+                  <p className="mt-3 text-brand-gray-light">
+                    Digital templates are non-refundable after delivery, but support is provided to help you launch successfully.
+                  </p>
+                </details>
+                <details className="bg-brand-gray-dark rounded-xl p-6 border border-brand-gray-dark">
+                  <summary className="cursor-pointer font-semibold text-brand-white hover:text-brand-gold transition-colors">
+                    What happens after purchase?
+                  </summary>
+                  <p className="mt-3 text-brand-gray-light">
+                    You get instant download access and, if applicable, an intake form for customization. Support is available for any launch questions.
+                  </p>
+                </details>
               </div>
             </div>
           </section>
 
-          {/* 10. Final CTA */}
-          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark bg-brand-gray-dark/30">
+          {/* 11. Final CTA */}
+          <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-white mb-4">
                 Ready to launch your new website?
               </h2>
               <p className="text-xl text-brand-gray-light mb-8">
-                Pick a template and get started today.
+                Choose a template and start today.
               </p>
               <a
                 href="#templates"
                 className="inline-block bg-brand-gold hover:bg-brand-gold-dark text-brand-black px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
-                Browse Templates
+                Browse Templates →
               </a>
             </div>
           </section>

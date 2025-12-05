@@ -42,14 +42,45 @@ export default function ContactPage() {
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-6">
           Let's Build Something Clean & Professional
         </h1>
-        <p className="text-lg text-brand-gray-light mb-12 leading-relaxed max-w-3xl">
+        <p className="text-lg text-brand-gray-light mb-8 leading-relaxed max-w-3xl">
           Whether you're launching a website, setting up a Notion system,
           designing your brand, or getting your content engine in place — this is
           the best way to get in touch. Fill out the form or contact me directly.
         </p>
 
+        {/* Primary CTA - Schedule a Call */}
+        <div className="mb-12 max-w-2xl">
+          <a
+            href="https://calendly.com/reuben-lopezproductions/intro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary inline-flex items-center space-x-2 px-8 py-4 text-lg"
+          >
+            <span>📅 Schedule a 15-Minute Call</span>
+            <span>→</span>
+          </a>
+        </div>
+
         {/* Contact Options */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
+            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
+              Schedule a Call
+            </h3>
+            <p className="text-brand-gray-light mb-6 leading-relaxed">
+              Book a 15-minute Zoom call to discuss your project, ask questions, or explore how we can work together.
+            </p>
+            <a
+              href="https://calendly.com/reuben-lopezproductions/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
+            >
+              <span>Book a call</span>
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+
           <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
             <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
               General Inquiries

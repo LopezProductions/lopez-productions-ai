@@ -102,10 +102,24 @@ export default function ThankYouPage() {
           <h3 className="text-lg font-serif font-bold text-brand-white mb-4">
             What's Next?
           </h3>
-          <div className="space-y-3 text-brand-gray-light text-sm">
+          <div className="space-y-3 text-brand-gray-light text-sm mb-6">
             <p>• Check your email for a copy of these downloads</p>
             <p>• Follow me on <a href="https://www.youtube.com/@LopezWorkflows" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:underline">YouTube</a> for more content tips</p>
             <p>• Need help? <a href="https://www.linkedin.com/company/lopez-productions/" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:underline">Connect on LinkedIn</a></p>
+          </div>
+          <div className="pt-4 border-t border-brand-gray-dark">
+            <p className="text-brand-gray-light mb-4">
+              Want to talk through your project?
+            </p>
+            <a
+              href="https://calendly.com/reuben-lopezproductions/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center space-x-2 w-full justify-center"
+            >
+              <span>Book a 15-minute Zoom call here</span>
+              <span>→</span>
+            </a>
           </div>
         </motion.div>
 

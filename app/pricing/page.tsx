@@ -6,77 +6,248 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import PackageRequestForm from '../../components/PackageRequestForm'
 import PricingFAQ from '../../components/PricingFAQ'
+import { motion } from 'framer-motion'
 
 export default function PricingPage() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [packageData, setPackageData] = useState(null)
-  const [selectedBuilderItems, setSelectedBuilderItems] = useState<Set<string>>(new Set())
+  const [selectedAddOns, setSelectedAddOns] = useState<Set<string>>(new Set())
 
   const schema = {
     '@context': 'https://schema.org',
     '@type': ['Offer', 'Product', 'Service'],
     name: 'Lopez Productions Pricing',
-    description: 'Pricing for AI-powered websites, templates, automations, and digital products.',
+    description: 'Pricing for custom websites, templates, packages, and digital services.',
     provider: {
       '@type': 'Organization',
       name: 'Lopez Productions',
     },
   }
 
-  // Package Builder items that require intake forms
-  const builderItems = [
-    // Done-for-you websites
-    { id: 'grad-portfolio', name: 'Grad Portfolio Website', price: 150, category: 'Websites', description: '1-Page website for internships and job apps — About, Resume, Contact.' },
-    { id: 'travel-portfolio', name: 'Travel Portfolio Website', price: 150, category: 'Websites', description: '1-Page travel résumé + gallery + contact.' },
-    { id: 'creator-site', name: 'Creator Site', price: 250, category: 'Websites', description: '3-Page website for creators, coaches, tutors, and freelancers.' },
-    
-    // Packages
-    { id: 'academic-creator', name: 'Academic Creator Package', price: 500, category: 'Packages', description: 'Website + newsletter setup + 1 month content plan for teachers.' },
-    { id: 'travel-creator', name: 'Travel Creator Package', price: 500, category: 'Packages', description: 'Website + affiliate setup + 1 month travel content plan.' },
-    { id: 'creator-ultra', name: 'Creator Ultra', price: 1500, category: 'Packages', description: 'Full brand system + website + automation + content strategy.' },
-    
-    // Professional services
-    { id: 'client-onboarding', name: 'Client Onboarding Engine', price: 750, category: 'Automation', description: 'Automated intake → contract → invoice → client portal.' },
-    { id: 'firm-authority', name: 'Firm Authority Package', price: 2500, category: 'Professional', description: '5-Page website + SEO + blog plan for dominating local search.' },
-    
-    // Add-ons
-    { id: 'school-spirit', name: 'School Spirit Add-On', price: 10, category: 'Add-Ons', description: 'Add your school logo & colors to any dashboard. (Requires school info — added during checkout)' },
-    { id: 'domain-setup', name: 'Domain Setup', price: 25, category: 'Add-Ons', description: 'Custom domain setup and configuration.' },
-    { id: 'reel-edit', name: 'Reel Edit (1 Minute)', price: 25, category: 'Add-Ons', description: 'Quick edit + transistions.' },
-    { id: 'concept-art', name: 'Concept Art Pack', price: 50, category: 'Add-Ons', description: '5 custom AI-generated Nano Banana images designed specifically for your website, branding, or content needs.' },
-    { id: 'social-audit', name: 'Social Strategy Audit', price: 100, category: 'Add-Ons', description: 'A personalized evaluation of your social media presence with clear recommendations, a profile upgrade, and a 30-day tactical posting plan.' },
-    { id: 'brand-sheet', name: 'Professional Brand Sheet', price: 135, category: 'Add-Ons', description: 'Receive a clean, modern brand sheet that defines your visual identity in one place — colors, fonts, logo variations, spacing rules, and brand tone. Ideal for creators launching a website, businesses formalizing their look, and anyone who wants a consistent, professional appearance online.' },
-    { id: 'market-research', name: 'Market Research Add-On', price: 350, category: 'Add-Ons', description: 'A deep-dive analysis into your niche, audience, competitors, keywords, and industry trends. Perfect for creators, businesses, or professionals who want strategic clarity before launching or scaling.' },
+  // Custom Websites (Built From Scratch)
+  const customWebsites = [
+    {
+      id: 'starter-site',
+      name: 'Starter Site',
+      price: 500,
+      priceDisplay: '$500',
+      perfectFor: 'Perfect for: personal brands, simple portfolios, resumes, creators.',
+      includes: [
+        '1-page responsive website',
+        'Hero, About, Services, Contact',
+        'Clean modern layout',
+        'Mobile-ready',
+        'Proper metadata & SEO basics',
+        'Domain setup included',
+        '1 revision cycle',
+        'Delivered in 3–5 days',
+      ],
+    },
+    {
+      id: 'business-rebuild',
+      name: 'Business Rebuild',
+      price: 1000,
+      priceDisplay: '$1,000',
+      perfectFor: 'For small businesses, freelancers, coaches, and teams wanting a polished online home.',
+      includes: [
+        '3 custom pages (ex: Home, About, Services, Contact)',
+        'Tailored brand layout + UI',
+        'Secure, fast Next.js codebase',
+        'Optimized for performance & SEO',
+        'Contact forms (Netlify or custom API)',
+        '2 revision cycles',
+        'Delivered in 5–10 days',
+      ],
+    },
+    {
+      id: 'premium-site',
+      name: 'Premium Site',
+      price: 1500,
+      priceDisplay: '$1,500+',
+      perfectFor: 'For brands ready to level up with stronger design, structure, and scalability.',
+      includes: [
+        '4–6 fully designed pages',
+        'Smooth animations (Framer Motion optional)',
+        'Component library for future scaling',
+        'Blog or CMS integration (optional)',
+        'Newsletter capture or custom forms',
+        'SEO optimization across all pages',
+        '2–3 revision cycles',
+        'Delivered in 7–14 days',
+      ],
+    },
+    {
+      id: 'full-business-suite',
+      name: 'Full Business Suite',
+      price: 2500,
+      priceDisplay: '$2,500+',
+      perfectFor: 'For advanced businesses, agencies, or Web3 teams needing a full digital system.',
+      includes: [
+        '6–10 custom pages',
+        'CMS or Supabase integration',
+        'On-brand UI system & global design tokens',
+        'Blog setup + content structure',
+        'SEO foundation + Open Graph cards',
+        'Analytics + tracking setup',
+        '30-day support window',
+        'Delivered in 2–4 weeks',
+      ],
+    },
   ]
 
-  const toggleBuilderItem = (itemId: string) => {
-    setSelectedBuilderItems(prev => {
-      const newSet = new Set(prev)
-      if (newSet.has(itemId)) {
-        newSet.delete(itemId)
-      } else {
-        newSet.add(itemId)
-      }
-      return newSet
+  // Website Templates (DIY or Done-For-You)
+  const templates = [
+    {
+      id: 'diy-template',
+      name: 'DIY Template',
+      price: 50,
+      priceDisplay: '$50',
+      description: 'Instant download',
+      includes: [
+        'Choose from any theme in the Template Library',
+        'Customize in your own time',
+      ],
+      serviceId: 'diy-template',
+    },
+    {
+      id: 'template-installation',
+      name: 'Template + Installation',
+      price: 150,
+      priceDisplay: '$150',
+      description: 'Everything in DIY',
+      includes: [
+        'I install it on your domain',
+        'Basic colors + text applied',
+        'Ready to publish',
+      ],
+      serviceId: 'template-installation',
+    },
+    {
+      id: 'template-full-customization',
+      name: 'Template + Full Customization',
+      price: 450,
+      priceDisplay: '$450',
+      description: 'Full done-for-you build using any template',
+      includes: [
+        'Colors, fonts, layout, imagery tailored to your brand',
+        'Domain + SEO setup included',
+        'Delivered in 3–5 days',
+      ],
+      serviceId: 'template-full-customization',
+    },
+  ]
+
+  // Creator & Business Packages
+  const packages = [
+    {
+      id: 'academic-creator',
+      name: 'Academic Creator Package',
+      price: 500,
+      priceDisplay: '$500',
+      description: '1-page creator website + Newsletter setup + 1-month content plan',
+      perfectFor: 'Perfect for teachers & edu-creators',
+    },
+    {
+      id: 'travel-creator',
+      name: 'Travel Creator Package',
+      price: 500,
+      priceDisplay: '$500',
+      description: 'Travel website + gallery + Affiliate setup + 1-month content plan',
+      perfectFor: 'Perfect for travel creators',
+    },
+    {
+      id: 'creator-ultra',
+      name: 'Creator Ultra',
+      price: 1500,
+      priceDisplay: '$1,500',
+      description: 'Complete brand system + Custom website (3–5 pages) + Automation setup + Strategic content roadmap',
+      perfectFor: 'For serious creators ready to scale',
+    },
+    {
+      id: 'firm-authority',
+      name: 'Firm Authority Package',
+      price: 2500,
+      priceDisplay: '$2,500',
+      description: '5-page professional website + SEO optimization + Blog system + plan',
+      perfectFor: 'Designed to dominate local search',
+    },
+  ]
+
+  // Add-Ons
+  const addOns = [
+    {
+      id: 'school-spirit',
+      name: 'School Spirit Add-On',
+      price: 10,
+      description: 'School colors + logo added to dashboards',
+    },
+    {
+      id: 'domain-setup',
+      name: 'Domain Setup',
+      price: 25,
+      description: 'Connect and configure a domain',
+    },
+    {
+      id: 'reel-edit',
+      name: 'Reel Edit (1 minute)',
+      price: 25,
+      description: 'Quick edit + transitions',
+    },
+    {
+      id: 'concept-art',
+      name: 'Concept Art Pack',
+      price: 50,
+      description: '5 custom Nano Banana images',
+    },
+    {
+      id: 'social-audit',
+      name: 'Social Strategy Audit',
+      price: 100,
+      description: 'Profile upgrade + 30-day plan',
+    },
+    {
+      id: 'brand-sheet',
+      name: 'Professional Brand Sheet',
+      price: 135,
+      description: 'Colors, fonts, logo rules, brand tone',
+    },
+    {
+      id: 'market-research',
+      name: 'Market Research Add-On',
+      price: 350,
+      description: 'Competitor, audience, keyword research',
+    },
+    {
+      id: 'client-onboarding',
+      name: 'Client Onboarding Engine',
+      price: 750,
+      description: 'Automated intake → contract → invoice → portal',
+    },
+  ]
+
+  // Handle custom website or package selection (opens intake form)
+  const handleCustomServiceClick = (service: typeof customWebsites[0] | typeof packages[0]) => {
+    const selectedAddOnIds = Array.from(selectedAddOns)
+    const selectedAddOnProducts = addOns.filter(item => selectedAddOnIds.includes(item.id))
+    const addOnNames = selectedAddOnProducts.map(p => p.name).join(', ')
+    const addOnTotal = selectedAddOnProducts.reduce((sum, item) => sum + item.price, 0)
+    const totalPrice = service.price + addOnTotal
+
+    const packageSelection = `${service.name}${addOnNames ? ` + ${addOnNames}` : ''}`
+    const customNotes = `Service: ${service.name}${addOnNames ? ` | Add-Ons: ${addOnNames}` : ''}`
+
+    setPackageData({
+      selectedServiceIds: [service.id, ...selectedAddOnIds],
+      bundleIds: [],
+      total: totalPrice,
+      customNotes: customNotes,
+      packageSelection: packageSelection,
     })
+    setIsFormOpen(true)
   }
 
-  const builderTotal = builderItems
-    .filter(item => selectedBuilderItems.has(item.id))
-    .reduce((sum, item) => sum + item.price, 0)
-
-  const handleBuilderCheckout = async () => {
-    if (selectedBuilderItems.size === 0) {
-      alert('Please select at least one item to checkout.')
-      return
-    }
-
-    const selectedIds = Array.from(selectedBuilderItems)
-    const selectedProducts = builderItems.filter(item => selectedIds.includes(item.id))
-    const productNames = selectedProducts.map(p => p.name).join(', ')
-    const hasSchoolSpirit = selectedIds.includes('school-spirit')
-    const customNotes = `Package Builder: ${productNames}${hasSchoolSpirit ? ' | School Spirit Add-On: true' : ''}`
-
+  // Handle template checkout (direct Stripe)
+  const handleTemplateCheckout = async (template: typeof templates[0]) => {
     try {
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
@@ -84,10 +255,10 @@ export default function PricingPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          selectedServiceIds: selectedIds,
+          selectedServiceIds: [template.serviceId],
           bundleIds: [],
-          total: builderTotal,
-          customNotes: customNotes,
+          total: template.price,
+          customNotes: `Template: ${template.name}`,
         }),
       })
 
@@ -105,7 +276,6 @@ export default function PricingPage() {
       }
 
       if (data.url) {
-        // Redirect to Stripe Checkout
         window.location.href = data.url
       } else {
         throw new Error('No checkout URL received')
@@ -116,14 +286,22 @@ export default function PricingPage() {
     }
   }
 
-  // Group builder items by category
-  const groupedBuilderItems = builderItems.reduce((acc, item) => {
-    if (!acc[item.category]) {
-      acc[item.category] = []
-    }
-    acc[item.category].push(item)
-    return acc
-  }, {} as Record<string, typeof builderItems>)
+  // Toggle add-on selection
+  const toggleAddOn = (addOnId: string) => {
+    setSelectedAddOns(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(addOnId)) {
+        newSet.delete(addOnId)
+      } else {
+        newSet.add(addOnId)
+      }
+      return newSet
+    })
+  }
+
+  const addOnTotal = addOns
+    .filter(item => selectedAddOns.has(item.id))
+    .reduce((sum, item) => sum + item.price, 0)
 
   return (
     <>
@@ -155,258 +333,314 @@ export default function PricingPage() {
         <div className="relative z-10">
           <Navigation />
 
-        {/* ----------------------------- */}
-        {/* HERO SECTION */}
-        {/* ----------------------------- */}
-        <section className="py-20 px-6 md:px-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-text-primary">
-            Build Your System. Own Your Niche.
-          </h1>
-          <p className="text-xl text-text-secondary mt-6 max-w-3xl mx-auto">
-            Whether you&apos;re studying, teaching, creating, traveling, or running a law firm —
-            these tools help you organize, present, and automate your work with ease.
-          </p>
-        </section>
+          {/* ----------------------------- */}
+          {/* HERO SECTION */}
+          {/* ----------------------------- */}
+          <section className="py-20 px-6 md:px-12 text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-5xl md:text-6xl font-serif font-bold text-text-primary"
+            >
+              Pricing & Packages
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="text-xl md:text-2xl text-accent mt-6 max-w-3xl mx-auto"
+            >
+              Build your system. Launch your brand. Scale your digital presence.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-lg text-text-secondary mt-6 max-w-3xl mx-auto leading-relaxed"
+            >
+              Whether you&apos;re a creator, student, teacher, or small business owner, you&apos;ll find two types of offerings here:
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="mt-8 max-w-3xl mx-auto space-y-2 text-text-secondary"
+            >
+              <p><strong className="text-text-primary">Custom Websites</strong> — built from scratch for polish, speed, and performance</p>
+              <p><strong className="text-text-primary">Templates & Digital Tools</strong> — plug-and-play systems to use instantly</p>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              className="text-base text-text-secondary mt-6"
+            >
+              Scroll to find the option that fits your goals.
+            </motion.p>
+          </section>
 
-        {/* ===================================================================== */}
-        {/* SECTION 1 — DIGITAL SHOP (Instant Downloads) */}
-        {/* ===================================================================== */}
-        <section className="py-16 px-6 md:px-12 bg-surface">
-          <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
-            Digital Shop — Instant Downloads
-          </h2>
-          <p className="text-text-secondary text-center mb-12 max-w-2xl mx-auto">
-            Templates and tools you can start using today. No wait times. One-click checkout.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Prompt Library */}
-            <DigitalShopCard
-              title="The 100+ Prompt Library"
-              price="$9"
-              description="Universal AI prompt library. Stop guessing and start generating."
-              serviceId="prompt-library"
-            />
+          {/* ===================================================================== */}
+          {/* SECTION 1 — CUSTOM WEBSITES (Built From Scratch) */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
+                Custom Websites (Built From Scratch)
+              </h2>
+              <p className="text-text-secondary text-center mb-4 max-w-3xl mx-auto">
+                Fast. Modern. Secure. Tailored to your brand.
+              </p>
+              <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm">
+                These are full rebuilds — not template edits and not legacy cleanups.<br />
+                Send your assets → get a professionally designed site with clean code and high performance.
+              </p>
 
-            {/* Student Dashboard */}
-            <DigitalShopCard
-              title="🎓 The Student Dashboard"
-              price="$19"
-              description="Semester OS. Track assignments, summarize lectures, and calculate grades."
-              serviceId="student-dashboard"
-            />
-
-            {/* Travel Planner */}
-            <DigitalShopCard
-              title="✈️ The Smart Travel Planner"
-              price="$19"
-              description="AI-ready itinerary builder. Drag-and-drop your Gemini suggestions into a real schedule."
-              serviceId="travel-planner"
-            />
-
-            {/* Creator System OS */}
-            <DigitalShopCard
-              title="🎨 The Creator System OS"
-              price="$24"
-              description="The missing 'Folders' for your AI workflow. Content calendar + Brand asset library."
-              serviceId="creator-system-os"
-            />
-
-            {/* Classroom OS */}
-            <DigitalShopCard
-              title="🍎 The Classroom OS"
-              price="$29"
-              description="Lesson planner, gradebook, and curriculum visualizer. Stop using 5 different apps."
-              serviceId="classroom-os"
-            />
-
-            {/* Case Tracker */}
-            <DigitalShopCard
-              title="⚖️ The Solo-Firm Case Tracker"
-              price="$49"
-              description="Simple, professional client & case management for independent attorneys."
-              serviceId="case-tracker"
-            />
-          </div>
-        </section>
-
-        {/* ===================================================================== */}
-        {/* SECTION 2 — PACKAGE BUILDER (Services & Add-Ons) */}
-        {/* ===================================================================== */}
-        <section className="py-16 px-6 md:px-12 bg-background">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
-              Package Builder — Services & Add-Ons
-            </h2>
-            <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto">
-              Build your custom package. All services include intake form and project kickoff.
-            </p>
-
-            {/* Builder Items by Category */}
-            <div className="space-y-12">
-              {Object.entries(groupedBuilderItems).map(([category, items]) => (
-                <div key={category}>
-                  <h3 className="text-2xl font-serif text-text-primary mb-6">{category}</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {items.map((item) => (
-                      <BuilderItemCard
-                        key={item.id}
-                        item={item}
-                        isSelected={selectedBuilderItems.has(item.id)}
-                        onToggle={() => toggleBuilderItem(item.id)}
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Checkout Summary */}
-            {selectedBuilderItems.size > 0 && (
-              <div className="mt-12 bg-surface rounded-xl p-8 border border-border">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                  <div>
-                    <p className="text-text-secondary mb-2">
-                      Selected: {selectedBuilderItems.size} item{selectedBuilderItems.size > 1 ? 's' : ''}
-                    </p>
-                    <p className="text-accent text-3xl font-bold">
-                      Total: ${builderTotal.toLocaleString()}
-                    </p>
-                  </div>
-                  <button
-                    onClick={handleBuilderCheckout}
-                    className="btn-primary px-8 py-4 text-lg whitespace-nowrap"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {customWebsites.map((website, index) => (
+                  <motion.div
+                    key={website.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-background p-8 rounded-xl border border-border card-hover"
                   >
-                    Proceed to Checkout →
-                  </button>
-                </div>
+                    <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
+                      {website.name} ({website.id === 'starter-site' ? '1 Page' : website.id === 'business-rebuild' ? '3 Pages' : website.id === 'premium-site' ? '4–6 Pages' : '6–10 Pages'})
+                    </h3>
+                    <p className="text-4xl font-serif font-bold text-accent mb-4">
+                      {website.priceDisplay}
+                    </p>
+                    <p className="text-text-secondary text-sm mb-6 italic">
+                      {website.perfectFor}
+                    </p>
+                    <div className="mb-6">
+                      <p className="text-text-primary font-semibold mb-3">Includes:</p>
+                      <ul className="space-y-2 text-text-secondary text-sm">
+                        {website.includes.map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="text-accent mr-2">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <button
+                      onClick={() => handleCustomServiceClick(website)}
+                      className="btn-primary w-full py-3 text-lg"
+                    >
+                      {website.id === 'starter-site' 
+                        ? 'Start My Starter Site →'
+                        : website.id === 'business-rebuild'
+                        ? 'Request Business Quote →'
+                        : website.id === 'premium-site'
+                        ? 'Request Premium Quote →'
+                        : 'Request Full Suite Quote →'}
+                    </button>
+                    <a
+                      href="https://calendly.com/reuben-lopezproductions/intro"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-outline w-full py-3 text-lg mt-3 text-center block"
+                    >
+                      Not sure? Schedule a 15-min call →
+                    </a>
+                  </motion.div>
+                ))}
               </div>
-            )}
-          </div>
-        </section>
+            </div>
+          </section>
 
-        <PricingFAQ />
+          {/* ===================================================================== */}
+          {/* SECTION 2 — WEBSITE TEMPLATES (DIY or Done-For-You) */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-background">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
+                Website Templates (DIY or Done-For-You)
+              </h2>
+              <p className="text-text-secondary text-center mb-4 max-w-3xl mx-auto">
+                Lower-cost options for fast launches.
+              </p>
+              <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm">
+                These are not custom sites — these are structured templates with optional add-on support.
+              </p>
 
-        <Footer />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {templates.map((template, index) => (
+                  <motion.div
+                    key={template.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-surface p-8 rounded-xl border border-border card-hover flex flex-col"
+                  >
+                    <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
+                      {template.name}
+                    </h3>
+                    <p className="text-4xl font-serif font-bold text-accent mb-4">
+                      {template.priceDisplay}
+                    </p>
+                    <p className="text-text-secondary text-sm mb-2 font-semibold">
+                      {template.description}
+                    </p>
+                    <div className="mb-6 flex-grow">
+                      <ul className="space-y-2 text-text-secondary text-sm">
+                        {template.includes.map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="text-accent mr-2">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <button
+                      onClick={() => handleTemplateCheckout(template)}
+                      className="bg-brand-gold text-brand-black py-3 px-4 rounded-lg font-semibold hover:bg-brand-gold-dark transition mt-auto"
+                    >
+                      Buy Template →
+                    </button>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-        {/* Modal */}
-        <PackageRequestForm
-          isOpen={isFormOpen}
-          onClose={() => setIsFormOpen(false)}
-          packageData={packageData}
-        />
+          {/* ===================================================================== */}
+          {/* SECTION 3 — CREATOR & BUSINESS PACKAGES */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
+                Creator & Business Packages
+              </h2>
+              <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto">
+                Bundles combining websites with strategy or automation.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {packages.map((pkg, index) => (
+                  <motion.div
+                    key={pkg.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-background p-8 rounded-xl border border-border card-hover"
+                  >
+                    <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
+                      {pkg.name}
+                    </h3>
+                    <p className="text-4xl font-serif font-bold text-accent mb-4">
+                      {pkg.priceDisplay}
+                    </p>
+                    <p className="text-text-secondary text-sm mb-2">
+                      {pkg.description}
+                    </p>
+                    <p className="text-text-secondary text-sm mb-6 italic">
+                      {pkg.perfectFor}
+                    </p>
+                    <button
+                      onClick={() => handleCustomServiceClick(pkg)}
+                      className="btn-primary w-full py-3 text-lg"
+                    >
+                      Start Project →
+                    </button>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* SECTION 4 — ADD-ONS */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-background">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
+                Add-Ons
+              </h2>
+              <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto">
+                Enhance any template or service.
+              </p>
+
+              <div className="bg-surface rounded-xl border border-border overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-brand-gray-dark border-b border-border">
+                      <tr>
+                        <th className="px-6 py-4 text-left text-text-primary font-semibold">Add-On</th>
+                        <th className="px-6 py-4 text-left text-text-primary font-semibold">Price</th>
+                        <th className="px-6 py-4 text-left text-text-primary font-semibold">Description</th>
+                        <th className="px-6 py-4 text-center text-text-primary font-semibold">Select</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {addOns.map((addOn, index) => (
+                        <tr
+                          key={addOn.id}
+                          className={`border-b border-border hover:bg-brand-gray-dark/50 transition-colors ${
+                            selectedAddOns.has(addOn.id) ? 'bg-brand-gray-dark/30' : ''
+                          }`}
+                        >
+                          <td className="px-6 py-4 text-text-primary font-medium">
+                            {addOn.name}
+                          </td>
+                          <td className="px-6 py-4 text-accent font-bold">
+                            ${addOn.price.toLocaleString()}
+                          </td>
+                          <td className="px-6 py-4 text-text-secondary">
+                            {addOn.description}
+                          </td>
+                          <td className="px-6 py-4 text-center">
+                            <input
+                              type="checkbox"
+                              checked={selectedAddOns.has(addOn.id)}
+                              onChange={() => toggleAddOn(addOn.id)}
+                              className="w-5 h-5 rounded border-brand-gray-light text-accent focus:ring-brand-gold focus:ring-2 cursor-pointer"
+                            />
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {selectedAddOns.size > 0 && (
+                  <div className="p-6 bg-brand-gray-dark border-t border-border">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                      <div>
+                        <p className="text-text-secondary mb-1">
+                          Selected: {selectedAddOns.size} add-on{selectedAddOns.size > 1 ? 's' : ''}
+                        </p>
+                        <p className="text-accent text-2xl font-bold">
+                          Total: ${addOnTotal.toLocaleString()}
+                        </p>
+                      </div>
+                      <p className="text-text-secondary text-sm text-center md:text-left">
+                        Add-ons will be included when you select a service above.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+
+          <PricingFAQ />
+
+          <Footer />
+
+          {/* Modal */}
+          <PackageRequestForm
+            isOpen={isFormOpen}
+            onClose={() => setIsFormOpen(false)}
+            packageData={packageData}
+          />
         </div>
       </main>
     </>
-  )
-}
-
-/* ===================================================================== */
-/* COMPONENTS */
-/* ===================================================================== */
-
-interface DigitalShopCardProps {
-  title: string
-  price: string
-  description: string
-  serviceId: string
-}
-
-function DigitalShopCard({ title, price, description, serviceId }: DigitalShopCardProps) {
-  const [isLoading, setIsLoading] = useState(false)
-
-  const handleCheckout = async () => {
-    setIsLoading(true)
-    try {
-      const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
-
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          selectedServiceIds: [serviceId],
-          bundleIds: [],
-          total: numericPrice,
-          customNotes: `Digital Shop: ${title}`,
-        }),
-      })
-
-      const contentType = response.headers.get('content-type')
-      if (!contentType || !contentType.includes('application/json')) {
-        const text = await response.text()
-        console.error('Non-JSON response received:', text.substring(0, 200))
-        throw new Error('Server returned an error. Please check the console for details.')
-      }
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to create checkout session')
-      }
-
-      if (data.url) {
-        window.location.href = data.url
-      } else {
-        throw new Error('No checkout URL received')
-      }
-    } catch (err) {
-      console.error('Error creating checkout session:', err)
-      alert(err instanceof Error ? err.message : 'Something went wrong. Please try again or contact support.')
-      setIsLoading(false)
-    }
-  }
-
-  return (
-    <div className="bg-background p-6 rounded-xl border border-border flex flex-col justify-between">
-      <div>
-        <h3 className="text-2xl font-serif text-text-primary">{title}</h3>
-        <p className="text-accent font-bold mt-2">{price}</p>
-        <p className="text-text-secondary mt-3">{description}</p>
-      </div>
-      <button
-        onClick={handleCheckout}
-        disabled={isLoading}
-        className="mt-6 bg-brand-gold text-brand-black py-3 px-4 rounded-lg font-semibold hover:bg-primary-dark transition disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {isLoading ? 'Processing...' : 'Buy Now'}
-      </button>
-    </div>
-  )
-}
-
-interface BuilderItemCardProps {
-  item: {
-    id: string
-    name: string
-    price: number
-    category: string
-    description: string
-  }
-  isSelected: boolean
-  onToggle: () => void
-}
-
-function BuilderItemCard({ item, isSelected, onToggle }: BuilderItemCardProps) {
-  return (
-    <div
-      className={`bg-surface p-6 rounded-xl border cursor-pointer transition-all ${
-        isSelected ? 'border-accent' : 'border-border hover:border-brand-gray-light'
-      }`}
-      onClick={onToggle}
-    >
-      <div className="flex items-start justify-between mb-4">
-        <h3 className="text-xl font-serif text-text-primary flex-1">{item.name}</h3>
-        <input
-          type="checkbox"
-          checked={isSelected}
-          onChange={onToggle}
-          onClick={(e) => e.stopPropagation()}
-          className="w-5 h-5 rounded border-brand-gray-light text-accent focus:ring-brand-gold focus:ring-2 cursor-pointer ml-4 flex-shrink-0"
-        />
-      </div>
-      <p className="text-accent font-bold text-lg mb-3">${item.price.toLocaleString()}</p>
-      <p className="text-text-secondary text-sm">{item.description}</p>
-    </div>
   )
 }

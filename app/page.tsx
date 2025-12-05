@@ -43,17 +43,14 @@ export const metadata: Metadata = {
 
 // Lazy load below-the-fold sections
 const AboutSection = dynamic(() => import('../components/AboutSection'), {
-  ssr: false,
   loading: () => null,
 })
 
 const HowItWorksSection = dynamic(() => import('../components/HowItWorksSection'), {
-  ssr: false,
   loading: () => null,
 })
 
 const FAQSection = dynamic(() => import('../components/FAQSection'), {
-  ssr: false,
   loading: () => null,
 })
 

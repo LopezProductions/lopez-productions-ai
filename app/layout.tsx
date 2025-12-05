@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import Script from 'next/script'
+import FloatingCallButton from '../components/FloatingCallButton'
 import './globals.css'
 
 const inter = Inter({ 
@@ -124,6 +125,7 @@ export default function RootLayout({
         </Script>
         
         {children}
+        <FloatingCallButton />
       </body>
     </html>
   )
