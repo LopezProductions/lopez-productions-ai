@@ -9,7 +9,7 @@
   package = "@netlify/plugin-nextjs"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 # Critical redirect to ensure static files are served correctly
 [[redirects]]
