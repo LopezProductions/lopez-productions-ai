@@ -8,9 +8,17 @@ import PackageRequestForm from '../../components/PackageRequestForm'
 import PricingFAQ from '../../components/PricingFAQ'
 import { motion } from 'framer-motion'
 
+interface PackageData {
+  selectedServiceIds: string[]
+  bundleIds: string[]
+  total: number
+  customNotes: string
+  packageSelection: string
+}
+
 export default function PricingPage() {
   const [isFormOpen, setIsFormOpen] = useState(false)
-  const [packageData, setPackageData] = useState(null)
+  const [packageData, setPackageData] = useState<PackageData | null>(null)
   const [selectedAddOns, setSelectedAddOns] = useState<Set<string>>(new Set())
 
   const schema = {
