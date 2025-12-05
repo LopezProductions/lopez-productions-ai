@@ -10,6 +10,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'firefly-mobile-nano-banana',
+    title: "Why I Switched to Adobe Firefly Mobile (The Real Reason Isn't the Adobe Model)",
+    excerpt: "Most mobile AI apps break the moment you need to switch modes or continue a workflow. Firefly Mobile quietly solves this by pairing Adobe's UI with Nano Banana (Gemini 2.5). Here's why it's the most complete mobile creator studio right now.",
+    readTime: '10 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-12-05',
+    coverImage: '/firefly-mobile-nano-banana.png',
+  },
+  {
     slug: 'gpt-5-1-vs-gemini-3-creative-workflows',
     title: 'GPT-5.1 vs Gemini 3: Which AI Model Is Better for Real Creative Workflows?',
     excerpt: 'A practical breakdown of GPT-5.1 vs. Gemini 3 written specifically for creators, students, small teams, and automation-focused professionals. Covers workflow reliability, PDF handling, creativity, citation accuracy, and tool integrations like Notion and Make.com.',

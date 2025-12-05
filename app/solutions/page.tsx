@@ -1,17 +1,16 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Script from 'next/script'
 import Link from 'next/link'
-import type { Metadata } from 'next'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
-
-export const metadata: Metadata = {
-  title: 'AI Brand Systems & Creative Workflows | Solutions | Lopez Productions',
-  description:
-    'Build a modern digital identity with AI-powered systems, templates, workflows, and content engines. Designed for creators, founders, and small businesses.',
-}
+import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronDown } from 'lucide-react'
 
 export default function SolutionsPage() {
+  const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null)
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -32,125 +31,53 @@ export default function SolutionsPage() {
     },
   }
 
-  const services = [
-    {
-      id: 'ai-systems',
-      title: 'AI Systems & Workflows',
-      description:
-        'AI Systems & Workflows are automations that eliminate manual admin, save 10+ hours a week, and keep your business operating on autopilot. Instead of drowning in onboarding tasks, scattered content planning, or repetitive client updates, your systems handle everything quietly in the background — powered by Make.com, Notion, and context-aware AI. Stop being the bottleneck in your own business. Make overwhelm obsolete. Scale the work that actually pays you.',
-      bulletTitle: 'What gets automated',
-      bullets: [
-        'Client onboarding',
-        'Lead capture & intake',
-        'Content planning',
-        'Task creation & updates',
-        'Weekly client summaries',
-        'Reporting',
-        'Posting workflows',
-        'Research collection',
-        'And more',
-      ],
-      cta: {
-        label: 'Install My AI System →',
-        href: '/contact?service=ai-systems',
-      },
-    },
-    {
-      id: 'content-engines',
-      title: 'Content Engines',
-      description:
-        'Content Engines turn one idea into 30+ pieces of content automatically. You drop your notes into your Notion database → AI drafts your captions → Make.com schedules them across LinkedIn, Instagram, X, and YouTube. No more blank-page anxiety. No more spending 3 hours writing one post. Create 30 days of content in 90 minutes — in your voice.',
-      bulletTitle: 'What it includes',
-      bullets: [
-        'A unified Notion content calendar',
-        'Auto-drafting from notes, voice memos, or ideas',
-        'Multi-platform scheduling',
-        'Context-aware voice training',
-        'Templates for every platform',
-        'Daily posting consistency without the burnout',
-      ],
-      cta: {
-        label: 'Build My Content Engine →',
-        href: '/contact?service=content-engine',
-      },
-    },
-    {
-      id: 'website-templates',
-      title: 'Website & Portfolio Templates',
-      description:
-        'Portfolio Templates are premium, pre-built Vite or Next.js sites that let you launch a $10k-quality website this weekend. Skip the dev timelines, skip Webflow headaches, skip the waiting. Your digital identity can be live — fast, SEO-ready, and built to convert. Your portfolio is losing you clients because it doesn’t exist yet. Fix that today.',
-      bulletTitle: 'What you get',
-      bullets: [
-        'One fully-designed template',
-        'Custom colors + typography',
-        'Fast load, mobile-first design',
-        'SEO-ready structure',
-        'Blog-ready routing',
-        'Contact form + intake integration',
-        'Analytics setup',
-        'Deployment to Netlify or Vercel',
-      ],
-      cta: {
-        label: 'Launch Your Portfolio in 48 Hours →',
-        href: '/pricing',
-      },
-    },
-  ]
+  const toggleFAQ = (i: number) => {
+    setOpenFAQIndex(openFAQIndex === i ? null : i)
+  }
 
   const benefits = [
     {
-      title: 'Save 10–20 hours every week',
-      body:
-        'Your time should go toward the high-value work — not the admin buried underneath it.',
+      title: 'Less Busywork, More Output',
+      body: 'Save 10–20 hours a week and focus on the work that actually pays you.',
     },
     {
-      title: 'Operate like a real brand',
-      body: 'Systems make you look — and feel — like a mature, credible business.',
+      title: "A Website You're Proud to Share",
+      body: 'No more embarrassment. No more half-finished pages. Just a site that sells for you.',
     },
     {
-      title: 'Consistent content without the mental load',
-      body: 'Never stare at a blank page again.',
+      title: 'Operate Like a Real Brand',
+      body: 'Your digital presence becomes professional, cohesive, and authority-building.',
     },
     {
-      title: 'Launch faster than your competitors',
-      body: 'A polished website in 48 hours is a competitive advantage.',
+      title: 'Launch Faster Than Your Competitors',
+      body: 'A polished portfolio is a real competitive advantage.',
     },
     {
-      title: 'Scale without hiring',
-      body: 'Automation is your first employee.',
+      title: 'Scale Without Hiring',
+      body: 'Automation becomes your first employee — silent, reliable, efficient.',
     },
-  ]
-
-  const workflowSteps = [
-    'Add your idea to the Notion content calendar',
-    'Make.com triggers AI writing',
-    'Captions are generated for LinkedIn, Instagram, X, and YouTube',
-    'Posts are automatically scheduled',
-    'You get a full month of content — instantly',
   ]
 
   const faqs = [
     {
       question: 'How fast can I launch my website?',
-      answer:
-        '48 hours. Faster if you already have your copy and branding ready.',
+      answer: 'Starter sites in 3–5 days. Larger sites in 5–10 days. Templates can go live in 48 hours.',
     },
     {
-      question: 'Do I need to know Make.com or Notion?',
-      answer: 'No — everything is set up for you. You log in and use it immediately.',
+      question: 'Do I need to know any tech?',
+      answer: 'No — everything is handled for you. You log in and use it.',
     },
     {
-      question: 'Will the content sound like me?',
-      answer: 'Yes. Your engine learns your voice from your real writing samples.',
+      question: 'Can you help me choose a package?',
+      answer: "Yes — book a call and I'll walk you through the best fit.",
     },
     {
-      question: 'Are these templates only for creators?',
-      answer:
-        'No — they work for consultants, coaches, agencies, and small businesses too.',
+      question: 'Do these systems work for non-creators?',
+      answer: 'Absolutely. Consultants, freelancers, coaches, agencies, and small businesses use them every day.',
     },
     {
-      question: 'Do you offer custom builds?',
-      answer: 'Yes. If you want something fully custom, we can scope that out.',
+      question: 'Do you offer fully custom builds?',
+      answer: 'Yes. If you need something beyond the listed packages, we can scope it out during your intro call.',
     },
   ]
 
@@ -159,216 +86,651 @@ export default function SolutionsPage() {
       <Script id="solutions-schema" type="application/ld+json">
         {JSON.stringify(schema)}
       </Script>
-      <main className="min-h-screen bg-background relative overflow-hidden">
+      <main className="min-h-screen bg-background relative overflow-x-hidden">
         {/* Background with logo - very dark silhouette */}
-        <div
+        <div 
           className="fixed inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(/transparent_logo_lp.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.15,
+            opacity: 0.1
           }}
-        />
-        {/* Dark overlay to create silhouette effect */}
-        <div className="fixed inset-0 bg-gradient-to-br from-brand-black/85 via-brand-gray-dark/80 to-brand-black/85" />
+        ></div>
+        {/* Light overlay to maintain charcoal color */}
+        <div className="fixed inset-0 bg-gradient-to-br from-brand-black/60 via-brand-gray-dark/40 to-brand-black/60"></div>
         
         {/* Subtle gold halo effect around the logo */}
         <div className="fixed inset-0 flex items-center justify-center">
-          <div className="w-96 h-96 rounded-full bg-gradient-radial from-brand-gold/20 via-brand-gold/5 to-transparent blur-3xl" />
+          <div className="w-96 h-96 rounded-full bg-gradient-radial from-brand-gold/20 via-brand-gold/5 to-transparent blur-3xl"></div>
         </div>
         
         {/* Minimal gold glow overlay */}
-        <div className="fixed inset-0 bg-gradient-radial from-brand-gold/8 via-brand-gold/2 to-transparent" />
+        <div className="fixed inset-0 bg-gradient-radial from-brand-gold/8 via-brand-gold/2 to-transparent"></div>
         
         <div className="relative z-10">
           <Navigation />
-          
-          <div className="px-6 md:px-12 py-20">
-            <div className="max-w-6xl mx-auto space-y-24">
-              {/* Hero Section */}
-              <section className="text-center md:text-left">
-                <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">
-                  Lopez Productions • Solutions
-                </p>
-                <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-6 max-w-4xl mx-auto md:mx-0">
-                  Build a Business That Runs Itself.
-                </h1>
-                <p className="text-2xl text-text-secondary font-serif mb-8">
-                  Automate Your Work. Launch Faster. Create More.
-                </p>
-                <p className="text-lg text-text-secondary mb-10 max-w-3xl leading-relaxed mx-auto md:mx-0">
-                  Lopez Productions helps creators, consultants, and small teams automate their operations, scale their content output, and launch premium digital identities — without burnout or bottlenecks.
-                </p>
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                  <Link
-                    href="/pricing"
-                    className="inline-flex items-center justify-center rounded-full px-10 py-4 text-brand-black font-semibold bg-brand-gold hover:bg-brand-gold/90 transition text-lg"
-                  >
-                    Launch Your Portfolio in 48 Hours →
-                  </Link>
-                  <Link
-                    href="/contact?service=ai-systems"
-                    className="inline-flex items-center justify-center rounded-full px-8 py-3 border border-accent/60 text-accent hover:bg-brand-gold/10 transition"
-                  >
-                    Install Your AI System →
-                  </Link>
-                </div>
-              </section>
 
-              {/* Problem Section */}
-              <section className="space-y-6 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
-                  The Real Problem
-                </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent max-w-3xl mx-auto md:mx-0">
-                  You&apos;re not overwhelmed because the work is hard. You&apos;re overwhelmed because the process is broken.
-                </h2>
-                <div className="space-y-4 text-text-secondary text-lg leading-relaxed max-w-3xl mx-auto md:mx-0 text-left">
-                  <p>Every growing creator or solopreneur hits the same wall:</p>
-                  <ul className="space-y-2">
-                    {[
-                      'Too much admin',
-                      'Too many apps',
-                      'Too many ideas scattered everywhere',
-                      'Too little time to build the digital presence that actually gets clients',
-                    ].map((problem) => (
-                      <li key={problem} className="flex gap-2">
-                        <span className="text-accent">•</span>
-                        <span>{problem}</span>
-                      </li>
-                    ))}
+          {/* ----------------------------- */}
+          {/* HERO SECTION */}
+          {/* ----------------------------- */}
+          <section className="py-20 px-6 md:px-12 text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-5xl md:text-6xl font-serif font-bold text-text-primary mb-6"
+            >
+              Build Your Website. Automate Your Workflow. Scale Your Business.
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="text-xl md:text-2xl text-accent mt-6 max-w-3xl mx-auto"
+            >
+              Your digital identity should work for you — not slow you down.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-lg text-text-secondary mt-6 max-w-3xl mx-auto leading-relaxed"
+            >
+              Lopez Productions helps creators, consultants, and small teams launch premium websites, streamline operations, and build systems that save 10+ hours a week.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="mt-8 flex flex-wrap gap-4 justify-center"
+            >
+              <Link
+                href="/pricing"
+                className="btn-primary px-10 py-4 text-lg"
+              >
+                Explore Website Packages →
+              </Link>
+              <Link
+                href="https://calendly.com/reuben-lopezproductions/intro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline px-10 py-4 text-lg"
+              >
+                Schedule a 15-min Call →
+              </Link>
+            </motion.div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* SECTION 1 — WEBSITE & PORTFOLIO BUILDS */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary text-center mb-4"
+              >
+                Custom Websites That Make You Look Like a $10k Brand
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-4 max-w-3xl mx-auto"
+              >
+                Whether you're a creator, consultant, freelancer, or small business, you need a website that builds authority, earns trust, and helps you close clients faster.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm"
+              >
+                No bloated builders.<br />
+                No agency timelines.<br />
+                Just clean, fast, modern designs built on Next.js — delivered with clarity and zero overwhelm.
+              </motion.p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="bg-background p-8 rounded-xl border border-border"
+                >
+                  <h3 className="text-xl font-serif font-bold text-text-primary mb-4">
+                    Perfect for:
+                  </h3>
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Personal brands</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Freelancers & coaches</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Creative professionals</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Small businesses</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Digital entrepreneurs</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Consultants & agencies</span>
+                    </li>
                   </ul>
-                  <p>You don’t need more motivation. You don’t need another productivity tool.</p>
-                  <p>
-                    You need systems that run themselves, content that schedules itself, and a portfolio that builds authority instantly. This is what we build for you.
-                  </p>
-                </div>
-              </section>
+                </motion.div>
 
-              {/* Solutions Intro */}
-              <section className="space-y-4 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
-                  The Solution
-                </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent max-w-4xl mx-auto md:mx-0">
-                  Here are the three systems that give you your time back, increase your revenue, and let you operate like a real digital business — not a burnout machine.
-                </h2>
-              </section>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="bg-background p-8 rounded-xl border border-border"
+                >
+                  <h3 className="text-xl font-serif font-bold text-text-primary mb-4">
+                    What You Get:
+                  </h3>
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Custom responsive design</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>1–10 pages depending on package</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>SEO-ready structure</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Contact forms + intake integration</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Tailored brand colors & typography</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Deployment to Netlify or Vercel</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Fast delivery, minimal revisions</span>
+                    </li>
+                  </ul>
+                </motion.div>
+              </div>
 
-              {/* Services */}
-              <section className="space-y-16">
-                {services.map((service) => (
-                  <div key={service.id} id={service.id} className="p-8 rounded-3xl border border-white/5 bg-white/5 backdrop-blur-sm space-y-8">
-                    <div className="space-y-4 text-center md:text-left">
-                      <h3 className="text-3xl font-serif font-bold text-accent">{service.title}</h3>
-                      <p className="text-lg text-text-secondary leading-relaxed mx-auto md:mx-0">{service.description}</p>
-                    </div>
-                    <div>
-                      <p className="text-accent font-semibold mb-4 uppercase tracking-wide">{service.bulletTitle}</p>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        {service.bullets.map((bullet) => (
-                          <div key={bullet} className="flex gap-3 text-text-secondary">
-                            <span className="text-accent">•</span>
-                            <span>{bullet}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <Link
-                      href={service.cta.href}
-                      className="inline-flex items-center justify-center rounded-full px-8 py-3 text-brand-black font-semibold bg-brand-gold hover:bg-brand-gold/90 transition w-full md:w-auto"
-                    >
-                      {service.cta.label}
-                    </Link>
-                  </div>
-                ))}
-              </section>
-
-              {/* Benefits */}
-              <section className="space-y-10 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
-                  Why These Systems Work
-                </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent">Benefits</h2>
-                <div className="grid md:grid-cols-2 gap-8">
-                  {benefits.map((benefit) => (
-                    <div key={benefit.title} className="p-6 rounded-2xl border border-white/5 bg-white/5">
-                      <p className="text-xl font-serif text-accent mb-3">{benefit.title}</p>
-                      <p className="text-text-secondary">{benefit.body}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Sample Workflow */}
-              <section className="space-y-6 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
-                  Sample Workflow
-                </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent">
-                  “Idea → Multi-Platform Content in 30 Seconds”
-                </h2>
-                <div className="space-y-3 text-text-secondary text-left">
-                  {workflowSteps.map((step, index) => (
-                    <div key={step} className="flex items-start gap-4">
-                      <span className="w-10 h-10 flex items-center justify-center rounded-full border border-accent/60 text-accent font-semibold">
-                        {index + 1}
-                      </span>
-                      <p className="text-lg">{step}</p>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-text-secondary max-w-3xl mx-auto md:mx-0 text-left">
-                  This is the automation that saves you the most time and sells the fastest.
-                </p>
-              </section>
-
-              {/* FAQ */}
-              <section className="space-y-10 text-center md:text-left">
-                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
-                  FAQ
-                </p>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent">Answers to your biggest questions</h2>
-                <div className="space-y-6">
-                  {faqs.map((faq) => (
-                    <div key={faq.question} className="border border-white/5 rounded-2xl p-6 bg-white/5">
-                      <p className="text-accent text-xl font-serif mb-2">{faq.question}</p>
-                      <p className="text-text-secondary">{faq.answer}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Final CTA */}
-              <section className="text-center p-10 rounded-3xl border border-white/5 bg-brand-gold/10 space-y-6">
-                <p className="text-sm uppercase tracking-[0.3em] text-accent/80">
-                  Final Call
-                </p>
-                <h3 className="text-3xl font-serif font-bold text-accent">
-                  Ready to Build a Digital Business That Runs Itself?
-                </h3>
-                <p className="text-text-secondary max-w-2xl mx-auto">
-                  Launch your portfolio, install your systems, and scale the work that actually pays you.
-                </p>
-                <div className="flex flex-wrap gap-4 justify-center">
-                  <Link
-                    href="/pricing"
-                    className="inline-flex items-center justify-center rounded-full px-10 py-4 text-brand-black font-semibold bg-brand-gold hover:bg-brand-gold/90 transition text-lg"
-                  >
-                    Launch Your Portfolio in 48 Hours →
-                  </Link>
-                  <Link
-                    href="/contact?service=ai-systems"
-                    className="inline-flex items-center justify-center rounded-full px-8 py-3 border border-accent/60 text-accent hover:bg-brand-gold/10 transition"
-                  >
-                    Install My AI System →
-                  </Link>
-                </div>
-              </section>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="flex flex-wrap gap-4 justify-center"
+              >
+                <Link
+                  href="/pricing"
+                  className="btn-primary px-10 py-3 text-lg"
+                >
+                  View Website Packages →
+                </Link>
+                <Link
+                  href="https://calendly.com/reuben-lopezproductions/intro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline px-10 py-3 text-lg"
+                >
+                  Schedule a Call →
+                </Link>
+              </motion.div>
             </div>
-          </div>
-          
+          </section>
+
+          {/* ===================================================================== */}
+          {/* SECTION 2 — AI SYSTEMS & WORKFLOW AUTOMATION */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-background">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary text-center mb-4"
+              >
+                Systems That Run the Business While You Run the Vision
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-4 max-w-3xl mx-auto"
+              >
+                It's not enough to have a website — you need operations that keep your business moving without you manually pushing every button.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm"
+              >
+                AI + automation eliminates repetitive tasks, reduces admin by 80%, and creates a seamless client experience.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-surface p-8 rounded-xl border border-border mb-8"
+              >
+                <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
+                  What Gets Automated:
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Client onboarding</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Lead capture & follow-up</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Content planning & tasking</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Weekly summaries & status updates</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Research collection</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Content scheduling</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>CRM updates</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Reporting</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-xl font-serif font-bold text-accent text-center mb-8"
+              >
+                Stop being the bottleneck.<br />
+                Start scaling with ease.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="flex justify-center"
+              >
+                <Link
+                  href="/contact?service=ai-systems"
+                  className="btn-primary px-10 py-3 text-lg"
+                >
+                  Install My AI System →
+                </Link>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* SECTION 3 — CONTENT ENGINES */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary text-center mb-4"
+              >
+                Turn One Idea Into 30 Days of Content
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto"
+              >
+                You drop your ideas or voice notes into Notion → AI drafts captions → Make.com schedules them everywhere.<br /><br />
+                You stay consistent without spending hours writing or editing.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-background p-8 rounded-xl border border-border mb-8"
+              >
+                <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
+                  What's Included:
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Unified Notion content calendar</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>AI-assisted drafting</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Platform-specific templates</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Automatic scheduling</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Your unique voice trained into the system</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Keeps you posting even on low-energy days</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex justify-center"
+              >
+                <Link
+                  href="/contact?service=content-engine"
+                  className="btn-primary px-10 py-3 text-lg"
+                >
+                  Build My Content Engine →
+                </Link>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* SECTION 4 — WEBSITE TEMPLATES */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-background">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary text-center mb-4"
+              >
+                Launch A Premium Website This Weekend
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto"
+              >
+                Want to go faster? Choose a portfolio-ready Vite or Next.js template, customize your colors, update your content, and deploy in hours — not weeks.<br /><br />
+                Perfect for creators, students, new brands, or anyone who needs a clean, modern site live now.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-surface p-8 rounded-xl border border-border mb-8"
+              >
+                <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
+                  You Get:
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>A fully designed template</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Modern, mobile-first UI</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>SEO-ready structure</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Clean Tailwind components</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Easy customization</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Lifetime updates</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex justify-center"
+              >
+                <Link
+                  href="/templates"
+                  className="btn-primary px-10 py-3 text-lg"
+                >
+                  Browse Templates →
+                </Link>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* WHY THESE SYSTEMS WORK */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary text-center mb-12"
+              >
+                Why These Systems Work
+              </motion.h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={benefit.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-background p-8 rounded-xl border border-border card-hover"
+                  >
+                    <h3 className="text-xl font-serif font-bold text-text-primary mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      {benefit.body}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* FAQ SECTION */}
+          {/* ===================================================================== */}
+          <section className="py-20 px-6 md:px-12 bg-background border-t border-brand-gray-dark">
+            <div className="max-w-4xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary text-center mb-12"
+              >
+                FAQ — Answers You Actually Care About
+              </motion.h2>
+
+              <div className="space-y-4">
+                {faqs.map((faq, i) => (
+                  <motion.div
+                    key={faq.question}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-surface border border-border rounded-xl overflow-hidden"
+                  >
+                    <button
+                      className="w-full flex justify-between items-center p-5 text-left"
+                      onClick={() => toggleFAQ(i)}
+                    >
+                      <span className="text-lg text-text-primary font-medium">
+                        {faq.question}
+                      </span>
+
+                      <motion.div
+                        animate={{ rotate: openFAQIndex === i ? 180 : 0 }}
+                        transition={{ duration: 0.25 }}
+                      >
+                        <ChevronDown className="w-5 h-5 text-accent" />
+                      </motion.div>
+                    </button>
+
+                    {/* Accordion Content */}
+                    <AnimatePresence initial={false}>
+                      {openFAQIndex === i && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.25 }}
+                          className="px-5 pb-5"
+                        >
+                          <p className="text-text-secondary leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* FINAL CTA */}
+          {/* ===================================================================== */}
+          <section className="py-20 px-6 md:px-12 bg-surface">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary mb-6"
+              >
+                Ready to Build a Business That Runs Itself?
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto"
+              >
+                Launch your website, install your systems, and scale the work that actually pays you.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="flex flex-wrap gap-4 justify-center"
+              >
+                <Link
+                  href="/pricing"
+                  className="btn-primary px-10 py-4 text-lg"
+                >
+                  Explore Website Packages →
+                </Link>
+                <Link
+                  href="https://calendly.com/reuben-lopezproductions/intro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline px-10 py-4 text-lg"
+                >
+                  Schedule a 15-min Call →
+                </Link>
+              </motion.div>
+            </div>
+          </section>
+
           <Footer />
         </div>
       </main>
