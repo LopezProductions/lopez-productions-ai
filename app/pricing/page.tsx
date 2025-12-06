@@ -8,6 +8,7 @@ import Breadcrumbs from '../../components/Breadcrumbs'
 import PackageRequestForm from '../../components/PackageRequestForm'
 import PricingFAQ from '../../components/PricingFAQ'
 import { motion } from 'framer-motion'
+import { Globe, Link as LinkIcon, Rocket, TrendingUp, Star, Crown } from 'lucide-react'
 
 interface PackageData {
   selectedServiceIds: string[]
@@ -38,69 +39,90 @@ export default function PricingPage() {
     {
       id: 'starter-site',
       name: 'Starter Site',
-      price: 500,
-      priceDisplay: '$500',
-      perfectFor: 'Perfect for: personal brands, simple portfolios, resumes, creators.',
+      price: 1000,
+      priceDisplay: '$1,000',
+      perfectFor: 'Perfect for creators & personal brands who need a clean, modern digital presence.',
       includes: [
         '1-page responsive website',
         'Hero, About, Services, Contact',
-        'Clean modern layout',
-        'Mobile-ready',
-        'Proper metadata & SEO basics',
-        'Domain setup included',
-        '1 revision cycle',
+        'Modern visual hierarchy',
+        'Mobile-first optimization',
+        'SEO basics (metadata, headers, structure)',
+        'Performance-tuned layout',
+        'Domain + hosting setup',
         'Delivered in 3–5 days',
       ],
+      optimizationLayer: {
+        title: 'Optimization Layer: SEO',
+        description: 'Visibility foundations. Not built for funnels or automation — perfect for simple, polished presence.',
+      },
     },
     {
       id: 'business-rebuild',
       name: 'Business Rebuild',
-      price: 1000,
-      priceDisplay: '$1,000',
-      perfectFor: 'For small businesses, freelancers, coaches, and teams wanting a polished online home.',
+      price: 2500,
+      priceDisplay: '$2,500',
+      perfectFor: 'Perfect for local businesses, freelancers & service providers wanting credibility + conversions.',
       includes: [
-        '3 custom pages (ex: Home, About, Services, Contact)',
-        'Tailored brand layout + UI',
-        'Secure, fast Next.js codebase',
-        'Optimized for performance & SEO',
-        'Contact forms (Netlify or custom API)',
+        '3 custom pages (Home, About, Services/Contact)',
+        'Simple lead capture (email or booking)',
+        'Upgraded brand layout & UI',
+        'Clear, conversion-focused structure',
+        'Performance + SEO optimization',
         '2 revision cycles',
         'Delivered in 5–10 days',
       ],
+      optimizationLayer: {
+        title: 'Optimization Layer: SEO+ (Lead Capture)',
+        description: 'Your site now generates leads — not just views.',
+      },
     },
     {
       id: 'premium-site',
       name: 'Premium Site',
-      price: 1500,
-      priceDisplay: '$1,500+',
-      perfectFor: 'For brands ready to level up with stronger design, structure, and scalability.',
+      price: 4400,
+      priceDisplay: '$4,400',
+      perfectFor: 'Perfect for creators, consultants & small teams who want automation + real digital systems.',
       includes: [
-        '4–6 fully designed pages',
-        'Smooth animations (Framer Motion optional)',
-        'Component library for future scaling',
-        'Blog or CMS integration (optional)',
-        'Newsletter capture or custom forms',
-        'SEO optimization across all pages',
+        'Up to 5 fully designed pages',
+        'Custom animations (Framer Motion optional)',
+        'Automation setup (email sequences, CRM handoff, funnels)',
+        'CMS or simple blog setup',
+        'Newsletter capture + optimized opt-in',
+        'Conversion-aligned UX',
+        'GEO-optimized content structure',
         '2–3 revision cycles',
         'Delivered in 7–14 days',
       ],
+      optimizationLayer: {
+        title: 'Optimization Layer: GEO (Generative Engine Optimization)',
+        description: 'Optimized for discoverability inside ChatGPT, Perplexity, Gemini, Grok, Claude, and AI-powered search.',
+      },
+      showcaseLink: 'https://launchstack.xyz',
     },
     {
       id: 'full-business-suite',
       name: 'Full Business Suite',
-      price: 2500,
-      priceDisplay: '$2,500+',
-      perfectFor: 'For advanced businesses, agencies, or Web3 teams needing a full digital system.',
+      price: 7200,
+      priceDisplay: '$7,200',
+      perfectFor: 'Perfect for serious businesses, agencies & Web3 teams who want a future-proof digital system.',
       includes: [
         '6–10 custom pages',
+        'Full brand system (components, tokens, reusable UI)',
         'CMS or Supabase integration',
-        'On-brand UI system & global design tokens',
-        'Blog setup + content structure',
-        'SEO foundation + Open Graph cards',
-        'Analytics + tracking setup',
+        'Blog system + tagging architecture',
+        'Lead funnels + advanced automation',
+        'SEO + GEO + AEO optimization stack',
+        'OG cards, metadata, schema system',
+        'Analytics + heatmap setup',
         '30-day support window',
         'Delivered in 2–4 weeks',
       ],
+      optimizationLayer: {
+        title: 'Optimization Layer: AEO (Answer Engine Optimization)',
+        description: 'Built for modern discovery — where AI search engines and chatbots pull your site as the "best possible answer."',
+      },
+      showcaseLink: 'https://launchstack.xyz',
     },
   ]
 
@@ -366,7 +388,7 @@ export default function PricingPage() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-xl md:text-2xl text-accent mt-6 max-w-3xl mx-auto"
             >
-              Build your system. Launch your brand. Scale your digital presence.
+              Modern websites built for SEO, GEO, and AEO — the full discoverability stack.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -374,7 +396,7 @@ export default function PricingPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg text-text-secondary mt-6 max-w-3xl mx-auto leading-relaxed"
             >
-              Whether you&apos;re a creator, student, teacher, or small business owner, you&apos;ll find two types of offerings here:
+              Whether you&apos;re a creator, business owner, student, or teacher, choose from:
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -382,8 +404,8 @@ export default function PricingPage() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-8 max-w-3xl mx-auto space-y-2 text-text-secondary"
             >
-              <p><strong className="text-text-primary">Custom Websites</strong> — built from scratch for polish, speed, and performance</p>
-              <p><strong className="text-text-primary">Templates & Digital Tools</strong> — plug-and-play systems to use instantly</p>
+              <p><strong className="text-text-primary">• Custom Websites</strong> — Built from scratch with the full optimization stack</p>
+              <p><strong className="text-text-primary">• Templates & Digital Tools</strong> — Launch fast and upgrade anytime</p>
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -391,7 +413,7 @@ export default function PricingPage() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-base text-text-secondary mt-6"
             >
-              Scroll to find the option that fits your goals.
+              Scroll to explore the option that fits your timeline and goals.
             </motion.p>
           </section>
 
@@ -400,15 +422,16 @@ export default function PricingPage() {
           {/* ===================================================================== */}
           <section className="py-16 px-6 md:px-12 bg-surface">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
+              <h2 className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3">
+                <Globe className="w-8 h-8 text-brand-gold" />
                 Custom Websites (Built From Scratch)
               </h2>
               <p className="text-text-secondary text-center mb-4 max-w-3xl mx-auto">
-                Fast. Modern. Secure. Tailored to your brand.
+                High-performance design for the modern internet.
               </p>
               <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm">
-                These are full rebuilds — not template edits and not legacy cleanups.<br />
-                Send your assets → get a professionally designed site with clean code and high performance.
+                Clean code, strong hierarchy, SEO foundations, and full support for AI-driven discovery.<br />
+                These are <strong>true custom builds</strong> — no page builders, no bloated plugins, no legacy cleanups.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -421,8 +444,17 @@ export default function PricingPage() {
                     viewport={{ once: true }}
                     className="bg-background p-8 rounded-xl border border-border card-hover"
                   >
-                    <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
-                      {website.name} ({website.id === 'starter-site' ? '1 Page' : website.id === 'business-rebuild' ? '3 Pages' : website.id === 'premium-site' ? '4–6 Pages' : '6–10 Pages'})
+                    <h3 className="text-2xl font-serif font-bold text-text-primary mb-2 flex items-center gap-2">
+                      {website.id === 'starter-site' ? (
+                        <Rocket className="w-6 h-6 text-brand-gold" />
+                      ) : website.id === 'business-rebuild' ? (
+                        <TrendingUp className="w-6 h-6 text-brand-gold" />
+                      ) : website.id === 'premium-site' ? (
+                        <Star className="w-6 h-6 text-brand-gold" />
+                      ) : (
+                        <Crown className="w-6 h-6 text-brand-gold" />
+                      )}
+                      {website.name}
                     </h3>
                     <p className="text-4xl font-serif font-bold text-accent mb-4">
                       {website.priceDisplay}
@@ -441,6 +473,28 @@ export default function PricingPage() {
                         ))}
                       </ul>
                     </div>
+                    {website.optimizationLayer && (
+                      <div className="mb-6 p-4 bg-brand-gray-dark/50 rounded-lg border border-border">
+                        <p className="text-text-primary font-semibold mb-2 text-sm">
+                          {website.optimizationLayer.title}
+                        </p>
+                        <p className="text-text-secondary text-sm">
+                          {website.optimizationLayer.description}
+                        </p>
+                      </div>
+                    )}
+                    {website.showcaseLink && (
+                      <a
+                        href={website.showcaseLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full text-center text-accent hover:text-accent-dark text-sm font-medium mb-3 underline"
+                      >
+                        {website.id === 'premium-site' 
+                          ? 'See an example Premium build → LaunchStack.xyz'
+                          : 'Explore our most advanced builds → LaunchStack.xyz'}
+                      </a>
+                    )}
                     <button
                       onClick={() => handleCustomServiceClick(website)}
                       className="btn-primary w-full py-3 text-lg"
@@ -463,6 +517,40 @@ export default function PricingPage() {
                     </a>
                   </motion.div>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* EXPERIENCE OUR SYSTEMS SECTION */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-background">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3">
+                <LinkIcon className="w-8 h-8 text-brand-gold" />
+                Experience Our Systems Before You Choose A Package
+              </h2>
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-serif font-bold text-text-primary mb-4">
+                  Experience Our Craft
+                </h3>
+                <p className="text-text-secondary max-w-3xl mx-auto mb-6">
+                  Before choosing a package, explore how we design, optimize, and scale modern websites:
+                </p>
+                <a
+                  href="https://launchstack.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xl font-semibold text-accent hover:text-accent-dark transition-colors mb-4"
+                >
+                  <LinkIcon className="w-5 h-5" />
+                  LaunchStack.xyz – Premium Build Showcase
+                </a>
+                <p className="text-text-secondary max-w-3xl mx-auto text-sm">
+                  A curated gallery of our most advanced client builds, including websites optimized with SEO, GEO, and AEO.
+                  <br />
+                  This gives prospects proof of the quality behind the Premium and Full Suite tiers.
+                </p>
               </div>
             </div>
           </section>

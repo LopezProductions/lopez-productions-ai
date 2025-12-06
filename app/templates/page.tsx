@@ -2,12 +2,12 @@
 
 import React from 'react'
 import Link from 'next/link'
-import Script from 'next/script'
 import Image from 'next/image'
 import { Zap, Palette, Smartphone, Wrench, RefreshCw, Shield } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/Breadcrumbs'
+import FAQSchema from '../../components/FAQSchema'
 
 // Helper function to map slug to image filename
 function getTemplateImage(slug: string): string {
@@ -68,22 +68,60 @@ const templates = [
 ]
 
 export default function TemplatesPage() {
-  const schema = {
+  const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Lopez Productions Template Library',
+    name: 'Website Template Library',
+    description: 'A curated collection of modern, high-performance React and Next.js website templates.',
+    itemListOrder: 'http://schema.org/ItemListOrderAscending',
+    numberOfItems: 6,
     itemListElement: templates.map((t, index) => ({
       '@type': 'ListItem',
       position: index + 1,
+      name: `${t.title} — Web Template`,
       url: `https://lopezproductions.ai/templates/${t.slug}`,
     })),
   }
 
+  const faqs = [
+    {
+      question: 'Do I need coding experience?',
+      answer: 'No. The Starter option includes everything you need, and the higher tiers handle setup or full customization for you.',
+    },
+    {
+      question: 'Are the templates mobile-friendly?',
+      answer: "Yes — they're built responsive out of the box. Optional Mobile Optimization adds extra refinement.",
+    },
+    {
+      question: "What's the difference between the pricing tiers?",
+      answer: '$50 = DIY template download\n$150 = installation + basic setup\n$450 = full customization up to 5 pages, final deployment',
+    },
+    {
+      question: 'How long does Done-For-You take?',
+      answer: 'Most builds are completed in 24–72 hours depending on customizations and pages.',
+    },
+    {
+      question: 'Can you build a full custom website instead?',
+      answer: 'Yes — fully custom builds start at $1,000+ on the pricing page. Templates are the low-ticket entry; custom builds are the premium upgrade.',
+    },
+    {
+      question: 'Do you offer refunds?',
+      answer: 'Digital templates are non-refundable after delivery, but support is provided to help you launch successfully.',
+    },
+    {
+      question: 'What happens after purchase?',
+      answer: 'You get instant download access and, if applicable, an intake form for customization. Support is available for any launch questions.',
+    },
+  ]
+
   return (
     <>
-      <Script id="templates-schema" type="application/ld+json">
-        {JSON.stringify(schema)}
-      </Script>
+      <script
+        id="template-library-itemlist"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <FAQSchema faqs={faqs} />
       <main className="min-h-screen bg-background relative overflow-hidden">
         {/* Background with logo - very dark silhouette */}
         <div

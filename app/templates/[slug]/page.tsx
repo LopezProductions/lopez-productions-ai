@@ -1,9 +1,9 @@
 import React from 'react'
-import Script from 'next/script'
 import type { Metadata } from 'next'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import FAQSchema from '../../../components/FAQSchema'
 import { notFound } from 'next/navigation'
 
 const TEMPLATE_DATA: Record<
@@ -230,33 +230,111 @@ export default async function TemplatePage({
   }
 
   const imageFilename = getTemplateImage(slug)
-  const imageUrl = `https://lopezproductions.ai/${imageFilename}`
+  const imageUrl = `https://lopezproductions.ai/templates/${slug}/cover.jpg`
+  const templateUrl = `https://lopezproductions.ai/templates/${slug}`
+  
+  // Enhanced description combining description and longDescription
+  const fullDescription = `${template.description} Includes scroll animations, service layouts, gallery, contact forms, and SEO-ready structure.`
 
-  const schema = {
-    '@context': 'https://schema.org/',
+  const productSchema = {
+    '@context': 'https://schema.org',
     '@type': 'Product',
     name: `${template.title} — Web Template`,
-    description: template.description,
-    image: [imageUrl],
-    sku: slug,
+    description: fullDescription,
+    image: imageUrl,
     brand: {
       '@type': 'Brand',
       name: 'Lopez Productions',
     },
+    category: 'Website Template',
+    sku: slug,
+    url: templateUrl,
     offers: {
-      '@type': 'Offer',
-      price: '50.00',
+      '@type': 'AggregateOffer',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      url: `https://lopezproductions.ai/templates/${slug}`,
+      lowPrice: '50',
+      highPrice: '450',
+      offerCount: 4,
+      offers: [
+        {
+          '@type': 'Offer',
+          price: '50',
+          priceCurrency: 'USD',
+          itemCondition: 'https://schema.org/NewCondition',
+          availability: 'https://schema.org/InStock',
+          name: 'Starter Template',
+          url: templateUrl,
+        },
+        {
+          '@type': 'Offer',
+          price: '125',
+          priceCurrency: 'USD',
+          itemCondition: 'https://schema.org/NewCondition',
+          availability: 'https://schema.org/InStock',
+          name: 'Template + Branding Pack',
+          url: templateUrl,
+        },
+        {
+          '@type': 'Offer',
+          price: '250',
+          priceCurrency: 'USD',
+          itemCondition: 'https://schema.org/NewCondition',
+          availability: 'https://schema.org/InStock',
+          name: 'Done-For-You Website',
+          url: templateUrl,
+        },
+        {
+          '@type': 'Offer',
+          price: '450',
+          priceCurrency: 'USD',
+          itemCondition: 'https://schema.org/NewCondition',
+          availability: 'https://schema.org/InStock',
+          name: 'Full Brand + Website',
+          url: templateUrl,
+        },
+      ],
     },
   }
 
+  const faqs = [
+    {
+      question: "What's included in each template?",
+      answer: 'Each template includes a complete React/Next.js + Tailwind codebase, 3–5 prebuilt page layouts, mobile-ready components, setup instructions, and lifetime updates.',
+    },
+    {
+      question: 'Do I need coding experience to use these templates?',
+      answer: "You can use the Starter Template without coding, but basic editing is easier if you understand React or Tailwind. A Done-For-You option is available if you prefer a hands-off launch.",
+    },
+    {
+      question: "What's the difference between the $50 template and the $250 Done-For-You package?",
+      answer: 'The $50 option includes the full codebase for DIY customization. The $250 Done-For-You package includes full setup, branding, 3 custom pages, content placement, and deployment.',
+    },
+    {
+      question: 'What add-ons are available?',
+      answer: 'Optional add-ons include Custom Image Packs, Mobile Optimization, and Additional Page Builds.',
+    },
+    {
+      question: 'Are the templates mobile-friendly?',
+      answer: 'Yes, all templates use mobile-first responsive design built with TailwindCSS.',
+    },
+    {
+      question: 'How long does the Done-For-You service take?',
+      answer: 'Most Done-For-You websites are delivered within 24–48 hours depending on content requirements.',
+    },
+    {
+      question: 'Can you build a full website with more than 3 pages?',
+      answer: 'Yes, additional pages can be built for $60 per page or as part of the Elite Full Brand + Website package.',
+    },
+  ]
+
   return (
     <>
-      <Script id="template-schema" type="application/ld+json">
-        {JSON.stringify(schema)}
-      </Script>
+      <script
+        id="template-product-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <FAQSchema faqs={faqs} />
       <main className="min-h-screen bg-brand-black relative overflow-hidden">
         {/* Background with logo - very dark silhouette */}
         <div
