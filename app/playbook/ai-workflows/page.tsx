@@ -9,6 +9,9 @@ export const metadata = {
   title: 'AI Tools & Workflows — Practical AI Systems That Help You Work Smarter | Lopez Productions',
   description: 'Not every AI tool matters — but the right systems change everything. Learn about tooling, workflows, and automation fundamentals that improve how you research, plan, and publish.',
   keywords: 'AI tools, AI workflows, ChatGPT, Perplexity AI, content engine, AI productivity, workflow automation',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/ai-workflows',
+  },
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai/playbook/ai-workflows',

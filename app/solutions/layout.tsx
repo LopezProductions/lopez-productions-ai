@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     'automation agency',
     'AI systems designer',
   ].join(', '),
+  alternates: {
+    canonical: 'https://lopezproductions.ai/solutions',
+  },
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai/solutions',

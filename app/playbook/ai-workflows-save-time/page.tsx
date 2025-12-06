@@ -8,6 +8,9 @@ export const metadata = {
   title: 'How AI Workflows Save SaaS Teams 10 Hours a Week | Lopez Productions',
   description: 'Discover the specific automation systems that cut project time by 20-30%. Learn which AI workflows actually work and why most teams are still doing manual work.',
   keywords: 'AI workflow automation, business automation, time savings, SaaS automation, AI productivity, workflow optimization, business process automation',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/ai-workflows-save-time',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/ai-workflows-save-time',

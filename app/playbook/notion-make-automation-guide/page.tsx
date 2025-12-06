@@ -8,6 +8,9 @@ export const metadata = {
   title: 'Notion + Make.com: The Ultimate Automation Stack for Freelancers | Lopez Productions',
   description: 'Step-by-step guide to connecting Notion databases with Make.com workflows. Automate client intake, project tracking, and reporting for freelancers.',
   keywords: 'Notion automation, Make.com workflows, freelancer tools, Notion Make integration, automation guide, freelancer automation, project management automation',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/notion-make-automation-guide',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/notion-make-automation-guide',

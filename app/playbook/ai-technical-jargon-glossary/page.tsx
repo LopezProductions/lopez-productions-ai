@@ -8,6 +8,9 @@ export const metadata = {
   title: 'AI Technical Jargon Explained — A Beginner-Friendly Glossary (2025) | Lopez Productions',
   description: 'A simple, practical glossary of common AI and automation terms—like RAG, Chain of Thought, One-Shot Prompting, and Vector Databases—explained in plain English for creators and beginners.',
   keywords: 'AI glossary, AI terms, RAG, chain of thought, vector database, embeddings, AI prompting, AI automation terms, beginner AI guide',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/ai-technical-jargon-glossary',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/ai-technical-jargon-glossary',

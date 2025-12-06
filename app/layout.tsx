@@ -99,6 +99,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "name": "Lopez Productions",
+              "alternateName": "AI Brand Systems for Creators & Small Businesses",
               "url": "https://lopezproductions.ai",
               "potentialAction": {
                 "@type": "SearchAction",

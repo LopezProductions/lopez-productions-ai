@@ -8,6 +8,9 @@ export const metadata = {
   title: 'Why Your First Priority Isn\'t Automation — It\'s Your Brand System | Lopez Productions',
   description: 'Most people jump into AI thinking automation is the first step. But if you\'re a creator or small business, the real problem is that your brand system isn\'t set up yet.',
   keywords: 'brand system, automation, AI branding, creator branding, small business branding, brand identity, content system',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/why-your-first-priority-isnt-automation-its-your-brand-system',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/why-your-first-priority-isnt-automation-its-your-brand-system',

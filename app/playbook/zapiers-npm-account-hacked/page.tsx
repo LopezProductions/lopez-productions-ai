@@ -7,24 +7,27 @@ import Footer from '../../../components/Footer'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Zapier’s NPM Account Hacked — Should You Be Worried About Your Automations?',
+  title: 'Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions',
   description:
-    'Zapier’s NPM breach infected several packages with self-propagating malware. Here’s what happened, who’s at risk, and why everyday automations are still safe.',
+    'Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.',
   keywords:
     'Zapier, npm breach, automation security, supply-chain attack, Shai Hulud malware, Zapier automations safety',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/zapiers-npm-account-hacked',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/zapiers-npm-account-hacked',
-    title: 'Zapier’s NPM Account Hacked — Should You Be Worried About Your Automations?',
+    title: 'Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions',
     description:
-      'Zapier’s NPM breach infected several packages with self-propagating malware. Here’s what happened, who’s at risk, and why everyday automations are still safe.',
+      'Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.',
     images: ['/zapier-breach.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zapier’s NPM Account Hacked — Should You Be Worried About Your Automations?',
+    title: 'Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions',
     description:
-      'Zapier’s NPM breach infected several packages with self-propagating malware. Here’s what happened, who’s at risk, and why everyday automations are still safe.',
+      'Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.',
     images: ['/zapier-breach.png'],
   },
 }

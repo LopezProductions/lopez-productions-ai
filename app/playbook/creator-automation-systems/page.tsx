@@ -8,6 +8,9 @@ export const metadata = {
   title: '3 Systems Every Creator Should Automate in 2025 | Lopez Productions',
   description: 'The essential automation stack for content creators: from Notion planning to cross-platform posting. Stop spending 15+ hours weekly on admin work.',
   keywords: 'creator automation, content systems, Notion automation, creator tools, content automation, social media automation, creator workflow',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/creator-automation-systems',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/creator-automation-systems',

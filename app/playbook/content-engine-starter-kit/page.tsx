@@ -8,6 +8,9 @@ export const metadata = {
   title: 'AI Tools You Need to Start Your Content Engine (2025 Edition) | Lopez Productions',
   description: 'Learn how to build your own AI-powered content workflow using tools like ChatGPT, Claude, Perplexity AI, Midjourney, Notion, and Make.com.',
   keywords: 'AI Content Creation, Notion Automation, Workflow Automation, AI Tools, Productivity Apps, Content Engine, ChatGPT, Claude, PerplexityAI, Midjourney, Makecom, Zapier, n8n',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/content-engine-starter-kit',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/content-engine-starter-kit',

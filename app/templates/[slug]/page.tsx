@@ -193,6 +193,9 @@ export async function generateMetadata({
   return {
     title: `${template.title} | Lopez Productions`,
     description: template.description,
+    alternates: {
+      canonical: `https://lopezproductions.ai/templates/${slug}`,
+    },
     openGraph: {
       title: template.title,
       description: template.description,

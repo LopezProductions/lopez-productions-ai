@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'About | Lopez Productions',
   description:
     'The story behind Lopez Productions — a modern AI-first studio helping creators and small businesses build clean systems, professional brands, and consistent content.',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/about',
+  },
 }
 
 export default function AboutPage() {

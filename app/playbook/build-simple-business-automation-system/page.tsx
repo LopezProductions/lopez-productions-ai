@@ -8,6 +8,9 @@ export const metadata = {
   title: 'How To Build a Simple Automation System for Your Business (Beginner-Friendly Guide) | Lopez Productions',
   description: 'A plain-English guide to automating your business without overthinking it — using simple systems, AI tools, and lightweight workflows that save time every single week.',
   keywords: 'business automation, automation systems, AI workflows, small business automation, creator automation, workflow automation, Make.com automation, Notion automation',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/build-simple-business-automation-system',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/build-simple-business-automation-system',

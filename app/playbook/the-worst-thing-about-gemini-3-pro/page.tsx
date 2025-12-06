@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
   keywords:
     'gemini 3 pro, project folders, ai organization, gemini workflow, ai tools comparison, knowledge management, notion, ai productivity',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/the-worst-thing-about-gemini-3-pro',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/the-worst-thing-about-gemini-3-pro',

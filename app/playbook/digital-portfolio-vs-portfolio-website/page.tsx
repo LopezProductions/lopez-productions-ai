@@ -5,19 +5,22 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Digital Portfolio vs Portfolio Website: What\'s the Difference?',
+  title: 'Digital Portfolio vs Portfolio Website: What\'s the Difference? | Lopez Productions',
   description: 'Learn the difference between a digital portfolio and a portfolio website — and why modern creators need both.',
   keywords: 'digital portfolio, online portfolio, my digital portfolio, digital agency portfolio',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/digital-portfolio-vs-portfolio-website',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/digital-portfolio-vs-portfolio-website',
-    title: 'Digital Portfolio vs Portfolio Website: What\'s the Difference?',
+    title: 'Digital Portfolio vs Portfolio Website: What\'s the Difference? | Lopez Productions',
     description: 'Learn the difference between a digital portfolio and a portfolio website — and why modern creators need both.',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Portfolio vs Portfolio Website: What\'s the Difference?',
+    title: 'Digital Portfolio vs Portfolio Website: What\'s the Difference? | Lopez Productions',
     description: 'Learn the difference between a digital portfolio and a portfolio website — and why modern creators need both.',
     images: ['/og-image.jpg'],
   },

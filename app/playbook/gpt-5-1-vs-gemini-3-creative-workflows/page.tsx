@@ -16,16 +16,12 @@ export const metadata: Metadata = {
     'A practical breakdown of GPT-5.1 vs. Gemini 3 written specifically for creators, students, small teams, and automation-focused professionals. Covers workflow reliability, PDF handling, creativity, citation accuracy, and tool integrations like Notion and Make.com.',
   keywords:
     'GPT-5.1, Gemini 3, AI workflow, automation systems, Notion, Make.com, image generation, AI comparison, creative workflows, AI tools',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/gpt-5-1-vs-gemini-3-creative-workflows',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/gpt-5-1-vs-gemini-3-creative-workflows',
-    title: 'GPT-5.1 vs Gemini 3: Which AI Model Is Better for Real Creative Workflows?',
-    description:
-      'A practical breakdown of GPT-5.1 vs. Gemini 3 written specifically for creators, students, small teams, and automation-focused professionals. Covers workflow reliability, PDF handling, creativity, citation accuracy, and tool integrations like Notion and Make.com.',
-    images: ['/gpt5.1-vs-gemini3.png'],
-  },
-  twitter: {
-    card: 'summary_large_image',
     title: 'GPT-5.1 vs Gemini 3: Which AI Model Is Better for Real Creative Workflows?',
     description:
       'A practical breakdown of GPT-5.1 vs. Gemini 3 written specifically for creators, students, small teams, and automation-focused professionals. Covers workflow reliability, PDF handling, creativity, citation accuracy, and tool integrations like Notion and Make.com.',

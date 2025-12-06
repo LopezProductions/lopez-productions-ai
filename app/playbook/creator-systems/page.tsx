@@ -9,6 +9,9 @@ export const metadata = {
   title: 'Creator Systems — Build the Foundation Your Brand Actually Needs | Lopez Productions',
   description: 'Creators don\'t fail because they lack talent — they fail because they lack systems. Learn about Notion dashboards, brand structure, and the fundamentals of running your creative business without chaos.',
   keywords: 'creator systems, brand systems, Notion for creators, creator brand foundation, creative business systems',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/creator-systems',
+  },
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai/playbook/creator-systems',

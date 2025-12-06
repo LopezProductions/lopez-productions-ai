@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     'A practical comparison of Gemini 3 Pro and Claude 4.5 for academic research and writing, with a hybrid workflow that leverages each model\'s strengths for better results.',
   keywords:
     'gemini 3 pro, claude 4.5, ai for students, academic writing, research workflow, ai tools comparison, student productivity, ai workflows',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/gemini-3-vs-claude-4-5-research-workflow',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/gemini-3-vs-claude-4-5-research-workflow',

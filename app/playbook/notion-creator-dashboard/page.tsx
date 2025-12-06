@@ -9,6 +9,9 @@ export const metadata = {
   title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System | Lopez Productions',
   description: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
   keywords: 'notion for creators, notion dashboard, creator brand system, content calendar, notion templates, creator workflow, brand system',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/notion-creator-dashboard',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/notion-creator-dashboard',

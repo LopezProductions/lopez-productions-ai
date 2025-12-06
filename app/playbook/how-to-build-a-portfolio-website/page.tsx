@@ -5,19 +5,22 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'How to Build a Portfolio Website That Actually Gets You Clients (2025 Guide)',
+  title: 'How to Build a Portfolio Website That Actually Gets You Clients (2025 Guide) | Lopez Productions',
   description: 'Learn how to plan, design, and launch a high-converting portfolio website — plus how AI can automate updates and analytics.',
   keywords: 'how to build a portfolio website, build a portfolio website, best website builder for portfolio, portfolio building websites',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/how-to-build-a-portfolio-website',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/how-to-build-a-portfolio-website',
-    title: 'How to Build a Portfolio Website That Actually Gets You Clients (2025 Guide)',
+    title: 'How to Build a Portfolio Website That Actually Gets You Clients (2025 Guide) | Lopez Productions',
     description: 'Learn how to plan, design, and launch a high-converting portfolio website — plus how AI can automate updates and analytics.',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Build a Portfolio Website That Actually Gets You Clients (2025 Guide)',
+    title: 'How to Build a Portfolio Website That Actually Gets You Clients (2025 Guide) | Lopez Productions',
     description: 'Learn how to plan, design, and launch a high-converting portfolio website — plus how AI can automate updates and analytics.',
     images: ['/og-image.jpg'],
   },

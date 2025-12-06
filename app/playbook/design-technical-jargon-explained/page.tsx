@@ -5,19 +5,22 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators',
+  title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators | Lopez Productions',
   description: 'A simple, practical guide that breaks down essential design terms—aspect ratio, resolution, safe zones, export settings, and common social sizes—so beginners can design clean, professional content without overwhelm.',
   keywords: 'design terms, aspect ratio, resolution, DPI, safe zones, Canva guide, Photoshop guide, social media sizes, design for beginners, content creation',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/design-technical-jargon-explained',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/design-technical-jargon-explained',
-    title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators',
+    title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators | Lopez Productions',
     description: 'A simple, practical guide that breaks down essential design terms—aspect ratio, resolution, safe zones, export settings, and common social sizes—so beginners can design clean, professional content without overwhelm.',
     images: ['/design-jargon.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators',
+    title: 'Design Technical Jargon Explained — A Beginner\'s Guide for Canva, Photoshop, and Social Creators | Lopez Productions',
     description: 'A simple, practical guide that breaks down essential design terms—aspect ratio, resolution, safe zones, export settings, and common social sizes—so beginners can design clean, professional content without overwhelm.',
     images: ['/design-jargon.png'],
   },

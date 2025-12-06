@@ -8,6 +8,9 @@ export const metadata = {
   title: 'AI Prompting Essentials — The Skills Every Creator Needs in 2025 | Lopez Productions',
   description: 'A practical guide to the core prompting skills that help creators build faster, communicate clearly with AI, and run a smoother content engine.',
   keywords: 'AI prompting, prompt engineering, ChatGPT prompts, AI tools for creators, content creation with AI, AI workflows, prompting skills',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/ai-prompting-essentials',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/ai-prompting-essentials',

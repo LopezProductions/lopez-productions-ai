@@ -8,6 +8,9 @@ export const metadata = {
   title: 'How I Use AI to Organize My Week Inside Notion | Lopez Productions',
   description: 'A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.',
   keywords: 'Notion weekly planning, AI productivity, Notion automation, weekly organization, AI workflows, productivity systems, Notion templates, creator productivity',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/ai-notion-weekly-organization',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/ai-notion-weekly-organization',

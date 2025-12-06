@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     "Most mobile AI apps break the moment you need to switch modes or continue a workflow. Firefly Mobile quietly solves this by pairing Adobe's UI with Nano Banana (Gemini 2.5). Here's why it's the most complete mobile creator studio right now.",
   keywords:
     'Adobe Firefly mobile, Nano Banana Pro, Gemini 2.5, AI mobile workflow, Creator tools, mobile AI apps, Adobe Firefly, mobile creation',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/firefly-mobile-nano-banana',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/firefly-mobile-nano-banana',

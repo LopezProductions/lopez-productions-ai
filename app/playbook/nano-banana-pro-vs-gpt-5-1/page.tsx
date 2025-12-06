@@ -10,6 +10,9 @@ export const metadata = {
   title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better? | Lopez Productions',
   description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
   keywords: 'AI image generation, GPT-5.1, Nano Banana Pro, AI comparison, image models, AI design tools, image generation comparison',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1',

@@ -9,6 +9,9 @@ export const metadata = {
   title: 'Business Automation — Automate the Parts of Your Business That Slow You Down | Lopez Productions',
   description: 'Most entrepreneurs are drowning in manual work. Learn how to simplify your operations, build smarter processes, and create automations that save time without adding complexity.',
   keywords: 'business automation, workflow automation, Make.com, Notion automation, freelancer automation, SaaS automation',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/automation-systems',
+  },
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai/playbook/automation-systems',

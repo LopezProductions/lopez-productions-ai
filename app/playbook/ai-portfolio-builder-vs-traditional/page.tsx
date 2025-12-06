@@ -5,19 +5,22 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AI Portfolio Builders vs Traditional Website Builders: Which Wins in 2025?',
+  title: 'AI Portfolio Builders vs Traditional Website Builders: Which Wins in 2025? | Lopez Productions',
   description: 'Traditional website builders are static. AI portfolio systems update automatically and help you scale your creative brand.',
   keywords: 'AI portfolio website builder, best portfolio website builder, free portfolio website builder, digital portfolio',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/ai-portfolio-builder-vs-traditional',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/ai-portfolio-builder-vs-traditional',
-    title: 'AI Portfolio Builders vs Traditional Website Builders: Which Wins in 2025?',
+    title: 'AI Portfolio Builders vs Traditional Website Builders: Which Wins in 2025? | Lopez Productions',
     description: 'Traditional website builders are static. AI portfolio systems update automatically and help you scale your creative brand.',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Portfolio Builders vs Traditional Website Builders: Which Wins in 2025?',
+    title: 'AI Portfolio Builders vs Traditional Website Builders: Which Wins in 2025? | Lopez Productions',
     description: 'Traditional website builders are static. AI portfolio systems update automatically and help you scale your creative brand.',
     images: ['/og-image.jpg'],
   },

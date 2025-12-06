@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     'A practical guide for teachers on using Nano Banana Pro to create clean, accurate, classroom-ready visual materials for science, history, and English.',
   keywords:
     'nano banana, ai for teachers, education technology, classroom tools, ai visuals, curriculum design, nano banana pro, teaching materials',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/nano-banana-for-teachers-visualizing-curriculum',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/nano-banana-for-teachers-visualizing-curriculum',

@@ -59,6 +59,7 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': ['WebSite', 'WebPage'],
     name: 'Lopez Productions',
+    alternateName: 'AI Brand Systems for Creators & Small Businesses',
     url: 'https://lopezproductions.ai',
     description: 'AI-powered systems, templates, and workflows for creators, founders, and small businesses.',
   }

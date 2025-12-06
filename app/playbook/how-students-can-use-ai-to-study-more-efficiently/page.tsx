@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     'A simple guide to using AI tools for smarter studying, better organization, and faster research—without breaking academic rules or relying on AI to write your papers.',
   keywords:
     'students, study tools, ai for school, productivity, education, ai workflows, student productivity, study efficiency',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/how-students-can-use-ai-to-study-more-efficiently',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/how-students-can-use-ai-to-study-more-efficiently',

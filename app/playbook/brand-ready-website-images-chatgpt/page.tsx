@@ -7,22 +7,25 @@ import Footer from '../../../components/Footer'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
+  title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1 | Lopez Productions',
   description:
     'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
   keywords:
     'brand-ready images, ChatGPT image prompts, AI design workflow, website hero backgrounds, brand sheet prompts',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/brand-ready-website-images-chatgpt',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/brand-ready-website-images-chatgpt',
-    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
+    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1 | Lopez Productions',
     description:
       'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
     images: ['/how-to-brand-images.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
+    title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1 | Lopez Productions',
     description:
       'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
     images: ['/how-to-brand-images.png'],

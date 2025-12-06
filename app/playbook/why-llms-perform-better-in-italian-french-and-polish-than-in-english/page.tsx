@@ -8,6 +8,9 @@ export const metadata = {
   title: 'Why LLMs Perform Better in Italian, French, and Polish Than in English | Lopez Productions',
   description: 'New multilingual AI research shows that Romance and Slavic languages outperform English in long-context reasoning. Here\'s why fusional morphology and information-dense grammar give LLMs clearer signals and higher accuracy.',
   keywords: 'LLMs, multilingual AI, ONERULER, language models, AI prompting, multilingual prompting, Italian, French, Polish, language performance, AI productivity',
+  alternates: {
+    canonical: 'https://lopezproductions.ai/playbook/why-llms-perform-better-in-italian-french-and-polish-than-in-english',
+  },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/why-llms-perform-better-in-italian-french-and-polish-than-in-english',

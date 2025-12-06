@@ -6,6 +6,9 @@ export const metadata = {
   title: "Contact | Lopez Productions",
   description:
     "Get in touch with Lopez Productions — whether you need a system, a template, a workflow, or a full brand overhaul, this is the best way to reach out.",
+  alternates: {
+    canonical: "https://lopezproductions.ai/contact",
+  },
 }
 
 export default function ContactPage() {
