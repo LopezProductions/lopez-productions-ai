@@ -3,6 +3,8 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 
 export const metadata = {
   title: 'Why LLMs Perform Better in Italian, French, and Polish Than in English | Lopez Productions',
@@ -27,38 +29,19 @@ export const metadata = {
 }
 
 export default function WhyLLMsPerformBetterInItalianFrenchAndPolish() {
+  const post = allInsights.find(p => p.slug === 'why-llms-perform-better-in-italian-french-and-polish-than-in-english')
+  
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Why LLMs Perform Better in Italian, French, and Polish Than in English",
-            "description": "New multilingual AI research shows that Romance and Slavic languages outperform English in long-context reasoning. Here's why fusional morphology and information-dense grammar give LLMs clearer signals and higher accuracy.",
-            "author": {
-              "@type": "Person",
-              "name": "Reuben Lopez",
-              "url": "https://lopezproductions.ai"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Lopez Productions",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://lopezproductions.ai/transparent_logo_lp.png"
-              }
-            },
-            "datePublished": "2025-11-25",
-            "dateModified": "2025-11-25",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://lopezproductions.ai/playbook/why-llms-perform-better-in-italian-french-and-polish-than-in-english"
-            }
-          })
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'why-llms-perform-better-in-italian-french-and-polish-than-in-english'}
+        publishedDate={post?.publishedDate || '2025-11-25'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'why-llms-perform-better-in-italian-french-and-polish-than-in-english'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

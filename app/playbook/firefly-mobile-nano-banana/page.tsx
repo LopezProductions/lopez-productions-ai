@@ -4,7 +4,9 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
 import CreatorSystemOSCheckoutButton from '../../../components/CreatorSystemOSCheckoutButton'
+import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -34,38 +36,19 @@ export const metadata: Metadata = {
 }
 
 export default function FireflyMobileNanoBanana() {
+  const post = allInsights.find(p => p.slug === 'firefly-mobile-nano-banana')
+  
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: "Why I Switched to Adobe Firefly Mobile (The Real Reason Isn't the Adobe Model)",
-            description:
-              "Most mobile AI apps break the moment you need to switch modes or continue a workflow. Firefly Mobile quietly solves this by pairing Adobe's UI with Nano Banana (Gemini 2.5). Here's why it's the most complete mobile creator studio right now.",
-            author: {
-              '@type': 'Person',
-              name: 'Reuben Lopez',
-              url: 'https://lopezproductions.ai',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Lopez Productions',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://lopezproductions.ai/transparent_logo_lp.png',
-              },
-            },
-            datePublished: '2025-12-05',
-            dateModified: '2025-12-05',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://lopezproductions.ai/playbook/firefly-mobile-nano-banana',
-            },
-          }),
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'firefly-mobile-nano-banana'}
+        publishedDate={post?.publishedDate || '2025-12-05'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'firefly-mobile-nano-banana'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-background">

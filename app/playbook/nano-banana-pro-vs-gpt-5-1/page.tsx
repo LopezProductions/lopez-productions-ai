@@ -3,8 +3,10 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
 import ConceptArtCheckoutButton from '../../../components/ConceptArtCheckoutButton'
 import Related from '../../../components/Related'
+import { allInsights } from '../insights-data'
 
 export const metadata = {
   title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better? | Lopez Productions',
@@ -29,38 +31,19 @@ export const metadata = {
 }
 
 export default function NanoBananaProVsGPT51() {
+  const post = allInsights.find(p => p.slug === 'nano-banana-pro-vs-gpt-5-1')
+  
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?",
-            "description": "A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.",
-            "author": {
-              "@type": "Person",
-              "name": "Reuben Lopez",
-              "url": "https://lopezproductions.ai"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Lopez Productions",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://lopezproductions.ai/transparent_logo_lp.png"
-              }
-            },
-            "datePublished": "2025-11-24",
-            "dateModified": "2025-11-24",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1"
-            }
-          })
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'nano-banana-pro-vs-gpt-5-1'}
+        publishedDate={post?.publishedDate || '2025-11-24'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'nano-banana-pro-vs-gpt-5-1'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

@@ -5,6 +5,7 @@ import Script from 'next/script'
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
@@ -115,6 +116,12 @@ export default function SolutionsPage() {
           {/* HERO SECTION */}
           {/* ----------------------------- */}
           <section className="py-20 px-6 md:px-12 text-center">
+            <div className="max-w-6xl mx-auto mb-8">
+              <Breadcrumbs 
+                title="Solutions" 
+                type="simple"
+              />
+            </div>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

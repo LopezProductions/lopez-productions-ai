@@ -1,7 +1,10 @@
 import React from 'react'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
 import Link from 'next/link'
+import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -27,6 +30,7 @@ export const metadata: Metadata = {
 }
 
 export default function HowToBuildPortfolio() {
+  const post = allInsights.find(p => p.slug === 'how-to-build-a-portfolio-website')
   const steps = [
     {
       number: 1,
@@ -72,6 +76,16 @@ export default function HowToBuildPortfolio() {
 
   return (
     <>
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'how-to-build-a-portfolio-website'}
+        publishedDate={post?.publishedDate || '2025-01-28'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'how-to-build-a-portfolio-website'}`}
+        faqs={post?.faqs}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -100,9 +114,14 @@ export default function HowToBuildPortfolio() {
         
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
+            <Breadcrumbs 
+              title="How to Build a Portfolio Website That Actually Gets You Clients (2025 Guide)" 
+              slug="how-to-build-a-portfolio-website" 
+            />
+            
             <div className="mb-6">
-              <Link href="/blog" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
-                ← Back to Blog
+              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+                ← Back to Playbook
               </Link>
             </div>
             

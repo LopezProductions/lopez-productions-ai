@@ -1,7 +1,10 @@
 import React from 'react'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
 import Link from 'next/link'
+import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -27,15 +30,33 @@ export const metadata: Metadata = {
 }
 
 export default function DesignTechnicalJargon() {
+  const post = allInsights.find(p => p.slug === 'design-technical-jargon-explained')
+  
   return (
-    <main className="min-h-screen bg-brand-black">
-      <Navigation />
-      
-      <section className="pt-20 pb-16 px-6 md:px-12">
+    <>
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'design-technical-jargon-explained'}
+        publishedDate={post?.publishedDate || '2025-11-21'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'design-technical-jargon-explained'}`}
+        faqs={post?.faqs}
+      />
+      <main className="min-h-screen bg-brand-black">
+        <Navigation />
+        
+        <section className="pt-20 pb-16 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
+          <Breadcrumbs 
+            title="Design Technical Jargon Explained — A Beginner's Guide for Content Creators" 
+            slug="design-technical-jargon-explained" 
+          />
+          
           <div className="mb-6">
-            <Link href="/blog" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
-              ← Back to Blog
+            <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
+              ← Back to Playbook
             </Link>
           </div>
           
@@ -464,6 +485,7 @@ export default function DesignTechnicalJargon() {
 
       <Footer />
     </main>
+    </>
   )
 }
 

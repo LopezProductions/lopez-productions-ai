@@ -3,6 +3,8 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 
 export const metadata = {
   title: 'Stop Chasing Every AI Tool — Learn Perplexity, ChatGPT, and Gemini (2025 Guide) | Lopez Productions',
@@ -27,38 +29,19 @@ export const metadata = {
 }
 
 export default function StopChasingAITools() {
+  const post = allInsights.find(p => p.slug === 'stop-chasing-ai-tools')
+  
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Stop Chasing Every New AI Tool — Here's What's Actually Worth Learning (Perplexity AI / ChatGPT / Gemini)",
-            "description": "Most new AI tools aren't worth your time. Here's my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.",
-            "author": {
-              "@type": "Person",
-              "name": "Reuben Lopez",
-              "url": "https://lopezproductions.ai"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Lopez Productions",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://lopezproductions.ai/transparent_logo_lp.png"
-              }
-            },
-            "datePublished": "2025-11-12",
-            "dateModified": "2025-11-12",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://lopezproductions.ai/playbook/stop-chasing-ai-tools"
-            }
-          })
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'stop-chasing-ai-tools'}
+        publishedDate={post?.publishedDate || '2025-11-12'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'stop-chasing-ai-tools'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

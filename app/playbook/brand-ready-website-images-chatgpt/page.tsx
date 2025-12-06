@@ -5,6 +5,8 @@ import type { Metadata } from 'next'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 
 export const metadata: Metadata = {
   title: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1 | Lopez Productions',
@@ -33,38 +35,19 @@ export const metadata: Metadata = {
 }
 
 export default function BrandReadyWebsiteImages() {
+  const post = allInsights.find(p => p.slug === 'brand-ready-website-images-chatgpt')
+  
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1',
-            description:
-              'A beginner-friendly guide to generating clean, consistent, brand-ready images using ChatGPT — without messy visuals or design headaches.',
-            author: {
-              '@type': 'Person',
-              name: 'Reuben Lopez',
-              url: 'https://lopezproductions.ai',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Lopez Productions',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://lopezproductions.ai/transparent_logo_lp.png',
-              },
-            },
-    datePublished: '2025-11-27',
-    dateModified: '2025-11-27',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://lopezproductions.ai/playbook/brand-ready-website-images-chatgpt',
-            },
-          }),
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'brand-ready-website-images-chatgpt'}
+        publishedDate={post?.publishedDate || '2025-11-27'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'brand-ready-website-images-chatgpt'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

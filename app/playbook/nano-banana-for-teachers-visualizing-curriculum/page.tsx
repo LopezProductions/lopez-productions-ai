@@ -3,6 +3,8 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -32,82 +34,19 @@ export const metadata: Metadata = {
 }
 
 export default function NanoBananaForTeachers() {
+  const post = allInsights.find(p => p.slug === 'nano-banana-for-teachers-visualizing-curriculum')
+  
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'How to Use Nano Banana for Teachers: Visualizing the Curriculum (Step-by-Step Guide)',
-            description:
-              'A practical guide for teachers on using Nano Banana Pro to create clean, accurate, classroom-ready visual materials for science, history, and English.',
-            author: {
-              '@type': 'Person',
-              name: 'Reuben Lopez',
-              url: 'https://lopezproductions.ai',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Lopez Productions',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://lopezproductions.ai/transparent_logo_lp.png',
-              },
-            },
-            datePublished: '2025-11-28',
-            dateModified: '2025-11-28',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://lopezproductions.ai/playbook/nano-banana-for-teachers-visualizing-curriculum',
-            },
-          }),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'How can teachers use Nano Banana Pro in the classroom?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Teachers can use Nano Banana Pro to visualize complex curriculum concepts. Key use cases include generating 3D "textbook style" diagrams for biology, creating photorealistic historical re-enactments for social studies, and generating visual writing prompts for creative writing classes.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What is the best Nano Banana prompt for science diagrams?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'For clear science visuals, use the "Textbook Test" prompt structure. Example: "A high-quality 3D cutaway educational render of a [Subject]. brightly colored, clean white background, textbook style, high definition, 8k, labeled parts." This forces the AI to focus on clarity over artistic flair.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How can I use AI images to teach history?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Use Nano Banana to create "Time Machine" visuals. A recommended prompt formula is: "Photorealistic cinematic shot of [Location/Event], year [Year]. [Specific Details], moody lighting, historically accurate." Ask students to critique the image for historical accuracy to build critical thinking skills.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Is Nano Banana Pro safe for K-12 education?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Nano Banana is often preferred for education because it adheres to strict safety guidelines and heavy NSFW filtering. To ensure extra safety, teachers should add keywords like "family friendly" or "educational" to their prompts to provide additional context for the AI.',
-                },
-              },
-            ],
-          }),
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'nano-banana-for-teachers-visualizing-curriculum'}
+        publishedDate={post?.publishedDate || '2025-11-28'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'nano-banana-for-teachers-visualizing-curriculum'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

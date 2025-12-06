@@ -1,6 +1,7 @@
 import Script from "next/script"
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
+import Breadcrumbs from "../../components/Breadcrumbs"
 
 export const metadata = {
   title: "Contact | Lopez Productions",
@@ -38,6 +39,11 @@ export default function ContactPage() {
 
       <div className="px-6 md:px-12 pt-24 pb-20">
         <div className="max-w-4xl mx-auto">
+        <Breadcrumbs 
+          title="Contact" 
+          type="simple"
+        />
+        
         {/* Header */}
         <p className="text-xs uppercase tracking-[0.2em] text-brand-gold mb-3">
           Contact

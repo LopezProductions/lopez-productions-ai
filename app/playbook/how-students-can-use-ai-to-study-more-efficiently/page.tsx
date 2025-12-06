@@ -4,7 +4,9 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
 import StudentAssignmentDownloadForm from '../../../components/StudentAssignmentDownloadForm'
+import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -34,82 +36,19 @@ export const metadata: Metadata = {
 }
 
 export default function HowStudentsCanUseAIToStudyMoreEfficiently() {
+  const post = allInsights.find(p => p.slug === 'how-students-can-use-ai-to-study-more-efficiently')
+  
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'How Students Can Use AI to Study More Efficiently',
-            description:
-              'A simple guide to using AI tools for smarter studying, better organization, and faster research—without breaking academic rules or relying on AI to write your papers.',
-            author: {
-              '@type': 'Person',
-              name: 'Reuben Lopez',
-              url: 'https://lopezproductions.ai',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Lopez Productions',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://lopezproductions.ai/transparent_logo_lp.png',
-              },
-            },
-            datePublished: '2025-11-29',
-            dateModified: '2025-11-29',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://lopezproductions.ai/playbook/how-students-can-use-ai-to-study-more-efficiently',
-            },
-          }),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'How can students use AI to study efficiently without cheating?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'The safest and most effective way to use AI is to treat it like a tutor. Students can use AI to break down complex topics, summarize long lectures, generate practice quiz questions, and brainstorm essay outlines without asking the AI to write the actual paper.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What is the best AI tool for summarizing YouTube lectures?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Gemini is highly effective for breaking down video content. By pasting a YouTube link into Gemini and asking for a study guide or summary, students can get a high-level overview of 1-2 hour lectures in minutes, allowing them to focus on key concepts rather than rewatching the entire video.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Can AI summarize PDF textbooks and articles?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Yes. Adobe Acrobat\'s new AI features allow students to upload PDFs (textbooks, journals, case studies) and ask specific questions. You can ask the AI to summarize chapters, extract key definitions, or explain specific sections in simpler language.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How can I use Notion and AI to organize my semester?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'To organize a semester, create a master folder in Notion with subfolders for each class (containing assignments, deadlines, and reading lists). Pair this with ChatGPT by creating a specific "Class Workspace" conversation for each course to store prompts and summaries, keeping all study materials retrievable instantly.',
-                },
-              },
-            ],
-          }),
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'how-students-can-use-ai-to-study-more-efficiently'}
+        publishedDate={post?.publishedDate || '2025-11-29'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'how-students-can-use-ai-to-study-more-efficiently'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-background">

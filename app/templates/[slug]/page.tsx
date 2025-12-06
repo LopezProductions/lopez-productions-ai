@@ -3,6 +3,7 @@ import Script from 'next/script'
 import type { Metadata } from 'next'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 import { notFound } from 'next/navigation'
 
 const TEMPLATE_DATA: Record<
@@ -283,6 +284,12 @@ export default async function TemplatePage({
           
           <section className="pt-20 pb-16 px-6 md:px-12">
             <div className="max-w-4xl mx-auto">
+              <Breadcrumbs 
+                title={template.title}
+                slug={slug}
+                type="template"
+              />
+              
               <p className="text-xs uppercase tracking-[0.2em] text-brand-gold mb-3">
                 {template.category}
               </p>

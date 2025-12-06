@@ -3,6 +3,8 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 
 export const metadata = {
   title: 'Why Your First Priority Isn\'t Automation — It\'s Your Brand System | Lopez Productions',
@@ -27,38 +29,19 @@ export const metadata = {
 }
 
 export default function BrandSystemFirst() {
+  const post = allInsights.find(p => p.slug === 'why-your-first-priority-isnt-automation-its-your-brand-system')
+  
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Why Your First Priority Isn't Automation — It's Your Brand System",
-            "description": "Most people jump into AI thinking automation is the first step. But if you're a creator or small business, the real problem is that your brand system isn't set up yet.",
-            "author": {
-              "@type": "Person",
-              "name": "Reuben Lopez",
-              "url": "https://lopezproductions.ai"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Lopez Productions",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://lopezproductions.ai/transparent_logo_lp.png"
-              }
-            },
-            "datePublished": "2025-11-13",
-            "dateModified": "2025-11-13",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://lopezproductions.ai/playbook/why-your-first-priority-isnt-automation-its-your-brand-system"
-            }
-          })
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'why-your-first-priority-isnt-automation-its-your-brand-system'}
+        publishedDate={post?.publishedDate || '2025-11-13'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'why-your-first-priority-isnt-automation-its-your-brand-system'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

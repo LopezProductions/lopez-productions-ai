@@ -4,6 +4,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'About | Lopez Productions',
@@ -60,6 +61,11 @@ export default function AboutPage() {
           
           <div className="px-6 md:px-12 py-20">
             <div className="max-w-4xl mx-auto">
+              <Breadcrumbs 
+                title="About" 
+                type="simple"
+              />
+              
               {/* Header */}
               <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">
                 About

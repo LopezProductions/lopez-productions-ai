@@ -3,6 +3,8 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 
 export const metadata = {
   title: 'Notion + Make.com: The Ultimate Automation Stack for Freelancers | Lopez Productions',
@@ -27,38 +29,19 @@ export const metadata = {
 }
 
 export default function NotionMakeAutomationGuide() {
+  const post = allInsights.find(p => p.slug === 'notion-make-automation-guide')
+  
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Notion + Make.com: The Ultimate Automation Stack for Freelancers",
-            "description": "Step-by-step guide to connecting Notion databases with Make.com workflows. Automate client intake, project tracking, and reporting for freelancers.",
-            "author": {
-              "@type": "Person",
-              "name": "Reuben Lopez",
-              "url": "https://lopezproductions.ai"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Lopez Productions",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://lopezproductions.ai/transparent_logo_lp.png"
-              }
-            },
-            "datePublished": "2025-11-09",
-            "dateModified": "2025-11-14",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://lopezproductions.ai/playbook/notion-make-automation-guide"
-            }
-          })
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'notion-make-automation-guide'}
+        publishedDate={post?.publishedDate || '2025-11-09'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'notion-make-automation-guide'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

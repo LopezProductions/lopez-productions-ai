@@ -4,8 +4,10 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
 import StudentAssignmentDownloadForm from '../../../components/StudentAssignmentDownloadForm'
 import Related from '../../../components/Related'
+import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -35,38 +37,19 @@ export const metadata: Metadata = {
 }
 
 export default function Gemini3ProVsClaude45ResearchWorkflow() {
+  const post = allInsights.find(p => p.slug === 'gemini-3-vs-claude-4-5-research-workflow')
+  
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'Gemini 3 Pro vs. Claude 4.5: The Ultimate Workflow for Research & Academic Writing',
-            description:
-              'A practical comparison of Gemini 3 Pro and Claude 4.5 for academic research and writing, with a hybrid workflow that leverages each model\'s strengths for better results.',
-            author: {
-              '@type': 'Person',
-              name: 'Reuben Lopez',
-              url: 'https://lopezproductions.ai',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Lopez Productions',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://lopezproductions.ai/transparent_logo_lp.png',
-              },
-            },
-            datePublished: '2025-12-01',
-            dateModified: '2025-12-01',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://lopezproductions.ai/playbook/gemini-3-vs-claude-4-5-research-workflow',
-            },
-          }),
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'gemini-3-vs-claude-4-5-research-workflow'}
+        publishedDate={post?.publishedDate || '2025-12-01'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'gemini-3-vs-claude-4-5-research-workflow'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-background">

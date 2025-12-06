@@ -5,11 +5,13 @@ import type { Metadata } from 'next'
 import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 
 export const metadata: Metadata = {
-  title: 'Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions',
+  title: "Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions",
   description:
-    'Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.',
+    "Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.",
   keywords:
     'Zapier, npm breach, automation security, supply-chain attack, Shai Hulud malware, Zapier automations safety',
   alternates: {
@@ -18,53 +20,34 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/zapiers-npm-account-hacked',
-    title: 'Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions',
+    title: "Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions",
     description:
-      'Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.',
+      "Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.",
     images: ['/zapier-breach.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions',
+    title: "Zapier's NPM Account Hacked — Should You Be Worried About Your Automations? | Lopez Productions",
     description:
-      'Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.',
+      "Zapier's NPM breach infected several packages with self-propagating malware. Here's what happened, who's at risk, and why everyday automations are still safe.",
     images: ['/zapier-breach.png'],
   },
 }
 
 export default function ZapierNpmAccountHacked() {
+  const post = allInsights.find(p => p.slug === 'zapiers-npm-account-hacked')
+  
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'Zapier’s NPM Account Hacked — Should You Be Worried About Your Automations?',
-            description:
-              'Zapier’s NPM breach infected several packages with self-propagating malware. Here’s what happened, who’s at risk, and why everyday automations are still safe.',
-            author: {
-              '@type': 'Person',
-              name: 'Reuben Lopez',
-              url: 'https://lopezproductions.ai',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Lopez Productions',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://lopezproductions.ai/transparent_logo_lp.png',
-              },
-            },
-            datePublished: '2025-11-26',
-            dateModified: '2025-11-26',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://lopezproductions.ai/playbook/zapiers-npm-account-hacked',
-            },
-          }),
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'zapiers-npm-account-hacked'}
+        publishedDate={post?.publishedDate || '2025-11-26'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'zapiers-npm-account-hacked'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

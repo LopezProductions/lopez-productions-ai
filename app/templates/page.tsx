@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { Zap, Palette, Smartphone, Wrench, RefreshCw, Shield } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
 
 // Helper function to map slug to image filename
 function getTemplateImage(slug: string): string {
@@ -111,6 +112,14 @@ export default function TemplatesPage() {
           {/* 1. Hero Section */}
           <section className="pt-20 pb-16 px-6 md:px-12">
             <div className="max-w-6xl mx-auto">
+              <Breadcrumbs 
+                title="Templates" 
+                items={[
+                  { name: 'Home', href: '/' },
+                  { name: 'Templates', href: null }
+                ]}
+              />
+              
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-6">
                 Template Library
               </h1>

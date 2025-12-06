@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Script from 'next/script'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
 import PackageRequestForm from '../../components/PackageRequestForm'
 import PricingFAQ from '../../components/PricingFAQ'
 import { motion } from 'framer-motion'
@@ -345,6 +346,12 @@ export default function PricingPage() {
           {/* HERO SECTION */}
           {/* ----------------------------- */}
           <section className="py-20 px-6 md:px-12 text-center">
+            <div className="max-w-6xl mx-auto mb-8">
+              <Breadcrumbs 
+                title="Pricing" 
+                type="simple"
+              />
+            </div>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

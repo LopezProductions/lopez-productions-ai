@@ -1,3 +1,8 @@
+export interface FAQ {
+  question: string
+  answer: string
+}
+
 export interface Insight {
   slug: string
   title: string
@@ -6,6 +11,8 @@ export interface Insight {
   category: string
   publishedDate: string
   coverImage?: string
+  modifiedDate?: string
+  faqs?: FAQ[]
 }
 
 export const allInsights: Insight[] = [
@@ -53,6 +60,24 @@ export const allInsights: Insight[] = [
     category: 'AI Workflows',
     publishedDate: '2025-11-29',
     coverImage: '/ai-student-study.png',
+    faqs: [
+      {
+        question: 'How can students use AI to study efficiently without cheating?',
+        answer: 'The safest and most effective way to use AI is to treat it like a tutor. Students can use AI to break down complex topics, summarize long lectures, generate practice quiz questions, and brainstorm essay outlines without asking the AI to write the actual paper.',
+      },
+      {
+        question: 'What is the best AI tool for summarizing YouTube lectures?',
+        answer: 'Gemini is highly effective for breaking down video content. By pasting a YouTube link into Gemini and asking for a study guide or summary, students can get a high-level overview of 1-2 hour lectures in minutes, allowing them to focus on key concepts rather than rewatching the entire video.',
+      },
+      {
+        question: 'Can AI summarize PDF textbooks and articles?',
+        answer: 'Yes. Adobe Acrobat\'s new AI features allow students to upload PDFs (textbooks, journals, case studies) and ask specific questions. You can ask the AI to summarize chapters, extract key definitions, or explain specific sections in simpler language.',
+      },
+      {
+        question: 'How can I use Notion and AI to organize my semester?',
+        answer: 'To organize a semester, create a master folder in Notion with subfolders for each class (containing assignments, deadlines, and reading lists). Pair this with ChatGPT by creating a specific "Class Workspace" conversation for each course to store prompts and summaries, keeping all study materials retrievable instantly.',
+      },
+    ],
   },
   {
     slug: 'nano-banana-for-teachers-visualizing-curriculum',
@@ -62,6 +87,24 @@ export const allInsights: Insight[] = [
     category: 'AI Workflows',
     publishedDate: '2025-11-28',
     coverImage: '/nano-banana-for-teachers.png',
+    faqs: [
+      {
+        question: 'How can teachers use Nano Banana Pro in the classroom?',
+        answer: 'Teachers can use Nano Banana Pro to visualize complex curriculum concepts. Key use cases include generating 3D "textbook style" diagrams for biology, creating photorealistic historical re-enactments for social studies, and generating visual writing prompts for creative writing classes.',
+      },
+      {
+        question: 'What is the best Nano Banana prompt for science diagrams?',
+        answer: 'For clear science visuals, use the "Textbook Test" prompt structure. Example: "A high-quality 3D cutaway educational render of a [Subject]. brightly colored, clean white background, textbook style, high definition, 8k, labeled parts." This forces the AI to focus on clarity over artistic flair.',
+      },
+      {
+        question: 'How can I use AI images to teach history?',
+        answer: 'Use Nano Banana to create "Time Machine" visuals. A recommended prompt formula is: "Photorealistic cinematic shot of [Location/Event], year [Year]. [Specific Details], moody lighting, historically accurate." Ask students to critique the image for historical accuracy to build critical thinking skills.',
+      },
+      {
+        question: 'Is Nano Banana Pro safe for K-12 education?',
+        answer: 'Nano Banana is often preferred for education because it adheres to strict safety guidelines and heavy NSFW filtering. To ensure extra safety, teachers should add keywords like "family friendly" or "educational" to their prompts to provide additional context for the AI.',
+      },
+    ],
   },
   {
     slug: 'brand-ready-website-images-chatgpt',

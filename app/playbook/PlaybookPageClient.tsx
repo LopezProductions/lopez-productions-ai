@@ -3,6 +3,7 @@
 import React from 'react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { allInsights } from './insights-data'
@@ -66,6 +67,15 @@ export default function PlaybookPageClient() {
 
       {/* Hero */}
       <section className="pt-24 pb-12 px-6 md:px-12 text-center">
+        <div className="max-w-6xl mx-auto mb-8">
+          <Breadcrumbs 
+            title="Playbook" 
+            items={[
+              { name: 'Home', href: '/' },
+              { name: 'Playbook', href: null }
+            ]}
+          />
+        </div>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

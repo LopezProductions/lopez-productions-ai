@@ -3,6 +3,8 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 
 export const metadata = {
   title: 'How I Use AI to Organize My Week Inside Notion | Lopez Productions',
@@ -27,38 +29,19 @@ export const metadata = {
 }
 
 export default function AINotionWeeklyOrganization() {
+  const post = allInsights.find(p => p.slug === 'ai-notion-weekly-organization')
+  
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "How I Use AI to Organize My Week Inside Notion",
-            "description": "A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.",
-            "author": {
-              "@type": "Person",
-              "name": "Reuben Lopez",
-              "url": "https://lopezproductions.ai"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Lopez Productions",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://lopezproductions.ai/transparent_logo_lp.png"
-              }
-            },
-            "datePublished": "2025-11-16",
-            "dateModified": "2025-11-16",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://lopezproductions.ai/playbook/ai-notion-weekly-organization"
-            }
-          })
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'ai-notion-weekly-organization'}
+        publishedDate={post?.publishedDate || '2025-11-16'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'ai-notion-weekly-organization'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

@@ -3,6 +3,8 @@ import Navigation from '../../../components/Navigation'
 import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
+import { allInsights } from '../insights-data'
 
 export const metadata = {
   title: 'How To Build a Simple Automation System for Your Business (Beginner-Friendly Guide) | Lopez Productions',
@@ -27,38 +29,19 @@ export const metadata = {
 }
 
 export default function BuildSimpleBusinessAutomationSystem() {
+  const post = allInsights.find(p => p.slug === 'build-simple-business-automation-system')
+  
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "How To Build a Simple Automation System for Your Business (Beginner-Friendly Guide)",
-            "description": "A plain-English guide to automating your business without overthinking it — using simple systems, AI tools, and lightweight workflows that save time every single week.",
-            "author": {
-              "@type": "Person",
-              "name": "Reuben Lopez",
-              "url": "https://lopezproductions.ai"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Lopez Productions",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://lopezproductions.ai/transparent_logo_lp.png"
-              }
-            },
-            "datePublished": "2025-11-15",
-            "dateModified": "2025-11-15",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://lopezproductions.ai/playbook/build-simple-business-automation-system"
-            }
-          })
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'build-simple-business-automation-system'}
+        publishedDate={post?.publishedDate || '2025-11-15'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'build-simple-business-automation-system'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-brand-black">

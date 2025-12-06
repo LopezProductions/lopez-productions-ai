@@ -4,10 +4,12 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
 import Related from '../../../components/Related'
 import BrandSheetCheckoutButton from '../../../components/BrandSheetCheckoutButton'
 import StudentDashboardCheckoutButton from '../../../components/StudentDashboardCheckoutButton'
 import CreatorSystemOSCheckoutButton from '../../../components/CreatorSystemOSCheckoutButton'
+import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -30,38 +32,19 @@ export const metadata: Metadata = {
 }
 
 export default function GPT51VsGemini3CreativeWorkflows() {
+  const post = allInsights.find(p => p.slug === 'gpt-5-1-vs-gemini-3-creative-workflows')
+  
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'GPT-5.1 vs Gemini 3: Which AI Model Is Better for Real Creative Workflows?',
-            description:
-              'A practical breakdown of GPT-5.1 vs. Gemini 3 written specifically for creators, students, small teams, and automation-focused professionals. Covers workflow reliability, PDF handling, creativity, citation accuracy, and tool integrations like Notion and Make.com.',
-            author: {
-              '@type': 'Person',
-              name: 'Reuben Lopez',
-              url: 'https://lopezproductions.ai',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Lopez Productions',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://lopezproductions.ai/transparent_logo_lp.png',
-              },
-            },
-            datePublished: '2025-12-03',
-            dateModified: '2025-12-03',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://lopezproductions.ai/playbook/gpt-5-1-vs-gemini-3-creative-workflows',
-            },
-          }),
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'gpt-5-1-vs-gemini-3-creative-workflows'}
+        publishedDate={post?.publishedDate || '2025-12-03'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'gpt-5-1-vs-gemini-3-creative-workflows'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-background">

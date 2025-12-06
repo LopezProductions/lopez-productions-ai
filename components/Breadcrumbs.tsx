@@ -4,7 +4,9 @@ import { pillarMappings } from '../app/playbook/insights-data'
 
 interface BreadcrumbsProps {
   title: string
-  slug: string
+  slug?: string
+  type?: 'playbook' | 'template' | 'simple'
+  items?: Array<{ name: string; href: string | null }>
 }
 
 const getPillarFromSlug = (slug: string): { name: string; path: string } | null => {
@@ -37,23 +39,49 @@ const getPillarFromSlug = (slug: string): { name: string; path: string } | null 
   return null
 }
 
-export default function Breadcrumbs({ title, slug }: BreadcrumbsProps) {
-  const pillar = getPillarFromSlug(slug)
-  const isPillarPage = slug === 'creator-systems' || slug === 'ai-workflows' || slug === 'automation-systems'
-  
-  // Build breadcrumb items
-  const items: Array<{ name: string; href: string | null }> = [
-    { name: 'Home', href: '/' },
-    { name: 'Playbook', href: '/playbook' },
-  ]
+export default function Breadcrumbs({ title, slug, type, items: customItems }: BreadcrumbsProps) {
+  let items: Array<{ name: string; href: string | null }> = []
 
-  if (pillar) {
-    items.push({ name: pillar.name, href: `/playbook/${pillar.path}` })
-  }
+  // If custom items are provided, use them
+  if (customItems) {
+    items = customItems
+  } else if (type === 'template' && slug) {
+    // Template pages: Home > Templates > Template Name
+    items = [
+      { name: 'Home', href: '/' },
+      { name: 'Templates', href: '/templates' },
+      { name: title, href: null }
+    ]
+  } else if (type === 'simple') {
+    // Simple pages: Home > Page Name
+    items = [
+      { name: 'Home', href: '/' },
+      { name: title, href: null }
+    ]
+  } else if (slug) {
+    // Playbook pages (default behavior)
+    const pillar = getPillarFromSlug(slug)
+    const isPillarPage = slug === 'creator-systems' || slug === 'ai-workflows' || slug === 'automation-systems'
+    
+    items = [
+      { name: 'Home', href: '/' },
+      { name: 'Playbook', href: '/playbook' },
+    ]
 
-  // For blog posts, add the post title (no link)
-  if (!isPillarPage) {
-    items.push({ name: title, href: null })
+    if (pillar) {
+      items.push({ name: pillar.name, href: `/playbook/${pillar.path}` })
+    }
+
+    // For blog posts, add the post title (no link)
+    if (!isPillarPage) {
+      items.push({ name: title, href: null })
+    }
+  } else {
+    // Fallback: just Home > Title
+    items = [
+      { name: 'Home', href: '/' },
+      { name: title, href: null }
+    ]
   }
 
   // Build JSON-LD schema

@@ -4,8 +4,10 @@ import Footer from '../../../components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import PostSchema from '../../../components/PostSchema'
 import Related from '../../../components/Related'
 import BrandSheetCheckoutButton from '../../../components/BrandSheetCheckoutButton'
+import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -35,38 +37,19 @@ export const metadata: Metadata = {
 }
 
 export default function TheWorstThingAboutGemini3Pro() {
+  const post = allInsights.find(p => p.slug === 'the-worst-thing-about-gemini-3-pro')
+  
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'The Worst Thing About Gemini 3 Pro (That No One Talks About)',
-            description:
-              'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
-            author: {
-              '@type': 'Person',
-              name: 'Reuben Lopez',
-              url: 'https://lopezproductions.ai',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Lopez Productions',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://lopezproductions.ai/transparent_logo_lp.png',
-              },
-            },
-            datePublished: '2025-12-02',
-            dateModified: '2025-12-02',
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://lopezproductions.ai/playbook/the-worst-thing-about-gemini-3-pro',
-            },
-          }),
-        }}
+      <PostSchema
+        title={post?.title || ''}
+        description={post?.excerpt || ''}
+        slug={post?.slug || 'the-worst-thing-about-gemini-3-pro'}
+        publishedDate={post?.publishedDate || '2025-12-02'}
+        modifiedDate={post?.modifiedDate}
+        coverImage={post?.coverImage}
+        canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'the-worst-thing-about-gemini-3-pro'}`}
+        faqs={post?.faqs}
       />
 
       <main className="min-h-screen bg-background">

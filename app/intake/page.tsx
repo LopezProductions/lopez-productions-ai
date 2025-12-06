@@ -4,6 +4,7 @@ import React, { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
 import { motion } from 'framer-motion'
 import { Info } from 'lucide-react'
 import { predefinedPackages } from '../data/packages'
@@ -186,6 +187,11 @@ function IntakePageContent() {
       
       <section className="py-20 px-6 md:px-12">
         <div className="container mx-auto max-w-2xl">
+          <Breadcrumbs 
+            title="Intake Form" 
+            type="simple"
+          />
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
