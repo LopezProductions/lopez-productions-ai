@@ -141,15 +141,6 @@ export const templates: Template[] = [
     price: 49,
     thumbnail: '/notion-dashboard.png',
   },
-  {
-    id: 'seo-geo-aeo-template',
-    slug: 'seo-geo-aeo-template',
-    title: 'SEO → GEO → AEO Content Structure Template',
-    category: 'Docs & Architecture',
-    description: 'Content structure template optimized for SEO, Generative Engine Optimization, and Answer Engine Optimization.',
-    price: 49,
-    thumbnail: '/notion-dashboard.png',
-  },
 
   // AI Workflow Tools
   {
