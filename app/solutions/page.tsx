@@ -6,23 +6,34 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/Breadcrumbs'
+import PackageRequestForm from '../../components/PackageRequestForm'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Code, BookOpen, Zap, Bot, LayoutGrid, FastForward, Layers, TrendingUp, Target, Rocket } from 'lucide-react'
+
+interface PackageData {
+  selectedServiceIds: string[]
+  bundleIds: string[]
+  total: number
+  customNotes: string
+  packageSelection: string
+}
 
 export default function SolutionsPage() {
   const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null)
+  const [isFormOpen, setIsFormOpen] = useState(false)
+  const [packageData, setPackageData] = useState<PackageData | null>(null)
 
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'AI Brand Systems & Creative Workflows',
+    name: 'Technical Solutions for Founders Building AI Products',
     provider: {
       '@type': 'Organization',
       name: 'Lopez Productions',
       url: 'https://lopezproductions.ai',
     },
     description:
-      'AI systems, website templates, content engines, and brand workflows designed for creators, founders, and small businesses.',
+      'Your product deserves a frontend that feels fast, clean, and engineered with intention — paired with systems that reduce friction across your operations.',
     areaServed: 'Worldwide',
     offers: {
       '@type': 'Offer',
@@ -36,49 +47,60 @@ export default function SolutionsPage() {
     setOpenFAQIndex(openFAQIndex === i ? null : i)
   }
 
+  const handleRequestBuildSlot = () => {
+    setPackageData({
+      selectedServiceIds: ['growth-wrapper'],
+      bundleIds: [],
+      total: 2800,
+      customNotes: 'Request Build Slot - Growth Wrapper',
+      packageSelection: 'Growth Wrapper — Marketing Site',
+    })
+    setIsFormOpen(true)
+  }
+
   const benefits = [
     {
-      title: 'Less Busywork, More Output',
-      body: 'Save 10–20 hours a week and focus on the work that actually pays you.',
+      title: 'Faster Iteration',
+      body: 'Clean architecture reduces engineering bottlenecks.',
     },
     {
-      title: "A Website You're Proud to Share",
-      body: 'No more embarrassment. No more half-finished pages. Just a site that sells for you.',
+      title: 'Stronger Product Story',
+      body: 'Your marketing site, docs, UI, and flows all align into one cohesive system.',
     },
     {
-      title: 'Operate Like a Real Brand',
-      body: 'Your digital presence becomes professional, cohesive, and authority-building.',
+      title: 'Better Discoverability',
+      body: 'GEO + AEO-informed structures help AI engines understand your product context.',
     },
     {
-      title: 'Launch Faster Than Your Competitors',
-      body: 'A polished portfolio is a real competitive advantage.',
+      title: 'Operational Clarity',
+      body: 'Automation removes busywork so teams can focus on building.',
     },
     {
-      title: 'Scale Without Hiring',
-      body: 'Automation becomes your first employee — silent, reliable, efficient.',
+      title: 'Designed for Builders',
+      body: 'No fluff, no bloat, no drag-and-drop mess. Just systems engineered for speed.',
     },
   ]
 
   const faqs = [
     {
-      question: 'How fast can I launch my website?',
-      answer: 'Starter sites in 3–5 days. Larger sites in 5–10 days. Templates can go live in 48 hours.',
+      question: 'How fast can we ship a frontend?',
+      answer: 'Most builds ship in 1–3 weeks depending on scope.',
     },
     {
-      question: 'Do I need to know any tech?',
-      answer: 'No — everything is handled for you. You log in and use it.',
+      question: 'Do you work with very early-stage teams?',
+      answer: 'Yes — most clients come pre-seed or bootstrapped.',
     },
     {
-      question: 'Can you help me choose a package?',
-      answer: "Yes — book a call and I'll walk you through the best fit.",
+      question: 'Do you handle backend logic?',
+      answer: 'We build the interface layer. You (or your engineer) connect the backend.',
     },
     {
-      question: 'Do these systems work for non-creators?',
-      answer: 'Absolutely. Consultants, freelancers, coaches, agencies, and small businesses use them every day.',
+      question: 'Can systems integrate with our existing stack?',
+      answer: 'Yes — we support Supabase, Firebase, Stripe, GitHub, Notion, PostHog, Discord, etc.',
     },
     {
-      question: 'Do you offer fully custom builds?',
-      answer: 'Yes. If you need something beyond the listed packages, we can scope it out during your intro call.',
+      question: 'Do you offer fully custom architectures?',
+      answer: 'Yes — see the GEO Build and AEO Ecosystem tiers.',
     },
   ]
 
@@ -128,7 +150,7 @@ export default function SolutionsPage() {
               transition={{ duration: 0.7 }}
               className="text-5xl md:text-6xl font-serif font-bold text-text-primary mb-6"
             >
-              Build Your Website. Automate Your Workflow. Scale Your Business.
+              Technical Solutions for Founders Building AI Products
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -136,7 +158,7 @@ export default function SolutionsPage() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-xl md:text-2xl text-accent mt-6 max-w-3xl mx-auto"
             >
-              Your digital identity should work for you — not slow you down.
+              Your product deserves a frontend that feels fast, clean, and engineered with intention — paired with systems that reduce friction across your operations.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -144,19 +166,19 @@ export default function SolutionsPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg text-text-secondary mt-6 max-w-3xl mx-auto leading-relaxed"
             >
-              Lopez Productions helps creators, consultants, and small teams launch premium websites, streamline operations, and build systems that save 10+ hours a week.
+              Lopez Productions helps AI startups and solo builders ship better interfaces, streamline workflows, and operate with real startup velocity.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-8 flex flex-wrap gap-4 justify-center"
+              className="mt-10 flex flex-col sm:flex-row justify-center gap-4"
             >
               <Link
                 href="/pricing"
                 className="btn-primary px-10 py-4 text-lg"
               >
-                Explore Website Packages →
+                Explore Pricing →
               </Link>
               <Link
                 href="https://calendly.com/reuben-lopezproductions/intro"
@@ -164,13 +186,13 @@ export default function SolutionsPage() {
                 rel="noopener noreferrer"
                 className="btn-outline px-10 py-4 text-lg"
               >
-                Schedule a 15-min Call →
+                Schedule a Technical Call →
               </Link>
             </motion.div>
           </section>
 
           {/* ===================================================================== */}
-          {/* SECTION 1 — WEBSITE & PORTFOLIO BUILDS */}
+          {/* SECTION 1 — INTERFACE SYSTEMS (FRONTEND) */}
           {/* ===================================================================== */}
           <section className="py-16 px-6 md:px-12 bg-surface">
             <div className="max-w-6xl mx-auto">
@@ -179,29 +201,28 @@ export default function SolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl font-serif text-text-primary text-center mb-4"
+                className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
               >
-                Custom Websites That Make You Look Like a $10k Brand
+                <Code className="w-8 h-8 text-brand-gold" />
+                1. Interface Systems (Frontend)
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-text-secondary text-center mb-4 max-w-3xl mx-auto"
+                className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
               >
-                Whether you're a creator, consultant, freelancer, or small business, you need a website that builds authority, earns trust, and helps you close clients faster.
+                Clean, Fast, Modern Frontends for AI Tools and SaaS
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm"
+                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto"
               >
-                No bloated builders.<br />
-                No agency timelines.<br />
-                Just clean, fast, modern designs built on Next.js — delivered with clarity and zero overwhelm.
+                We design and build the interface layer: dashboards, landing pages, pricing pages, and UI systems optimized for speed, clarity, and iteration.
               </motion.p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -213,32 +234,24 @@ export default function SolutionsPage() {
                   className="bg-background p-8 rounded-xl border border-border"
                 >
                   <h3 className="text-xl font-serif font-bold text-text-primary mb-4">
-                    Perfect for:
+                    Best For:
                   </h3>
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Personal brands</span>
+                      <span>Founders shipping an MVP</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Freelancers & coaches</span>
+                      <span>SaaS products needing a conversion-focused landing page</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Creative professionals</span>
+                      <span>Tools that need visual structure or improved UX</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Small businesses</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Digital entrepreneurs</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Consultants & agencies</span>
+                      <span>Indie hackers who want a polished, credible product</span>
                     </li>
                   </ul>
                 </motion.div>
@@ -256,31 +269,35 @@ export default function SolutionsPage() {
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Custom responsive design</span>
+                      <span>Custom React or Next.js architecture</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>1–10 pages depending on package</span>
+                      <span>High-performance, mobile-first UI</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>SEO-ready structure</span>
+                      <span>Tailwind component library</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Contact forms + intake integration</span>
+                      <span>Framer Motion micro-interactions</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Tailored brand colors & typography</span>
+                      <span>AEO/GEO-informed content structure</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Deployment to Netlify or Vercel</span>
+                      <span>Deployment to Vercel or Netlify</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Fast delivery, minimal revisions</span>
+                      <span>Technical SEO baseline</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Clean engineering handoff</span>
                     </li>
                   </ul>
                 </motion.div>
@@ -297,22 +314,20 @@ export default function SolutionsPage() {
                   href="/pricing"
                   className="btn-primary px-10 py-3 text-lg"
                 >
-                  View Website Packages →
+                  View Frontend Systems →
                 </Link>
-                <Link
-                  href="https://calendly.com/reuben-lopezproductions/intro"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={handleRequestBuildSlot}
                   className="btn-outline px-10 py-3 text-lg"
                 >
-                  Schedule a Call →
-                </Link>
+                  Request Build Slot →
+                </button>
               </motion.div>
             </div>
           </section>
 
           {/* ===================================================================== */}
-          {/* SECTION 2 — AI SYSTEMS & WORKFLOW AUTOMATION */}
+          {/* SECTION 2 — DOCUMENTATION & DEVELOPER EXPERIENCE */}
           {/* ===================================================================== */}
           <section className="py-16 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto">
@@ -321,27 +336,28 @@ export default function SolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl font-serif text-text-primary text-center mb-4"
+                className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
               >
-                Systems That Run the Business While You Run the Vision
+                <BookOpen className="w-8 h-8 text-brand-gold" />
+                2. Documentation & Developer Experience
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-text-secondary text-center mb-4 max-w-3xl mx-auto"
+                className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
               >
-                It's not enough to have a website — you need operations that keep your business moving without you manually pushing every button.
+                Docs, API references, onboarding, and internal systems that scale
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm"
+                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
               >
-                AI + automation eliminates repetitive tasks, reduces admin by 80%, and creates a seamless client experience.
+                Your documentation is part of your product. We design clear, structured systems that onboard users and developers fast.
               </motion.p>
 
               <motion.div
@@ -352,43 +368,136 @@ export default function SolutionsPage() {
                 className="bg-surface p-8 rounded-xl border border-border mb-8"
               >
                 <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
+                  Includes:
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Docusaurus or Starlight documentation frameworks</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>API structure planning + schema mapping</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Internal engineering playbooks</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Knowledge base + product reasoning systems</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Support documentation</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Versioning and changelog systems</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="flex justify-center"
+              >
+                <Link
+                  href="/templates"
+                  className="btn-primary px-10 py-3 text-lg"
+                >
+                  Explore Docs Solutions →
+                </Link>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* SECTION 3 — WORKFLOW AUTOMATION FOR TECHNICAL TEAMS */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
+              >
+                <Zap className="w-8 h-8 text-brand-gold" />
+                3. Workflow Automation for Technical Teams
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
+              >
+                Automation that removes engineering drag
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
+              >
+                We build operational systems that eliminate manual, repetitive tasks across your product and internal workflow.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-background p-8 rounded-xl border border-border mb-8"
+              >
+                <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
                   What Gets Automated:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Client onboarding</span>
+                      <span>Release cycle coordination</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Lead capture & follow-up</span>
+                      <span>GitHub → Notion sync</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Content planning & tasking</span>
+                      <span>Automatic changelog generation</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Weekly summaries & status updates</span>
+                      <span>Weekly operational summaries</span>
                     </li>
                   </ul>
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Research collection</span>
+                      <span>Stripe → Supabase → Discord onboarding</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Content scheduling</span>
+                      <span>Lead capture → CRM routing</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>CRM updates</span>
+                      <span>Data classification + research collection</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Reporting</span>
+                      <span>Support workflow automation</span>
                     </li>
                   </ul>
                 </div>
@@ -399,10 +508,9 @@ export default function SolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="text-xl font-serif font-bold text-accent text-center mb-8"
+                className="text-xl font-serif font-bold text-accent text-center mb-8 italic"
               >
-                Stop being the bottleneck.<br />
-                Start scaling with ease.
+                Automation becomes the &quot;silent engineer&quot; keeping everything moving.
               </motion.p>
 
               <motion.div
@@ -413,101 +521,17 @@ export default function SolutionsPage() {
                 className="flex justify-center"
               >
                 <Link
-                  href="/contact?service=ai-systems"
+                  href="/templates"
                   className="btn-primary px-10 py-3 text-lg"
                 >
-                  Install My AI System →
+                  Explore Automation →
                 </Link>
               </motion.div>
             </div>
           </section>
 
           {/* ===================================================================== */}
-          {/* SECTION 3 — CONTENT ENGINES */}
-          {/* ===================================================================== */}
-          <section className="py-16 px-6 md:px-12 bg-surface">
-            <div className="max-w-6xl mx-auto">
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-4xl font-serif text-text-primary text-center mb-4"
-              >
-                Turn One Idea Into 30 Days of Content
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto"
-              >
-                You drop your ideas or voice notes into Notion → AI drafts captions → Make.com schedules them everywhere.<br /><br />
-                You stay consistent without spending hours writing or editing.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-background p-8 rounded-xl border border-border mb-8"
-              >
-                <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
-                  What's Included:
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <ul className="space-y-2 text-text-secondary text-sm">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Unified Notion content calendar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>AI-assisted drafting</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Platform-specific templates</span>
-                    </li>
-                  </ul>
-                  <ul className="space-y-2 text-text-secondary text-sm">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Automatic scheduling</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Your unique voice trained into the system</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Keeps you posting even on low-energy days</span>
-                    </li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="flex justify-center"
-              >
-                <Link
-                  href="/contact?service=content-engine"
-                  className="btn-primary px-10 py-3 text-lg"
-                >
-                  Build My Content Engine →
-                </Link>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* ===================================================================== */}
-          {/* SECTION 4 — WEBSITE TEMPLATES */}
+          {/* SECTION 4 — AI WORKFLOWS FOR PRODUCT TEAMS */}
           {/* ===================================================================== */}
           <section className="py-16 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto">
@@ -516,27 +540,129 @@ export default function SolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl font-serif text-text-primary text-center mb-4"
+                className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
               >
-                Launch A Premium Website This Weekend
+                <Bot className="w-8 h-8 text-brand-gold" />
+                4. AI Workflows for Product Teams
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto"
+                className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
               >
-                Want to go faster? Choose a portfolio-ready Vite or Next.js template, customize your colors, update your content, and deploy in hours — not weeks.<br /><br />
-                Perfect for creators, students, new brands, or anyone who needs a clean, modern site live now.
+                Use AI to plan, research, write, design, and execute faster
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
+              >
+                Systems designed to help founders and engineering teams leverage AI without chaos.
               </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
                 className="bg-surface p-8 rounded-xl border border-border mb-8"
+              >
+                <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
+                  Includes:
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Feature ideation workflows</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Model comparison + evaluation templates</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Product spec → task conversion</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-2 text-text-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Research pipelines</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>AI-assisted writing + UX reasoning</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-accent mr-2">•</span>
+                      <span>Structured PRD generation</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="flex justify-center"
+              >
+                <Link
+                  href="/playbook"
+                  className="btn-primary px-10 py-3 text-lg"
+                >
+                  Explore AI Workflows →
+                </Link>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* ===================================================================== */}
+          {/* SECTION 5 — UI KITS & STARTUP TEMPLATES */}
+          {/* ===================================================================== */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
+            <div className="max-w-6xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
+              >
+                <LayoutGrid className="w-8 h-8 text-brand-gold" />
+                5. UI Kits & Startup Templates
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
+              >
+                Launch a polished frontend this weekend
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
+              >
+                Choose from clean, modern UI kits and startup templates engineered for speed. Perfect for founders who want to go live fast without hiring a full dev team.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-background p-8 rounded-xl border border-border mb-8"
               >
                 <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
                   You Get:
@@ -545,11 +671,11 @@ export default function SolutionsPage() {
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>A fully designed template</span>
+                      <span>Complete frontend architecture</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Modern, mobile-first UI</span>
+                      <span>Responsive, modern UI</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
@@ -559,7 +685,7 @@ export default function SolutionsPage() {
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Clean Tailwind components</span>
+                      <span>Tailwind components</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
@@ -576,7 +702,7 @@ export default function SolutionsPage() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
                 className="flex justify-center"
               >
@@ -593,7 +719,7 @@ export default function SolutionsPage() {
           {/* ===================================================================== */}
           {/* WHY THESE SYSTEMS WORK */}
           {/* ===================================================================== */}
-          <section className="py-16 px-6 md:px-12 bg-surface">
+          <section className="py-16 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -613,7 +739,7 @@ export default function SolutionsPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-background p-8 rounded-xl border border-border card-hover"
+                    className="bg-surface p-8 rounded-xl border border-border card-hover"
                   >
                     <h3 className="text-xl font-serif font-bold text-text-primary mb-3">
                       {benefit.title}
@@ -630,7 +756,7 @@ export default function SolutionsPage() {
           {/* ===================================================================== */}
           {/* FAQ SECTION */}
           {/* ===================================================================== */}
-          <section className="py-20 px-6 md:px-12 bg-background border-t border-brand-gray-dark">
+          <section className="py-20 px-6 md:px-12 bg-surface border-t border-border">
             <div className="max-w-4xl mx-auto">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -639,7 +765,7 @@ export default function SolutionsPage() {
                 viewport={{ once: true }}
                 className="text-4xl font-serif text-text-primary text-center mb-12"
               >
-                FAQ — Answers You Actually Care About
+                FAQ — For Founders & Technical Teams
               </motion.h2>
 
               <div className="space-y-4">
@@ -650,7 +776,7 @@ export default function SolutionsPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-surface border border-border rounded-xl overflow-hidden"
+                    className="bg-background border border-border rounded-xl overflow-hidden"
                   >
                     <button
                       className="w-full flex justify-between items-center p-5 text-left"
@@ -693,16 +819,16 @@ export default function SolutionsPage() {
           {/* ===================================================================== */}
           {/* FINAL CTA */}
           {/* ===================================================================== */}
-          <section className="py-20 px-6 md:px-12 bg-surface">
+          <section className="py-20 px-6 md:px-12 bg-background">
             <div className="max-w-4xl mx-auto text-center">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl font-serif text-text-primary mb-6"
+                className="text-4xl font-serif font-bold text-text-primary mb-6"
               >
-                Ready to Build a Business That Runs Itself?
+                Ready to Build Your Interface Layer?
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -711,7 +837,7 @@ export default function SolutionsPage() {
                 viewport={{ once: true }}
                 className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto"
               >
-                Launch your website, install your systems, and scale the work that actually pays you.
+                Ship a better frontend. Structure your documentation. Automate your operations. Move with real startup velocity.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -724,7 +850,7 @@ export default function SolutionsPage() {
                   href="/pricing"
                   className="btn-primary px-10 py-4 text-lg"
                 >
-                  Explore Website Packages →
+                  Explore Pricing →
                 </Link>
                 <Link
                   href="https://calendly.com/reuben-lopezproductions/intro"
@@ -732,7 +858,7 @@ export default function SolutionsPage() {
                   rel="noopener noreferrer"
                   className="btn-outline px-10 py-4 text-lg"
                 >
-                  Schedule a 15-min Call →
+                  Schedule a Technical Call →
                 </Link>
               </motion.div>
             </div>
@@ -740,6 +866,15 @@ export default function SolutionsPage() {
 
           <Footer />
         </div>
+
+        {/* Package Request Form Modal */}
+        {isFormOpen && packageData && (
+          <PackageRequestForm
+            isOpen={isFormOpen}
+            onClose={() => setIsFormOpen(false)}
+            packageData={packageData}
+          />
+        )}
       </main>
     </>
   )

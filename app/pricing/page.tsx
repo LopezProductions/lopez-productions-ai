@@ -8,7 +8,7 @@ import Breadcrumbs from '../../components/Breadcrumbs'
 import PackageRequestForm from '../../components/PackageRequestForm'
 import PricingFAQ from '../../components/PricingFAQ'
 import { motion } from 'framer-motion'
-import { Globe, Link as LinkIcon, Rocket, TrendingUp, Star, Crown } from 'lucide-react'
+import { Code, Rocket, TrendingUp, Crown, Settings, Search } from 'lucide-react'
 
 interface PackageData {
   selectedServiceIds: string[]
@@ -26,259 +26,144 @@ export default function PricingPage() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': ['Offer', 'Product', 'Service'],
-    name: 'Lopez Productions Pricing',
-    description: 'Pricing for custom websites, templates, packages, and digital services.',
+    name: 'Lopez Productions Pricing & Systems',
+    description: 'The Interface Layer for AI Startups — Fast, modern frontends. Clean architecture. Zero bloat.',
     provider: {
       '@type': 'Organization',
       name: 'Lopez Productions',
     },
   }
 
-  // Custom Websites (Built From Scratch)
-  const customWebsites = [
+  // Frontend Systems (Products)
+  const frontendSystems = [
     {
-      id: 'starter-site',
-      name: 'Starter Site',
-      price: 1000,
-      priceDisplay: '$1,000',
-      perfectFor: 'Perfect for creators & personal brands who need a clean, modern digital presence.',
+      id: 'antigravity-kit-source',
+      name: 'Google Antigravity Kit — Source Code',
+      price: 149,
+      priceDisplay: '$149',
+      description: 'A high-performance React + Tailwind UI system built for AI dashboards, tools, and landing pages.',
+      builtFor: 'indie hackers, solo founders, dev teams shipping fast.',
       includes: [
-        '1-page responsive website',
-        'Hero, About, Services, Contact',
-        'Modern visual hierarchy',
-        'Mobile-first optimization',
-        'SEO basics (metadata, headers, structure)',
-        'Performance-tuned layout',
-        'Domain + hosting setup',
-        'Delivered in 3–5 days',
+        'Full GitHub repo (React 18 + Vite)',
+        '40+ "Zero-G" components (inputs, cards, layouts)',
+        'Mission Control dashboard template',
+        'Airlock Auth flow (login, register, API keys)',
+        'Figma file for easy brand updates',
+        'Clean architecture + 100/100 Lighthouse performance',
       ],
-      optimizationLayer: {
-        title: 'Optimization Layer: SEO',
-        description: 'Visibility foundations. Not built for funnels or automation — perfect for simple, polished presence.',
-      },
+      cta: 'Download Source Code',
     },
     {
-      id: 'business-rebuild',
-      name: 'Business Rebuild',
-      price: 2500,
-      priceDisplay: '$2,500',
-      perfectFor: 'Perfect for local businesses, freelancers & service providers wanting credibility + conversions.',
+      id: 'concierge-deployment',
+      name: 'Concierge Deployment — Launch Assist',
+      price: 495,
+      priceDisplay: '$495',
+      description: 'We configure the entire kit so you can focus on your backend.',
+      builtFor: 'founders who want it done right, fast.',
       includes: [
-        '3 custom pages (Home, About, Services/Contact)',
-        'Simple lead capture (email or booking)',
-        'Upgraded brand layout & UI',
-        'Clear, conversion-focused structure',
-        'Performance + SEO optimization',
-        '2 revision cycles',
-        'Delivered in 5–10 days',
+        'Everything in the Source Code License',
+        'Repo setup (GitHub/Vercel/Netlify)',
+        'Brand injection into tailwind.config',
+        'Logo + asset implementation',
+        'Supabase/Firebase auth stub',
+        'Production-ready deployment',
       ],
-      optimizationLayer: {
-        title: 'Optimization Layer: SEO+ (Lead Capture)',
-        description: 'Your site now generates leads — not just views.',
-      },
+      cta: 'Start Deployment',
+    },
+  ]
+
+  // Custom Architectures (Services)
+  const customArchitectures = [
+    {
+      id: 'growth-wrapper',
+      name: 'The Growth Wrapper — Marketing Site',
+      price: 2800,
+      priceDisplay: '$2,800',
+      timeline: '2-week sprint',
+      description: 'A conversion-focused marketing site for SaaS, dev tools, or AI apps.',
+      bestFor: 'Seed-stage teams that need instant credibility.',
+      includes: [
+        '3 custom pages (Home, Pricing, Use Cases)',
+        'Clean, developer-friendly UI (optional R3F or subtle motion)',
+        'Lead capture + waitlist integrations',
+        'Performance tuning (<100ms TTFB)',
+        'Technical SEO foundation',
+      ],
+      cta: 'Request Build Slot',
     },
     {
-      id: 'premium-site',
-      name: 'Premium Site',
-      price: 4400,
-      priceDisplay: '$4,400',
-      perfectFor: 'Perfect for creators, consultants & small teams who want automation + real digital systems.',
+      id: 'geo-architecture',
+      name: 'The GEO Architecture — Premium Build',
+      price: 4800,
+      priceDisplay: '$4,800',
+      timeline: '3-week sprint',
+      description: 'Optimized for generative engines (ChatGPT, Perplexity). We structure your content so AI models understand it.',
+      bestFor: 'startups relying on organic discovery.',
       includes: [
-        'Up to 5 fully designed pages',
-        'Custom animations (Framer Motion optional)',
-        'Automation setup (email sequences, CRM handoff, funnels)',
-        'CMS or simple blog setup',
-        'Newsletter capture + optimized opt-in',
-        'Conversion-aligned UX',
-        'GEO-optimized content structure',
-        '2–3 revision cycles',
-        'Delivered in 7–14 days',
+        '5 custom pages + CMS blog structure',
+        'GEO optimization (structured data, embeddings-ready content)',
+        'Framer Motion micro-interactions',
+        'Newsletter → CRM automation',
+        'Plausible / PostHog analytics setup',
       ],
-      optimizationLayer: {
-        title: 'Optimization Layer: GEO (Generative Engine Optimization)',
-        description: 'Optimized for discoverability inside ChatGPT, Perplexity, Gemini, Grok, Claude, and AI-powered search.',
-      },
+      cta: 'View GEO Case Study',
       showcaseLink: 'https://launchstack.xyz',
     },
     {
-      id: 'full-business-suite',
-      name: 'Full Business Suite',
-      price: 7200,
-      priceDisplay: '$7,200',
-      perfectFor: 'Perfect for serious businesses, agencies & Web3 teams who want a future-proof digital system.',
+      id: 'aeo-ecosystem',
+      name: 'The AEO Ecosystem — Full Suite',
+      price: 7800,
+      priceDisplay: '$7,800',
+      timeline: '4-week sprint',
+      description: 'A full-stack content system designed to make your brand the answer in AI search results.',
+      bestFor: 'funded teams, Web3 protocols, or fast-scaling AI products.',
       includes: [
-        '6–10 custom pages',
-        'Full brand system (components, tokens, reusable UI)',
-        'CMS or Supabase integration',
-        'Blog system + tagging architecture',
-        'Lead funnels + advanced automation',
-        'SEO + GEO + AEO optimization stack',
-        'OG cards, metadata, schema system',
-        'Analytics + heatmap setup',
-        '30-day support window',
-        'Delivered in 2–4 weeks',
+        'Full brand system (design tokens + UI component library)',
+        'AEO stack (Answer Engine Optimization)',
+        'Knowledge Graph architecture (JSON-LD network)',
+        'Programmatic SEO (auto-generated high-intent pages)',
+        '30-day post-launch support + heatmap analysis',
       ],
-      optimizationLayer: {
-        title: 'Optimization Layer: AEO (Answer Engine Optimization)',
-        description: 'Built for modern discovery — where AI search engines and chatbots pull your site as the "best possible answer."',
-      },
-      showcaseLink: 'https://launchstack.xyz',
+      cta: 'Request Full Suite Quote',
     },
   ]
 
-  // Website Templates (DIY or Done-For-You)
-  const templates = [
+  // Technical Add-Ons
+  const technicalAddOns = [
     {
-      id: 'diy-template',
-      name: 'DIY Template',
-      price: 50,
-      priceDisplay: '$50',
-      description: 'Instant download',
-      includes: [
-        'Choose from any theme in the Template Library',
-        'Customize in your own time',
-      ],
-      serviceId: 'diy-template',
+      id: 'opengraph-design',
+      name: 'OpenGraph Design System',
+      price: 300,
+      description: 'Clean social cards for Twitter/iMessage previews.',
     },
     {
-      id: 'template-installation',
-      name: 'Template + Installation',
-      price: 150,
-      priceDisplay: '$150',
-      description: 'Everything in DIY',
-      includes: [
-        'I install it on your domain',
-        'Basic colors + text applied',
-        'Ready to publish',
-      ],
-      serviceId: 'template-installation',
+      id: 'docs-architecture',
+      name: 'Docs Architecture',
+      price: 550,
+      description: 'Docusaurus / Starlight system for API or onboarding docs.',
     },
     {
-      id: 'template-full-customization',
-      name: 'Template + Full Customization',
-      price: 450,
-      priceDisplay: '$450',
-      description: 'Full done-for-you build using any template',
-      includes: [
-        'Colors, fonts, layout, imagery tailored to your brand',
-        'Domain + SEO setup included',
-        'Delivered in 3–5 days',
-      ],
-      serviceId: 'template-full-customization',
-    },
-  ]
-
-  // Creator & Business Packages
-  const packages = [
-    {
-      id: 'academic-creator',
-      name: 'Academic Creator Package',
-      price: 500,
-      priceDisplay: '$500',
-      description: '1-page creator website + Newsletter setup + 1-month content plan',
-      perfectFor: 'Perfect for teachers & edu-creators',
-    },
-    {
-      id: 'travel-creator',
-      name: 'Travel Creator Package',
-      price: 500,
-      priceDisplay: '$500',
-      description: 'Travel website + gallery + Affiliate setup + 1-month content plan',
-      perfectFor: 'Perfect for travel creators',
-    },
-    {
-      id: 'creator-ultra',
-      name: 'Creator Ultra',
-      price: 1500,
-      priceDisplay: '$1,500',
-      description: 'Complete brand system + Custom website (3–5 pages) + Automation setup + Strategic content roadmap',
-      perfectFor: 'For serious creators ready to scale',
-    },
-    {
-      id: 'firm-authority',
-      name: 'Firm Authority Package',
-      price: 2500,
-      priceDisplay: '$2,500',
-      description: '5-page professional website + SEO optimization + Blog system + plan',
-      perfectFor: 'Designed to dominate local search',
-    },
-  ]
-
-  // Add-Ons
-  const addOns = [
-    {
-      id: 'school-spirit',
-      name: 'School Spirit Add-On',
-      price: 10,
-      description: 'School colors + logo added to dashboards',
-    },
-    {
-      id: 'domain-setup',
-      name: 'Domain Setup',
-      price: 25,
-      description: 'Connect and configure a domain',
-    },
-    {
-      id: 'reel-edit',
-      name: 'Reel Edit (1 minute)',
-      price: 25,
-      description: 'Quick edit + transitions',
-    },
-    {
-      id: 'concept-art',
+      id: 'concept-art-pack',
       name: 'Concept Art Pack',
-      price: 50,
-      description: '5 custom Nano Banana images',
+      price: 250,
+      description: '10 custom AI art assets matching your brand palette.',
     },
     {
-      id: 'social-audit',
-      name: 'Social Strategy Audit',
-      price: 100,
-      description: 'Profile upgrade + 30-day plan',
+      id: 'onboarding-engine',
+      name: 'Onboarding Engine',
+      price: 950,
+      description: 'Stripe → CRM → Discord automation loop.',
     },
     {
-      id: 'brand-sheet',
-      name: 'Professional Brand Sheet',
-      price: 135,
-      description: 'Colors, fonts, logo rules, brand tone',
-    },
-    {
-      id: 'market-research',
-      name: 'Market Research Add-On',
-      price: 350,
-      description: 'Competitor, audience, keyword research',
-    },
-    {
-      id: 'client-onboarding',
-      name: 'Client Onboarding Engine',
-      price: 750,
-      description: 'Automated intake → contract → invoice → portal',
+      id: 'competitor-aeo-audit',
+      name: 'Competitor AEO Audit',
+      price: 450,
+      description: 'How your competitors rank inside AI engines.',
     },
   ]
 
-  // Handle custom website or package selection (opens intake form)
-  const handleCustomServiceClick = (service: typeof customWebsites[0] | typeof packages[0]) => {
-    const selectedAddOnIds = Array.from(selectedAddOns)
-    const selectedAddOnProducts = addOns.filter(item => selectedAddOnIds.includes(item.id))
-    const addOnNames = selectedAddOnProducts.map(p => p.name).join(', ')
-    const addOnTotal = selectedAddOnProducts.reduce((sum, item) => sum + item.price, 0)
-    const totalPrice = service.price + addOnTotal
-
-    const packageSelection = `${service.name}${addOnNames ? ` + ${addOnNames}` : ''}`
-    const customNotes = `Service: ${service.name}${addOnNames ? ` | Add-Ons: ${addOnNames}` : ''}`
-
-    setPackageData({
-      selectedServiceIds: [service.id, ...selectedAddOnIds],
-      bundleIds: [],
-      total: totalPrice,
-      customNotes: customNotes,
-      packageSelection: packageSelection,
-    })
-    setIsFormOpen(true)
-  }
-
-  // Handle template checkout (direct Stripe)
-  const handleTemplateCheckout = async (template: typeof templates[0]) => {
+  // Handle Frontend Systems checkout (Direct Stripe)
+  const handleFrontendSystemCheckout = async (product: typeof frontendSystems[0]) => {
     try {
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
@@ -286,10 +171,10 @@ export default function PricingPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          selectedServiceIds: [template.serviceId],
+          selectedServiceIds: [product.id],
           bundleIds: [],
-          total: template.price,
-          customNotes: `Template: ${template.name}`,
+          total: product.price,
+          customNotes: `Frontend System: ${product.name}`,
         }),
       })
 
@@ -317,6 +202,27 @@ export default function PricingPage() {
     }
   }
 
+  // Handle Custom Architecture selection (Opens form)
+  const handleCustomArchitectureClick = (service: typeof customArchitectures[0]) => {
+    const selectedAddOnIds = Array.from(selectedAddOns)
+    const selectedAddOnProducts = technicalAddOns.filter(item => selectedAddOnIds.includes(item.id))
+    const addOnNames = selectedAddOnProducts.map(p => p.name).join(', ')
+    const addOnTotal = selectedAddOnProducts.reduce((sum, item) => sum + item.price, 0)
+    const totalPrice = service.price + addOnTotal
+
+    const packageSelection = `${service.name}${addOnNames ? ` + ${addOnNames}` : ''}`
+    const customNotes = `Service: ${service.name}${addOnNames ? ` | Add-Ons: ${addOnNames}` : ''}`
+
+    setPackageData({
+      selectedServiceIds: [service.id, ...selectedAddOnIds],
+      bundleIds: [],
+      total: totalPrice,
+      customNotes: customNotes,
+      packageSelection: packageSelection,
+    })
+    setIsFormOpen(true)
+  }
+
   // Toggle add-on selection
   const toggleAddOn = (addOnId: string) => {
     setSelectedAddOns(prev => {
@@ -330,7 +236,7 @@ export default function PricingPage() {
     })
   }
 
-  const addOnTotal = addOns
+  const addOnTotal = technicalAddOns
     .filter(item => selectedAddOns.has(item.id))
     .reduce((sum, item) => sum + item.price, 0)
 
@@ -370,7 +276,7 @@ export default function PricingPage() {
           <section className="py-20 px-6 md:px-12 text-center">
             <div className="max-w-6xl mx-auto mb-8">
               <Breadcrumbs 
-                title="Pricing" 
+                title="Pricing & Systems" 
                 type="simple"
               />
             </div>
@@ -378,66 +284,59 @@ export default function PricingPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="text-5xl md:text-6xl font-serif font-bold text-text-primary"
+              className="text-5xl md:text-6xl font-serif font-bold text-text-primary mb-4"
             >
-              Pricing & Packages
+              Lopez Productions — Pricing & Systems
             </motion.h1>
-            <motion.p
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-xl md:text-2xl text-accent mt-6 max-w-3xl mx-auto"
+              className="text-3xl md:text-4xl font-serif font-bold text-accent mb-6"
             >
-              Modern websites built for SEO, GEO, and AEO — the full discoverability stack.
-            </motion.p>
+              The Interface Layer for AI Startups
+            </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-lg text-text-secondary mt-6 max-w-3xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl text-text-secondary mt-6 max-w-3xl mx-auto mb-4"
             >
-              Whether you&apos;re a creator, business owner, student, or teacher, choose from:
+              Fast, modern frontends. Clean architecture. Zero bloat.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-8 max-w-3xl mx-auto space-y-2 text-text-secondary"
-            >
-              <p><strong className="text-text-primary">• Custom Websites</strong> — Built from scratch with the full optimization stack</p>
-              <p><strong className="text-text-primary">• Templates & Digital Tools</strong> — Launch fast and upgrade anytime</p>
-            </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="text-base text-text-secondary mt-6"
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed"
             >
-              Scroll to explore the option that fits your timeline and goals.
+              Ship your product faster — without hiring a full agency.
             </motion.p>
           </section>
 
           {/* ===================================================================== */}
-          {/* SECTION 1 — CUSTOM WEBSITES (Built From Scratch) */}
+          {/* SECTION 1 — FRONTEND SYSTEMS (PRODUCTS) */}
           {/* ===================================================================== */}
           <section className="py-16 px-6 md:px-12 bg-surface">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3">
-                <Globe className="w-8 h-8 text-brand-gold" />
-                Custom Websites (Built From Scratch)
+                <Code className="w-8 h-8 text-brand-gold" />
+                1. Frontend Systems (Products)
               </h2>
               <p className="text-text-secondary text-center mb-4 max-w-3xl mx-auto">
-                High-performance design for the modern internet.
+                For founders and developers who want a beautiful UI without losing a week of build time.
               </p>
-              <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm">
-                Clean code, strong hierarchy, SEO foundations, and full support for AI-driven discovery.<br />
-                These are <strong>true custom builds</strong> — no page builders, no bloated plugins, no legacy cleanups.
+              <p className="text-text-secondary text-center mb-8 max-w-3xl mx-auto text-sm">
+                Looking for Notion Systems & Planning Docs?{' '}
+                <a href="/templates" className="text-accent hover:text-accent-dark underline transition-colors">
+                  Browse the Template Library →
+                </a>
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {customWebsites.map((website, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                {frontendSystems.map((product, index) => (
                   <motion.div
-                    key={website.id}
+                    key={product.id}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -445,27 +344,32 @@ export default function PricingPage() {
                     className="bg-background p-8 rounded-xl border border-border card-hover"
                   >
                     <h3 className="text-2xl font-serif font-bold text-text-primary mb-2 flex items-center gap-2">
-                      {website.id === 'starter-site' ? (
-                        <Rocket className="w-6 h-6 text-brand-gold" />
-                      ) : website.id === 'business-rebuild' ? (
-                        <TrendingUp className="w-6 h-6 text-brand-gold" />
-                      ) : website.id === 'premium-site' ? (
-                        <Star className="w-6 h-6 text-brand-gold" />
+                      {product.id === 'antigravity-kit-source' ? (
+                        <Code className="w-6 h-6 text-brand-gold" />
                       ) : (
-                        <Crown className="w-6 h-6 text-brand-gold" />
+                        <Rocket className="w-6 h-6 text-brand-gold" />
                       )}
-                      {website.name}
+                      {product.name}
                     </h3>
                     <p className="text-4xl font-serif font-bold text-accent mb-4">
-                      {website.priceDisplay}
+                      {product.priceDisplay}
+                      {product.id === 'antigravity-kit-source' && (
+                        <span className="text-lg text-text-secondary font-normal ml-2">— One-time license</span>
+                      )}
+                      {product.id === 'concierge-deployment' && (
+                        <span className="text-lg text-text-secondary font-normal ml-2">— Done-for-you setup (48 hours)</span>
+                      )}
                     </p>
-                    <p className="text-text-secondary text-sm mb-6 italic">
-                      {website.perfectFor}
+                    <p className="text-text-secondary text-sm mb-6">
+                      {product.description}
+                    </p>
+                    <p className="text-text-secondary text-xs mb-6 italic">
+                      Built for: {product.builtFor}
                     </p>
                     <div className="mb-6">
-                      <p className="text-text-primary font-semibold mb-3">Includes:</p>
+                      <p className="text-text-primary font-semibold mb-3 text-sm">Includes:</p>
                       <ul className="space-y-2 text-text-secondary text-sm">
-                        {website.includes.map((item, i) => (
+                        {product.includes.map((item, i) => (
                           <li key={i} className="flex items-start">
                             <span className="text-accent mr-2">•</span>
                             <span>{item}</span>
@@ -473,48 +377,22 @@ export default function PricingPage() {
                         ))}
                       </ul>
                     </div>
-                    {website.optimizationLayer && (
-                      <div className="mb-6 p-4 bg-brand-gray-dark/50 rounded-lg border border-border">
-                        <p className="text-text-primary font-semibold mb-2 text-sm">
-                          {website.optimizationLayer.title}
-                        </p>
-                        <p className="text-text-secondary text-sm">
-                          {website.optimizationLayer.description}
-                        </p>
-                      </div>
-                    )}
-                    {website.showcaseLink && (
+                    {product.id === 'antigravity-kit-source' && (
                       <a
-                        href={website.showcaseLink}
+                        href="https://googleantigravity.netlify.app"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block w-full text-center text-accent hover:text-accent-dark text-sm font-medium mb-3 underline"
+                        className="btn-outline w-full py-3 text-lg mb-3 text-center block"
                       >
-                        {website.id === 'premium-site' 
-                          ? 'See an example Premium build → LaunchStack.xyz'
-                          : 'Explore our most advanced builds → LaunchStack.xyz'}
+                        View Live Preview →
                       </a>
                     )}
                     <button
-                      onClick={() => handleCustomServiceClick(website)}
+                      onClick={() => handleFrontendSystemCheckout(product)}
                       className="btn-primary w-full py-3 text-lg"
                     >
-                      {website.id === 'starter-site' 
-                        ? 'Start My Starter Site →'
-                        : website.id === 'business-rebuild'
-                        ? 'Request Business Quote →'
-                        : website.id === 'premium-site'
-                        ? 'Request Premium Quote →'
-                        : 'Request Full Suite Quote →'}
+                      {product.cta} →
                     </button>
-                    <a
-                      href="https://calendly.com/reuben-lopezproductions/intro"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-outline w-full py-3 text-lg mt-3 text-center block"
-                    >
-                      Not sure? Schedule a 15-min call →
-                    </a>
                   </motion.div>
                 ))}
               </div>
@@ -522,76 +400,57 @@ export default function PricingPage() {
           </section>
 
           {/* ===================================================================== */}
-          {/* EXPERIENCE OUR SYSTEMS SECTION */}
+          {/* SECTION 2 — CUSTOM ARCHITECTURES (SERVICES) */}
           {/* ===================================================================== */}
           <section className="py-16 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3">
-                <LinkIcon className="w-8 h-8 text-brand-gold" />
-                Experience Our Systems Before You Choose A Package
-              </h2>
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-serif font-bold text-text-primary mb-4">
-                  Experience Our Craft
-                </h3>
-                <p className="text-text-secondary max-w-3xl mx-auto mb-6">
-                  Before choosing a package, explore how we design, optimize, and scale modern websites:
-                </p>
-                <a
-                  href="https://launchstack.xyz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xl font-semibold text-accent hover:text-accent-dark transition-colors mb-4"
-                >
-                  <LinkIcon className="w-5 h-5" />
-                  LaunchStack.xyz – Premium Build Showcase
-                </a>
-                <p className="text-text-secondary max-w-3xl mx-auto text-sm">
-                  A curated gallery of our most advanced client builds, including websites optimized with SEO, GEO, and AEO.
-                  <br />
-                  This gives prospects proof of the quality behind the Premium and Full Suite tiers.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* ===================================================================== */}
-          {/* SECTION 2 — WEBSITE TEMPLATES (DIY or Done-For-You) */}
-          {/* ===================================================================== */}
-          <section className="py-16 px-6 md:px-12 bg-background">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
-                Website Templates (DIY or Done-For-You)
+                <Rocket className="w-8 h-8 text-brand-gold" />
+                2. Custom Architectures (Services)
               </h2>
               <p className="text-text-secondary text-center mb-4 max-w-3xl mx-auto">
-                Lower-cost options for fast launches.
+                Bespoke builds for startups who need more than a template.
               </p>
               <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto text-sm">
-                These are not custom sites — these are structured templates with optional add-on support.
+                Clear, fast, optimized. No WordPress. No drag-and-drop. No bloat.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {templates.map((template, index) => (
+                {customArchitectures.map((service, index) => (
                   <motion.div
-                    key={template.id}
+                    key={service.id}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="bg-surface p-8 rounded-xl border border-border card-hover flex flex-col"
                   >
-                    <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
-                      {template.name}
+                    <h3 className="text-2xl font-serif font-bold text-text-primary mb-2 flex items-center gap-2">
+                      {service.id === 'growth-wrapper' ? (
+                        <TrendingUp className="w-6 h-6 text-brand-gold" />
+                      ) : service.id === 'geo-architecture' ? (
+                        <Search className="w-6 h-6 text-brand-gold" />
+                      ) : (
+                        <Crown className="w-6 h-6 text-brand-gold" />
+                      )}
+                      {service.name}
                     </h3>
-                    <p className="text-4xl font-serif font-bold text-accent mb-4">
-                      {template.priceDisplay}
+                    <p className="text-4xl font-serif font-bold text-accent mb-2">
+                      {service.priceDisplay}
                     </p>
-                    <p className="text-text-secondary text-sm mb-2 font-semibold">
-                      {template.description}
+                    <p className="text-text-secondary text-xs mb-4">
+                      — {service.timeline}
+                    </p>
+                    <p className="text-text-secondary text-sm mb-4">
+                      {service.description}
+                    </p>
+                    <p className="text-text-secondary text-xs mb-6 italic">
+                      Best for: {service.bestFor}
                     </p>
                     <div className="mb-6 flex-grow">
+                      <p className="text-text-primary font-semibold mb-3 text-sm">Includes:</p>
                       <ul className="space-y-2 text-text-secondary text-sm">
-                        {template.includes.map((item, i) => (
+                        {service.includes.map((item, i) => (
                           <li key={i} className="flex items-start">
                             <span className="text-accent mr-2">•</span>
                             <span>{item}</span>
@@ -599,11 +458,21 @@ export default function PricingPage() {
                         ))}
                       </ul>
                     </div>
+                    {service.showcaseLink && (
+                      <a
+                        href={service.showcaseLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full text-center text-accent hover:text-accent-dark text-sm font-medium mb-3 underline"
+                      >
+                        View GEO Case Study →
+                      </a>
+                    )}
                     <button
-                      onClick={() => handleTemplateCheckout(template)}
-                      className="bg-brand-gold text-brand-black py-3 px-4 rounded-lg font-semibold hover:bg-brand-gold-dark transition mt-auto"
+                      onClick={() => handleCustomArchitectureClick(service)}
+                      className="btn-primary w-full py-3 text-lg mt-auto"
                     >
-                      Buy Template →
+                      {service.cta} →
                     </button>
                   </motion.div>
                 ))}
@@ -612,76 +481,31 @@ export default function PricingPage() {
           </section>
 
           {/* ===================================================================== */}
-          {/* SECTION 3 — CREATOR & BUSINESS PACKAGES */}
+          {/* SECTION 3 — TECHNICAL ADD-ONS */}
           {/* ===================================================================== */}
           <section className="py-16 px-6 md:px-12 bg-surface">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
-                Creator & Business Packages
+              <h2 className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3">
+                <Settings className="w-8 h-8 text-brand-gold" />
+                3. Technical Add-Ons
               </h2>
               <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto">
-                Bundles combining websites with strategy or automation.
+                Modular upgrades you can bolt onto any package.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {packages.map((pkg, index) => (
-                  <motion.div
-                    key={pkg.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-background p-8 rounded-xl border border-border card-hover"
-                  >
-                    <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
-                      {pkg.name}
-                    </h3>
-                    <p className="text-4xl font-serif font-bold text-accent mb-4">
-                      {pkg.priceDisplay}
-                    </p>
-                    <p className="text-text-secondary text-sm mb-2">
-                      {pkg.description}
-                    </p>
-                    <p className="text-text-secondary text-sm mb-6 italic">
-                      {pkg.perfectFor}
-                    </p>
-                    <button
-                      onClick={() => handleCustomServiceClick(pkg)}
-                      className="btn-primary w-full py-3 text-lg"
-                    >
-                      Start Project →
-                    </button>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* ===================================================================== */}
-          {/* SECTION 4 — ADD-ONS */}
-          {/* ===================================================================== */}
-          <section className="py-16 px-6 md:px-12 bg-background">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-serif text-text-primary text-center mb-4">
-                Add-Ons
-              </h2>
-              <p className="text-text-secondary text-center mb-12 max-w-3xl mx-auto">
-                Enhance any template or service.
-              </p>
-
-              <div className="bg-surface rounded-xl border border-border overflow-hidden">
+              <div className="bg-background rounded-xl border border-border overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead className="bg-brand-gray-dark border-b border-border">
                       <tr>
-                        <th className="px-6 py-4 text-left text-text-primary font-semibold">Add-On</th>
+                        <th className="px-6 py-4 text-left text-text-primary font-semibold">Upgrade</th>
                         <th className="px-6 py-4 text-left text-text-primary font-semibold">Price</th>
                         <th className="px-6 py-4 text-left text-text-primary font-semibold">Description</th>
                         <th className="px-6 py-4 text-center text-text-primary font-semibold">Select</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {addOns.map((addOn, index) => (
+                      {technicalAddOns.map((addOn, index) => (
                         <tr
                           key={addOn.id}
                           className={`border-b border-border hover:bg-brand-gray-dark/50 transition-colors ${
@@ -723,7 +547,7 @@ export default function PricingPage() {
                         </p>
                       </div>
                       <p className="text-text-secondary text-sm text-center md:text-left">
-                        Add-ons will be included when you select a service above.
+                        Add-ons will be included when you select a custom architecture above.
                       </p>
                     </div>
                   </div>

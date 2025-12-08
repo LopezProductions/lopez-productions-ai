@@ -18,6 +18,37 @@
   status = 200
   force = true
 
+# Redirect old web templates to lopezwebdesign.com
+[[redirects]]
+  from = "/templates/polaris-blue"
+  to = "https://lopezwebdesign.com/templates/polaris-blue"
+  status = 301
+
+[[redirects]]
+  from = "/templates/polaris-light"
+  to = "https://lopezwebdesign.com/templates/polaris-light"
+  status = 301
+
+[[redirects]]
+  from = "/templates/law-crest"
+  to = "https://lopezwebdesign.com/templates/law-crest"
+  status = 301
+
+[[redirects]]
+  from = "/templates/roamline"
+  to = "https://lopezwebdesign.com/templates/roamline"
+  status = 301
+
+[[redirects]]
+  from = "/templates/shieldcare"
+  to = "https://lopezwebdesign.com/templates/shieldcare"
+  status = 301
+
+[[redirects]]
+  from = "/templates/revive-pt"
+  to = "https://lopezwebdesign.com/templates/revive-pt"
+  status = 301
+
 # Ensure static files are served correctly - prevent stale CSS
 [[headers]]
   for = "/_next/static/*"

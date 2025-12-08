@@ -13,78 +13,47 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "What's the difference between Templates and Custom Websites?",
+    question: "Do you use WordPress?",
     answer: (
       <>
-        Templates are pre-built designs you customize.
+        No. Everything is React, Next.js, Astro, or Vite — depending on your needs.
         <br />
-        Custom Websites are full, from-scratch builds tailored to your brand.
+        No plugins. No bloat. No surprises.
       </>
     ),
   },
   {
-    question: "Can I mix and match services?",
+    question: "Can I upgrade from the $149 Kit to a custom build later?",
     answer: (
       <>
-        Yes — add anything from the Add-Ons section to any package.
+        Yes. Your full kit cost is credited toward your custom build.
       </>
     ),
   },
   {
-    question: "What's the turnaround time?",
+    question: "What's the difference between SEO, GEO, and AEO?",
     answer: (
       <>
-        Templates: <b>same day</b>.
+        <strong>SEO:</strong> Optimizes for Google search
         <br />
-        Custom sites: <b>3–14 days</b> depending on scope.
+        <br />
+        <strong>GEO:</strong> Optimizes for generative search (ChatGPT, Claude, Perplexity)
+        <br />
+        <br />
+        <strong>AEO:</strong> Optimizes to become the single answer AI engines output
+        <br />
+        <br />
+        Higher tiers include more advanced optimization layers.
       </>
     ),
   },
   {
-    question: "What do you need from me to start?",
+    question: "Do you build backend logic?",
     answer: (
       <>
-        Your logo, colors, text, and any images you want included.
-      </>
-    ),
-  },
-  {
-    question: "Can you manage my content?",
-    answer: (
-      <>
-        Yes — content strategy packages and retainers are available.
-      </>
-    ),
-  },
-  {
-    question: "Do I need technical knowledge?",
-    answer: (
-      <>
-        No. Everything is beginner-friendly.
-      </>
-    ),
-  },
-  {
-    question: "What happens after I pay?",
-    answer: (
-      <>
-        You&apos;ll get an intake form → your project is created → kickoff begins.
-      </>
-    ),
-  },
-  {
-    question: "What if I already have a domain?",
-    answer: (
-      <>
-        I can connect it at no extra charge unless DNS setup is required.
-      </>
-    ),
-  },
-  {
-    question: "What if I'm a student or teacher on a budget?",
-    answer: (
-      <>
-        Templates are extremely affordable and designed for budget-friendly launches.
+        No. The Antigravity Kit is a frontend UI system.
+        <br />
+        You connect your own backend (Node, Python, Go, Rust, etc.).
       </>
     ),
   },
@@ -100,11 +69,11 @@ export default function PricingFAQ() {
   return (
     <section className="py-20 px-6 md:px-12 bg-brand-black border-t border-brand-gray-dark">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-serif text-brand-white text-center mb-12">
-          FAQ
+        <h2 className="text-4xl font-serif text-brand-white text-center mb-4">
+          FAQ (Optimized for Technical Buyers)
         </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-4 mt-12">
           {faqs.map((faq, i) => (
             <div
               key={i}

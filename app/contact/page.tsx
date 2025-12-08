@@ -1,311 +1,404 @@
-import Script from "next/script"
-import Navigation from "../../components/Navigation"
-import Footer from "../../components/Footer"
-import Breadcrumbs from "../../components/Breadcrumbs"
+'use client'
 
-export const metadata = {
-  title: "Contact | Lopez Productions",
-  description:
-    "Get in touch with Lopez Productions — whether you need a system, a template, a workflow, or a full brand overhaul, this is the best way to reach out.",
-  alternates: {
-    canonical: "https://lopezproductions.ai/contact",
-  },
-}
+import React from 'react'
+import Script from 'next/script'
+import Link from 'next/link'
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import { motion } from 'framer-motion'
+import { Calendar, Mail, HelpCircle, Twitter } from 'lucide-react'
 
 export default function ContactPage() {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact Lopez Productions",
-    "url": "https://lopezproductions.ai/contact",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Lopez Productions",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "contact@lopezproductions.ai",
-        "url": "https://lopezproductions.ai/contact",
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Lopez Productions',
+    url: 'https://lopezproductions.ai/contact',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'Lopez Productions',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        email: 'contact@lopezproductions.ai',
+        url: 'https://lopezproductions.ai/contact',
       },
     },
   }
 
   return (
-    <main className="min-h-screen bg-brand-black text-brand-gray-light">
-      <Navigation />
+    <>
       <Script id="contact-schema" type="application/ld+json">
         {JSON.stringify(schema)}
       </Script>
-
-      <div className="px-6 md:px-12 pt-24 pb-20">
-        <div className="max-w-4xl mx-auto">
-        <Breadcrumbs 
-          title="Contact" 
-          type="simple"
-        />
+      <main className="min-h-screen bg-background relative overflow-x-hidden">
+        {/* Background with logo - very dark silhouette */}
+        <div 
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/transparent_logo_lp.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.1
+          }}
+        ></div>
+        {/* Light overlay to maintain charcoal color */}
+        <div className="fixed inset-0 bg-gradient-to-br from-brand-black/60 via-brand-gray-dark/40 to-brand-black/60"></div>
         
-        {/* Header */}
-        <p className="text-xs uppercase tracking-[0.2em] text-brand-gold mb-3">
-          Contact
-        </p>
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-6">
-          Let's Build Something Clean & Professional
-        </h1>
-        <p className="text-lg text-brand-gray-light mb-8 leading-relaxed max-w-3xl">
-          Whether you're launching a website, setting up a Notion system,
-          designing your brand, or getting your content engine in place — this is
-          the best way to get in touch. Fill out the form or contact me directly.
-        </p>
-
-        {/* Primary CTA - Schedule a Call */}
-        <div className="mb-12 max-w-2xl">
-          <a
-            href="https://calendly.com/reuben-lopezproductions/intro"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary inline-flex items-center space-x-2 px-8 py-4 text-lg"
-          >
-            <span>📅 Schedule a 15-Minute Call</span>
-            <span>→</span>
-          </a>
+        {/* Subtle gold halo effect around the logo */}
+        <div className="fixed inset-0 flex items-center justify-center">
+          <div className="w-96 h-96 rounded-full bg-gradient-radial from-brand-gold/20 via-brand-gold/5 to-transparent blur-3xl"></div>
         </div>
+        
+        {/* Minimal gold glow overlay */}
+        <div className="fixed inset-0 bg-gradient-radial from-brand-gold/8 via-brand-gold/2 to-transparent"></div>
+        
+        <div className="relative z-10">
+          <Navigation />
 
-        {/* Contact Options */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
-            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
-              Schedule a Call
-            </h3>
-            <p className="text-brand-gray-light mb-6 leading-relaxed">
-              Book a 15-minute Zoom call to discuss your project, ask questions, or explore how we can work together.
-            </p>
-            <a
-              href="https://calendly.com/reuben-lopezproductions/intro"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
-            >
-              <span>Book a call</span>
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
-
-          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
-            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
-              General Inquiries
-            </h3>
-            <p className="text-brand-gray-light mb-6 leading-relaxed">
-              New project inquiries, consultation requests, questions about services, or general messages.
-            </p>
-            <a
-              href="mailto:contact@lopezproductions.ai"
-              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
-            >
-              <span>contact@lopezproductions.ai</span>
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
-
-          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
-            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
-              Customer Support
-            </h3>
-            <p className="text-brand-gray-light mb-6 leading-relaxed">
-              Download issues, billing problems, template help, installation questions, or any customer service needs.
-            </p>
-            <a
-              href="mailto:support@lopezproductions.ai"
-              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
-            >
-              <span>support@lopezproductions.ai</span>
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
-
-          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
-            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
-              X (Twitter)
-            </h3>
-            <p className="text-brand-gray-light mb-6 leading-relaxed">
-              You can also DM me on X for quick questions.
-            </p>
-            <a
-              href="https://x.com/LopezProdx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
-            >
-              <span>@LopezProdx</span>
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
-
-          <div className="rounded-2xl border border-brand-gray-dark p-8 bg-white/5 hover:bg-white/10 transition-colors">
-            <h3 className="text-2xl font-serif font-bold text-brand-gold mb-4">
-              Intake Form
-            </h3>
-            <p className="text-brand-gray-light mb-6 leading-relaxed">
-              Not sure what you need yet? Tell me your goals.
-            </p>
-            <a
-              href="#contact-form"
-              className="inline-flex items-center text-brand-gold hover:text-brand-gold-dark transition-colors font-medium group"
-            >
-              <span>Scroll to form</span>
-              <span className="ml-2 group-hover:translate-y-1 transition-transform">↓</span>
-            </a>
-          </div>
-        </div>
-
-        {/* Contact Form */}
-        <div id="contact-form" className="py-10">
-          <h2 className="text-3xl font-serif font-bold text-brand-gold mb-6">
-            Project Intake Form
-          </h2>
-          <p className="text-brand-gray-light mb-8 leading-relaxed max-w-3xl">
-            Give me as much or as little detail as you'd like — this helps me
-            understand what you're building and how I can support you.
-          </p>
-
-          {/* Formspree form */}
-          <div className="relative">
-            {/* Left side glow */}
-            <div className="absolute -left-16 top-0 bottom-0 w-48 bg-gradient-to-r from-brand-gold/30 via-brand-gold/10 to-transparent blur-3xl pointer-events-none"></div>
-            {/* Right side glow */}
-            <div className="absolute -right-16 top-0 bottom-0 w-48 bg-gradient-to-l from-brand-gold/30 via-brand-gold/10 to-transparent blur-3xl pointer-events-none"></div>
-            
-            <form
-              action="https://formspree.io/f/xldpoywb"
-              method="POST"
-              className="space-y-6 relative bg-brand-black/30 rounded-xl p-8 border border-brand-gray-dark z-10"
-            >
-            <input
-              type="hidden"
-              name="_next"
-              value="https://lopezproductions.ai/thank-you"
-            />
-
-            {/* Name */}
-            <div>
-              <label className="block text-sm font-medium text-brand-white mb-2">
-                Full Name *
-              </label>
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Your full name"
-                className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition"
+          {/* ----------------------------- */}
+          {/* HERO SECTION */}
+          {/* ----------------------------- */}
+          <section className="py-20 px-6 md:px-12 text-center">
+            <div className="max-w-6xl mx-auto mb-8">
+              <Breadcrumbs 
+                title="Contact" 
+                type="simple"
               />
             </div>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-5xl md:text-6xl font-serif font-bold text-text-primary mb-6"
+            >
+              Let&apos;s Build Your Interface Layer
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed"
+            >
+              Whether you&apos;re shipping an MVP, scaling your AI product, or architecting your next release — this is the best way to get in touch.
+            </motion.p>
+          </section>
 
-            {/* Email */}
-            <div>
-              <label className="block text-sm font-medium text-brand-white mb-2">
-                Email Address *
-              </label>
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="your.email@example.com"
-                className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition"
-              />
+          {/* ----------------------------- */}
+          {/* CONTACT OPTIONS */}
+          {/* ----------------------------- */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Schedule a Technical Call */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="bg-background rounded-xl border border-border p-8 card-hover"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <Calendar className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-2xl font-serif font-bold text-text-primary">
+                      Schedule a Technical Call
+                    </h3>
+                  </div>
+                  <p className="text-text-secondary mb-2 font-semibold">
+                    A direct conversation for founders and technical teams.
+                  </p>
+                  <p className="text-text-secondary text-sm mb-6 leading-relaxed">
+                    Discuss scope, timelines, technical requirements, architectures, or integration questions.
+                  </p>
+                  <a
+                    href="https://calendly.com/reuben-lopezproductions/intro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary inline-flex items-center gap-2"
+                  >
+                    Book a 15-Minute Call →
+                  </a>
+                </motion.div>
+
+                {/* General Inquiries */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-background rounded-xl border border-border p-8 card-hover"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <Mail className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-2xl font-serif font-bold text-text-primary">
+                      General Inquiries
+                    </h3>
+                  </div>
+                  <p className="text-text-secondary mb-2 font-semibold">
+                    For questions about pricing, systems, UI kits, or upcoming availability.
+                  </p>
+                  <a
+                    href="mailto:contact@lopezproductions.ai"
+                    className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-medium group mt-4"
+                  >
+                    <span>contact@lopezproductions.ai</span>
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                  </a>
+                </motion.div>
+
+                {/* Customer Support */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-background rounded-xl border border-border p-8 card-hover"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <HelpCircle className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-2xl font-serif font-bold text-text-primary">
+                      Customer Support
+                    </h3>
+                  </div>
+                  <p className="text-text-secondary mb-2 font-semibold">
+                    Issues with downloads, billing, template installation, or Stripe receipts.
+                  </p>
+                  <a
+                    href="mailto:support@lopezproductions.ai"
+                    className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-medium group mt-4"
+                  >
+                    <span>support@lopezproductions.ai</span>
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                  </a>
+                </motion.div>
+
+                {/* X (Twitter) */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="bg-background rounded-xl border border-border p-8 card-hover"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <Twitter className="w-6 h-6 text-brand-gold" />
+                    <h3 className="text-2xl font-serif font-bold text-text-primary">
+                      X (Twitter)
+                    </h3>
+                  </div>
+                  <p className="text-text-secondary mb-2 font-semibold">
+                    Fast replies, quick technical questions, and async communication.
+                  </p>
+                  <a
+                    href="https://x.com/LopezProdx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-medium group mt-4"
+                  >
+                    <span>@LopezProdx</span>
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                  </a>
+                </motion.div>
+              </div>
             </div>
+          </section>
 
-            {/* Choose Focus */}
-            <div>
-              <label className="block text-sm font-medium text-brand-white mb-2">
-                What are you trying to build right now?
-              </label>
-              <select
-                name="focus"
-                defaultValue=""
-                className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
+          {/* ----------------------------- */}
+          {/* TECHNICAL INTAKE FORM */}
+          {/* ----------------------------- */}
+          <section id="contact-form" className="py-16 px-6 md:px-12 bg-background">
+            <div className="max-w-4xl mx-auto">
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-4xl font-serif font-bold text-text-primary mb-4"
               >
-                <option value="" disabled>
-                  Choose one
-                </option>
-                <option>Website or Portfolio Template</option>
-                <option>Brand Blueprint + Identity</option>
-                <option>Content Engine (AI + Notion)</option>
-                <option>AI Workflows / Automation</option>
-                <option>Custom Build or System</option>
-                <option>Not sure yet</option>
-              </select>
-            </div>
-
-            {/* Project Description */}
-            <div>
-              <label className="block text-sm font-medium text-brand-white mb-2">
-                Describe what you're trying to build
-              </label>
-              <textarea
-                name="description"
-                rows={5}
-                placeholder="Tell me about your goals, project, or what you want to improve..."
-                className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white placeholder-brand-gray-light focus:border-brand-gold transition resize-none"
-              />
-            </div>
-
-            {/* Timeline */}
-            <div>
-              <label className="block text-sm font-medium text-brand-white mb-2">
-                Timeline
-              </label>
-              <select
-                name="timeline"
-                defaultValue=""
-                className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
+                Technical Intake Form
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-text-secondary mb-8 leading-relaxed max-w-3xl"
               >
-                <option value="" disabled>
-                  Choose one
-                </option>
-                <option>ASAP</option>
-                <option>Within 1–2 weeks</option>
-                <option>This month</option>
-                <option>Flexible</option>
-                <option>Just exploring</option>
-              </select>
-            </div>
+                Tell me about what you&apos;re building. You don&apos;t need a polished pitch — just enough detail to point us in the right direction.
+              </motion.p>
 
-            {/* Budget */}
-            <div>
-              <label className="block text-sm font-medium text-brand-white mb-2">
-                Budget Range
-              </label>
-              <select
-                name="budget"
-                defaultValue=""
-                className="w-full px-4 py-3 bg-brand-black border border-brand-gray-dark rounded-lg text-brand-white focus:border-brand-gold transition"
+              {/* Form */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
               >
-                <option value="" disabled>
-                  Choose one
-                </option>
-                <option>$100–$300</option>
-                <option>$300–$750</option>
-                <option>$750–$1,500</option>
-                <option>Over $1,500</option>
-                <option>Not sure</option>
-              </select>
-            </div>
+                {/* Glow effects */}
+                <div className="absolute -left-16 top-0 bottom-0 w-48 bg-gradient-to-r from-brand-gold/30 via-brand-gold/10 to-transparent blur-3xl pointer-events-none"></div>
+                <div className="absolute -right-16 top-0 bottom-0 w-48 bg-gradient-to-l from-brand-gold/30 via-brand-gold/10 to-transparent blur-3xl pointer-events-none"></div>
+                
+                <form
+                  action="https://formspree.io/f/xldpoywb"
+                  method="POST"
+                  className="space-y-6 relative bg-surface rounded-xl p-8 border border-border z-10"
+                >
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://lopezproductions.ai/thank-you"
+                  />
 
-            {/* Submit */}
-            <div className="pt-4">
-              <button
-                type="submit"
-                className="w-full btn-primary py-3 text-lg font-medium"
-              >
-                Submit Request
-              </button>
+                  {/* Full Name */}
+                  <div>
+                    <label className="block text-sm font-medium text-text-primary mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      placeholder="Your full name"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary placeholder-text-secondary focus:border-brand-gold focus:outline-none transition-colors"
+                    />
+                  </div>
+
+                  {/* Email Address */}
+                  <div>
+                    <label className="block text-sm font-medium text-text-primary mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="your.email@example.com"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary placeholder-text-secondary focus:border-brand-gold focus:outline-none transition-colors"
+                    />
+                  </div>
+
+                  {/* Role */}
+                  <div>
+                    <label className="block text-sm font-medium text-text-primary mb-2">
+                      Role
+                    </label>
+                    <select
+                      name="role"
+                      defaultValue=""
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary focus:border-brand-gold focus:outline-none transition-colors"
+                    >
+                      <option value="" disabled>Choose one</option>
+                      <option value="Founder">Founder</option>
+                      <option value="Engineer">Engineer</option>
+                      <option value="Product Lead">Product Lead</option>
+                      <option value="Solo Builder">Solo Builder</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  {/* What are you trying to build? */}
+                  <div>
+                    <label className="block text-sm font-medium text-text-primary mb-2">
+                      What are you trying to build?
+                    </label>
+                    <select
+                      name="project_type"
+                      defaultValue=""
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary focus:border-brand-gold focus:outline-none transition-colors"
+                    >
+                      <option value="" disabled>Choose one</option>
+                      <option value="SaaS marketing site">SaaS marketing site</option>
+                      <option value="Dashboard / interface">Dashboard / interface</option>
+                      <option value="Documentation system">Documentation system</option>
+                      <option value="Workflow automation">Workflow automation</option>
+                      <option value="UI/UX system">UI/UX system</option>
+                      <option value="Something custom">Something custom</option>
+                      <option value="Not sure yet">Not sure yet</option>
+                    </select>
+                  </div>
+
+                  {/* Describe your product or technical goals */}
+                  <div>
+                    <label className="block text-sm font-medium text-text-primary mb-2">
+                      Describe your product or technical goals
+                    </label>
+                    <textarea
+                      name="description"
+                      rows={6}
+                      placeholder="Tell me about your architecture, challenges, or what you want to improve."
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary placeholder-text-secondary focus:border-brand-gold focus:outline-none transition-colors resize-none"
+                    />
+                  </div>
+
+                  {/* Current Stack */}
+                  <div>
+                    <label className="block text-sm font-medium text-text-primary mb-2">
+                      Current Stack <span className="text-text-secondary font-normal">(optional)</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="current_stack"
+                      placeholder="Examples: React, Next.js, Vite, Supabase, Firebase, Python, Node, Go…"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary placeholder-text-secondary focus:border-brand-gold focus:outline-none transition-colors"
+                    />
+                  </div>
+
+                  {/* Timeline */}
+                  <div>
+                    <label className="block text-sm font-medium text-text-primary mb-2">
+                      Timeline
+                    </label>
+                    <select
+                      name="timeline"
+                      defaultValue=""
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary focus:border-brand-gold focus:outline-none transition-colors"
+                    >
+                      <option value="" disabled>Choose one</option>
+                      <option value="ASAP (1–2 weeks)">ASAP (1–2 weeks)</option>
+                      <option value="This month">This month</option>
+                      <option value="This quarter">This quarter</option>
+                      <option value="Flexible">Flexible</option>
+                    </select>
+                  </div>
+
+                  {/* Budget Range */}
+                  <div>
+                    <label className="block text-sm font-medium text-text-primary mb-2">
+                      Budget Range
+                    </label>
+                    <select
+                      name="budget"
+                      defaultValue=""
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-text-primary focus:border-brand-gold focus:outline-none transition-colors"
+                    >
+                      <option value="" disabled>Choose one</option>
+                      <option value="$1,000–$2,500">$1,000–$2,500</option>
+                      <option value="$2,500–$5,000">$2,500–$5,000</option>
+                      <option value="$5,000–$10,000">$5,000–$10,000</option>
+                      <option value="$10,000+">$10,000+</option>
+                      <option value="Not sure yet">Not sure yet</option>
+                    </select>
+                  </div>
+
+                  {/* Submit */}
+                  <div className="pt-4">
+                    <button
+                      type="submit"
+                      className="w-full btn-primary py-3 text-lg font-medium"
+                    >
+                      Submit Technical Request
+                    </button>
+                  </div>
+                </form>
+              </motion.div>
             </div>
-            </form>
-          </div>
+          </section>
+
+          <Footer />
         </div>
-        </div>
-      </div>
-      <Footer />
-    </main>
+      </main>
+    </>
   )
 }
-

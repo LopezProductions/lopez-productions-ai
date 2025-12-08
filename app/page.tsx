@@ -1,20 +1,21 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import HomePageClient from '../components/HomePageClient'
-import HeroSection from '../components/HeroSection'
-import PillarsSection from '../components/PillarsSection'
-import TemplatesPreviewSection from '../components/TemplatesPreviewSection'
-import WhyChooseSection from '../components/WhyChooseSection'
+import Hero from '../components/Hero'
+import ValueProps from '../components/ValueProps'
+import FrontendSystems from '../components/FrontendSystems'
+import Services from '../components/Services'
+import TemplateShowcase from '../components/TemplateShowcase'
+import FounderReasons from '../components/FounderReasons'
+import BlogPreview from '../components/BlogPreview'
 import FinalCTASection from '../components/FinalCTASection'
-import LatestPosts from '../components/LatestPosts'
 
 export const metadata: Metadata = {
-  title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
-  description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
+  title: 'The Interface Layer for AI Startups | Lopez Productions',
+  description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
   alternates: {
     canonical: 'https://lopezproductions.ai',
   },
@@ -22,46 +23,33 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://lopezproductions.ai',
     siteName: 'Lopez Productions',
-    title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
-    description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
+    title: 'The Interface Layer for AI Startups | Lopez Productions',
+    description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Lopez Productions – AI Brand Systems',
+        alt: 'Lopez Productions – The Interface Layer for AI Startups',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
-    description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
+    title: 'The Interface Layer for AI Startups | Lopez Productions',
+    description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
     images: ['/og-image.jpg'],
   },
 }
-
-// Lazy load below-the-fold sections
-const AboutSection = dynamic(() => import('../components/AboutSection'), {
-  loading: () => null,
-})
-
-const HowItWorksSection = dynamic(() => import('../components/HowItWorksSection'), {
-  loading: () => null,
-})
-
-const FAQSection = dynamic(() => import('../components/FAQSection'), {
-  loading: () => null,
-})
 
 export default function Home() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': ['WebSite', 'WebPage'],
     name: 'Lopez Productions',
-    alternateName: 'AI Brand Systems for Creators & Small Businesses',
+    alternateName: 'The Interface Layer for AI Startups',
     url: 'https://lopezproductions.ai',
-    description: 'AI-powered systems, templates, and workflows for creators, founders, and small businesses.',
+    description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
   }
 
   return (
@@ -96,30 +84,27 @@ export default function Home() {
           <Navigation />
 
           {/* Hero Section */}
-          <HeroSection />
+          <Hero />
 
-          {/* What I Build (3 Pillars) */}
-          <PillarsSection />
+          {/* Why Founders Come Here */}
+          <ValueProps />
 
-          {/* Templates Preview Section */}
-          <TemplatesPreviewSection />
+          {/* Frontend Systems */}
+          <FrontendSystems />
 
-          {/* Latest Posts Section */}
-          <LatestPosts />
+          {/* Services for Growing Startups */}
+          <Services />
 
-          {/* Why Choose Section */}
-          <WhyChooseSection />
+          {/* Templates & Systems */}
+          <TemplateShowcase />
 
-          {/* About Section - Lazy Loaded */}
-          <AboutSection />
+          {/* Why AI Founders Trust Us */}
+          <FounderReasons />
 
-          {/* How It Works Section - Lazy Loaded */}
-          <HowItWorksSection />
+          {/* Featured Articles */}
+          <BlogPreview />
 
-          {/* FAQ Section - Lazy Loaded */}
-          <FAQSection />
-
-          {/* Final CTA Section */}
+          {/* Final CTA */}
           <FinalCTASection />
 
           <Footer />

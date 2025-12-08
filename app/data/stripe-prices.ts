@@ -26,6 +26,10 @@ export const stripePriceIds: Record<string, string> = {
   'client-onboarding': 'price_1SYy5uLq5JCtXEO7h8fo5xdh', // Client Onboarding Engine - $750
   'firm-authority': 'price_1SYxgXLq5JCtXEO7Pe48Gmpd', // Firm Authority Package - $2,500+
 
+  // Frontend Systems (Products)
+  'antigravity-kit-source': 'TODO_REPLACE_WITH_STRIPE_PRICE_ID', // Google Antigravity Kit — Source Code - $149
+  'concierge-deployment': 'TODO_REPLACE_WITH_STRIPE_PRICE_ID', // Concierge Deployment — Launch Assist - $495
+
   // Add-Ons
   'school-spirit': 'price_1SYy6pLq5JCtXEO7cddA2Itz', // School Spirit Add-On - $10
   'domain-setup': 'price_1SYy7ILq5JCtXEO70XM4hrrA', // Domain Setup - $25
@@ -34,6 +38,13 @@ export const stripePriceIds: Record<string, string> = {
   'social-audit': 'price_1SYyScLq5JCtXEO7RM1twmzs', // Social Strategy Audit - $100
   'brand-sheet': 'price_1SYyTULq5JCtXEO7T4PxUvSw', // Professional Brand Sheet - $135
   'market-research': 'price_1SYyUNLq5JCtXEO742ESoU7T', // Market Research Add-On - $350
+
+  // Technical Add-Ons (New)
+  'opengraph-design': 'TODO_REPLACE_WITH_STRIPE_PRICE_ID', // OpenGraph Design System - $300
+  'docs-architecture': 'TODO_REPLACE_WITH_STRIPE_PRICE_ID', // Docs Architecture - $550
+  'concept-art-pack': 'TODO_REPLACE_WITH_STRIPE_PRICE_ID', // Concept Art Pack (10 custom AI art assets) - $250
+  'onboarding-engine': 'TODO_REPLACE_WITH_STRIPE_PRICE_ID', // Onboarding Engine - $950
+  'competitor-aeo-audit': 'TODO_REPLACE_WITH_STRIPE_PRICE_ID', // Competitor AEO Audit - $450
 
   // Legacy/Other (keeping for backwards compatibility)
   'reel': 'price_1SQy73Lq5JCtXEO7isNcwQUj', // 1-Minute Reel - $25
