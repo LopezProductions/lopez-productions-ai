@@ -16,8 +16,12 @@ export default function TemplatesPage() {
   
   const filteredTemplates = getTemplatesByCategory(activeCategory)
   // Exclude featured templates from the main grid only when "All" is selected (they're shown separately)
+  // Also separate available and coming soon
+  const availableTemplates = filteredTemplates.filter(t => t.status === 'available' || !t.status)
+  const comingSoonTemplates = filteredTemplates.filter(t => t.status === 'coming_soon')
+  
   const gridTemplates = activeCategory === 'All' 
-    ? filteredTemplates.filter(t => !t.featured)
+    ? [...availableTemplates.filter(t => !t.featured), ...comingSoonTemplates]
     : filteredTemplates
 
   const itemListSchema = {

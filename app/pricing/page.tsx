@@ -164,6 +164,13 @@ export default function PricingPage() {
 
   // Handle Frontend Systems checkout (Direct Stripe)
   const handleFrontendSystemCheckout = async (product: typeof frontendSystems[0]) => {
+    // Direct Stripe checkout for Antigravity Kit
+    if (product.id === 'antigravity-kit-source') {
+      window.location.href = 'https://buy.stripe.com/9B628s83c51y0y4avvcs807'
+      return
+    }
+
+    // API checkout for other products
     try {
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',

@@ -65,7 +65,7 @@ export default function FeaturedTemplates() {
 
                   <div className="mt-auto">
                     <Link
-                      href={`/templates/${template.slug}`}
+                      href={template.externalLink || `/templates/${template.slug}`}
                       className="btn-outline inline-block"
                     >
                       View Template →

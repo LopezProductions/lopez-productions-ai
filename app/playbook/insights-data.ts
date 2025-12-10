@@ -17,6 +17,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'google-antigravity-ui',
+    title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
+    excerpt: 'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
+    readTime: '12 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-12-10',
+    coverImage: '/1200-google-antigravity.png',
+  },
+  {
     slug: 'firefly-mobile-nano-banana',
     title: "Why I Switched to Adobe Firefly Mobile (The Real Reason Isn't the Adobe Model)",
     excerpt: "Most mobile AI apps break the moment you need to switch modes or continue a workflow. Firefly Mobile quietly solves this by pairing Adobe's UI with Nano Banana (Gemini 2.5). Here's why it's the most complete mobile creator studio right now.",
@@ -257,6 +266,7 @@ export const pillarMappings = {
     'ai-notion-weekly-organization'
   ],
   'ai-workflows': [
+    'google-antigravity-ui',
     'gpt-5-1-vs-gemini-3-creative-workflows',
     'the-worst-thing-about-gemini-3-pro',
     'gemini-3-vs-claude-4-5-research-workflow',
