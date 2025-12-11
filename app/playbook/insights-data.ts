@@ -183,7 +183,7 @@ export const allInsights: Insight[] = [
     title: 'How I Use AI to Organize My Week Inside Notion',
     excerpt: 'A simple, AI-powered weekly planning system inside Notion that helps creators and small teams stay consistent, organized, and focused.',
     readTime: '8 min read',
-    category: 'Creator Systems',
+    category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-16',
     coverImage: '/organize-notion.png'
   },
@@ -201,7 +201,7 @@ export const allInsights: Insight[] = [
     title: 'Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System',
     excerpt: 'Every creator has the same problem: too many ideas, too many platforms, too many half-finished projects. Notion becomes the operating system of your brand when used right.',
     readTime: '10 min read',
-    category: 'Creator Systems',
+    category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-14',
     coverImage: '/notion-dashboard.png'
   },
@@ -227,7 +227,7 @@ export const allInsights: Insight[] = [
     title: '3 Systems Every Creator Should Automate in 2025',
     excerpt: 'The essential automation stack for content creators: from Notion planning to cross-platform posting. Stop spending 15+ hours weekly on admin work.',
     readTime: '6 min read',
-    category: 'Creator Systems',
+    category: 'Automation & Ops Engineering',
     publishedDate: '2025-01-27'
   },
   {
@@ -252,7 +252,7 @@ export const allInsights: Insight[] = [
     title: 'Why Your First Priority Isn\'t Automation — It\'s Your Brand System',
     excerpt: 'Most people jump into AI thinking automation is the first step. But if you\'re a creator or small business, the real problem is that your brand system isn\'t set up yet.',
     readTime: '8 min read',
-    category: 'Creator Systems',
+    category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-13',
     coverImage: '/brand-system.png'
   }
@@ -264,9 +264,6 @@ export const pillarMappings = {
     'google-antigravity-ui'
   ],
   'creator-systems': [
-    'notion-creator-dashboard',
-    'why-your-first-priority-isnt-automation-its-your-brand-system',
-    'ai-notion-weekly-organization'
   ],
   'ai-workflows': [
     'gpt-5-1-vs-gemini-3-creative-workflows',
@@ -288,7 +285,10 @@ export const pillarMappings = {
     'ai-workflows-save-time',
     'creator-automation-systems',
     'notion-make-automation-guide',
-    'content-engine-starter-kit'
+    'content-engine-starter-kit',
+    'notion-creator-dashboard',
+    'why-your-first-priority-isnt-automation-its-your-brand-system',
+    'ai-notion-weekly-organization'
   ]
 }
 

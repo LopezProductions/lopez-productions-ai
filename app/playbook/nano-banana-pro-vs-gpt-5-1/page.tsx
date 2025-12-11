@@ -395,7 +395,7 @@ export default function NanoBananaProVsGPT51() {
                 Need Custom AI-Generated Images?
               </h3>
               <p className="text-brand-gray-light mb-6">
-                Get 5 custom AI-generated Nano Banana images designed specifically for your website, branding, or content needs. Perfect for OG cards, social media, presentations, and more.
+                Get 10 custom AI art assets matching your brand palette. Perfect for OG cards, social media, presentations, and more.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <ConceptArtCheckoutButton />

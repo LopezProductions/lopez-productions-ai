@@ -17,9 +17,9 @@ export default function ConceptArtCheckoutButton() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          selectedServiceIds: ['concept-art'],
+          selectedServiceIds: ['concept-art-pack'],
           bundleIds: [],
-          total: 50,
+          total: 250,
         }),
       })
 
@@ -52,7 +52,7 @@ export default function ConceptArtCheckoutButton() {
         disabled={isLoading}
         className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isLoading ? 'Processing...' : 'Buy Concept Art Pack ($50)'}
+        {isLoading ? 'Processing...' : 'Buy Concept Art Pack ($250)'}
       </button>
       {error && (
         <p className="text-red-400 text-sm mt-2">{error}</p>
@@ -60,6 +60,8 @@ export default function ConceptArtCheckoutButton() {
     </div>
   )
 }
+
+
 
 
 
