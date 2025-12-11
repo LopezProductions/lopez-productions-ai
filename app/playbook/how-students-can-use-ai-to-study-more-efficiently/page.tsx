@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     title: 'How Students Can Use AI to Study More Efficiently',
     description:
       'A simple guide to using AI tools for smarter studying, better organization, and faster research—without breaking academic rules or relying on AI to write your papers.',
-    images: ['/ai-student-study.png'],
+    images: ['https://lopezproductions.ai/ai-student-study.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How Students Can Use AI to Study More Efficiently',
     description:
       'A simple guide to using AI tools for smarter studying, better organization, and faster research—without breaking academic rules or relying on AI to write your papers.',
-    images: ['/ai-student-study.png'],
+    images: ['https://lopezproductions.ai/ai-student-study.png'],
   },
 }
 

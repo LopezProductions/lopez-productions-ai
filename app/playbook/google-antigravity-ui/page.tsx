@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     description:
       'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
-    images: ['/1200-google-antigravity.png'],
+    images: ['https://lopezproductions.ai/1200-google-antigravity.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     description:
       'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
-    images: ['/1200-google-antigravity.png'],
+    images: ['https://lopezproductions.ai/1200-google-antigravity.png'],
   },
 }
 
@@ -387,6 +387,7 @@ export default function GoogleAntigravityUITemplate() {
               title="The Worst Thing About Gemini 3 Pro (That No One Talks About)"
               description="Does Gemini 3 Pro have project folders? No. Here's why the lack of folders makes multi-project work harder and the best workaround for organizing your research."
               href="/playbook/the-worst-thing-about-gemini-3-pro"
+              thumbnail="/worst-gemini-feature.png"
             />
 
             <hr className="my-12 border-border" />

@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     title: 'The Worst Thing About Gemini 3 Pro (That No One Talks About)',
     description:
       'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
-    images: ['/worst-gemini-feature.png'],
+    images: ['https://lopezproductions.ai/worst-gemini-feature.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The Worst Thing About Gemini 3 Pro (That No One Talks About)',
     description:
       'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
-    images: ['/worst-gemini-feature.png'],
+    images: ['https://lopezproductions.ai/worst-gemini-feature.png'],
   },
 }
 
@@ -189,6 +189,7 @@ export default function TheWorstThingAboutGemini3Pro() {
               title="Gemini 3 Pro vs. Claude 4.5: The Ultimate Workflow for Research & Academic Writing"
               description="A breakdown of which model is better for PDFs, citations, academic writing, and deep research."
               href="/playbook/gemini-3-vs-claude-4-5-research-workflow"
+              thumbnail="/gemini-vs-claude.png"
             />
 
             <hr className="my-12 border-border" />

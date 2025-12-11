@@ -27,7 +27,14 @@ export const metadata: Metadata = {
     title: 'GPT-5.1 vs Gemini 3: Which AI Model Is Better for Real Creative Workflows?',
     description:
       'A practical breakdown of GPT-5.1 vs. Gemini 3 written specifically for creators, students, small teams, and automation-focused professionals. Covers workflow reliability, PDF handling, creativity, citation accuracy, and tool integrations like Notion and Make.com.',
-    images: ['/gpt5.1-vs-gemini3.png'],
+    images: ['https://lopezproductions.ai/gpt5.1-vs-gemini3.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GPT-5.1 vs Gemini 3: Which AI Model Is Better for Real Creative Workflows?',
+    description:
+      'A practical breakdown of GPT-5.1 vs. Gemini 3 written specifically for creators, students, small teams, and automation-focused professionals. Covers workflow reliability, PDF handling, creativity, citation accuracy, and tool integrations like Notion and Make.com.',
+    images: ['https://lopezproductions.ai/gpt5.1-vs-gemini3.png'],
   },
 }
 
@@ -487,6 +494,7 @@ export default function GPT51VsGemini3CreativeWorkflows() {
               title="Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?"
               description="A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics."
               href="/playbook/nano-banana-pro-vs-gpt-5-1"
+              thumbnail="/gpt-vs-nano.png"
             />
 
             <hr className="my-12 border-border" />

@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     title: 'Gemini 3 Pro vs. Claude 4.5: The Ultimate Workflow for Research & Academic Writing',
     description:
       'A practical comparison of Gemini 3 Pro and Claude 4.5 for academic research and writing, with a hybrid workflow that leverages each model\'s strengths for better results.',
-    images: ['/gemini-vs-claude.png'],
+    images: ['https://lopezproductions.ai/gemini-vs-claude.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Gemini 3 Pro vs. Claude 4.5: The Ultimate Workflow for Research & Academic Writing',
     description:
       'A practical comparison of Gemini 3 Pro and Claude 4.5 for academic research and writing, with a hybrid workflow that leverages each model\'s strengths for better results.',
-    images: ['/gemini-vs-claude.png'],
+    images: ['https://lopezproductions.ai/gemini-vs-claude.png'],
   },
 }
 
@@ -253,6 +253,7 @@ export default function Gemini3ProVsClaude45ResearchWorkflow() {
               title="How Students Can Use AI to Study More Efficiently"
               description="A simple guide to using AI tools for smarter studying, better organization, and faster research—without breaking academic rules or relying on AI to write your papers."
               href="/playbook/how-students-can-use-ai-to-study-more-efficiently"
+              thumbnail="/ai-student-study.png"
             />
 
             <hr className="my-12 border-border" />

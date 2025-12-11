@@ -20,13 +20,13 @@ export const metadata = {
     url: 'https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1',
     title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?',
     description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
-    images: ['/gpt-vs-nano.png'],
+    images: ['https://lopezproductions.ai/gpt-vs-nano.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?',
     description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
-    images: ['/gpt-vs-nano.png'],
+    images: ['https://lopezproductions.ai/gpt-vs-nano.png'],
   },
 }
 
