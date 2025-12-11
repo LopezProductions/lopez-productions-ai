@@ -259,7 +259,7 @@ export const allInsights: Insight[] = [
 ]
 
 // Pillar mappings
-export const pillarMappings = {
+export const pillarMappings: Record<string, string[]> = {
   'interface-architecture': [
     'google-antigravity-ui'
   ],
