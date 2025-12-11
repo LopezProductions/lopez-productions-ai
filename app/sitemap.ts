@@ -15,6 +15,8 @@ const staticPages = [
   { url: 'https://lopezproductions.ai/ai-portfolio-builder', priority: 0.9, changefreq: 'weekly' as const },
   { url: 'https://lopezproductions.ai/ai-systems-for-freelancers', priority: 0.9, changefreq: 'weekly' as const },
   { url: 'https://lopezproductions.ai/case-studies/nvidia-competitive-edge', priority: 0.6, changefreq: 'monthly' as const },
+  { url: 'https://lopezproductions.ai/google-antigravity-ui', priority: 0.9, changefreq: 'weekly' as const },
+  { url: 'https://lopezproductions.ai/playbook/google-antigravity-ui', priority: 0.9, changefreq: 'weekly' as const },
 ]
 
 // Template pages
