@@ -21,7 +21,7 @@ const getPillarFromSlug = (slug: string): { name: string; path: string } | null 
     return { name: 'AI Tools & Workflows', path: 'ai-workflows' }
   }
   if (slug === 'automation-systems') {
-    return { name: 'Business Automation', path: 'automation-systems' }
+    return { name: 'Automation & Ops Engineering', path: 'automation-systems' }
   }
 
   // Check if slug belongs to a pillar
@@ -37,7 +37,7 @@ const getPillarFromSlug = (slug: string): { name: string; path: string } | null 
         return { name: 'AI Tools & Workflows', path: 'ai-workflows' }
       }
       if (pillarPath === 'automation-systems') {
-        return { name: 'Business Automation', path: 'automation-systems' }
+        return { name: 'Automation & Ops Engineering', path: 'automation-systems' }
       }
     }
   }

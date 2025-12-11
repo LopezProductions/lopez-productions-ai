@@ -192,7 +192,7 @@ export const allInsights: Insight[] = [
     title: 'How To Build a Simple Automation System for Your Business (Beginner-Friendly Guide)',
     excerpt: 'A plain-English guide to automating your business without overthinking it — using simple systems, AI tools, and lightweight workflows that save time every single week.',
     readTime: '12 min read',
-    category: 'Business Automation',
+    category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-15',
     coverImage: '/simple-automation.png'
   },
@@ -219,7 +219,7 @@ export const allInsights: Insight[] = [
     title: 'How AI Workflows Save SaaS Teams 10 Hours a Week',
     excerpt: 'Discover the specific automation systems that cut project time by 20-30% and why most teams are still doing manual work that AI can handle.',
     readTime: '8 min read',
-    category: 'Business Automation',
+    category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-13'
   },
   {
@@ -235,7 +235,7 @@ export const allInsights: Insight[] = [
     title: 'Notion + Make.com: The Ultimate Automation Stack for Freelancers',
     excerpt: 'Step-by-step guide to connecting Notion databases with Make.com workflows. Automate client intake, project tracking, and reporting.',
     readTime: '12 min read',
-    category: 'Business Automation',
+    category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-09'
   },
   {
@@ -243,7 +243,7 @@ export const allInsights: Insight[] = [
     title: 'AI Tools You Need to Start Your Content Engine (2025 Edition)',
     excerpt: 'Learn how to build your own AI-powered content workflow using tools like ChatGPT, Claude, Perplexity AI, Midjourney, Notion, and Make.com.',
     readTime: '6 min read',
-    category: 'Business Automation',
+    category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-11',
     coverImage: '/content-engine.png'
   },

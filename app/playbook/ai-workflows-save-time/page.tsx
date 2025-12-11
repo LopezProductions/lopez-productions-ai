@@ -63,7 +63,7 @@ export default function AIWorkflowsSaveTime() {
             
             <div className="mb-6">
               <span className="inline-flex items-center rounded-full border border-brand-gold/30 px-3 py-1 text-sm text-brand-gold/90 bg-brand-gold/5">
-                AI Automation
+                Automation & Ops Engineering
               </span>
             </div>
             

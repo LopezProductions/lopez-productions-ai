@@ -6,23 +6,23 @@ import { allInsights, pillarMappings } from '../insights-data'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 
 export const metadata = {
-  title: 'Business Automation — Automate the Parts of Your Business That Slow You Down | Lopez Productions',
-  description: 'Most entrepreneurs are drowning in manual work. Learn how to simplify your operations, build smarter processes, and create automations that save time without adding complexity.',
-  keywords: 'business automation, workflow automation, Make.com, Notion automation, freelancer automation, SaaS automation',
+  title: 'Automation & Ops Engineering — Workflow Automations That Keep Your Startup Moving | Lopez Productions',
+  description: 'Workflow automations that eliminate repetitive tasks and keep your startup moving. Operational pipelines, Stripe → CRM → Discord flows, GitHub → Notion syncs, automated changelogs, internal summaries — all designed to reduce engineering bottlenecks.',
+  keywords: 'automation engineering, ops engineering, workflow automation, startup automation, AI team workflows, automation pipelines, internal tooling, system architecture',
   alternates: {
     canonical: 'https://lopezproductions.ai/playbook/automation-systems',
   },
   openGraph: {
     type: 'website',
     url: 'https://lopezproductions.ai/playbook/automation-systems',
-    title: 'Business Automation — Automate the Parts of Your Business That Slow You Down',
-    description: 'Most entrepreneurs are drowning in manual work. Learn how to simplify your operations, build smarter processes, and create automations that save time without adding complexity.',
+    title: 'Automation & Ops Engineering — Workflow Automations That Keep Your Startup Moving',
+    description: 'Workflow automations that eliminate repetitive tasks and keep your startup moving. Operational pipelines, Stripe → CRM → Discord flows, GitHub → Notion syncs, automated changelogs, internal summaries — all designed to reduce engineering bottlenecks.',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Business Automation — Automate the Parts of Your Business That Slow You Down',
-    description: 'Most entrepreneurs are drowning in manual work. Learn how to simplify your operations and build smarter processes.',
+    title: 'Automation & Ops Engineering — Workflow Automations That Keep Your Startup Moving',
+    description: 'Workflow automations that eliminate repetitive tasks and keep your startup moving. Operational pipelines, automation pipelines, internal tooling, system architecture.',
     images: ['/og-image.jpg'],
   },
 }
@@ -42,7 +42,7 @@ export default function AutomationSystemsPage() {
       <section className="pt-20 pb-16 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
           <Breadcrumbs 
-            title="Business Automation" 
+            title="Automation & Ops Engineering" 
             slug="automation-systems" 
           />
           
@@ -53,15 +53,15 @@ export default function AutomationSystemsPage() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight bg-gradient-to-b from-brand-gold to-brand-gold-dark bg-clip-text text-transparent mb-6">
-            Business Automation
+            Automation & Ops Engineering
           </h1>
           
           <p className="text-xl md:text-2xl text-brand-gray-light mb-8 leading-relaxed">
-            Automate the parts of your business that slow you down.
+            Workflow automations that eliminate repetitive tasks and keep your startup moving.
           </p>
           
           <p className="text-lg text-brand-gray-light max-w-4xl leading-relaxed">
-            Most entrepreneurs are drowning in manual work. This pillar helps you simplify your operations, build smarter processes, and create automations that save time without adding complexity.
+            Operational pipelines, Stripe → CRM → Discord flows, GitHub → Notion syncs, automated changelogs, internal summaries — all designed to reduce engineering bottlenecks. This pillar covers startup ops, AI team workflows, automation pipelines, internal tooling, and system architecture.
           </p>
         </div>
       </section>

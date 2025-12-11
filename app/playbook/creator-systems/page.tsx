@@ -137,7 +137,7 @@ export default function CreatorSystemsPage() {
             </h2>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Once you have your brand system foundation in place, you can start building with <Link href="/playbook/ai-workflows" className="text-brand-gold hover:text-brand-gold-dark underline">AI tools and workflows</Link> and then move on to <Link href="/playbook/automation-systems" className="text-brand-gold hover:text-brand-gold-dark underline">business automation</Link>.
+              Once you have your brand system foundation in place, you can start building with <Link href="/playbook/ai-workflows" className="text-brand-gold hover:text-brand-gold-dark underline">AI tools and workflows</Link> and then move on to <Link href="/playbook/automation-systems" className="text-brand-gold hover:text-brand-gold-dark underline">automation & ops engineering</Link>.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">

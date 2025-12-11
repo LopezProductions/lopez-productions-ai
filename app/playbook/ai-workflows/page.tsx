@@ -143,7 +143,7 @@ export default function AIWorkflowsPage() {
             </h2>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Before diving into AI tools, make sure you have a solid <Link href="/playbook/creator-systems" className="text-brand-gold hover:text-brand-gold-dark underline">brand system foundation</Link> in place. Once you have the right tools, you can start building <Link href="/playbook/automation-systems" className="text-brand-gold hover:text-brand-gold-dark underline">business automation systems</Link>.
+              Before diving into AI tools, make sure you have a solid <Link href="/playbook/creator-systems" className="text-brand-gold hover:text-brand-gold-dark underline">brand system foundation</Link> in place. Once you have the right tools, you can start building <Link href="/playbook/automation-systems" className="text-brand-gold hover:text-brand-gold-dark underline">automation & ops engineering systems</Link>.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
