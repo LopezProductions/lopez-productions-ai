@@ -52,22 +52,16 @@ export default function NanoBananaProVsGPT51() {
         {/* Hero */}
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
-            <Breadcrumbs 
-              title="Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?" 
-              slug="nano-banana-pro-vs-gpt-5-1" 
-            />
-            
-            <div className="mb-6">
-              <Link href="/playbook" className="text-brand-gold hover:text-brand-gold-dark transition-colors">
-                ← Back to Insights
-              </Link>
-            </div>
-            
-            <div className="mb-6">
+            <div className="mb-4">
               <span className="inline-flex items-center rounded-full border border-brand-gold/30 px-3 py-1 text-sm text-brand-gold/90 bg-brand-gold/5">
                 AI Image Generation
               </span>
             </div>
+            
+            <Breadcrumbs 
+              title="Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?" 
+              slug="nano-banana-pro-vs-gpt-5-1" 
+            />
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight bg-gradient-to-b from-brand-gold to-brand-gold-dark bg-clip-text text-transparent mb-6">
               Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?
@@ -201,12 +195,6 @@ export default function NanoBananaProVsGPT51() {
                 />
               </div>
             </div>
-
-            <Related
-              title="The Worst Thing About Gemini 3 Pro (That No One Talks About)"
-              description="Does Gemini 3 Pro have project folders? No. Here's why the lack of folders makes multi-project work harder and the best workaround for organizing your research."
-              href="/playbook/the-worst-thing-about-gemini-3-pro"
-            />
 
             <hr className="my-12 border-brand-gray-dark" />
 
@@ -376,6 +364,13 @@ export default function NanoBananaProVsGPT51() {
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
               <strong className="text-brand-white">Until next time.</strong>
             </p>
+
+            <Related
+              title="The Worst Thing About Gemini 3 Pro (That No One Talks About)"
+              description="Does Gemini 3 Pro have project folders? No. Here's why the lack of folders makes multi-project work harder and the best workaround for organizing your research."
+              href="/playbook/the-worst-thing-about-gemini-3-pro"
+              thumbnail="/worst-gemini-feature.png"
+            />
 
             <hr className="my-12 border-brand-gray-dark" />
 

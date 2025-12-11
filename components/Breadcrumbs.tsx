@@ -109,7 +109,7 @@ export default function Breadcrumbs({ title, slug, type, items: customItems }: B
 
       {/* Breadcrumb Navigation */}
       <nav aria-label="Breadcrumb" className="mb-6">
-        <ol className="flex items-center gap-1 text-sm text-text-muted/70 flex-wrap">
+        <ol className="flex items-center gap-1 text-xs text-text-muted/40 flex-wrap">
           {items.map((item, index) => (
             <li key={index} className="flex items-center">
               {index > 0 && (
