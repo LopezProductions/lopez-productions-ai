@@ -11,6 +11,9 @@ interface BreadcrumbsProps {
 
 const getPillarFromSlug = (slug: string): { name: string; path: string } | null => {
   // Check if slug is a pillar page itself
+  if (slug === 'interface-architecture') {
+    return { name: 'Interface Architecture', path: 'interface-architecture' }
+  }
   if (slug === 'creator-systems') {
     return { name: 'Creator Systems', path: 'creator-systems' }
   }
@@ -24,6 +27,9 @@ const getPillarFromSlug = (slug: string): { name: string; path: string } | null 
   // Check if slug belongs to a pillar
   for (const [pillarPath, slugs] of Object.entries(pillarMappings)) {
     if (slugs.includes(slug)) {
+      if (pillarPath === 'interface-architecture') {
+        return { name: 'Interface Architecture', path: 'interface-architecture' }
+      }
       if (pillarPath === 'creator-systems') {
         return { name: 'Creator Systems', path: 'creator-systems' }
       }
@@ -61,7 +67,7 @@ export default function Breadcrumbs({ title, slug, type, items: customItems }: B
   } else if (slug) {
     // Playbook pages (default behavior)
     const pillar = getPillarFromSlug(slug)
-    const isPillarPage = slug === 'creator-systems' || slug === 'ai-workflows' || slug === 'automation-systems'
+    const isPillarPage = slug === 'interface-architecture' || slug === 'creator-systems' || slug === 'ai-workflows' || slug === 'automation-systems'
     
     items = [
       { name: 'Home', href: '/' },

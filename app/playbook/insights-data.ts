@@ -21,7 +21,7 @@ export const allInsights: Insight[] = [
     title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     excerpt: 'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
     readTime: '12 min read',
-    category: 'AI Workflows',
+    category: 'Interface Architecture',
     publishedDate: '2025-12-10',
     coverImage: '/1200-google-antigravity.png',
   },
@@ -260,13 +260,15 @@ export const allInsights: Insight[] = [
 
 // Pillar mappings
 export const pillarMappings = {
+  'interface-architecture': [
+    'google-antigravity-ui'
+  ],
   'creator-systems': [
     'notion-creator-dashboard',
     'why-your-first-priority-isnt-automation-its-your-brand-system',
     'ai-notion-weekly-organization'
   ],
   'ai-workflows': [
-    'google-antigravity-ui',
     'gpt-5-1-vs-gemini-3-creative-workflows',
     'the-worst-thing-about-gemini-3-pro',
     'gemini-3-vs-claude-4-5-research-workflow',
