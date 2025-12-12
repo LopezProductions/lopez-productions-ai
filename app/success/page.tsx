@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
-import { CheckCircle, Mail, Calendar, Download } from 'lucide-react'
+import { CheckCircle, Mail, Calendar, Download, Loader2, AlertCircle } from 'lucide-react'
 import { anyRequiresIntake, formatPurchasedServices, getServiceName } from '../data/service-mapping'
 
 interface SessionData {
@@ -23,6 +23,10 @@ interface SessionData {
   payment_status: string
 }
 
+// List of service IDs that have downloadable products
+// This should match the downloadableProducts map in /api/download/route.ts
+const downloadableServiceIds = ['antigravity-kit-source']
+
 function SuccessPageContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
@@ -30,6 +34,43 @@ function SuccessPageContent() {
   const [sessionData, setSessionData] = useState<SessionData | null>(null)
   const [requiresIntakeForm, setRequiresIntakeForm] = useState(false)
   const [purchasedServices, setPurchasedServices] = useState<string>('')
+  const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
+  const [isDownloadLoading, setIsDownloadLoading] = useState(false)
+  const [downloadError, setDownloadError] = useState<string | null>(null)
+  const [hasDownloadableProduct, setHasDownloadableProduct] = useState(false)
+
+  const fetchDownloadUrl = async (sessionId: string) => {
+    setIsDownloadLoading(true)
+    setDownloadError(null)
+    
+    try {
+      const response = await fetch('/api/download', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ sessionId }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Failed to fetch download link' }))
+        setDownloadError(errorData.error || 'Failed to fetch download link')
+        return
+      }
+
+      const data = await response.json()
+      if (data.url) {
+        setDownloadUrl(data.url)
+      } else {
+        setDownloadError('No download URL returned')
+      }
+    } catch (err) {
+      console.error('Error fetching download URL:', err)
+      setDownloadError('Failed to fetch download link. Please try again or contact support.')
+    } finally {
+      setIsDownloadLoading(false)
+    }
+  }
 
   useEffect(() => {
     if (!sessionId) {
@@ -62,6 +103,15 @@ function SuccessPageContent() {
         // Format purchased services for display
         const formatted = formatPurchasedServices(selectedServiceIds, bundleIds)
         setPurchasedServices(formatted)
+
+        // Check if any purchased product qualifies for download
+        const hasDownload = allServiceIds.some(id => downloadableServiceIds.includes(id))
+        setHasDownloadableProduct(hasDownload)
+
+        // If product has download, fetch the download URL
+        if (hasDownload && sessionId) {
+          fetchDownloadUrl(sessionId)
+        }
       } catch (err) {
         console.error('Error fetching session:', err)
       } finally {
@@ -116,6 +166,59 @@ function SuccessPageContent() {
               </p>
             )}
           </motion.div>
+
+          {/* Download Button Section - Only shown for products with downloads */}
+          {hasDownloadableProduct && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="mb-8"
+            >
+              {isDownloadLoading && (
+                <div className="bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark">
+                  <div className="flex items-center justify-center gap-3 text-brand-gold">
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <span>Preparing your download...</span>
+                  </div>
+                </div>
+              )}
+
+              {downloadError && (
+                <div className="bg-brand-gray-dark rounded-xl p-8 border border-red-500/50">
+                  <div className="flex items-start gap-3 text-red-400">
+                    <AlertCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold mb-1">Download Error</p>
+                      <p className="text-sm text-red-300">{downloadError}</p>
+                      <button
+                        onClick={() => sessionId && fetchDownloadUrl(sessionId)}
+                        className="mt-3 text-sm text-brand-gold hover:text-brand-gold-dark underline"
+                      >
+                        Try again
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {downloadUrl && !isDownloadLoading && (
+                <div className="bg-brand-gray-dark rounded-xl p-8 border border-brand-gray-dark">
+                  <a
+                    href={downloadUrl}
+                    download
+                    className="btn-primary px-8 py-4 inline-flex items-center gap-3 text-lg"
+                  >
+                    <Download className="w-5 h-5" />
+                    Download Your Product
+                  </a>
+                  <p className="text-sm text-brand-gray-light mt-4">
+                    ⚠️ This download link expires in 10 minutes. Please download your file now.
+                  </p>
+                </div>
+              )}
+            </motion.div>
+          )}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
