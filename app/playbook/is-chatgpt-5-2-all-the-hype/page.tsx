@@ -141,6 +141,16 @@ export default function IsChatGPT52AllTheHype() {
               One thing I&apos;ve noticed with the last two iterations of GPT (5.1 and 5.2) is how much they <strong className="text-text-primary">overthink simple tasks</strong>.
             </p>
 
+            <div className="my-8 rounded-2xl overflow-hidden border border-border">
+              <Image
+                src="/overthinking-gpt-5-1.png"
+                alt="GPT-5.1 and 5.2 overthinking simple tasks"
+                width={1200}
+                height={630}
+                className="w-full h-auto"
+              />
+            </div>
+
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
               Instead of giving me a direct answer, the model often:
             </p>
@@ -262,6 +272,16 @@ export default function IsChatGPT52AllTheHype() {
               This is where the experience really breaks down for me.
             </p>
 
+            <div className="my-8 rounded-2xl overflow-hidden border border-border">
+              <Image
+                src="/just-generate-gpt.png"
+                alt="GPT-5.2 image generation friction and over-engineering prompts"
+                width={1200}
+                height={630}
+                className="w-full h-auto"
+              />
+            </div>
+
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
               With GPT-5.2, if I ask for something like a thumbnail:
             </p>
@@ -359,6 +379,57 @@ export default function IsChatGPT52AllTheHype() {
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
               Sometimes, knowing when <em>not</em> to think is the real upgrade.
             </p>
+
+            <hr className="my-12 border-border" />
+
+            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
+              Related Reading
+            </h2>
+
+            <p className="text-lg text-text-secondary mb-4 leading-relaxed">
+              <em className="text-text-muted">Explore more AI tools and workflows:</em>
+            </p>
+
+            <ul className="list-disc pl-6 text-text-secondary space-y-2 mb-6">
+              <li>
+                <Link href="/playbook/firefly-mobile-nano-banana" className="text-accent hover:text-accent-dark underline">
+                  Why I Switched to Adobe Firefly Mobile (The Real Reason Isn&apos;t the Adobe Model)
+                </Link>
+              </li>
+              <li>
+                <Link href="/playbook/stop-chasing-ai-tools" className="text-accent hover:text-accent-dark underline">
+                  Stop Chasing Every New AI Tool — Here&apos;s What&apos;s Actually Worth Learning
+                </Link>
+              </li>
+              <li>
+                <Link href="/playbook/gemini-3-vs-claude-4-5-research-workflow" className="text-accent hover:text-accent-dark underline">
+                  Gemini 3 Pro vs. Claude 4.5: The Ultimate Workflow for Research &amp; Academic Writing
+                </Link>
+              </li>
+              <li>
+                <Link href="/playbook/brand-ready-website-images-chatgpt" className="text-accent hover:text-accent-dark underline">
+                  How to Generate Clean, Brand-Ready Website Images Using ChatGPT 5.1
+                </Link>
+              </li>
+            </ul>
+
+            {/* CTA */}
+            <div className="mt-16 p-8 bg-surface rounded-2xl text-center border border-brand-gold/20">
+              <h3 className="text-2xl font-serif font-bold text-text-primary mb-4">
+                Ready to build your content engine?
+              </h3>
+              <p className="text-text-secondary mb-6">
+                Get a free 20-minute audit of your current processes and discover which workflows you can automate today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/solutions" className="btn-primary">
+                  Book a Free System Audit
+                </Link>
+                <Link href="/playbook" className="btn-outline">
+                  Read More Insights
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
