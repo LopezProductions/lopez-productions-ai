@@ -17,6 +17,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'is-chatgpt-5-2-all-the-hype',
+    title: 'Is ChatGPT 5.2 All the Hype?',
+    excerpt: 'A practical, hands-on review of ChatGPT 5.2 vs 5.1 and 5.0—focusing on real workflows, overthinking, hallucinations, image generation friction, and when smarter models actually slow you down.',
+    readTime: '9 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-12-15',
+    coverImage: '/chatgpt-5-2-hype.png',
+  },
+  {
     slug: 'google-antigravity-ui',
     title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     excerpt: 'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
@@ -266,6 +275,7 @@ export const pillarMappings: Record<string, string[]> = {
   'creator-systems': [
   ],
   'ai-workflows': [
+    'is-chatgpt-5-2-all-the-hype',
     'gpt-5-1-vs-gemini-3-creative-workflows',
     'the-worst-thing-about-gemini-3-pro',
     'gemini-3-vs-claude-4-5-research-workflow',
