@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/lp-og.png',
         width: 1200,
         height: 630,
         alt: 'Lopez Productions – AI Brand Systems',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Brand Systems for Creators & Small Businesses | Lopez Productions',
     description: 'Build a modern brand system using AI. Simple workflows, clean design, and creator-friendly tools to grow your content and identity.',
-    images: ['/og-image.jpg'],
+    images: ['/lp-og.png'],
   },
 }
 

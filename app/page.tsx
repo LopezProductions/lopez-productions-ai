@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/lp-og.png',
         width: 1200,
         height: 630,
         alt: 'Lopez Productions – The Interface Layer for AI Startups',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Interface Layer for AI Startups | Lopez Productions',
     description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
-    images: ['/og-image.jpg'],
+    images: ['/lp-og.png'],
   },
 }
 
