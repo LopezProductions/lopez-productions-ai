@@ -135,12 +135,21 @@ export const allInsights: Insight[] = [
   },
   {
     slug: 'zapiers-npm-account-hacked',
-    title: 'Zapier’s NPM Account Hacked — Should You Be Worried About Your Automations?',
-    excerpt: 'Zapier’s NPM account was breached and several packages shipped self-propagating malware—but unless you write custom JS integrations, your everyday automations are outside the blast radius.',
+    title: 'Zapier\'s NPM Account Hacked — Should You Be Worried About Your Automations?',
+    excerpt: 'Zapier\'s NPM account was breached and several packages shipped self-propagating malware—but unless you write custom JS integrations, your everyday automations are outside the blast radius.',
     readTime: '9 min read',
     category: 'AI Workflows',
     publishedDate: '2025-11-26',
     coverImage: '/zapier-breach.png'
+  },
+  {
+    slug: 'ultimate-guide-zapier-gpt-integrations',
+    title: 'The Ultimate Guide to Zapier GPT Integrations (and Why You Should Stop Using Them)',
+    excerpt: 'Zapier GPT is great for prototyping but terrible for production, privacy, and cost control. Learn why serious AI agents don\'t belong on Zapier and discover the self-hosted n8n alternative.',
+    readTime: '12 min read',
+    category: 'Automation & Ops Engineering',
+    publishedDate: '2025-12-17',
+    coverImage: '/zapier-gpt-guide.png'
   },
   {
     slug: 'why-llms-perform-better-in-italian-french-and-polish-than-in-english',
@@ -299,7 +308,8 @@ export const pillarMappings: Record<string, string[]> = {
     'content-engine-starter-kit',
     'notion-creator-dashboard',
     'why-your-first-priority-isnt-automation-its-your-brand-system',
-    'ai-notion-weekly-organization'
+    'ai-notion-weekly-organization',
+    'ultimate-guide-zapier-gpt-integrations'
   ]
 }
 
