@@ -9,23 +9,23 @@ import Related from '../../../components/Related'
 import { allInsights } from '../insights-data'
 
 export const metadata = {
-  title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better? | Lopez Productions',
-  description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
-  keywords: 'AI image generation, GPT-5.1, Nano Banana Pro, AI comparison, image models, AI design tools, image generation comparison',
+  title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Wins in 2025? (Benchmarks & Review) | Lopez Productions',
+  description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 (ChatGPT\'s latest image generation model) using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
+  keywords: 'AI image generation, GPT-5.1, Nano Banana Pro, AI comparison, image models, AI design tools, image generation comparison, ChatGPT Image Gen, DALL-E 3',
   alternates: {
     canonical: 'https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1',
   },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1',
-    title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?',
-    description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
+    title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Wins in 2025? (Benchmarks & Review)',
+    description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 (ChatGPT\'s latest image generation model) using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
     images: ['https://lopezproductions.ai/gpt-vs-nano.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?',
-    description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
+    title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Wins in 2025? (Benchmarks & Review)',
+    description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 (ChatGPT\'s latest image generation model) using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
     images: ['https://lopezproductions.ai/gpt-vs-nano.png'],
   },
 }
@@ -59,16 +59,16 @@ export default function NanoBananaProVsGPT51() {
             </div>
             
             <Breadcrumbs 
-              title="Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?" 
+              title="Nano Banana Pro vs GPT-5.1: Which AI Image Model Wins in 2025? (Benchmarks & Review)" 
               slug="nano-banana-pro-vs-gpt-5-1" 
             />
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight bg-gradient-to-b from-brand-gold to-brand-gold-dark bg-clip-text text-transparent mb-6">
-              Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?
+              Nano Banana Pro vs GPT-5.1: Which AI Image Model Wins in 2025? (Benchmarks & Review)
             </h1>
             
             <p className="text-xl text-brand-gray-light mb-8 leading-relaxed">
-              A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.
+              A real-world image generation comparison between Nano Banana Pro and GPT-5.1 (ChatGPT's latest image generation model) using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.
             </p>
             
             <div className="flex items-center gap-4 text-sm text-brand-gray-muted">
@@ -99,82 +99,60 @@ export default function NanoBananaProVsGPT51() {
           <div className="max-w-4xl mx-auto prose prose-lg">
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Most AI image model comparisons online feel like hype, marketing, or cherry-picked examples. I wanted something more practical. So for this test, I ran the exact same prompts through both GPT-5.1 and Nano Banana Pro using scenarios that real creators actually care about: realistic portraits, stylized anime characters, and clean branded graphics for websites and slides. These represent the three big categories people use AI visuals for every day — content, characters, and communication. The point isn't to declare a universal winner, but to show their strengths side by side so you know which model fits the kind of work you're trying to create.
+              Most AI image model comparisons online feel like hype, marketing, or cherry-picked examples. I wanted something more practical.
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              I ran three real-world image generation tests using the same prompts for both GPT-5.1 and Nano Banana Pro.
+              For this test, I ran the exact same prompts through both <strong className="text-brand-white">GPT-5.1</strong> (ChatGPT's latest image generation model) and <strong className="text-brand-white">Nano Banana Pro</strong> using scenarios that real creators actually care about: realistic portraits, stylized anime characters, and clean branded graphics.
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              The goal wasn't to crown a universal winner — but to show what each model is good at, where they differ, and how their creative styles show up across different use cases.
+              These represent the three big categories people use AI visuals for every day: content, characters, and communication. The goal isn't to declare a universal winner, but to show their strengths side-by-side so you know which model fits your workflow.
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Here are the results.
+              Below are the results of my 2025 benchmarks for Nano Banana Pro vs. GPT-5.1.
             </p>
 
             <hr className="my-12 border-brand-gray-dark" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
-              Test Prompts Used
+              Test Methodology
             </h2>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              To keep the comparison fair, both models received the exact same text prompts.
+              To keep the comparison fair, both models received the exact same text prompts. I tested three distinct categories:
             </p>
 
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Here are the three prompts used in each round:
-            </p>
+            <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
+              <li><strong className="text-brand-white">Prompt 1:</strong> Realistic Portrait (Photography)</li>
+              <li><strong className="text-brand-white">Prompt 2:</strong> Anime Cyberpunk Character (Stylization)</li>
+              <li><strong className="text-brand-white">Prompt 3:</strong> Clean Branded OG-Card Graphic (Design)</li>
+            </ul>
 
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
-              Prompt 1 — Realistic Portrait
-            </h3>
-
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              A realistic studio portrait of a person with soft diffused lighting, sharp eyes, natural skin texture, and balanced facial proportions. Neutral beige backdrop, subtle depth of field, no stylization, no filters, no makeup, no exaggerated features. Clean professional photography style.
-            </p>
-
-            <hr className="my-8 border-brand-gray-dark" />
-
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
-              Prompt 2 — Anime Cyberpunk Character
-            </h3>
-
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Anime-style cyberpunk character standing in a neon-lit alley at night. Dynamic pose, glowing signs in the background, cool and warm light reflections, detailed outfit with tech accessories, expressive anime eyes, bold outlines, and vibrant colors. Clean composition with strong atmosphere.
-            </p>
-
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
-              Prompt 3 — Clean Branded OG-Card Graphic
-            </h3>
-
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              A clean, minimalist OG-card style graphic with a modern tech aesthetic. Neutral beige and charcoal tones, soft subtle shadows, simple rectangular layout. Include clear, legible text that reads: "AI Model Comparison 2025". Balanced spacing, crisp typography, no distortion, no extra decorations. Professional editorial design.
-            </p>
 
             <hr className="my-12 border-brand-gray-dark" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
-              Prompt 1: Realistic Portrait
+              Prompt 1: Realistic Portrait Performance
             </h2>
 
             <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
-              <strong className="text-brand-white">Winner: Tie</strong>
+              <strong className="text-brand-white">The Prompt:</strong> <em className="text-brand-gray-muted">A realistic studio portrait of a person with soft diffused lighting, sharp eyes, natural skin texture, and balanced facial proportions. Neutral beige backdrop, subtle depth of field, no stylization, no filters, no makeup, no exaggerated features. Clean professional photography style.</em>
             </p>
 
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Both GPT-5.1 and Nano Banana Pro delivered natural, realistic portraits with accurate lighting and clean skin texture.
-            </p>
+            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
+              Verdict: Tie (Best for General Stock Photos)
+            </h3>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              If you need <strong className="text-brand-white">stock-style photos, website visuals, or general b-roll imagery</strong>, either model is strong enough to use interchangeably.
+              Both GPT-5.1 and Nano Banana Pro delivered natural, realistic portraits with accurate lighting and clean skin texture. If you need stock-style photos, website visuals, or general b-roll imagery, either model is strong enough to use interchangeably.
             </p>
 
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              This category was almost identical for both models — a clean tie.
-            </p>
+            <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
+              <li><strong className="text-brand-white">Nano Banana Pro:</strong> Excellent skin texture and lighting accuracy.</li>
+              <li><strong className="text-brand-white">GPT-5.1:</strong> Reliable facial proportions and eye sharpness.</li>
+            </ul>
 
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-brand-gray-dark mb-4">
@@ -203,22 +181,25 @@ export default function NanoBananaProVsGPT51() {
             </h2>
 
             <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
-              <strong className="text-brand-white">Winner: Nano Banana Pro</strong>
-            </p>
-
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Both models produced good-looking anime characters, but the differences become clear once you zoom into the details.
+              <strong className="text-brand-white">The Prompt:</strong> <em className="text-brand-gray-muted">Anime-style cyberpunk character standing in a neon-lit alley at night. Dynamic pose, glowing signs in the background, cool and warm light reflections, detailed outfit with tech accessories, expressive anime eyes, bold outlines, and vibrant colors. Clean composition with strong atmosphere.</em>
             </p>
 
             <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
-              What Nano Banana Pro did better
+              Verdict: Winner — Nano Banana Pro
             </h3>
 
+            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
+              Both models produced good-looking anime characters, but the differences become clear once you zoom into the details. Nano Banana Pro captured the specific "genre" feel much better than GPT-5.1.
+            </p>
+
+            <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
+              <strong className="text-brand-white">Why Nano Banana Pro Won:</strong>
+            </p>
+
             <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
-              <li>Nailed the <strong className="text-brand-white">cyberpunk genre</strong> with goggles, tech wear, and neon gear</li>
-              <li>Captured a more dynamic, expressive pose</li>
-              <li>The style feels closer to <strong className="text-brand-white">Cyberpunk 2077</strong> or early 90s anime</li>
-              <li>The aesthetic accuracy to the prompt was noticeably stronger</li>
+              <li><strong className="text-brand-white">Genre Accuracy:</strong> Nailed the cyberpunk aesthetic with goggles, tech wear, and neon gear.</li>
+              <li><strong className="text-brand-white">Dynamic Posing:</strong> Captured a more expressive, action-oriented pose.</li>
+              <li><strong className="text-brand-white">Style Match:</strong> The style feels closer to <em>Cyberpunk 2077</em> or 90s anime, adhering strictly to the prompt's requested atmosphere.</li>
             </ul>
 
             <div className="my-8">
@@ -231,14 +212,13 @@ export default function NanoBananaProVsGPT51() {
               </div>
             </div>
 
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
-              Where GPT-5.1 differed
-            </h3>
+            <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
+              <strong className="text-brand-white">Where GPT-5.1 Struggled:</strong>
+            </p>
 
             <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
-              <li>The cyberpunk elements were softer or missing</li>
-              <li>The pose was less dynamic</li>
-              <li>The output looks more like a modern animated TV series — polished, but not as gritty or genre-specific</li>
+              <li><strong className="text-brand-white">Too Polished:</strong> The output looked like a modern animated TV series—smooth, but missing the "gritty" texture requested.</li>
+              <li><strong className="text-brand-white">Static Poses:</strong> The character felt stiff compared to Nano Banana's dynamic composition.</li>
             </ul>
 
             <div className="my-8">
@@ -251,10 +231,6 @@ export default function NanoBananaProVsGPT51() {
               </div>
             </div>
 
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Both images look great at first glance, but Nano Banana Pro's attention to stylistic cues and details gives it the win here.
-            </p>
-
             <hr className="my-12 border-brand-gray-dark" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
@@ -262,16 +238,25 @@ export default function NanoBananaProVsGPT51() {
             </h2>
 
             <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
-              <strong className="text-brand-white">Winner: Nano Banana Pro</strong>
+              <strong className="text-brand-white">The Prompt:</strong> <em className="text-brand-gray-muted">A clean, minimalist OG-card style graphic with a modern tech aesthetic. Neutral beige and charcoal tones, soft subtle shadows, simple rectangular layout. Include clear, legible text that reads: "AI Model Comparison 2025". Balanced spacing, crisp typography, no distortion, no extra decorations. Professional editorial design.</em>
             </p>
 
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              This one surprised me.
-            </p>
+            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
+              Verdict: Winner — Nano Banana Pro
+            </h3>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              GPT-5.1 generated a <strong className="text-brand-white">very simplistic</strong> design — clean, but not visually compelling. It didn't attempt anything beyond minimal layout rules, resulting in an output that felt safe but plain.
+              This result was the biggest surprise of the benchmark. GPT-5.1 struggled to create a compelling layout, whereas Nano Banana Pro produced a near-publishable asset.
             </p>
+
+            <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
+              <strong className="text-brand-white">Why Nano Banana Pro Won:</strong>
+            </p>
+
+            <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
+              <li><strong className="text-brand-white">Design Hierarchy:</strong> Created an infographic-style composition with proper structure and spacing.</li>
+              <li><strong className="text-brand-white">Professional Polish:</strong> The output looked like a designed slide rather than a random generation.</li>
+            </ul>
 
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-brand-gray-dark mb-4">
@@ -283,17 +268,14 @@ export default function NanoBananaProVsGPT51() {
               </div>
             </div>
 
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Nano Banana Pro, however, created a much more interesting <strong className="text-brand-white">infographic-style composition</strong> with better structure, spacing, and visual hierarchy.
+            <p className="text-lg text-brand-gray-light mb-4 leading-relaxed">
+              <strong className="text-brand-white">Where GPT-5.1 Struggled:</strong>
             </p>
 
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              This seems to be a major strength of Nano Banana Pro:
-            </p>
-
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              It excels at <strong className="text-brand-white">illustrations, infographics, and presentation-ready slides</strong> that look professionally designed.
-            </p>
+            <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
+              <li><strong className="text-brand-white">Too Simple:</strong> It followed the "minimal" instruction too literally, resulting in a plain, uninspired image.</li>
+              <li><strong className="text-brand-white">Lack of Structure:</strong> It didn't attempt to organize the information visually.</li>
+            </ul>
 
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-brand-gray-dark mb-4">
@@ -308,69 +290,78 @@ export default function NanoBananaProVsGPT51() {
             <hr className="my-12 border-brand-gray-dark" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
-              Final Conclusion
+              Final Conclusion: Which Model is Better?
             </h2>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              Both models are excellent, but they shine in different areas.
+              Both models are excellent, but they shine in different areas. For most users in 2025, the best choice depends on your specific output needs.
             </p>
 
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
-              Where both models perform well
-            </h3>
-
-            <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
-              <li>Realistic photos</li>
-              <li>Anime characters</li>
-              <li>Aesthetically pleasing images</li>
-            </ul>
-
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
-              Where Nano Banana Pro stands out
-            </h3>
-
-            <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
-              <li>Detailed infographics and slide-style visuals</li>
-              <li>Strong adherence to stylistic prompts</li>
-              <li>More expressive genre-heavy imagery (like cyberpunk)</li>
-            </ul>
-
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-brand-white mt-8">
-              Where GPT-5.1 performs best
-            </h3>
-
-            <ul className="list-disc pl-6 text-brand-gray-light space-y-2 mb-6">
-              <li>Clean, modern character rendering</li>
-              <li>Reliable realism</li>
-              <li>Safe, predictable layouts (good for simple branded graphics)</li>
-            </ul>
-
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              For most people, the best choice depends on what you're trying to create.
-            </p>
-
-            <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              If you want <strong className="text-brand-white">infographics or stylistically accurate illustrations</strong>, Nano Banana Pro has the advantage.
-            </p>
+            <div className="overflow-x-auto mb-8">
+              <table className="w-full border-collapse border border-brand-gray-dark">
+                <thead>
+                  <tr className="bg-brand-gray-dark/50">
+                    <th className="border border-brand-gray-dark px-4 py-3 text-left text-brand-white font-semibold">Feature</th>
+                    <th className="border border-brand-gray-dark px-4 py-3 text-left text-brand-white font-semibold">Winner</th>
+                    <th className="border border-brand-gray-dark px-4 py-3 text-left text-brand-white font-semibold">Best For...</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-white font-semibold"><strong>Realism & Photography</strong></td>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-white font-semibold"><strong>Tie</strong></td>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-gray-light">Stock photos, headshots, general web visuals.</td>
+                  </tr>
+                  <tr className="bg-brand-gray-dark/30">
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-white font-semibold"><strong>Anime & Stylization</strong></td>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-white font-semibold"><strong>Nano Banana Pro</strong></td>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-gray-light">Game assets, fan art, specific genre styles.</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-white font-semibold"><strong>Graphic Design</strong></td>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-white font-semibold"><strong>Nano Banana Pro</strong></td>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-gray-light">Infographics, slides, marketing assets.</td>
+                  </tr>
+                  <tr className="bg-brand-gray-dark/30">
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-white font-semibold"><strong>Ease of Use</strong></td>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-white font-semibold"><strong>GPT-5.1</strong></td>
+                    <td className="border border-brand-gray-dark px-4 py-3 text-brand-gray-light">Quick, simple chats and basic image needs.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              If you want <strong className="text-brand-white">clean characters or straightforward compositions</strong>, GPT-5.1 remains extremely dependable.
+              <strong className="text-brand-white">The Bottom Line:</strong>
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              This is just the starting point — I'll continue testing both models with deeper and more complex prompts in future comparisons.
+              If you want <strong className="text-brand-white">infographics, slides, or stylistically accurate illustrations</strong>, <strong className="text-brand-white">Nano Banana Pro</strong> has the clear advantage. If you want <strong className="text-brand-white">clean characters or straightforward compositions</strong>, <strong className="text-brand-white">GPT-5.1</strong> remains extremely dependable.
             </p>
 
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              <strong className="text-brand-white">Until next time.</strong>
+              I will continue testing both models with deeper prompts in future updates.
             </p>
 
-            <Related
-              title="The Worst Thing About Gemini 3 Pro (That No One Talks About)"
-              description="Does Gemini 3 Pro have project folders? No. Here's why the lack of folders makes multi-project work harder and the best workaround for organizing your research."
-              href="/playbook/the-worst-thing-about-gemini-3-pro"
-              thumbnail="/worst-gemini-feature.png"
-            />
+            <hr className="my-12 border-brand-gray-dark" />
+
+            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
+              Read Next
+            </h2>
+
+            <div className="my-8">
+              <Link 
+                href="/playbook/the-worst-thing-about-gemini-3-pro"
+                className="block p-6 bg-brand-gray-dark rounded-xl border border-brand-gray-dark hover:border-brand-gold/30 transition-colors"
+              >
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-brand-white mb-2">
+                  The Worst Thing About Gemini 3 Pro (That No One Talks About) →
+                </h3>
+                <p className="text-brand-gray-light">
+                  Does Gemini 3 Pro have project folders? No. Here is why that matters for your workflow.
+                </p>
+              </Link>
+            </div>
 
             <hr className="my-12 border-brand-gray-dark" />
 

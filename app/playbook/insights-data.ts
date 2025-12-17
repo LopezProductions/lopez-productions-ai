@@ -153,11 +153,12 @@ export const allInsights: Insight[] = [
   },
   {
     slug: 'nano-banana-pro-vs-gpt-5-1',
-    title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Actually Performs Better?',
-    excerpt: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
+    title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Wins in 2025? (Benchmarks & Review)',
+    excerpt: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 (ChatGPT\'s latest image generation model) using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
     readTime: '8 min read',
     category: 'AI Workflows',
     publishedDate: '2025-11-24',
+    modifiedDate: '2025-12-16',
     coverImage: '/gpt-vs-nano.png'
   },
   {
