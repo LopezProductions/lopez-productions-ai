@@ -8,10 +8,13 @@ import ConceptArtCheckoutButton from '../../../components/ConceptArtCheckoutButt
 import Related from '../../../components/Related'
 import { allInsights } from '../insights-data'
 
+const nanoBananaPost = allInsights.find(p => p.slug === 'nano-banana-pro-vs-gpt-5-1')
+const keywords = nanoBananaPost?.entityTags?.join(', ') || 'AI image generation, GPT-5.1, Nano Banana Pro, AI comparison, image models, AI design tools, image generation comparison, ChatGPT Image Gen, DALL-E 3'
+
 export const metadata = {
   title: 'Nano Banana Pro vs GPT-5.1: Which AI Image Model Wins in 2025? (Benchmarks & Review) | Lopez Productions',
   description: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 (ChatGPT\'s latest image generation model) using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
-  keywords: 'AI image generation, GPT-5.1, Nano Banana Pro, AI comparison, image models, AI design tools, image generation comparison, ChatGPT Image Gen, DALL-E 3',
+  keywords,
   alternates: {
     canonical: 'https://lopezproductions.ai/playbook/nano-banana-pro-vs-gpt-5-1',
   },

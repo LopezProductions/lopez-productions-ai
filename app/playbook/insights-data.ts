@@ -9,6 +9,7 @@ export interface Insight {
   excerpt: string
   readTime: string
   category: string
+  entityTags?: string[]
   publishedDate: string
   coverImage?: string
   modifiedDate?: string
@@ -152,6 +153,38 @@ export const allInsights: Insight[] = [
     coverImage: '/zapier-gpt-guide.png'
   },
   {
+    slug: 'google-ai-mode',
+    title: 'Google AI Mode: What It Is, Why It\'s Annoying, and Whether You Can Turn It Off',
+    excerpt: 'Google AI Mode forces Gemini summaries into search — even when you just want links. Here\'s what it does, why it\'s frustrating, and how to avoid it.',
+    readTime: '10 min read',
+    category: 'Interface Architecture',
+    entityTags: ['Google AI Mode', 'AI Search', 'Search Interface Design', 'Gemini', 'Google AI Overviews', 'Forced AI Experiences'],
+    publishedDate: '2025-12-18',
+    coverImage: '/google-ai-mode.png',
+    faqs: [
+      {
+        question: 'Can you turn off Google AI Mode completely?',
+        answer: 'No. Google does not currently offer a way to permanently disable AI Mode in Search. You can switch back to web results per search, but the setting does not persist.',
+      },
+      {
+        question: 'How do I remove AI Mode from Google Search?',
+        answer: 'You can\'t fully remove it. The best options are switching back to web results, avoiding AI-triggering queries, or navigating directly to URLs.',
+      },
+      {
+        question: 'What does Google AI Mode do?',
+        answer: 'Google AI Mode summarizes search results using Gemini, often replacing traditional link-based results with an AI-generated overview.',
+      },
+      {
+        question: 'Is Google AI Mode free to use?',
+        answer: 'Yes. Google AI Mode is currently free and included in standard Google Search.',
+      },
+      {
+        question: 'Why does Google force AI Mode in Search?',
+        answer: 'Google is positioning AI as a default search experience to compete with chat-based tools and keep users inside Google\'s ecosystem longer.',
+      },
+    ],
+  },
+  {
     slug: 'why-llms-perform-better-in-italian-french-and-polish-than-in-english',
     title: 'Why LLMs Perform Better in Italian, French, and Polish Than in English',
     excerpt: 'New multilingual AI research shows that Romance and Slavic languages outperform English in long-context reasoning. Here\'s why fusional morphology and information-dense grammar give LLMs clearer signals and higher accuracy.',
@@ -166,6 +199,7 @@ export const allInsights: Insight[] = [
     excerpt: 'A real-world image generation comparison between Nano Banana Pro and GPT-5.1 (ChatGPT\'s latest image generation model) using three test prompts: realistic portraits, anime cyberpunk characters, and clean branded graphics.',
     readTime: '8 min read',
     category: 'AI Workflows',
+    entityTags: ['Nano Banana Pro', 'GPT-5.1', 'AI Image Models', 'Image Generation Benchmarks', 'Gemini Image Models', 'Model Comparison'],
     publishedDate: '2025-11-24',
     modifiedDate: '2025-12-16',
     coverImage: '/gpt-vs-nano.png'
@@ -280,7 +314,8 @@ export const allInsights: Insight[] = [
 // Pillar mappings
 export const pillarMappings: Record<string, string[]> = {
   'interface-architecture': [
-    'google-antigravity-ui'
+    'google-antigravity-ui',
+    'google-ai-mode'
   ],
   'creator-systems': [
   ],
