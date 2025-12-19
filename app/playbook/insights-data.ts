@@ -27,6 +27,37 @@ export const allInsights: Insight[] = [
     coverImage: '/chatgpt-5-2-hype.png',
   },
   {
+    slug: 'chatgpt-5-2-vs-gemini-3-image-accuracy',
+    title: 'Why Image Accuracy Matters More Than Style: A Real Test of ChatGPT 5.2 vs Gemini 3 Pro',
+    excerpt: 'A real-world test comparing ChatGPT 5.2 and Gemini 3 Pro for image generation accuracy. One model reproduced a real website with near-perfect fidelity. The other produced polished but generic stand-ins.',
+    readTime: '10 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-12-19',
+    coverImage: '/chatgpt-5-2-vs-gemini-3-image-accuracy.png',
+    faqs: [
+      {
+        question: 'Is ChatGPT 5.2 available?',
+        answer: 'Yes, ChatGPT 5.2 is available through ChatGPT, though access depends on your plan tier and rollout timing. It may also be referred to as GPT 5.2 or ChatGPT Pro in different contexts.',
+      },
+      {
+        question: 'Is Gemini 3 available?',
+        answer: 'Gemini 3 Pro is available via Google\'s Gemini platform, though access and features may vary by region and account. Some users search for it as an upcoming release due to staggered rollouts.',
+      },
+      {
+        question: 'Is GPT 5.2 better than Gemini 3?',
+        answer: 'GPT 5.2 is better than Gemini 3 Pro for tasks requiring accuracy, brand fidelity, and repeatable image generation. Gemini 3 Pro still excels at stylistic and exploratory visuals.',
+      },
+      {
+        question: 'What is the main difference between ChatGPT 5.2 and Gemini 3 Pro for image generation?',
+        answer: 'The main difference is accuracy versus style. ChatGPT 5.2 better preserves real interface layouts and brand details from reference images, while Gemini 3 Pro prioritizes visual polish and aesthetic interpretation.',
+      },
+      {
+        question: 'Which model is better for agencies and client work?',
+        answer: 'ChatGPT 5.2 is better for agencies and client-facing work because it produces more accurate, repeatable, and brand-consistent image outputs.',
+      },
+    ],
+  },
+  {
     slug: 'google-antigravity-ui',
     title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     excerpt: 'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
@@ -321,6 +352,7 @@ export const pillarMappings: Record<string, string[]> = {
   ],
   'ai-workflows': [
     'is-chatgpt-5-2-all-the-hype',
+    'chatgpt-5-2-vs-gemini-3-image-accuracy',
     'gpt-5-1-vs-gemini-3-creative-workflows',
     'the-worst-thing-about-gemini-3-pro',
     'gemini-3-vs-claude-4-5-research-workflow',
