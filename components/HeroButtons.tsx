@@ -7,16 +7,16 @@ export default function HeroButtons() {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <Link
-        href="/solutions"
+        href="/saas-website-design"
         className="btn-primary"
       >
-        View Solutions
+        View Services
       </Link>
       <Link
-        href="/templates"
+        href="/pricing"
         className="btn-outline"
       >
-        Browse Templates
+        View Pricing
       </Link>
     </div>
   )

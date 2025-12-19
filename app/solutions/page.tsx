@@ -8,7 +8,7 @@ import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import PackageRequestForm from '../../components/PackageRequestForm'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, Code, BookOpen, Zap, Bot, LayoutGrid, FastForward, Layers, TrendingUp, Target, Rocket } from 'lucide-react'
+import { ChevronDown, Code, Zap, LayoutGrid, FastForward, Layers, TrendingUp, Target, Rocket, Search } from 'lucide-react'
 
 interface PackageData {
   selectedServiceIds: string[]
@@ -26,7 +26,7 @@ export default function SolutionsPage() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Technical Solutions for Founders Building AI Products',
+    name: 'Websites, Search, and Automations for AI Products',
     provider: {
       '@type': 'Organization',
       name: 'Lopez Productions',
@@ -150,7 +150,7 @@ export default function SolutionsPage() {
               transition={{ duration: 0.7 }}
               className="text-5xl md:text-6xl font-serif font-bold text-text-primary mb-6"
             >
-              Technical Solutions for Founders Building AI Products
+              Websites, Search, and Automations for AI Products
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -327,9 +327,9 @@ export default function SolutionsPage() {
           </section>
 
           {/* ===================================================================== */}
-          {/* SECTION 2 — DOCUMENTATION & DEVELOPER EXPERIENCE */}
+          {/* SECTION 2 — SEARCH & DISCOVERABILITY SYSTEMS */}
           {/* ===================================================================== */}
-          <section className="py-16 px-6 md:px-12 bg-background">
+          <section id="search" className="py-16 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -338,8 +338,8 @@ export default function SolutionsPage() {
                 viewport={{ once: true }}
                 className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
               >
-                <BookOpen className="w-8 h-8 text-brand-gold" />
-                2. Documentation & Developer Experience
+                <Search className="w-8 h-8 text-brand-gold" />
+                2. Search & Discoverability Systems
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -348,7 +348,7 @@ export default function SolutionsPage() {
                 viewport={{ once: true }}
                 className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
               >
-                Docs, API references, onboarding, and internal systems that scale
+                Your website is only effective if it&apos;s understood — by users and AI engines.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -357,7 +357,7 @@ export default function SolutionsPage() {
                 viewport={{ once: true }}
                 className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
               >
-                Your documentation is part of your product. We design clear, structured systems that onboard users and developers fast.
+                We structure sites and content so they surface correctly across Google, ChatGPT, and modern AI search experiences.
               </motion.p>
 
               <motion.div
@@ -374,29 +374,29 @@ export default function SolutionsPage() {
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Docusaurus or Starlight documentation frameworks</span>
+                      <span>Technical SEO foundations</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>API structure planning + schema mapping</span>
+                      <span>GEO / AEO content structure</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Internal engineering playbooks</span>
+                      <span>Entity and page hierarchy</span>
                     </li>
                   </ul>
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Knowledge base + product reasoning systems</span>
+                      <span>Documentation-as-marketing (when needed)</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Support documentation</span>
+                      <span>Search Console setup & cleanup</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Versioning and changelog systems</span>
+                      <span>Answer-surface optimization</span>
                     </li>
                   </ul>
                 </div>
@@ -410,19 +410,19 @@ export default function SolutionsPage() {
                 className="flex justify-center"
               >
                 <Link
-                  href="/templates"
+                  href="/pricing"
                   className="btn-primary px-10 py-3 text-lg"
                 >
-                  Explore Docs Solutions →
+                  View Search Systems →
                 </Link>
               </motion.div>
             </div>
           </section>
 
           {/* ===================================================================== */}
-          {/* SECTION 3 — WORKFLOW AUTOMATION FOR TECHNICAL TEAMS */}
+          {/* SECTION 3 — WEBSITE-ADJACENT AUTOMATIONS */}
           {/* ===================================================================== */}
-          <section className="py-16 px-6 md:px-12 bg-surface">
+          <section id="automations" className="py-16 px-6 md:px-12 bg-surface">
             <div className="max-w-6xl mx-auto">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -432,7 +432,7 @@ export default function SolutionsPage() {
                 className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
               >
                 <Zap className="w-8 h-8 text-brand-gold" />
-                3. Workflow Automation for Technical Teams
+                3. Website-Adjacent Automations
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -441,7 +441,7 @@ export default function SolutionsPage() {
                 viewport={{ once: true }}
                 className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
               >
-                Automation that removes engineering drag
+                Automation that supports your website, content, and onboarding — without replacing your engineering team.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -461,256 +461,93 @@ export default function SolutionsPage() {
                 className="bg-background p-8 rounded-xl border border-border mb-8"
               >
                 <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
-                  What Gets Automated:
+                  What We Automate:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Release cycle coordination</span>
+                      <span>Forms → Notion / CRM</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>GitHub → Notion sync</span>
+                      <span>Lead capture and routing</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Automatic changelog generation</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Weekly operational summaries</span>
+                      <span>Content publishing workflows</span>
                     </li>
                   </ul>
                   <ul className="space-y-2 text-text-secondary text-sm">
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Stripe → Supabase → Discord onboarding</span>
+                      <span>Stripe → onboarding flows</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-accent mr-2">•</span>
-                      <span>Lead capture → CRM routing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Data classification + research collection</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Support workflow automation</span>
+                      <span>Weekly summaries and reporting</span>
                     </li>
                   </ul>
                 </div>
+                <p className="text-text-secondary text-center mt-6 text-sm italic">
+                  <small>Automation is scoped to support your website and growth systems.</small>
+                </p>
               </motion.div>
-
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-xl font-serif font-bold text-accent text-center mb-8 italic"
-              >
-                Automation becomes the &quot;silent engineer&quot; keeping everything moving.
-              </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
                 className="flex justify-center"
               >
                 <Link
-                  href="/templates"
+                  href="/pricing"
                   className="btn-primary px-10 py-3 text-lg"
                 >
-                  Explore Automation →
+                  View Automation Options →
                 </Link>
               </motion.div>
             </div>
           </section>
 
           {/* ===================================================================== */}
-          {/* SECTION 4 — AI WORKFLOWS FOR PRODUCT TEAMS */}
+          {/* SECTION 4 — TOOLS & ACCELERATORS */}
           {/* ===================================================================== */}
-          <section className="py-16 px-6 md:px-12 bg-background">
+          <section className="py-12 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
+                className="text-2xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
               >
-                <Bot className="w-8 h-8 text-brand-gold" />
-                4. AI Workflows for Product Teams
+                <LayoutGrid className="w-6 h-6 text-brand-gold" />
+                4. Tools & Accelerators
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
+                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto text-sm italic"
               >
-                Use AI to plan, research, write, design, and execute faster
+                Optional tools for teams that want to move faster or self-serve.
               </motion.p>
-              <motion.p
+
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
-              >
-                Systems designed to help founders and engineering teams leverage AI without chaos.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-surface p-8 rounded-xl border border-border mb-8"
-              >
-                <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
-                  Includes:
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <ul className="space-y-2 text-text-secondary text-sm">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Feature ideation workflows</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Model comparison + evaluation templates</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Product spec → task conversion</span>
-                    </li>
-                  </ul>
-                  <ul className="space-y-2 text-text-secondary text-sm">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Research pipelines</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>AI-assisted writing + UX reasoning</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Structured PRD generation</span>
-                    </li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="flex justify-center"
-              >
-                <Link
-                  href="/playbook"
-                  className="btn-primary px-10 py-3 text-lg"
-                >
-                  Explore AI Workflows →
-                </Link>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* ===================================================================== */}
-          {/* SECTION 5 — UI KITS & STARTUP TEMPLATES */}
-          {/* ===================================================================== */}
-          <section className="py-16 px-6 md:px-12 bg-surface">
-            <div className="max-w-6xl mx-auto">
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-4xl font-serif text-text-primary text-center mb-4 flex items-center justify-center gap-3"
-              >
-                <LayoutGrid className="w-8 h-8 text-brand-gold" />
-                5. UI Kits & Startup Templates
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-2xl font-serif font-bold text-text-primary text-center mb-4"
-              >
-                Launch a polished frontend this weekend
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
-              >
-                Choose from clean, modern UI kits and startup templates engineered for speed. Perfect for founders who want to go live fast without hiring a full dev team.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-background p-8 rounded-xl border border-border mb-8"
-              >
-                <h3 className="text-xl font-serif font-bold text-text-primary mb-6">
-                  You Get:
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <ul className="space-y-2 text-text-secondary text-sm">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Complete frontend architecture</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Responsive, modern UI</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>SEO-ready structure</span>
-                    </li>
-                  </ul>
-                  <ul className="space-y-2 text-text-secondary text-sm">
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Tailwind components</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Easy customization</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-accent mr-2">•</span>
-                      <span>Lifetime updates</span>
-                    </li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
                 className="flex justify-center"
               >
                 <Link
                   href="/templates"
-                  className="btn-primary px-10 py-3 text-lg"
+                  className="btn-outline px-10 py-3 text-lg"
                 >
-                  Browse Templates →
+                  Browse Tools & Accelerators →
                 </Link>
               </motion.div>
             </div>

@@ -14,7 +14,7 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-text-primary mb-6 leading-tight"
         >
-          The Interface Layer for AI Startups
+          Websites & Search Systems for AI-Native Startups
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -22,7 +22,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto mb-4 leading-relaxed"
         >
-          Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.
+          I design marketing sites, dashboards, and content structures that show up correctly in Google, ChatGPT, and modern AI search.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 30 }}

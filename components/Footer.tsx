@@ -19,7 +19,7 @@ const Footer = () => {
           <h4 className="font-semibold text-sm md:text-base mb-2 md:mb-3">Explore</h4>
           <ul className="space-y-2 md:space-y-2">
             <li className="py-2"><Link href="/" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Home</Link></li>
-            <li className="py-2"><Link href="/solutions" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Solutions</Link></li>
+            <li className="py-2"><Link href="/solutions" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Services</Link></li>
             <li className="py-2"><Link href="/pricing" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Pricing</Link></li>
             <li className="py-2"><Link href="/templates" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Templates</Link></li>
             <li className="py-2"><Link href="/playbook" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">Playbook</Link></li>
