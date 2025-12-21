@@ -58,6 +58,16 @@ export const allInsights: Insight[] = [
     ],
   },
   {
+    slug: 'gemini-3-image-issues-context',
+    title: 'Gemini 3\'s Image Issues Aren\'t About Style — They\'re About Context',
+    excerpt: 'A neutral field analysis of Gemini 3\'s image generation behavior, focusing on semantic grounding, prompt length, and image-based workflows. Understanding when and why Gemini 3 struggles with contextual image inputs.',
+    readTime: '13 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-12-20',
+    coverImage: '/gemini-3-issues.png',
+    entityTags: ['Gemini', 'Gemini Image Models', 'Image Generation Benchmarks', 'Model Comparison', 'Semantic Grounding'],
+  },
+  {
     slug: 'google-antigravity-ui',
     title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     excerpt: 'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
@@ -353,6 +363,7 @@ export const pillarMappings: Record<string, string[]> = {
   'ai-workflows': [
     'is-chatgpt-5-2-all-the-hype',
     'chatgpt-5-2-vs-gemini-3-image-accuracy',
+    'gemini-3-image-issues-context',
     'gpt-5-1-vs-gemini-3-creative-workflows',
     'the-worst-thing-about-gemini-3-pro',
     'gemini-3-vs-claude-4-5-research-workflow',
