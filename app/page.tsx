@@ -14,8 +14,8 @@ import BlogPreview from '../components/BlogPreview'
 import FinalCTASection from '../components/FinalCTASection'
 
 export const metadata: Metadata = {
-  title: 'The Interface Layer for AI Startups | Lopez Productions',
-  description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
+  title: 'AI Business Systems for Modern Teams | Lopez Productions',
+  description: 'Lopez Productions designs AI business systems — websites, workflows, and search architecture built to perform across Google, ChatGPT, and modern AI discovery.',
   alternates: {
     canonical: 'https://lopezproductions.ai',
   },
@@ -23,21 +23,21 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://lopezproductions.ai',
     siteName: 'Lopez Productions',
-    title: 'The Interface Layer for AI Startups | Lopez Productions',
-    description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
+    title: 'AI Business Systems for Modern Teams | Lopez Productions',
+    description: 'Lopez Productions designs AI business systems — websites, workflows, and search architecture built to perform across Google, ChatGPT, and modern AI discovery.',
     images: [
       {
         url: '/lp-og.png',
         width: 1200,
         height: 630,
-        alt: 'Lopez Productions – The Interface Layer for AI Startups',
+        alt: 'Lopez Productions – AI Business Systems for Modern Teams',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Interface Layer for AI Startups | Lopez Productions',
-    description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
+    title: 'AI Business Systems for Modern Teams | Lopez Productions',
+    description: 'Lopez Productions designs AI business systems — websites, workflows, and search architecture built to perform across Google, ChatGPT, and modern AI discovery.',
     images: ['/lp-og.png'],
   },
 }
@@ -47,9 +47,9 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': ['WebSite', 'WebPage'],
     name: 'Lopez Productions',
-    alternateName: 'The Interface Layer for AI Startups',
+    alternateName: 'AI Business Systems for Modern Teams',
     url: 'https://lopezproductions.ai',
-    description: 'Modern frontends, clean architectures, and technical systems for founders building the next generation of AI tools.',
+    description: 'Lopez Productions designs AI business systems — websites, workflows, and search architecture built to perform across Google, ChatGPT, and modern AI discovery.',
   }
 
   return (

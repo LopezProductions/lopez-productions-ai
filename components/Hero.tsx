@@ -14,23 +14,15 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-text-primary mb-6 leading-tight"
         >
-          Websites & Search Systems for AI-Native Startups
+          AI Business Systems for Modern Teams
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto mb-4 leading-relaxed"
+          className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto mb-12 leading-relaxed"
         >
-          I design marketing sites, dashboards, and content structures that show up correctly in Google, ChatGPT, and modern AI search.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-lg md:text-xl text-accent font-semibold mb-12"
-        >
-          Ship faster. Look polished. Operate like a real product — without hiring a full agency.
+          Lopez Productions designs AI business systems — websites, workflows, and search architecture built to perform across Google, ChatGPT, and modern AI discovery. Everything is engineered to ship fast, scale cleanly, and operate like a real product, not a stitched-together stack.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
