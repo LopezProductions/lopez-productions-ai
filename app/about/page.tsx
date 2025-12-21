@@ -7,9 +7,9 @@ import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'About | The Studio Behind the Interface Layer | Lopez Productions',
+  title: 'About | The Studio Behind AI Business Systems | Lopez Productions',
   description:
-    'Lopez Productions is led by Reuben Lopez — a systems-minded designer and technical strategist who builds clean, high-performance frontends and operational workflows for AI startups, founders, and engineering-driven teams.',
+    'Lopez Productions builds AI business systems for modern teams — the websites, workflows, and operational architecture that allow products to ship faster, scale cleanly, and show up correctly across Google, ChatGPT, and AI-native discovery.',
   alternates: {
     canonical: 'https://lopezproductions.ai/about',
   },
@@ -21,7 +21,7 @@ export default function AboutPage() {
     '@type': 'AboutPage',
     name: 'About Lopez Productions',
     description:
-      'Lopez Productions is led by Reuben Lopez — a systems-minded designer and technical strategist who builds clean, high-performance frontends and operational workflows for AI startups, founders, and engineering-driven teams.',
+      'Lopez Productions builds AI business systems for modern teams — the websites, workflows, and operational architecture that allow products to ship faster, scale cleanly, and show up correctly across Google, ChatGPT, and AI-native discovery.',
     url: 'https://lopezproductions.ai/about',
     publisher: {
       '@type': 'Organization',
@@ -72,14 +72,14 @@ export default function AboutPage() {
               </p>
 
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-gradient mb-6">
-                The Studio Behind the Interface Layer
+                The Studio Behind AI Business Systems
               </h1>
 
               <p className="text-lg text-text-secondary mb-6 leading-relaxed max-w-3xl">
-                Lopez Productions is led by Reuben Lopez — a systems-minded designer and technical strategist who builds clean, high-performance frontends and operational workflows for AI startups, founders, and engineering-driven teams.
+                Lopez Productions builds AI business systems for modern teams — the websites, workflows, and operational architecture that allow products to ship faster, scale cleanly, and show up correctly across Google, ChatGPT, and AI-native discovery.
               </p>
               <p className="text-lg text-text-secondary mb-12 leading-relaxed max-w-3xl">
-                This is not a corporate agency. This is a builder&apos;s studio — fast, technical, opinionated, and execution-first.
+                Founded and led by Reuben Lopez, Lopez Productions operates as a builder&apos;s studio: technical, opinionated, and execution-first. This is not a corporate agency. It&apos;s a focused system shop designed for founders and teams who value clarity, speed, and leverage over process theater.
               </p>
               
               <p className="text-base text-text-secondary mb-12 max-w-3xl">
@@ -98,30 +98,45 @@ export default function AboutPage() {
                   Mission
                 </h2>
                 <h3 className="text-2xl font-serif font-bold text-text-primary mb-4">
-                  Build the systems early-stage teams need to ship faster.
+                  Build the systems early-stage teams need to move fast — without creating future drag.
                 </h3>
                 <p className="text-lg text-text-secondary leading-relaxed mb-4">
-                  Modern products require more than clean UI — they require:
+                  Modern products require more than clean UI. They require systems:
                 </p>
                 <ul className="space-y-2 mb-6 text-lg text-text-secondary">
                   <li className="flex gap-2">
-                    <span className="text-accent">•</span> Frontend architectures that are fast and maintainable
+                    <span className="text-accent">•</span> Frontend architectures that stay fast as products evolve
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-accent">•</span> Documentation that onboard users (or engineers) instantly
+                    <span className="text-accent">•</span> Documentation that onboards users and engineers instantly
                   </li>
                   <li className="flex gap-2">
                     <span className="text-accent">•</span> AI-assisted workflows that reduce time-to-ship
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-accent">•</span> Automation frameworks that eliminate repetitive tasks
+                    <span className="text-accent">•</span> Automation that removes repetitive operational work
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-accent">•</span> A unified product story across marketing, docs, and UI
+                    <span className="text-accent">•</span> A unified product narrative across marketing, docs, and interfaces
                   </li>
                 </ul>
+                <p className="text-lg text-text-secondary leading-relaxed mb-4">
+                  The mission is simple:
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed mb-4 font-semibold">
+                  Help teams operate with velocity without complexity.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed mb-2">
+                  No bloated tools.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed mb-2">
+                  No over-engineered frameworks.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed mb-4">
+                  No hand-holding systems that collapse as you scale.
+                </p>
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  The mission is simple: Help founders move with velocity — without complexity. No bloated tools. No over-engineering. No hand-holding frameworks that break as you grow. Just technical clarity, speed, and clean execution.
+                  Just technical clarity, clean execution, and systems that hold up under real use.
                 </p>
               </section>
 
@@ -134,36 +149,36 @@ export default function AboutPage() {
                 <div className="space-y-10 text-lg leading-relaxed">
                   <div>
                     <h3 className="text-2xl font-serif font-bold text-text-primary mb-3">
-                      1. Frontend Systems & Interface Architecture
+                      1. AI Business Interfaces & Frontend Systems
                     </h3>
                     <p className="text-text-secondary mb-3">
-                      High-performance React/Next.js systems for AI dashboards, SaaS products, and modern landing environments.
+                      High-performance React and Next.js systems for AI products, dashboards, and modern marketing environments.
                     </p>
                     <p className="text-text-secondary mb-3 font-semibold">
                       Focused on:
                     </p>
                     <ul className="space-y-2 text-text-secondary mb-3">
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> UI component systems
+                        <span className="text-accent">•</span> Interface and component systems
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Dashboard layouts
+                        <span className="text-accent">•</span> Dashboard and product layouts
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Pricing/marketing pages
+                        <span className="text-accent">•</span> Pricing and go-to-market pages
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> AEO/GEO-informed content structure
+                        <span className="text-accent">•</span> AEO / GEO-informed content structure
                       </li>
                       <li className="flex gap-2">
                         <span className="text-accent">•</span> Clean Tailwind architectures
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Framer Motion interactions
+                        <span className="text-accent">•</span> Purposeful Framer Motion interactions
                       </li>
                     </ul>
                     <p className="text-text-secondary italic">
-                      Built for founders who want to ship faster — without hiring a full dev team.
+                      Built for teams that want to ship fast without maintaining a full internal frontend team.
                     </p>
                   </div>
 
@@ -172,33 +187,30 @@ export default function AboutPage() {
                       2. Documentation & Developer Experience Systems
                     </h3>
                     <p className="text-text-secondary mb-3">
-                      Technical docs are part of your product.
+                      Documentation is part of the product — not an afterthought.
                     </p>
                     <p className="text-text-secondary mb-3 font-semibold">
                       Systems include:
                     </p>
                     <ul className="space-y-2 text-text-secondary mb-3">
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Docusaurus / Starlight frameworks
+                        <span className="text-accent">•</span> Docusaurus and Starlight documentation frameworks
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> API planning + schema structuring
+                        <span className="text-accent">•</span> API planning and schema structuring
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Knowledge graph architecture
+                        <span className="text-accent">•</span> Knowledge graph and information architecture
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Internal engineering playbooks
+                        <span className="text-accent">•</span> Engineering playbooks and internal SOPs
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Onboarding documentation
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="text-accent">•</span> Internal SOP systems
+                        <span className="text-accent">•</span> Scalable onboarding systems
                       </li>
                     </ul>
                     <p className="text-text-secondary italic">
-                      Designed for teams that need clarity, consistency, and onboarding that scales.
+                      Designed to reduce confusion, improve handoff, and make products easier to adopt and maintain.
                     </p>
                   </div>
 
@@ -207,30 +219,27 @@ export default function AboutPage() {
                       3. AI Workflows for Product Teams
                     </h3>
                     <p className="text-text-secondary mb-3">
-                      Notion-based and automation-powered systems that eliminate friction across:
+                      AI-assisted workflows that reduce friction across:
                     </p>
                     <ul className="space-y-2 text-text-secondary mb-3">
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Feature planning
+                        <span className="text-accent">•</span> Feature planning and research
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Product research
+                        <span className="text-accent">•</span> Writing, ideation, and synthesis
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> AI-assisted writing & ideation
+                        <span className="text-accent">•</span> Model evaluation and experimentation
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Model evaluation processes
+                        <span className="text-accent">•</span> Release coordination and changelogs
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Release cycle coordination
-                      </li>
-                      <li className="flex gap-2">
-                        <span className="text-accent">•</span> Changelogs & internal updates
+                        <span className="text-accent">•</span> Internal updates and documentation
                       </li>
                     </ul>
                     <p className="text-text-secondary italic">
-                      Built to reduce engineering drag and accelerate iteration.
+                      These systems are designed to accelerate iteration, not replace judgment.
                     </p>
                   </div>
 
@@ -239,7 +248,7 @@ export default function AboutPage() {
                       4. Automation & Operational Engineering
                     </h3>
                     <p className="text-text-secondary mb-3">
-                      Lightweight but powerful automation chains that integrate with:
+                      Lightweight automation systems that act as a silent engineer across tools like:
                     </p>
                     <ul className="space-y-2 text-text-secondary mb-3">
                       <li className="flex gap-2">
@@ -261,14 +270,14 @@ export default function AboutPage() {
                         <span className="text-accent">•</span> Discord
                       </li>
                       <li className="flex gap-2">
-                        <span className="text-accent">•</span> Email/CRM
+                        <span className="text-accent">•</span> Email and CRM platforms
                       </li>
                       <li className="flex gap-2">
                         <span className="text-accent">•</span> PostHog
                       </li>
                     </ul>
                     <p className="text-text-secondary italic">
-                      Automation becomes the silent engineer that keeps your product moving.
+                      Automation isn&apos;t added for novelty — only where it removes real operational overhead.
                     </p>
                   </div>
                 </div>
@@ -281,7 +290,11 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="text-lg text-text-secondary leading-relaxed mb-6">
-                  Lopez Productions isn&apos;t built around retainers, bloated frameworks, or &quot;agency thinking.&quot; It&apos;s built around startup velocity:
+                  Lopez Productions isn&apos;t built around retainers, bloated frameworks, or agency theater.
+                </p>
+
+                <p className="text-lg text-text-secondary leading-relaxed mb-6">
+                  It&apos;s built around startup velocity:
                 </p>
 
                 <ul className="space-y-3 text-lg text-text-secondary mb-6">
@@ -289,32 +302,38 @@ export default function AboutPage() {
                     <span className="text-accent">•</span> Minimal surface area, maximal output
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-accent">•</span> Clean architectures instead of complex stacks
+                    <span className="text-accent">•</span> Clean architectures instead of fragile stacks
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-accent">•</span> Practical systems that teams actually use
+                    <span className="text-accent">•</span> Practical systems teams actually use
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-accent">•</span> Templates built for iteration, not perfection
+                    <span className="text-accent">•</span> Templates designed for iteration, not perfection
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-accent">•</span> Automations that save engineering hours — not create maintenance
+                    <span className="text-accent">•</span> Automation that saves engineering hours — not creates maintenance
                   </li>
                 </ul>
 
-                <p className="text-lg text-text-secondary leading-relaxed italic">
-                  No fluff. No lifestyle productivity frameworks. Just systems for shipping.
+                <p className="text-lg text-text-secondary leading-relaxed mb-2">
+                  No fluff.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed mb-2">
+                  No productivity cosplay.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Just systems for shipping.
                 </p>
               </section>
 
               {/* Section: Behind the Studio */}
               <section className="mb-20">
                 <h2 className="text-3xl font-serif font-bold text-accent mb-4">
-                  Behind the Studio — Meet Reuben
+                  Behind the Studio
                 </h2>
 
                 <p className="text-lg text-text-secondary leading-relaxed mb-4">
-                  Founder Reuben Lopez blends:
+                  Reuben Lopez brings together:
                 </p>
                 <ul className="space-y-2 text-lg text-text-secondary mb-6">
                   <li className="flex gap-2"><span className="text-accent">•</span> Frontend architecture</li>
@@ -326,10 +345,13 @@ export default function AboutPage() {
                   <li className="flex gap-2"><span className="text-accent">•</span> Marketing clarity</li>
                 </ul>
                 <p className="text-lg text-text-secondary leading-relaxed mb-6">
-                  Every template, kit, workflow, and system offered here was originally developed internally, tested in real production contexts, and later released because it solved a real startup problem.
+                  Every system, template, and workflow offered through Lopez Productions was built internally first — tested in real production environments — and released only after it proved useful.
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed mb-4">
-                  The goal isn&apos;t to look big. The goal is to build things that work.
+                  The goal isn&apos;t to look big.
+                </p>
+                <p className="text-lg text-text-secondary leading-relaxed mb-4">
+                  The goal is to build things that work.
                 </p>
                 <p className="text-lg text-text-secondary leading-relaxed mb-2">
                   Things that reduce friction.
@@ -345,10 +367,10 @@ export default function AboutPage() {
               {/* Final CTA */}
               <div className="text-center mt-24">
                 <h3 className="text-3xl font-serif font-bold text-accent mb-4">
-                  Ready to Build Your Interface Layer?
+                  Ready to Build Your AI Business Systems?
                 </h3>
                 <p className="text-text-secondary mb-6 max-w-xl mx-auto">
-                  Explore the systems, kits, and architectures designed for founders and teams shipping the next generation of AI products.
+                  Explore the systems, kits, and architectures designed for teams shipping the next generation of AI products.
                 </p>
 
                 <div className="flex flex-col md:flex-row justify-center gap-4">
@@ -356,7 +378,7 @@ export default function AboutPage() {
                     href="/solutions"
                     className="btn-primary inline-flex items-center justify-center px-10 py-4 text-lg"
                   >
-                    View Solutions →
+                    View Systems →
                   </Link>
 
                   <Link
