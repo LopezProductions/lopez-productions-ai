@@ -63,7 +63,7 @@ export const allInsights: Insight[] = [
     excerpt: 'A neutral field analysis of Gemini 3\'s image generation behavior, focusing on semantic grounding, prompt length, and image-based workflows. Understanding when and why Gemini 3 struggles with contextual image inputs.',
     readTime: '13 min read',
     category: 'AI Workflows',
-    publishedDate: '2025-12-20',
+    publishedDate: '2025-12-21',
     coverImage: '/gemini-3-issues.png',
     entityTags: ['Gemini', 'Gemini Image Models', 'Image Generation Benchmarks', 'Model Comparison', 'Semantic Grounding'],
   },

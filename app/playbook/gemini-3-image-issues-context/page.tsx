@@ -45,7 +45,7 @@ export default function Gemini3ImageIssuesContext() {
         title={post?.title || ''}
         description={post?.excerpt || ''}
         slug={post?.slug || 'gemini-3-image-issues-context'}
-        publishedDate={post?.publishedDate || '2025-12-20'}
+        publishedDate={post?.publishedDate || '2025-12-21'}
         modifiedDate={post?.modifiedDate}
         coverImage={post?.coverImage}
         canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'gemini-3-image-issues-context'}`}
@@ -89,7 +89,7 @@ export default function Gemini3ImageIssuesContext() {
             <div className="flex items-center gap-4 text-sm text-text-muted">
               <span>By Reuben Lopez</span>
               <span>•</span>
-              <span>December 20, 2025</span>
+              <span>December 21, 2025</span>
               <span>•</span>
               <span>13 min read</span>
             </div>
@@ -341,6 +341,18 @@ export default function Gemini3ImageIssuesContext() {
               However, it can be confusing in professional workflows, especially when working with reference images.
             </p>
 
+            <div className="my-8">
+              <div className="rounded-xl overflow-hidden border border-border">
+                <Image
+                  src="/long-prompt-error-2-downloaded.png"
+                  alt="Downloaded file showing unexpected behavior - original screenshot returned instead of generated image"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+
             <hr className="my-12 border-border" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
@@ -406,18 +418,6 @@ export default function Gemini3ImageIssuesContext() {
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
               At this stage, this should be treated as a working hypothesis rather than a confirmed cause.
             </p>
-
-            <div className="my-8">
-              <div className="rounded-xl overflow-hidden border border-border">
-                <Image
-                  src="/long-prompt-error-2-downloaded.png"
-                  alt="Downloaded file showing unexpected behavior with screenshot complexity"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
 
             <hr className="my-12 border-border" />
 
