@@ -68,6 +68,15 @@ export const allInsights: Insight[] = [
     entityTags: ['Gemini', 'Gemini Image Models', 'Image Generation Benchmarks', 'Model Comparison', 'Semantic Grounding'],
   },
   {
+    slug: 'ai-generated-design-systems-governance',
+    title: 'AI-Generated Design Systems Aren\'t the Problem — Ungoverned Ones Are',
+    excerpt: 'AI-generated design systems didn\'t break product design. Teams broke design systems by skipping governance. Learn why ungoverned AI systems fail and how to build production-ready interface systems.',
+    readTime: '9 min read',
+    category: 'Interface Architecture',
+    publishedDate: '2025-12-22',
+    coverImage: '/generative-design.png',
+  },
+  {
     slug: 'google-antigravity-ui',
     title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     excerpt: 'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
@@ -355,6 +364,7 @@ export const allInsights: Insight[] = [
 // Pillar mappings
 export const pillarMappings: Record<string, string[]> = {
   'interface-architecture': [
+    'ai-generated-design-systems-governance',
     'google-antigravity-ui',
     'google-ai-mode'
   ],
