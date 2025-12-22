@@ -45,11 +45,46 @@ export const metadata: Metadata = {
 export default function Home() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': ['WebSite', 'WebPage'],
-    name: 'Lopez Productions',
-    alternateName: 'AI Business Systems for Modern Teams',
-    url: 'https://lopezproductions.ai',
-    description: 'Lopez Productions designs AI business systems — websites, workflows, and search architecture built to perform across Google, ChatGPT, and modern AI discovery.',
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': 'https://lopezproductions.ai/#reuben',
+        name: 'Reuben Lopez',
+        url: 'https://lopezproductions.ai',
+        jobTitle: 'Founder',
+        image: 'https://lopezproductions.ai/rl_pfp.png',
+        sameAs: [
+          'https://www.linkedin.com/in/reubenlopez/',
+        ],
+        worksFor: {
+          '@id': 'https://lopezproductions.ai/#organization',
+        },
+        owns: [
+          {
+            '@type': 'Organization',
+            name: 'Lopez Web Design',
+            url: 'https://lopezwebdesign.com',
+          },
+        ],
+      },
+      {
+        '@type': 'Organization',
+        '@id': 'https://lopezproductions.ai/#organization',
+        name: 'Lopez Productions',
+        url: 'https://lopezproductions.ai',
+        logo: 'https://lopezproductions.ai/transparent_logo_lp.png',
+        founder: {
+          '@id': 'https://lopezproductions.ai/#reuben',
+        },
+        sameAs: [
+          'https://www.linkedin.com/company/lopez-productions',
+          'https://x.com/LopezProdx',
+          'https://github.com/LopezProductions',
+          'https://www.instagram.com/lopezproductions_',
+          'https://linktr.ee/lopezproductions',
+        ],
+      },
+    ],
   }
 
   return (
