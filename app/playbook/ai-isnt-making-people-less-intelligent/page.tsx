@@ -43,7 +43,7 @@ export default function AIIsntMakingPeopleLessIntelligent() {
         title={post?.title || ''}
         description={post?.excerpt || ''}
         slug={post?.slug || 'ai-isnt-making-people-less-intelligent'}
-        publishedDate={post?.publishedDate || '2025-12-22'}
+        publishedDate={post?.publishedDate || '2025-12-23'}
         modifiedDate={post?.modifiedDate}
         coverImage={post?.coverImage}
         canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'ai-isnt-making-people-less-intelligent'}`}
@@ -94,7 +94,7 @@ export default function AIIsntMakingPeopleLessIntelligent() {
             <div className="flex items-center gap-4 text-sm text-text-muted">
               <span>By Reuben Lopez</span>
               <span>•</span>
-              <span>December 22, 2025</span>
+              <span>December 23, 2025</span>
               <span>•</span>
               <span>7 min read</span>
             </div>
@@ -321,7 +321,7 @@ export default function AIIsntMakingPeopleLessIntelligent() {
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              That&apos;s a policy and pedagogy issue—not a condemnation of the technology.
+              That&apos;s a teaching problem, not a technology problem.
             </p>
 
             <hr className="my-12 border-border" />

@@ -11,22 +11,25 @@ import { allInsights } from './insights-data'
 const pillars = [
   {
     title: 'Interface Architecture',
+    subtitle: 'Human ↔ System Interaction',
     description:
-      'Frontend systems, dashboard patterns, UI frameworks, and layout logic for modern AI tools. Learn how to structure your product visually and technically so you can iterate faster and communicate more clearly with users.',
+      'Frontend systems, dashboard patterns, and UI frameworks for modern AI tools. This pillar focuses on how humans see, understand, and control AI systems — ensuring clarity, feedback, and intentional friction where judgment matters.',
     tag: 'Interface Architecture',
     href: '/playbook/interface-architecture',
   },
   {
-    title: 'AI Workflows for Product Teams',
+    title: 'AI Workflows',
+    subtitle: 'Reasoning, Planning, and Synthesis',
     description:
-      'Systems that help founders and engineers research, test, design, and plan features using AI. From model evaluation workflows to product spec generation, these tools help you move faster without sacrificing clarity.',
+      'Systems that help founders and engineers research, test, and plan using AI — without outsourcing understanding. These workflows emphasize evaluation, iteration, and re-entry into the loop as complexity increases.',
     tag: 'AI Workflows',
     href: '/playbook/ai-workflows',
   },
   {
     title: 'Automation & Ops Engineering',
+    subtitle: 'Execution, Orchestration, and Scale',
     description:
-      'Workflow automations that eliminate repetitive tasks and keep your startup moving. Operational pipelines, Stripe → CRM → Discord flows, GitHub → Notion syncs, automated changelogs, internal summaries — all designed to reduce engineering bottlenecks.',
+      'Workflow automations that eliminate repetitive tasks while preserving oversight. Operational pipelines, agentic systems, and internal tooling designed to scale execution after intent and judgment are established.',
     tag: 'Automation & Ops',
     href: '/playbook/automation-systems',
   },
@@ -112,28 +115,60 @@ export default function PlaybookPageClient() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed"
         >
-          Technical workflows, architecture patterns, and automation systems for founders building AI products.
+          A practical systems playbook for building AI products — balancing human judgment, intelligent workflows, and scalable automation.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-base md:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mt-4"
+          className="text-base md:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mt-6"
         >
-          Learn the exact processes that help early-stage teams ship faster, reduce engineering drag, and operate with startup-level velocity.
+          AI should accelerate work without removing human judgment.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-sm md:text-base text-text-secondary max-w-3xl mx-auto leading-relaxed mt-4 italic"
+          className="text-base md:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mt-4"
         >
-          No fluff. No lifestyle productivity. Just clean, practical breakdowns backed by real build cycles.
+          This playbook defines how humans stay in the loop — where intent, oversight, and reflection govern how AI systems are designed and used.
         </motion.p>
       </section>
 
-      {/* Pillars */}
+      {/* Boundary Divider */}
+      <section className="py-8 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          <hr className="border-border mb-6" />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-sm md:text-base font-semibold text-text-primary uppercase tracking-wider mb-2">
+              EXECUTION MODEL
+            </h2>
+            <p className="text-text-muted text-sm">
+              The layers where AI systems are designed, deployed, and scaled.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Execution Layers */}
       <section className="py-12 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-text-muted text-center mb-8 text-sm md:text-base max-w-3xl mx-auto"
+          >
+            These layers operate together. Most real systems touch all three.
+          </motion.p>
+        </div>
         <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
           {pillars.map((pillar, i) => (
             <motion.div
@@ -148,19 +183,48 @@ export default function PlaybookPageClient() {
                   <span className="inline-flex items-center rounded-full border border-brand-gold/30 px-3 py-1 text-sm text-brand-gold bg-brand-gold/5 mb-4">
                     {pillar.tag}
                   </span>
-                  <h3 className="text-2xl font-serif font-bold text-text-primary group-hover:text-brand-gold mb-3 transition-colors">
+                  <h3 className="text-2xl font-serif font-bold text-text-primary group-hover:text-brand-gold mb-2 transition-colors">
                     {pillar.title}
                   </h3>
+                  {pillar.subtitle && (
+                    <p className="text-text-muted text-sm mb-3 font-medium">
+                      {pillar.subtitle}
+                    </p>
+                  )}
                   <p className="text-text-secondary text-lg leading-relaxed">
                     {pillar.description}
                   </p>
-                  <p className="text-brand-gold mt-4 font-medium group-hover:text-brand-gold-dark transition-colors">
-                    Explore Pillar →
+                  <p className="text-text-muted mt-4 text-sm group-hover:text-text-secondary transition-colors">
+                    View patterns →
                   </p>
                 </article>
               </Link>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Field Notes & Breakdowns */}
+      <section className="py-12 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl font-serif font-bold text-text-primary mb-3"
+          >
+            Field Notes & Breakdowns
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-text-secondary max-w-3xl mx-auto"
+          >
+            Real-world implementations, experiments, and lessons across all layers of the AI system stack.
+          </motion.p>
         </div>
       </section>
 

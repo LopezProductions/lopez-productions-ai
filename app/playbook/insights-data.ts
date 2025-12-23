@@ -23,7 +23,7 @@ export const allInsights: Insight[] = [
     excerpt: 'AI doesn\'t make people less intelligent — it exposes who never developed an edge. Tools don\'t remove skill, they reveal it. The real divider is edge before automation.',
     readTime: '7 min read',
     category: 'AI Workflows',
-    publishedDate: '2025-12-22',
+    publishedDate: '2025-12-23',
     coverImage: '/screwdriver-power-drill.png',
   },
   {

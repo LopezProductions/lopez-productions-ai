@@ -4,7 +4,7 @@ import PlaybookPageClient from './PlaybookPageClient'
 
 export const metadata: Metadata = {
   title: 'The AI Systems Playbook | Technical Workflows for AI Founders | Lopez Productions',
-  description: 'Technical workflows, architecture patterns, and automation systems for founders building AI products.',
+  description: 'A practical systems playbook for building AI products — balancing human judgment, intelligent workflows, and scalable automation.',
   alternates: {
     canonical: 'https://lopezproductions.ai/playbook',
   },
