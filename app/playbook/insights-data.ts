@@ -18,6 +18,15 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'ai-isnt-making-people-less-intelligent',
+    title: 'AI Isn\'t Making People Less Intelligent — It\'s Exposing Who Never Had an Edge',
+    excerpt: 'AI doesn\'t make people less intelligent — it exposes who never developed an edge. Tools don\'t remove skill, they reveal it. The real divider is edge before automation.',
+    readTime: '7 min read',
+    category: 'AI Workflows',
+    publishedDate: '2025-12-22',
+    coverImage: '/screwdriver-power-drill.png',
+  },
+  {
     slug: 'is-chatgpt-5-2-all-the-hype',
     title: 'Is ChatGPT 5.2 All the Hype?',
     excerpt: 'A practical, hands-on review of ChatGPT 5.2 vs 5.1 and 5.0—focusing on real workflows, overthinking, hallucinations, image generation friction, and when smarter models actually slow you down.',
@@ -371,6 +380,7 @@ export const pillarMappings: Record<string, string[]> = {
   'creator-systems': [
   ],
   'ai-workflows': [
+    'ai-isnt-making-people-less-intelligent',
     'is-chatgpt-5-2-all-the-hype',
     'chatgpt-5-2-vs-gemini-3-image-accuracy',
     'gemini-3-image-issues-context',
