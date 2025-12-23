@@ -535,7 +535,7 @@ export default function SaaSWebsiteExamplesPage() {
                     Explore SaaS Website Design →
                   </Link>
                   <Link
-                    href="/b2b-saas-website"
+                    href="/saas-websites#b2b"
                     className="btn-outline px-10 py-4 text-lg"
                   >
                     Learn About B2B SaaS Websites →

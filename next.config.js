@@ -69,6 +69,22 @@ const nextConfig = {
         destination: '/systems-in-action',
         permanent: false,
       },
+      // Redirect old SaaS Websites routes to new hub page with anchors
+      {
+        source: '/saas-website-examples',
+        destination: '/saas-websites#examples',
+        permanent: true,
+      },
+      {
+        source: '/b2b-saas-website',
+        destination: '/saas-websites#b2b',
+        permanent: true,
+      },
+      {
+        source: '/ai-company-websites',
+        destination: '/saas-websites#ai',
+        permanent: true,
+      },
       {
         source: '/case-studies/automation-workflows',
         destination: '/systems-in-action',

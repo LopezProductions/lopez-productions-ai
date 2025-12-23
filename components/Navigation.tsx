@@ -11,8 +11,6 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isServicesMobileOpen, setIsServicesMobileOpen] = useState(false)
-  const [isSaaSWebsitesOpen, setIsSaaSWebsitesOpen] = useState(false)
-  const [isSaaSWebsitesMobileOpen, setIsSaaSWebsitesMobileOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
 
@@ -44,6 +42,7 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
+    { href: '/saas-websites', label: 'SaaS Websites' },
     { href: '/playbook', label: 'Playbook' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
@@ -56,25 +55,17 @@ const Navigation = () => {
     { href: '/pricing', label: 'Pricing' },
   ]
 
-  const saasWebsitesSubItems = [
-    { href: '/saas-website-examples', label: 'SaaS Website Examples' },
-    { href: '/b2b-saas-website', label: 'B2B SaaS Websites' },
-    { href: '/ai-company-websites', label: 'AI Company Websites' },
-  ]
-
   // Check if current path is Services-related
   const isServicesActive = pathname === '/saas-website-design' || pathname === '/solutions' || pathname === '/pricing'
   
   // Check if current path is SaaS Websites-related
-  const isSaaSWebsitesActive = pathname === '/saas-website-examples' || pathname === '/b2b-saas-website' || pathname === '/ai-company-websites'
+  const isSaaSWebsitesActive = pathname === '/saas-websites'
 
   const handleNavClick = (href: string, e: React.MouseEvent) => {
     e.preventDefault()
-    setIsOpen(false)
-    setIsServicesOpen(false)
-    setIsServicesMobileOpen(false)
-    setIsSaaSWebsitesOpen(false)
-    setIsSaaSWebsitesMobileOpen(false)
+      setIsOpen(false)
+      setIsServicesOpen(false)
+      setIsServicesMobileOpen(false)
     
     if (href.includes('#')) {
       // Handle anchor links
@@ -126,19 +117,16 @@ const Navigation = () => {
       if (!target.closest('.services-dropdown')) {
         setIsServicesOpen(false)
       }
-      if (!target.closest('.saas-websites-dropdown')) {
-        setIsSaaSWebsitesOpen(false)
-      }
     }
 
-    if (isServicesOpen || isSaaSWebsitesOpen) {
+    if (isServicesOpen) {
       document.addEventListener('mousedown', handleClickOutside)
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [isServicesOpen, isSaaSWebsitesOpen])
+  }, [isServicesOpen])
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -217,56 +205,6 @@ const Navigation = () => {
                       className="absolute top-full left-0 mt-1 w-56 bg-surface border border-surface rounded-lg shadow-lg overflow-hidden z-50"
                     >
                       {servicesSubItems.map((subItem) => (
-                        <Link
-                          key={subItem.href}
-                          href={subItem.href}
-                          onClick={(e) => handleNavClick(subItem.href, e)}
-                          className={`block px-4 py-2 text-sm transition-colors duration-200 ${
-                            pathname === subItem.href
-                              ? 'text-accent bg-background/50'
-                              : 'text-text-secondary hover:text-accent hover:bg-background/30'
-                          }`}
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-
-              {/* SaaS Websites Dropdown */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="relative saas-websites-dropdown"
-                onMouseEnter={() => setIsSaaSWebsitesOpen(true)}
-                onMouseLeave={() => setIsSaaSWebsitesOpen(false)}
-              >
-                <button
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group flex items-center gap-1 ${
-                    isSaaSWebsitesActive ? 'text-accent' : 'text-text-secondary hover:text-accent'
-                  }`}
-                >
-                  SaaS Websites
-                  <ChevronDown 
-                    size={16} 
-                    className={`transition-transform duration-200 ${isSaaSWebsitesOpen ? 'rotate-180' : ''}`}
-                  />
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </button>
-
-                <AnimatePresence>
-                  {isSaaSWebsitesOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 w-56 bg-surface border border-surface rounded-lg shadow-lg overflow-hidden z-50"
-                    >
-                      {saasWebsitesSubItems.map((subItem) => (
                         <Link
                           key={subItem.href}
                           href={subItem.href}
@@ -374,51 +312,6 @@ const Navigation = () => {
                       className="pl-4 space-y-1"
                     >
                       {servicesSubItems.map((subItem) => (
-                        <Link
-                          key={subItem.href}
-                          href={subItem.href}
-                          onClick={(e) => handleNavClick(subItem.href, e)}
-                          className={`block px-3 py-2 rounded-md text-sm transition-colors duration-200 ${
-                            pathname === subItem.href
-                              ? 'text-accent'
-                              : 'text-text-secondary hover:text-accent'
-                          }`}
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-
-              {/* SaaS Websites with Dropdown */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-              >
-                <button
-                  onClick={() => setIsSaaSWebsitesMobileOpen(!isSaaSWebsitesMobileOpen)}
-                  className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    isSaaSWebsitesActive ? 'text-accent' : 'text-text-secondary hover:text-accent'
-                  }`}
-                >
-                  SaaS Websites
-                  <ChevronDown 
-                    size={20} 
-                    className={`transition-transform duration-200 ${isSaaSWebsitesMobileOpen ? 'rotate-180' : ''}`}
-                  />
-                </button>
-                <AnimatePresence>
-                  {isSaaSWebsitesMobileOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="pl-4 space-y-1"
-                    >
-                      {saasWebsitesSubItems.map((subItem) => (
                         <Link
                           key={subItem.href}
                           href={subItem.href}

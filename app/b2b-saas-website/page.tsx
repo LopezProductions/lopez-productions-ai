@@ -618,10 +618,10 @@ export default function B2BSaaSWebsitePage() {
                   View SaaS Website Design
                 </Link>
                 <Link
-                  href="/saas-website-examples"
+                  href="/saas-websites#examples"
                   className="btn-outline px-10 py-4 text-lg"
                 >
-                  View SaaS Website Examples
+                  View System Examples
                 </Link>
               </motion.div>
               <motion.div
