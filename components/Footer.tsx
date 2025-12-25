@@ -39,6 +39,7 @@ const Footer = () => {
             <li className="py-2"><a href="https://www.youtube.com/@LopezWorkflows" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">YouTube Channel</a></li>
             <li className="py-2"><a href="https://www.linkedin.com/company/lopez-productions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">LinkedIn</a></li>
             <li className="py-2"><a href="https://x.com/LopezProdx" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">X (Twitter)</a></li>
+            <li className="py-2"><a href="https://www.reddit.com/user/LopezProductions/" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">Reddit</a></li>
             <li className="py-2"><a href="https://linktr.ee/lopezproductions" target="_blank" rel="noopener noreferrer" className="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded inline-block">Linktree</a></li>
           </ul>
         </div>
