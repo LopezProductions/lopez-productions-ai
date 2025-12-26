@@ -92,6 +92,7 @@ export const allInsights: Insight[] = [
     readTime: '12 min read',
     category: 'Interface Architecture',
     publishedDate: '2025-12-10',
+    modifiedDate: '2025-12-26',
     coverImage: '/1200-google-antigravity.png',
   },
   {

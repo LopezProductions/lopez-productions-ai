@@ -95,7 +95,7 @@ export default function GoogleAntigravityUITemplate() {
             </div>
 
             <div className="mt-4 text-sm text-text-muted">
-              <span>Updated December 22, 2025</span>
+              <span>Updated December 26, 2025</span>
             </div>
           </div>
         </section>
@@ -177,6 +177,16 @@ export default function GoogleAntigravityUITemplate() {
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
               What Gemini Thinks &ldquo;Google Antigravity&rdquo; Means (And Why That&apos;s a Problem)
             </h2>
+
+            <div className="my-8 rounded-xl overflow-hidden border border-border">
+              <Image
+                src="/define-google-antigravity.png"
+                alt="Define Google Antigravity"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+              />
+            </div>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
               When queried directly, Gemini interprets <em>Google Antigravity</em> as:
