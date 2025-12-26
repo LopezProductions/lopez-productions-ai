@@ -88,6 +88,10 @@ export default function RootLayout({
                 "https://www.linkedin.com/company/lopez-productions",
                 "https://x.com/LopezProdx",
                 "https://www.reddit.com/user/LopezProductions/"
+              ],
+              "knowsAbout": [
+                "Search Engine Optimization",
+                "SaaS"
               ]
             })
           }}
