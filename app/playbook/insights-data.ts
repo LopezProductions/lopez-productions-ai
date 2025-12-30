@@ -368,6 +368,57 @@ export const allInsights: Insight[] = [
     category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-13',
     coverImage: '/brand-system.png'
+  },
+  {
+    slug: 'n8n-ai-content-repurposing-system',
+    title: 'I Fired Myself as a Social Media Manager',
+    excerpt: 'How I used n8n and AI agents to automate content repurposing across LinkedIn, X, and Reddit without losing control or brand voice.',
+    readTime: '10 min read',
+    category: 'Automation & Ops Engineering',
+    publishedDate: '2025-12-30',
+    coverImage: '/n8n-content-repurposing.png',
+    faqs: [
+      {
+        question: 'What problem does this n8n automation solve?',
+        answer: 'This automation eliminates the manual work of repurposing blog content for multiple social platforms. Instead of rewriting posts separately for LinkedIn, X, and Reddit, the system generates platform-specific drafts automatically, saving time and reducing creative fatigue.',
+      },
+      {
+        question: 'How does the n8n content repurposing workflow work?',
+        answer: 'The workflow monitors a website RSS feed for new blog posts. When a post is published, n8n triggers AI agents that read the article and generate formatted drafts tailored to each social platform. The drafts are delivered to a Notion dashboard for manual review before posting.',
+      },
+      {
+        question: 'Does this system automatically post content to social media?',
+        answer: 'No. The workflow intentionally stops at draft creation. Nothing is posted automatically. This ensures brand voice, tone, and context remain under human control while automation handles repetitive formatting and rewriting.',
+      },
+      {
+        question: 'What AI models are used in this workflow?',
+        answer: 'The workflow uses multiple AI agents, each trained on a specific platform style. One agent writes for LinkedIn, one for X (Twitter), and one for Reddit. Each agent interprets the same source content differently based on platform norms. The specific model can be swapped depending on preference or availability.',
+      },
+      {
+        question: 'Why use n8n instead of Zapier or Make?',
+        answer: 'n8n provides full visibility and control over the workflow logic. Unlike Zapier or Make, n8n is self-hostable, more cost-effective at scale, and does not lock key functionality behind pricing tiers. The tradeoff is a higher technical learning curve.',
+      },
+      {
+        question: 'Is this workflow suitable for businesses or just creators?',
+        answer: 'It works for both. Creators benefit from reduced posting overhead. Businesses benefit from consistent distribution without hiring additional staff or agencies for basic repurposing. The workflow scales well for SaaS teams, AI startups, and founders producing long-form content.',
+      },
+      {
+        question: 'Do I need a blog or website for this to work?',
+        answer: 'A website with long-form content makes the workflow easiest to implement. If you do not have a blog, the workflow can be modified to pull from documents, knowledge bases, or internal notes instead of RSS.',
+      },
+      {
+        question: 'Is this considered AI-generated content spam?',
+        answer: 'No. The system does not generate low-quality or mass-posted content. It produces drafts that are reviewed and edited by a human before publishing. Automation is used for efficiency, not replacement of authorship.',
+      },
+      {
+        question: 'How long does it take to set up this workflow?',
+        answer: 'Initial setup can take several hours depending on familiarity with n8n and AI agent configuration. Once built, ongoing maintenance is minimal, and content distribution becomes largely hands-off.',
+      },
+      {
+        question: 'Can this workflow be reused or customized?',
+        answer: 'Yes. The workflow can be duplicated and adapted for different brands, voices, platforms, or content types. Prompts, agents, and destinations can all be adjusted without rebuilding the system from scratch.',
+      },
+    ],
   }
 ]
 
@@ -408,7 +459,8 @@ export const pillarMappings: Record<string, string[]> = {
     'notion-creator-dashboard',
     'why-your-first-priority-isnt-automation-its-your-brand-system',
     'ai-notion-weekly-organization',
-    'ultimate-guide-zapier-gpt-integrations'
+    'ultimate-guide-zapier-gpt-integrations',
+    'n8n-ai-content-repurposing-system'
   ]
 }
 

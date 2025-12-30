@@ -26,6 +26,8 @@ export default function BlogPreview() {
       .filter(post => {
         // Include AI Workflows category
         if (post.category === 'AI Workflows') return true
+        // Include Automation & Ops Engineering category
+        if (post.category === 'Automation & Ops Engineering') return true
         // You can add more category matching logic here
         return false
       })
