@@ -38,62 +38,6 @@ export const metadata: Metadata = {
 export default function N8nAiContentRepurposingSystem() {
   const post = allInsights.find(p => p.slug === 'n8n-ai-content-repurposing-system')
   
-  // Optimized FAQ Schema for Google indexing and AEO
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What problem does this n8n automation solve?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'This automation removes the manual work of repurposing blog content for multiple social platforms. It generates platform-specific drafts automatically, reducing time spent rewriting and formatting posts.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How does the n8n content repurposing workflow work?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'The workflow monitors a website RSS feed for new blog posts. When a post is published, n8n triggers AI agents that generate drafts tailored for LinkedIn, X, and Reddit. Drafts are delivered to Notion for manual review.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Does this system automatically post content to social media?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'No. The workflow stops at draft creation. All posts are manually reviewed and scheduled to preserve brand voice and editorial control.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Why use n8n instead of Zapier or Make?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'n8n offers full visibility into workflow logic, self-hosting options, and better cost control at scale. Zapier and Make are easier to start with but restrict advanced logic behind pricing tiers.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is this workflow suitable for businesses?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. The workflow works for creators, startups, and businesses that publish long-form content and need consistent multi-platform distribution without increasing headcount.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do I need a website or blog for this workflow?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A website with a blog makes implementation easiest. The workflow can also be adapted to pull content from documents, internal notes, or knowledge bases instead of RSS.',
-        },
-      },
-    ],
-  }
-
   // How-To Schema for workflow execution
   const howToSchema = {
     '@context': 'https://schema.org',
@@ -160,15 +104,6 @@ export default function N8nAiContentRepurposingSystem() {
         coverImage={post?.coverImage}
         canonicalUrl={`https://lopezproductions.ai/playbook/${post?.slug || 'n8n-ai-content-repurposing-system'}`}
         faqs={post?.faqs}
-      />
-
-      {/* Optimized FAQ Schema for Google indexing and AEO */}
-      <Script
-        id="faq-schema-n8n"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
       />
 
       {/* How-To Schema for workflow execution */}
