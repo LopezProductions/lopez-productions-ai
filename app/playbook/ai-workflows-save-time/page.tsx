@@ -5,8 +5,9 @@ import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import PostSchema from '../../../components/PostSchema'
 import { allInsights } from '../insights-data'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'How AI Workflows Save SaaS Teams 10 Hours a Week | Lopez Productions',
   description: 'Discover the specific automation systems that cut project time by 20-30%. Learn which AI workflows actually work and why most teams are still doing manual work.',
   keywords: 'AI workflow automation, business automation, time savings, SaaS automation, AI productivity, workflow optimization, business process automation',

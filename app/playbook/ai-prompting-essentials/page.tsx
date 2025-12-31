@@ -5,8 +5,9 @@ import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import PostSchema from '../../../components/PostSchema'
 import { allInsights } from '../insights-data'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI Prompting Essentials — The Skills Every Creator Needs in 2025 | Lopez Productions',
   description: 'A practical guide to the core prompting skills that help creators build faster, communicate clearly with AI, and run a smoother content engine.',
   keywords: 'AI prompting, prompt engineering, ChatGPT prompts, AI tools for creators, content creation with AI, AI workflows, prompting skills',

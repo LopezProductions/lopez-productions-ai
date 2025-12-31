@@ -5,8 +5,9 @@ import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import PostSchema from '../../../components/PostSchema'
 import { allInsights } from '../insights-data'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '3 Systems Every Creator Should Automate in 2025 | Lopez Productions',
   description: 'The essential automation stack for content creators: from Notion planning to cross-platform posting. Stop spending 15+ hours weekly on admin work.',
   keywords: 'creator automation, content systems, Notion automation, creator tools, content automation, social media automation, creator workflow',
