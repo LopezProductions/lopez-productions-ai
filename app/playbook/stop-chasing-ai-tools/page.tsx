@@ -5,8 +5,9 @@ import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import PostSchema from '../../../components/PostSchema'
 import { allInsights } from '../insights-data'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Stop Chasing Every AI Tool — Learn Perplexity, ChatGPT, and Gemini (2025 Guide) | Lopez Productions',
   description: 'Most new AI tools aren\'t worth your time. Here\'s my take on the three that actually matter — Perplexity AI, ChatGPT, and Gemini — and how I use them daily for focused, productive work.',
   keywords: 'best AI tools for creators, AI tools for small business, AI productivity apps 2025, Perplexity AI guide, ChatGPT workflow, Gemini YouTube summary',

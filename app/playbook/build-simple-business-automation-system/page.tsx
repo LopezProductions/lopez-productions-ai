@@ -5,8 +5,9 @@ import Link from 'next/link'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import PostSchema from '../../../components/PostSchema'
 import { allInsights } from '../insights-data'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'How To Build a Simple Automation System for Your Business (Beginner-Friendly Guide) | Lopez Productions',
   description: 'A plain-English guide to automating your business without overthinking it — using simple systems, AI tools, and lightweight workflows that save time every single week.',
   keywords: 'business automation, automation systems, AI workflows, small business automation, creator automation, workflow automation, Make.com automation, Notion automation',
