@@ -496,6 +496,59 @@ export default function NotionCreatorDashboard() {
               Then — and only then — add the small automations that keep the system moving.
             </p>
 
+            {/* Related Articles Section */}
+            <div className="mt-16">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gold mb-6">
+                🗂 Related Articles
+              </h3>
+              
+              <div className="space-y-4">
+                <div className="rounded-xl border border-brand-gray-dark p-6 hover:bg-white/5 transition-all duration-300">
+                  <Link href="/playbook/ai-notion-weekly-organization" className="block">
+                    <h4 className="text-lg font-semibold text-brand-white mb-2 hover:text-brand-gold transition-colors">
+                      📅 How I Use AI to Organize My Week Inside Notion
+                    </h4>
+                    <p className="text-brand-gray-light text-sm">
+                      A simple system for creators, consultants, and solo operators who want clarity — not chaos.
+                    </p>
+                  </Link>
+                </div>
+
+                <div className="rounded-xl border border-brand-gray-dark p-6 hover:bg-white/5 transition-all duration-300">
+                  <Link href="/playbook/content-engine-starter-kit" className="block">
+                    <h4 className="text-lg font-semibold text-brand-white mb-2 hover:text-brand-gold transition-colors">
+                      🧠 The Content Engine Starter Kit
+                    </h4>
+                    <p className="text-brand-gray-light text-sm">
+                      Build your AI-powered content pipeline without feeling overwhelmed.
+                    </p>
+                  </Link>
+                </div>
+
+                <div className="rounded-xl border border-brand-gray-dark p-6 hover:bg-white/5 transition-all duration-300">
+                  <Link href="/playbook/build-simple-business-automation-system" className="block">
+                    <h4 className="text-lg font-semibold text-brand-white mb-2 hover:text-brand-gold transition-colors">
+                      ⚙️ How To Build a Simple Automation System for Your Business
+                    </h4>
+                    <p className="text-brand-gray-light text-sm">
+                      Beginner-friendly guide to building automations that actually work.
+                    </p>
+                  </Link>
+                </div>
+
+                <div className="rounded-xl border border-brand-gray-dark p-6 hover:bg-white/5 transition-all duration-300">
+                  <Link href="/playbook/n8n-ai-content-repurposing-system" className="block">
+                    <h4 className="text-lg font-semibold text-brand-white mb-2 hover:text-brand-gold transition-colors">
+                      🔄 I Fired Myself as a Social Media Manager
+                    </h4>
+                    <p className="text-brand-gray-light text-sm">
+                      How I used n8n and AI agents to automate content repurposing across LinkedIn, X, and Reddit without losing control or brand voice.
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             {/* CTA */}
             <div className="mt-16 p-8 bg-brand-gray-dark rounded-2xl text-center border border-brand-gray-dark">
               <h3 className="text-2xl font-serif font-bold text-brand-white mb-4">

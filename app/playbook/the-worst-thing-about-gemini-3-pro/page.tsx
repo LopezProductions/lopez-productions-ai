@@ -13,7 +13,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'The Worst Thing About Gemini 3 Pro (That No One Talks About) | Lopez Productions',
   description:
-    'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
+    'Does Gemini 3 Pro have project folders? No. Learn why Gemini lacks the project organization features of Claude and ChatGPT, and discover the best Notion workaround to fix your workflow.',
   keywords:
     'gemini 3 pro, project folders, ai organization, gemini workflow, ai tools comparison, knowledge management, notion, ai productivity',
   alternates: {
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     url: 'https://lopezproductions.ai/playbook/the-worst-thing-about-gemini-3-pro',
     title: 'The Worst Thing About Gemini 3 Pro (That No One Talks About)',
     description:
-      'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
+      'Does Gemini 3 Pro have project folders? No. Learn why Gemini lacks the project organization features of Claude and ChatGPT, and discover the best Notion workaround to fix your workflow.',
     images: ['https://lopezproductions.ai/worst-gemini-feature.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The Worst Thing About Gemini 3 Pro (That No One Talks About)',
     description:
-      'Does Gemini 3 Pro have project folders? No. Here\'s why the lack of folders makes multi-project work harder and the best workaround for organizing your research.',
+      'Does Gemini 3 Pro have project folders? No. Learn why Gemini lacks the project organization features of Claude and ChatGPT, and discover the best Notion workaround to fix your workflow.',
     images: ['https://lopezproductions.ai/worst-gemini-feature.png'],
   },
 }
@@ -135,42 +135,29 @@ export default function TheWorstThingAboutGemini3Pro() {
             <hr className="my-12 border-border" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
-              The Projects Folder Problem
+              The Organization Problem: Why Gemini Still Lacks Projects or Folders
             </h2>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Holy.
+              Holy. This issue is way bigger than I expected.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              This issue is way bigger than I expected.
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Gemini 3 Pro still <strong className="text-text-primary">doesn&apos;t have proper project organization.</strong>
+              Despite the massive upgrades to reasoning and speed, <strong className="text-text-primary">Gemini 3 Pro still lacks the project folders</strong> that power users rely on.
             </p>
 
             <ul className="list-disc pl-6 text-text-secondary space-y-2 mb-6">
-              <li>No folders</li>
-              <li>No grouping</li>
-              <li>No way to cluster related chats</li>
-              <li>No way to nest research, drafts, images, and iterations together</li>
+              <li><strong>No folders</strong> to store specific chat histories.</li>
+              <li><strong>No &quot;Projects&quot; feature</strong> like Claude to group documents and custom instructions.</li>
+              <li><strong>No way to cluster</strong> related research threads.</li>
             </ul>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Claude has project folders.
+              Users coming from other platforms are often confused, searching for &quot;Gemini 3 folders&quot; or asking &quot;does Gemini have projects like ChatGPT?&quot; The answer is frustratingly simple: it doesn&apos;t.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              ChatGPT has project folders.
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Perplexity has Spaces.
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Meanwhile, Gemini still throws <em>everything</em> into one long-running list — which becomes chaos if your workflow relies on switching between threads.
+              While <strong>Claude has Projects</strong> and <strong>ChatGPT has customizable Folders</strong> (via Archives and GPTs), Gemini throws <em>everything</em> into one long-running chronological list. This becomes chaos if your workflow relies on switching between threads or managing long-term research.
             </p>
 
             <div className="my-8">
@@ -274,6 +261,40 @@ export default function TheWorstThingAboutGemini3Pro() {
               If You Use Gemini Exclusively, You <em>NEED</em> a Second Brain
             </h2>
 
+            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+              If Gemini is your only tool, you absolutely cannot rely on its native history. You need an external system.
+            </p>
+
+            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+              Until Google adds native folders, the best workaround is <strong className="text-text-primary">pairing Gemini with a structured workspace like Notion.</strong>
+            </p>
+
+            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+              I realized early on that I couldn&apos;t rely on Gemini&apos;s sidebar. Instead, I built an automated workflow that pipes my research directly into Notion.
+            </p>
+
+            <ul className="list-disc pl-6 text-text-secondary space-y-2 mb-6">
+              <li>
+                <Link href="/playbook/ai-notion-weekly-organization" className="text-accent hover:text-accent-dark underline">
+                  Read the Guide: How I Use AI to Organize My Week Inside Notion →
+                </Link>
+              </li>
+            </ul>
+
+            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+              Without this external &quot;brain,&quot; you are forced to:
+            </p>
+
+            <ul className="list-disc pl-6 text-text-secondary space-y-2 mb-6">
+              <li>Sift through endless chronological chats.</li>
+              <li>Search for exact phrases you might have forgotten.</li>
+              <li>Re-create work because you couldn&apos;t locate the previous output.</li>
+            </ul>
+
+            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+              That is time you aren&apos;t getting back—and time that could have been spent doing real focused work.
+            </p>
+
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-border mb-4 max-w-2xl mx-auto">
                 <Image
@@ -285,33 +306,6 @@ export default function TheWorstThingAboutGemini3Pro() {
                 />
               </div>
             </div>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              If Gemini is your only tool, you should absolutely be using something like Notion.
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Not because you &quot;need another app.&quot;
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              But because your brain only has so much bandwidth.
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Without folders, you&apos;re forced to:
-            </p>
-
-            <ul className="list-disc pl-6 text-text-secondary space-y-2 mb-6">
-              <li>sift through old chats</li>
-              <li>search for exact phrases</li>
-              <li>remember which version of which idea lived where</li>
-              <li>recreate work because you couldn&apos;t locate the previous output</li>
-            </ul>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              That is time you&apos;re not getting back — and time that could have been spent doing real focused work.
-            </p>
 
             <hr className="my-12 border-border" />
 

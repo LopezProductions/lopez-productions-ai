@@ -120,6 +120,7 @@ export const allInsights: Insight[] = [
     readTime: '6 min read',
     category: 'AI Workflows',
     publishedDate: '2025-12-02',
+    modifiedDate: '2026-01-01',
     coverImage: '/worst-gemini-feature.png',
   },
   {
@@ -298,6 +299,7 @@ export const allInsights: Insight[] = [
     readTime: '8 min read',
     category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-16',
+    modifiedDate: '2026-01-05',
     coverImage: '/organize-notion.png'
   },
   {
