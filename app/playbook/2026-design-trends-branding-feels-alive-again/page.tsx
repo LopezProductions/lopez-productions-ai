@@ -456,6 +456,59 @@ export default function DesignTrends2026() {
               Design that doesn't just look good—but feels considered, responsive, and alive.
             </p>
 
+            {/* Related Articles Section */}
+            <div className="mt-16">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gold mb-6">
+                🗂 Related Articles
+              </h3>
+              
+              <div className="space-y-4">
+                <div className="rounded-xl border border-brand-gray-dark p-6 hover:bg-white/5 transition-all duration-300">
+                  <Link href="/playbook/ai-generated-design-systems-governance" className="block">
+                    <h4 className="text-lg font-semibold text-brand-white mb-2 hover:text-brand-gold transition-colors">
+                      🎨 AI-Generated Design Systems Aren&apos;t the Problem — Ungoverned Ones Are
+                    </h4>
+                    <p className="text-brand-gray-light text-sm">
+                      Learn why ungoverned AI systems fail and how to build production-ready interface systems.
+                    </p>
+                  </Link>
+                </div>
+
+                <div className="rounded-xl border border-brand-gray-dark p-6 hover:bg-white/5 transition-all duration-300">
+                  <Link href="/playbook/google-antigravity-ui" className="block">
+                    <h4 className="text-lg font-semibold text-brand-white mb-2 hover:text-brand-gold transition-colors">
+                      🚀 Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch
+                    </h4>
+                    <p className="text-brand-gray-light text-sm">
+                      I built the interface Google never shipped after AI kept returning unexpected results.
+                    </p>
+                  </Link>
+                </div>
+
+                <div className="rounded-xl border border-brand-gray-dark p-6 hover:bg-white/5 transition-all duration-300">
+                  <Link href="/playbook/design-technical-jargon-explained" className="block">
+                    <h4 className="text-lg font-semibold text-brand-white mb-2 hover:text-brand-gold transition-colors">
+                      📐 Design Technical Jargon Explained — A Beginner&apos;s Guide
+                    </h4>
+                    <p className="text-brand-gray-light text-sm">
+                      A simple, practical guide that breaks down essential design terms for beginners.
+                    </p>
+                  </Link>
+                </div>
+
+                <div className="rounded-xl border border-brand-gray-dark p-6 hover:bg-white/5 transition-all duration-300">
+                  <Link href="/playbook/notion-creator-dashboard" className="block">
+                    <h4 className="text-lg font-semibold text-brand-white mb-2 hover:text-brand-gold transition-colors">
+                      📋 Notion for Creators — The Simple Dashboard That Runs Your Entire Brand System
+                    </h4>
+                    <p className="text-brand-gray-light text-sm">
+                      Build a brand system foundation that becomes the operating system of your brand.
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             {/* CTA */}
             <div className="mt-16 p-8 bg-brand-gray-dark rounded-2xl text-center">
               <h3 className="text-2xl font-serif font-bold text-brand-white mb-4">

@@ -275,6 +275,7 @@ export const allInsights: Insight[] = [
     readTime: '10 min read',
     category: 'AI Workflows',
     publishedDate: '2025-11-25',
+    modifiedDate: '2026-01-02',
     coverImage: '/why-llms.png'
   },
   {
@@ -341,6 +342,7 @@ export const allInsights: Insight[] = [
     readTime: '10 min read',
     category: 'Automation & Ops Engineering',
     publishedDate: '2025-11-14',
+    modifiedDate: '2026-01-02',
     coverImage: '/notion-dashboard.png'
   },
   {
