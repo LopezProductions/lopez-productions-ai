@@ -9,18 +9,6 @@ const nextConfig = {
   poweredByHeader: false,
   async redirects() {
     return [
-      // 1. Italian/French Article Redirect
-      {
-        source: '/playbook/why-llms-perform-better-in-italian-french-and-polish-than-in-english',
-        destination: '/playbook/stop-prompting-in-english-italian-french-ai-hack',
-        permanent: true,
-      },
-      // 2. Gemini Article Redirect
-      {
-        source: '/playbook/the-worst-thing-about-gemini-3-pro',
-        destination: '/playbook/gemini-3-pro-no-project-folders',
-        permanent: true,
-      },
       // INDUSTRIES → SOLUTIONS full redirect cascade
       {
         source: '/industries',

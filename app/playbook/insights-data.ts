@@ -18,6 +18,29 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: '2026-design-trends-branding-feels-alive-again',
+    title: '2026 Design Trends: Why Branding Finally Feels Alive Again',
+    excerpt: 'For the last few years, branding hasn\'t hit the way it used to. Everything became smooth, optimized, frictionless—and somehow, nothing felt alive. What excites me about 2026 is that this trend is finally reversing.',
+    readTime: '12 min read',
+    category: 'Interface Architecture',
+    publishedDate: '2026-01-02',
+    coverImage: '/2026-design-trends.png',
+    faqs: [
+      {
+        question: 'What are the branding trends for 2026?',
+        answer: 'The branding trends for 2026 represent a return to "alive" branding, featuring emotional color palettes, narrative packaging with folklore and mythic symbols, visible imperfection and texture, and haptic design elements that make digital experiences feel tactile and responsive.',
+      },
+      {
+        question: 'How will AI affect graphic design in 2026?',
+        answer: 'AI will shift from generating generic art to enabling "Creative Necromancy"—helping designers execute complex analog styles like etching, linocut, and woodblock printing that were previously too time-intensive. AI collapses the gap between traditional craft and modern workflows, making emotionally rich art forms viable again.',
+      },
+      {
+        question: 'What is Haptic Design in web trends?',
+        answer: 'Haptic design refers to using sound design, textured micro-interactions, and material cues to make digital interfaces feel tactile and responsive. This includes thoughtful notification pings, buttons that feel pressable, and subtle textures that imply softness or weight—creating emotional feedback that acknowledges the user\'s presence.',
+      },
+    ],
+  },
+  {
     slug: 'ai-isnt-making-people-less-intelligent',
     title: 'AI Isn\'t Making People Less Intelligent — It\'s Exposing Who Never Had an Edge',
     excerpt: 'AI doesn\'t make people less intelligent — it exposes who never developed an edge. Tools don\'t remove skill, they reveal it. The real divider is edge before automation.',
@@ -427,6 +450,7 @@ export const allInsights: Insight[] = [
 // Pillar mappings
 export const pillarMappings: Record<string, string[]> = {
   'interface-architecture': [
+    '2026-design-trends-branding-feels-alive-again',
     'ai-generated-design-systems-governance',
     'google-antigravity-ui',
     'google-ai-mode'
