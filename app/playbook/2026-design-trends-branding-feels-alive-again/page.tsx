@@ -144,12 +144,12 @@ export default function DesignTrends2026() {
             </div>
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
-              AI Didn't Kill Craft. It Brought It Back.
+              Human-Centered Revival: AI Didn't Kill Craft. It Brought It Back.
             </h2>
             
             <div className="my-8 rounded-2xl overflow-hidden border border-brand-gray-dark">
               <img 
-                src="/creative-necromancy.png" 
+                src="/human-centered-revival.png" 
                 alt="A symbolic illustration of creative necromancy in design." 
                 className="w-full h-auto"
               />
@@ -160,11 +160,11 @@ export default function DesignTrends2026() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              But something more interesting is happening beneath that reaction.
+              But something more meaningful is happening beneath that reaction.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              AI is beginning to revive these "lost" art forms—not by replacing them, but by making them <strong className="text-brand-white">viable again inside modern design workflows</strong>.
+              AI is enabling a human-centered revival of craft—not by replacing designers, but by making emotionally rich, time-intensive art forms viable again inside modern workflows.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -180,7 +180,7 @@ export default function DesignTrends2026() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              With the right direction, designers can explore woodcut illustration, etched textures, ornamental systems, and folklore-driven type without weeks of manual labor. What used to be inaccessible is experimental again.
+              With the right direction, designers can explore woodcut illustration, etched textures, ornamental systems, and folklore-driven typography without weeks of manual labor. What was once inaccessible becomes experimental again.
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
@@ -188,7 +188,7 @@ export default function DesignTrends2026() {
             </p>
             
             <p className="text-lg text-brand-gray-light mb-6 leading-relaxed">
-              It's <strong className="text-brand-white">creative necromancy</strong>—bringing emotionally rich craft back into circulation.
+              It's technology supporting a return to human intention, imperfection, and emotional weight.
             </p>
 
             <div className="overflow-x-auto mb-8 mt-8">

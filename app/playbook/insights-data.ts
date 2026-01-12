@@ -24,6 +24,7 @@ export const allInsights: Insight[] = [
     readTime: '12 min read',
     category: 'Interface Architecture',
     publishedDate: '2026-01-02',
+    modifiedDate: '2026-01-12',
     coverImage: '/2026-design-trends.png',
     faqs: [
       {
