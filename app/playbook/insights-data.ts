@@ -18,6 +18,16 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'why-im-moving-away-from-chatgpt-in-2026',
+    title: "Why I'm Moving Away from ChatGPT in 2026 (And You Should Too)",
+    excerpt: 'OpenAI\'s rev share model, intrusive ads, and eroding trust have made 2026 the year to move on. Here\'s why the landscape has shifted and why alternatives like Gemini and Claude make more sense now.',
+    readTime: '6 min read',
+    category: 'AI Workflows',
+    publishedDate: '2026-02-18',
+    entityTags: ['ChatGPT', 'Claude', 'Perplexity AI', 'Gemini'],
+    coverImage: '/chatgpt-5-2-hype.png',
+  },
+  {
     slug: '2026-design-trends-branding-feels-alive-again',
     title: '2026 Design Trends: Why Branding Finally Feels Alive Again',
     excerpt: 'For the last few years, branding hasn\'t hit the way it used to. Everything became smooth, optimized, frictionless—and somehow, nothing felt alive. What excites me about 2026 is that this trend is finally reversing.',
@@ -461,6 +471,7 @@ export const pillarMappings: Record<string, string[]> = {
   'creator-systems': [
   ],
   'ai-workflows': [
+    'why-im-moving-away-from-chatgpt-in-2026',
     'ai-isnt-making-people-less-intelligent',
     'is-chatgpt-5-2-all-the-hype',
     'chatgpt-5-2-vs-gemini-3-image-accuracy',
