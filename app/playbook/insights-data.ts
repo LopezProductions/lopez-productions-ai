@@ -26,6 +26,20 @@ export const allInsights: Insight[] = [
     publishedDate: '2026-02-18',
     entityTags: ['ChatGPT', 'Claude', 'Perplexity AI', 'Gemini'],
     coverImage: '/chatgpt-5-2-hype.png',
+    faqs: [
+      {
+        question: 'Why is OpenAI moving to a rev share model?',
+        answer: 'OpenAI introduced an "Integrated Partner Model" that requires a percentage of revenue from users who build profitable products with their tools. The move appears driven by ballooning costs and pressure to become profitable, effectively taxing creators who already pay for subscriptions.',
+      },
+      {
+        question: 'What are the best ChatGPT alternatives in 2026?',
+        answer: 'Gemini and Claude have caught up to (and in some cases surpassed) GPT models. Perplexity offers a stronger research experience. Models like Kimi and DeepSeek are also viable for specific use cases. The competitive landscape has shifted, and users are no longer locked into a single provider.',
+      },
+      {
+        question: 'Is ChatGPT still worth using in 2026?',
+        answer: 'For many users, the combination of rev share demands, intrusive ads on free tiers, and concerns about data trust make ChatGPT less attractive. Alternatives like Gemini and Claude offer comparable or better capabilities without the same monetization pressure on creators.',
+      },
+    ],
   },
   {
     slug: '2026-design-trends-branding-feels-alive-again',
