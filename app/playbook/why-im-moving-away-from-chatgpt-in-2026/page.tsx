@@ -232,6 +232,30 @@ export default function WhyImMovingAwayFromChatGPTIn2026() {
             <hr className="my-12 border-border" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
+              Frequently Asked Questions
+            </h2>
+
+            {post?.faqs && post.faqs.length > 0 && (
+              <div className="space-y-4 mb-12">
+                {post.faqs.map((faq) => (
+                  <details
+                    key={faq.question}
+                    className="rounded-xl border border-border p-6 open:bg-surface/50 transition-all duration-300"
+                  >
+                    <summary className="cursor-pointer font-semibold text-text-primary hover:text-accent transition-colors">
+                      {faq.question}
+                    </summary>
+                    <p className="mt-3 text-text-secondary leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            )}
+
+            <hr className="my-12 border-border" />
+
+            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
               Related Reading
             </h2>
 
