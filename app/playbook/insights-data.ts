@@ -18,6 +18,30 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'self-hosted-llm-limitations-n8n',
+    title: 'The Hard Truth About Self-Hosting: Why My "ChatGPT Killer" Failed (And What I Learned)',
+    excerpt: 'I tried to replace ChatGPT with a self-hosted local LLM and n8n. Here is why it failed, the technical limitations I faced, and the reality of local AI privacy.',
+    readTime: '8 min read',
+    category: 'Automation & Ops Engineering',
+    publishedDate: '2026-02-19',
+    entityTags: ['SelfHosted', 'LocalLLM', 'n8n', 'OpenAI', 'Privacy'],
+    coverImage: '/self-hosted-llm-issues.png',
+    faqs: [
+      {
+        question: 'What is the main disadvantage of self-hosted LLMs?',
+        answer: 'Self-hosted LLMs are disconnected from the internet. Unlike ChatGPT, which includes Bing search, web browsing, and execution environments, local models like Llama 3 or Mistral cannot look things up in real time.',
+      },
+      {
+        question: 'Where do local LLMs excel compared to cloud AI?',
+        answer: 'Local LLMs excel at synthesis—processing information you already have. They can summarize, reformat, and analyze PDFs, notes, or research papers faster and more privately than cloud tools. They struggle with discovery tasks like researching new topics or scraping the web.',
+      },
+      {
+        question: 'Is self-hosting worth it for privacy?',
+        answer: 'Yes. Running queries on a local LLM ensures 100% data sovereignty. Your research and business ideas are never used to train the next GPT. The tradeoff is sweat equity—complex tooling, proxies, and maintenance.',
+      },
+    ],
+  },
+  {
     slug: 'why-im-moving-away-from-chatgpt-in-2026',
     title: "Why I'm Moving Away from ChatGPT in 2026 (And You Should Too)",
     excerpt: 'OpenAI\'s rev share model, intrusive ads, and eroding trust have made 2026 the year to move on. Here\'s why the landscape has shifted and why alternatives like Gemini and Claude make more sense now.',
@@ -505,6 +529,7 @@ export const pillarMappings: Record<string, string[]> = {
     'zapiers-npm-account-hacked'
   ],
   'automation-systems': [
+    'self-hosted-llm-limitations-n8n',
     'build-simple-business-automation-system',
     'ai-workflows-save-time',
     'creator-automation-systems',

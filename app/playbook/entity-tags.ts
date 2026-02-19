@@ -46,6 +46,10 @@ export const TIER_1_CORE_TAGS = [
   'Zapier',
   'Notion',
   'Make.com',
+  'SelfHosted',
+  'LocalLLM',
+  'Privacy',
+  'OpenAI',
 ] as const
 
 /**
