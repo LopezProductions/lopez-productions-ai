@@ -10,6 +10,7 @@ import FrontendSystems from '../components/FrontendSystems'
 import Services from '../components/Services'
 import TemplateShowcase from '../components/TemplateShowcase'
 import FounderReasons from '../components/FounderReasons'
+import TheArchitectSection from '../components/TheArchitectSection'
 import BlogPreview from '../components/BlogPreview'
 import FinalCTASection from '../components/FinalCTASection'
 
@@ -135,6 +136,9 @@ export default function Home() {
 
           {/* Why AI Founders Trust Us */}
           <FounderReasons />
+
+          {/* The Architect */}
+          <TheArchitectSection />
 
           {/* Featured Articles */}
           <BlogPreview />

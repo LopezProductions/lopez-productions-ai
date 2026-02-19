@@ -20,7 +20,7 @@ export default function Services() {
   const services = [
     {
       id: 'growth-wrapper',
-      name: 'The Growth Wrapper',
+      name: 'Launch Infrastructure',
       price: 2800,
       priceDisplay: '$2,800',
       description: 'Conversion-optimized marketing site for SaaS and AI tools.',
@@ -29,7 +29,7 @@ export default function Services() {
     },
     {
       id: 'geo-architecture',
-      name: 'GEO Architecture',
+      name: 'Search Visibility System',
       price: 4800,
       priceDisplay: '$4,800',
       description: 'Built for generative engines (ChatGPT, Perplexity). Structured content for answer surfaces.',
@@ -41,7 +41,7 @@ export default function Services() {
       name: 'AEO Ecosystem',
       price: 7800,
       priceDisplay: '$7,800',
-      description: 'Become the answer AI models return.',
+      description: 'Total Market Presence. Become the answer AI models return.',
       icon: Crown,
       cta: 'Request Full Quote',
     },
@@ -71,7 +71,16 @@ export default function Services() {
           >
             Services for Growing Startups
           </motion.h2>
-          <div className="grid gap-8 md:grid-cols-3 mt-12">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-center text-text-secondary max-w-2xl mx-auto mb-12"
+          >
+            Global startups pay for velocity and system delivery — not just custom design. We ship fast without creating technical debt.
+          </motion.p>
+          <div className="grid gap-8 md:grid-cols-3">
             {services.map((service, index) => {
               const Icon = service.icon
               return (

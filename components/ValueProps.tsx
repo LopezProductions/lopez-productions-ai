@@ -14,7 +14,7 @@ export default function ValueProps() {
     {
       icon: Layout,
       title: 'Clean Architecture',
-      description: 'Technical SEO → GEO → AEO alignment. Pages structured so AI models understand your product.',
+      description: 'Deterministic Data Structures. We engineer your frontend so LLMs (ChatGPT, Perplexity) cite your product accurately, eliminating AI hallucinations about your brand.',
     },
     {
       icon: Rocket,

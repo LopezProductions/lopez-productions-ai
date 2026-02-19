@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Code, Zap, TrendingUp } from 'lucide-react'
+import { Code, Zap, TrendingUp, Shield } from 'lucide-react'
 
 export default function FounderReasons() {
   const reasons = [
@@ -21,6 +21,11 @@ export default function FounderReasons() {
       title: 'Aligned With Search Trends',
       description: 'Your blog already dominates AI keyword paths. This homepage now aligns with that audience.',
     },
+    {
+      icon: Shield,
+      title: 'Sovereign Infrastructure',
+      description: 'Systems designed for data control and privacy. We prioritize self-hosted workflows and controlled infrastructure over generic, leaky API wrappers.',
+    },
   ]
 
   return (
@@ -35,7 +40,7 @@ export default function FounderReasons() {
         >
           Why AI Founders Trust Us
         </motion.h2>
-        <div className="grid gap-8 md:grid-cols-3 mt-12">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mt-12">
           {reasons.map((reason, index) => {
             const Icon = reason.icon
             return (
