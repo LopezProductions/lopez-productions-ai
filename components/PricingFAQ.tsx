@@ -51,7 +51,7 @@ const faqs: FAQItem[] = [
     question: "Do you build backend logic?",
     answer: (
       <>
-        No. The Antigravity Kit is a frontend UI system.
+        No. The Zero-G Dashboard Kit is a frontend UI system.
         <br />
         You connect your own backend (Node, Python, Go, Rust, etc.).
       </>

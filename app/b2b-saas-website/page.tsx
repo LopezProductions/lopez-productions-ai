@@ -618,7 +618,7 @@ export default function B2BSaaSWebsitePage() {
                   View SaaS Website Design
                 </Link>
                 <Link
-                  href="/saas-websites#examples"
+                  href="/saas-websites#reference-implementations"
                   className="btn-outline px-10 py-4 text-lg"
                 >
                   View System Examples

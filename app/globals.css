@@ -19,6 +19,28 @@
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --click-driver-color: #6366F1;
+    
+    /* --------------------------------------------------------- */
+    /* Texture System - SVG Data URIs                            */
+    /* --------------------------------------------------------- */
+    
+    /* Mineral: High frequency, sharp noise (Simulates Slate/Talc) */
+    --asset-noise-mineral: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.5"/%3E%3C/svg%3E');
+
+    /* Paper: Lower frequency, softer noise (Simulates Fiber/Pulp) */
+    --asset-noise-paper: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.4"/%3E%3C/svg%3E');
+
+    /* --------------------------------------------------------- */
+    /* Texture Tokens (Contextual Logic)                        */
+    /* --------------------------------------------------------- */
+    
+    /* Token: texture.mineral.subtle */
+    --texture-mineral-opacity: 0.15; /* 15% Opacity - increased for visibility */
+    --texture-mineral-blend: overlay; /* Best for dark/colored backgrounds */
+    
+    /* Token: texture.paper.soft */
+    --texture-paper-opacity: 0.12;   /* 12% Opacity - increased for visibility */
+    --texture-paper-blend: multiply; /* Best for light/white backgrounds */
   }
 
 @tailwind base;
@@ -54,6 +76,28 @@
     --brand-gray-muted: var(--text-muted);
     --brand-gold: var(--primary-color);
     --brand-gold-dark: var(--secondary-color);
+    
+    /* --------------------------------------------------------- */
+    /* Texture System - SVG Data URIs                            */
+    /* --------------------------------------------------------- */
+    
+    /* Mineral: High frequency, sharp noise (Simulates Slate/Talc) */
+    --asset-noise-mineral: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.5"/%3E%3C/svg%3E');
+
+    /* Paper: Lower frequency, softer noise (Simulates Fiber/Pulp) */
+    --asset-noise-paper: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.4"/%3E%3C/svg%3E');
+
+    /* --------------------------------------------------------- */
+    /* Texture Tokens (Contextual Logic)                        */
+    /* --------------------------------------------------------- */
+    
+    /* Token: texture.mineral.subtle */
+    --texture-mineral-opacity: 0.15; /* 15% Opacity - increased for visibility */
+    --texture-mineral-blend: overlay; /* Best for dark/colored backgrounds */
+    
+    /* Token: texture.paper.soft */
+    --texture-paper-opacity: 0.12;   /* 12% Opacity - increased for visibility */
+    --texture-paper-blend: multiply; /* Best for light/white backgrounds */
   }
   
   html {
@@ -76,6 +120,18 @@
   
   p {
     color: var(--text-secondary);
+  }
+  
+  /* --------------------------------------------------------- */
+  /* Dark Mode Texture Adaptation                              */
+  /* --------------------------------------------------------- */
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* In dark mode, paper needs to be lighter noise on dark bg */
+      --texture-paper-blend: overlay; 
+      --texture-paper-opacity: 0.10; /* Increased for visibility */
+    }
   }
 }
 
@@ -224,6 +280,48 @@
     @apply absolute inset-0 rounded-lg p-[2px] bg-gradient-to-r from-primary to-secondary;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
+  }
+  
+  /* --------------------------------------------------------- */
+  /* Texture Utility Classes                                   */
+  /* --------------------------------------------------------- */
+  
+  /* Base Texture Class - Ensures the texture sits correctly */
+  [class*="texture-"] {
+    position: relative;
+    /* Ensures texture doesn't spill out of rounded corners */
+    overflow: hidden; 
+    isolation: isolate;
+  }
+
+  [class*="texture-"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0; /* Changed from -1 to 0 to ensure visibility above background */
+    pointer-events: none; /* Never interferes with clicks */
+    background-repeat: repeat;
+    background-size: 150px 150px; /* Tiling size (arbitrary, as noise is seamless) */
+  }
+
+  /* --------------------------------------------------------- */
+  /* Token Application                                          */
+  /* --------------------------------------------------------- */
+
+  /* Usage: <div class="hero-section texture-mineral"> */
+  .texture-mineral::before {
+    background-image: var(--asset-noise-mineral);
+    opacity: var(--texture-mineral-opacity);
+    mix-blend-mode: var(--texture-mineral-blend);
+  }
+
+  /* Usage: <div class="blog-card texture-paper"> */
+  .texture-paper::before {
+    background-image: var(--asset-noise-paper);
+    opacity: var(--texture-paper-opacity);
+    mix-blend-mode: var(--texture-paper-blend);
+    /* Optional: Adds a slight warmth/sepia filter to the noise only */
+    filter: sepia(0.2); 
   }
 }
 

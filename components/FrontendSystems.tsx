@@ -9,7 +9,7 @@ export default function FrontendSystems() {
   const products = [
     {
       id: 'antigravity-kit-source',
-      name: 'Antigravity Kit',
+      name: 'Zero-G Dashboard Kit',
       price: '$149',
       description: 'The physics-based React UI system for dashboards and LLM tools.',
       icon: Code,

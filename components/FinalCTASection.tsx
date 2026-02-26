@@ -24,26 +24,20 @@ export default function FinalCTASection() {
           viewport={{ once: true }}
           className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto"
         >
-          Let&apos;s accelerate your next release — whether you need a UI kit, a launch site, or a complete AEO ecosystem.
+          Let&apos;s architect your digital infrastructure. Whether you need a clean Next.js launch site, a custom UI kit, or a complete AEO ecosystem, let&apos;s map out the right system for your team.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex justify-center"
         >
           <Link
             href="/contact"
             className="btn-primary px-8 py-4 text-lg"
           >
-            Start a Project
-          </Link>
-          <Link
-            href="/pricing"
-            className="btn-outline px-8 py-4 text-lg"
-          >
-            Pricing & Systems
+            Book Your Strategy Call
           </Link>
         </motion.div>
       </div>

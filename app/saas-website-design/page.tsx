@@ -25,13 +25,13 @@ export default function SaaSWebsiteDesignPage() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'SaaS Website Design for Modern Products',
+    name: 'Engineered SaaS Websites. Built for AI-Era Discovery.',
     provider: {
       '@type': 'Organization',
       name: 'Lopez Productions',
       url: 'https://lopezproductions.ai',
     },
-    description: 'I design SaaS websites that convert, build trust, and stay visible as search becomes increasingly AI-driven.',
+    description: 'We design and develop Next.js marketing sites that explain your product clearly, build trust with buyers, and structure your data so AI search engines actually understand what you do.',
     areaServed: 'Worldwide',
     offers: {
       '@type': 'Offer',
@@ -53,52 +53,42 @@ export default function SaaSWebsiteDesignPage() {
   }
 
   const isFitFor = [
-    'Building or scaling a SaaS product',
-    'Selling to businesses, teams, or professionals',
-    'Tired of a site that looks good but doesn\'t explain value',
-    'Planning a launch, relaunch, or positioning reset',
+    'You are building or scaling a B2B SaaS product.',
+    'You are tired of a site that looks good but fails to explain your actual value.',
+    'You need a clean positioning reset for a launch or major update.',
   ]
 
   const isNotFitFor = [
-    'You want a $49 template flipped into a brand',
-    'You\'re looking for ongoing product development',
-    'You want heavy backend or infrastructure work',
+    'You want a $49 theme flipped into a brand.',
+    'You are looking for heavy backend product development.',
+    'You want a stitched-together, bloated CMS stack.',
   ]
 
   const goodSaaSPoints = [
     {
       number: '1',
-      title: 'Explains the product in under 10 seconds',
-      description: 'Clear problem → clear outcome → clear next step.',
+      title: 'Instant Clarity',
+      description: 'Your site must explain the problem, the outcome, and the exact next step in under 10 seconds.',
     },
     {
       number: '2',
-      title: 'Builds trust before asking for action',
-      description: 'Proof, structure, and clarity matter more than clever copy.',
+      title: 'Engineered Trust',
+      description: 'Proof, clean Next.js UI structure, and deterministic data matter more than clever copywriting. We build interfaces that feel like real products.',
     },
     {
       number: '3',
-      title: 'Shows up correctly in search',
-      description: 'Pages are structured so Google and AI systems understand what you do, who it\'s for, and why it matters.',
+      title: 'Modern Search Visibility',
+      description: 'Search is no longer just about keywords. We structure your pages so Google, ChatGPT, and AI summaries understand exactly what you do, who it\'s for, and why it matters—eliminating AI hallucinations about your brand.',
     },
-  ]
-
-  const whatIDesign = [
-    'Marketing websites',
-    'Product landing pages',
-    'Pricing pages',
-    'Feature or solution pages',
-    'Lightweight dashboards or UI shells',
   ]
 
   const includedInEveryBuild = [
     'Custom page structure & layout',
     'Mobile-first, performance-optimized UI',
     'Clear messaging hierarchy',
-    'Technical SEO baseline',
-    'GEO / AEO-aware page structure',
-    'Google Search Console setup or cleanup',
-    'Clean handoff (no lock-in)',
+    'GEO / AEO-aware page architecture',
+    'Technical SEO baseline & Google Search Console setup',
+    'Clean handoff with zero vendor lock-in',
   ]
 
   const optionalAddOns = [
@@ -117,19 +107,22 @@ export default function SaaSWebsiteDesignPage() {
 
   const pricingTiers = [
     {
-      name: 'Growth Wrapper',
+      name: 'Launch Infrastructure',
       price: '$2,800',
-      description: 'Conversion-focused SaaS marketing site',
+      subheadline: null,
+      description: 'Conversion-focused Next.js marketing site.',
     },
     {
-      name: 'GEO Architecture',
+      name: 'Search Visibility System',
       price: '$4,800',
-      description: 'Search-ready structure for AI-era discovery',
+      subheadline: null,
+      description: 'Search-ready structure optimized for AI-era discovery.',
     },
     {
       name: 'AEO Ecosystem',
       price: '$7,800+',
-      description: 'For teams prioritizing long-term visibility',
+      subheadline: 'Total Market Presence',
+      description: 'For teams prioritizing long-term visibility across generative engines.',
     },
   ]
 
@@ -177,39 +170,25 @@ export default function SaaSWebsiteDesignPage() {
               transition={{ duration: 0.7 }}
               className="text-5xl md:text-6xl font-serif font-bold text-text-primary mb-6"
             >
-              SaaS Website Design for Modern Products
+              Engineered SaaS Websites. Built for AI-Era Discovery.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-xl md:text-2xl text-accent mt-6 max-w-3xl mx-auto mb-4"
+              className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8"
             >
-              I design SaaS websites that convert, build trust, and stay visible as search becomes increasingly AI-driven.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-lg text-text-secondary mt-6 max-w-3xl mx-auto leading-relaxed mb-8"
-            >
-              Built for founders who want a site that explains their product clearly — to users and search engines.
+              We design and develop Next.js marketing sites that explain your product clearly, build trust with buyers, and structure your data so AI search engines actually understand what you do.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-10 flex flex-col sm:flex-row justify-center gap-4"
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="mt-10 flex justify-center"
             >
-              <button
-                onClick={handleRequestBuildSlot}
-                className="btn-primary px-10 py-4 text-lg"
-              >
-                Request a Build Slot
-              </button>
               <Link
-                href="/saas-websites#examples"
-                className="btn-outline px-10 py-4 text-lg"
+                href="/saas-websites#reference-implementations"
+                className="btn-primary px-10 py-4 text-lg"
               >
                 View System Examples
               </Link>
@@ -226,17 +205,8 @@ export default function SaaSWebsiteDesignPage() {
                 viewport={{ once: true }}
                 className="text-4xl font-serif font-bold text-text-primary text-center mb-12"
               >
-                Who This Is For
+                Built for Product Teams, Not Template Flippers.
               </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
-              >
-                This service is a fit if you&apos;re:
-              </motion.p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -248,7 +218,7 @@ export default function SaaSWebsiteDesignPage() {
                   <div className="flex items-center gap-3 mb-6">
                     <CheckCircle className="w-6 h-6 text-accent" />
                     <h3 className="text-xl font-serif font-bold text-text-primary">
-                      This service is a fit if:
+                      This is for you if:
                     </h3>
                   </div>
                   <ul className="space-y-3">
@@ -270,7 +240,7 @@ export default function SaaSWebsiteDesignPage() {
                   <div className="flex items-center gap-3 mb-6">
                     <XCircle className="w-6 h-6 text-text-muted" />
                     <h3 className="text-xl font-serif font-bold text-text-primary">
-                      And it&apos;s not a fit if:
+                      This is not a fit if:
                     </h3>
                   </div>
                   <ul className="space-y-3">
@@ -283,15 +253,6 @@ export default function SaaSWebsiteDesignPage() {
                   </ul>
                 </motion.div>
               </div>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mt-8 text-sm italic max-w-3xl mx-auto"
-              >
-                This prevents bad leads early.
-              </motion.p>
             </div>
           </section>
 
@@ -303,19 +264,10 @@ export default function SaaSWebsiteDesignPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl font-serif font-bold text-text-primary text-center mb-8"
+                className="text-4xl font-serif font-bold text-text-primary text-center mb-12"
               >
-                What a High-Performing SaaS Website Gets Right
+                The Architecture of a High-Performing SaaS Site
               </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto"
-              >
-                A strong SaaS website does three things well:
-              </motion.p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 {goodSaaSPoints.map((point, index) => (
                   <motion.div
@@ -338,19 +290,10 @@ export default function SaaSWebsiteDesignPage() {
                   </motion.div>
                 ))}
               </div>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mt-8 text-sm italic max-w-3xl mx-auto"
-              >
-                This sets up your SEO/GEO value without jargon.
-              </motion.p>
             </div>
           </section>
 
-          {/* What I Design Section */}
+          {/* The Old Way vs The Lopez Way Section */}
           <section className="py-16 px-6 md:px-12 bg-surface">
             <div className="max-w-6xl mx-auto">
               <motion.h2
@@ -360,64 +303,51 @@ export default function SaaSWebsiteDesignPage() {
                 viewport={{ once: true }}
                 className="text-4xl font-serif font-bold text-text-primary text-center mb-8"
               >
-                What I Design
+                The Old Way vs The Lopez Way
               </motion.h2>
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
+                className="overflow-x-auto rounded-xl border border-border bg-background max-w-4xl mx-auto"
               >
-                Depending on your stage, this may include:
-              </motion.p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
-                {whatIDesign.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-background p-6 rounded-xl border border-border text-center"
-                  >
-                    <p className="text-text-primary font-semibold">{item}</p>
-                  </motion.div>
-                ))}
-              </div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-background p-8 rounded-xl border border-border max-w-3xl mx-auto"
-              >
-                <h3 className="text-xl font-serif font-bold text-text-primary mb-4 text-center">
-                  All built with:
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                  <div>
-                    <Code className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                    <p className="text-text-secondary text-sm">Modern frontend stacks (React / Next.js when needed)</p>
-                  </div>
-                  <div>
-                    <Rocket className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                    <p className="text-text-secondary text-sm">Performance-first layouts</p>
-                  </div>
-                  <div>
-                    <Code className="w-8 h-8 text-brand-gold mx-auto mb-2" />
-                    <p className="text-text-secondary text-sm">Clean, maintainable structure</p>
-                  </div>
-                </div>
-                <p className="text-text-secondary text-center mt-6 text-sm italic">
-                  No CMS hype. No fluff.
-                </p>
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="text-left p-6 text-text-primary font-semibold">
+                        The Old Way (Standard Design)
+                      </th>
+                      <th className="text-left p-6 text-text-primary font-semibold">
+                        The Lopez Way (System Architecture)
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-border">
+                      <td className="p-6 text-text-secondary text-sm">Focuses on &quot;Pixel Perfection&quot;</td>
+                      <td className="p-6 text-text-secondary text-sm">Focuses on &quot;Information Density&quot;</td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-6 text-text-secondary text-sm">Optimized for Keywords (SEO)</td>
+                      <td className="p-6 text-text-secondary text-sm">Optimized for Answers (AEO)</td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="p-6 text-text-secondary text-sm">&quot;Here is a brochure&quot;</td>
+                      <td className="p-6 text-text-secondary text-sm">&quot;Here is a logic map for AI&quot;</td>
+                    </tr>
+                    <tr>
+                      <td className="p-6 text-text-secondary text-sm">Requires constant updating</td>
+                      <td className="p-6 text-text-secondary text-sm">Built on resilient frameworks</td>
+                    </tr>
+                  </tbody>
+                </table>
               </motion.div>
             </div>
           </section>
 
-          {/* What's Included Section */}
-          <section className="py-16 px-6 md:px-12 bg-background">
+          {/* What We Ship Section */}
+          <section className="py-16 px-6 md:px-12 bg-surface">
             <div className="max-w-6xl mx-auto">
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
@@ -426,7 +356,7 @@ export default function SaaSWebsiteDesignPage() {
                 viewport={{ once: true }}
                 className="text-4xl font-serif font-bold text-text-primary text-center mb-8"
               >
-                What&apos;s Included
+                No CMS Hype. No Fluff.
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -435,9 +365,18 @@ export default function SaaSWebsiteDesignPage() {
                 viewport={{ once: true }}
                 className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
               >
-                Every SaaS website build includes:
+                We build marketing websites, pricing systems, and product landing pages using strictly modern frontend stacks (React / Next.js).
               </motion.p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+              <motion.h3
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                viewport={{ once: true }}
+                className="text-xl font-serif font-bold text-text-primary text-center mb-6"
+              >
+                Every SaaS build includes:
+              </motion.h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 {includedInEveryBuild.map((item, index) => (
                   <motion.div
                     key={index}
@@ -445,7 +384,7 @@ export default function SaaSWebsiteDesignPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 + index * 0.05 }}
                     viewport={{ once: true }}
-                    className="flex items-start bg-surface p-4 rounded-lg border border-border"
+                    className="flex items-start bg-background p-4 rounded-lg border border-border"
                   >
                     <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-text-secondary text-sm">{item}</span>
@@ -457,7 +396,7 @@ export default function SaaSWebsiteDesignPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-surface p-8 rounded-xl border border-border max-w-3xl mx-auto"
+                className="bg-background p-8 rounded-xl border border-border max-w-3xl mx-auto mt-8"
               >
                 <h3 className="text-xl font-serif font-bold text-text-primary mb-6 text-center">
                   Optional add-ons:
@@ -560,15 +499,6 @@ export default function SaaSWebsiteDesignPage() {
                   </div>
                 </div>
               </motion.div>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mt-8 text-sm italic max-w-3xl mx-auto"
-              >
-                You don&apos;t call this GEO/AEO — you demonstrate it.
-              </motion.p>
             </div>
           </section>
 
@@ -580,19 +510,10 @@ export default function SaaSWebsiteDesignPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl font-serif font-bold text-text-primary text-center mb-8"
+                className="text-4xl font-serif font-bold text-text-primary text-center mb-12"
               >
-                Pricing & Engagements
+                Scoped for Your Growth Stage
               </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mb-12 max-w-3xl mx-auto"
-              >
-                Most SaaS website projects fall into these ranges:
-              </motion.p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8">
                 {pricingTiers.map((tier, index) => (
                   <motion.div
@@ -606,40 +527,20 @@ export default function SaaSWebsiteDesignPage() {
                     <h3 className="text-2xl font-serif font-bold text-text-primary mb-2">
                       {tier.price}
                     </h3>
-                    <p className="text-xl font-serif font-bold text-accent mb-4">
+                    <p className="text-xl font-serif font-bold text-accent mb-1">
                       {tier.name}
                     </p>
+                    {tier.subheadline && (
+                      <p className="text-text-muted text-sm mb-3">
+                        {tier.subheadline}
+                      </p>
+                    )}
                     <p className="text-text-secondary text-sm">
                       {tier.description}
                     </p>
                   </motion.div>
                 ))}
               </div>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center max-w-3xl mx-auto"
-              >
-                Exact scope depends on:
-              </motion.p>
-              <div className="flex flex-wrap justify-center gap-4 mt-4 max-w-3xl mx-auto">
-                <span className="text-text-secondary text-sm">Page depth</span>
-                <span className="text-text-muted">•</span>
-                <span className="text-text-secondary text-sm">Content complexity</span>
-                <span className="text-text-muted">•</span>
-                <span className="text-text-secondary text-sm">Search requirements</span>
-              </div>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-text-secondary text-center mt-8 text-sm italic max-w-3xl mx-auto"
-              >
-                You don&apos;t oversell. You clarify.
-              </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -665,11 +566,20 @@ export default function SaaSWebsiteDesignPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl font-serif font-bold text-text-primary text-center mb-8 flex items-center justify-center gap-3"
+                className="text-4xl font-serif font-bold text-text-primary text-center mb-4 flex items-center justify-center gap-3"
               >
                 <Clock className="w-8 h-8 text-brand-gold" />
-                Process & Timeline
+                Our Process: Calm Confidence.
               </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-text-secondary text-center mb-8 max-w-3xl mx-auto"
+              >
+                Insight and clean architecture take precedence over speed. We do not offer &quot;48-hour&quot; rushed fixes. Most projects ship in 2–4 weeks through a deliberate process:
+              </motion.p>
               <div className="max-w-3xl mx-auto">
                 <div className="space-y-6 mb-8">
                   {processSteps.map((step, index) => (
@@ -688,24 +598,6 @@ export default function SaaSWebsiteDesignPage() {
                     </motion.div>
                   ))}
                 </div>
-                <motion.p
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  viewport={{ once: true }}
-                  className="text-text-secondary text-center mb-4"
-                >
-                  Most projects ship in <strong className="text-text-primary">2–4 weeks</strong>, depending on scope.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                  viewport={{ once: true }}
-                  className="text-text-secondary text-center text-sm italic"
-                >
-                  No &quot;48-hour&quot; nonsense. Calm confidence.
-                </motion.p>
               </div>
             </div>
           </section>
@@ -738,7 +630,7 @@ export default function SaaSWebsiteDesignPage() {
                 viewport={{ once: true }}
               >
                 <Link
-                  href="/saas-websites#examples"
+                  href="/saas-websites#reference-implementations"
                   className="btn-outline px-10 py-3 text-lg"
                 >
                   View System Examples →
@@ -757,7 +649,7 @@ export default function SaaSWebsiteDesignPage() {
                 viewport={{ once: true }}
                 className="text-4xl font-serif font-bold text-text-primary mb-8"
               >
-                Ready to Build a SaaS Website That Actually Works?
+                Ready to Build Your Interface Layer?
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -766,34 +658,14 @@ export default function SaaSWebsiteDesignPage() {
                 viewport={{ once: true }}
                 className="text-text-secondary mb-8 max-w-3xl mx-auto"
               >
-                If you want a SaaS website that:
-              </motion.p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-                <div className="bg-background p-6 rounded-xl border border-border">
-                  <p className="text-text-primary font-semibold">Explains your product clearly</p>
-                </div>
-                <div className="bg-background p-6 rounded-xl border border-border">
-                  <p className="text-text-primary font-semibold">Builds trust with the right buyers</p>
-                </div>
-                <div className="bg-background p-6 rounded-xl border border-border">
-                  <p className="text-text-primary font-semibold">Shows up in modern search</p>
-                </div>
-              </div>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-text-secondary mb-8 max-w-3xl mx-auto font-semibold"
-              >
-                You&apos;re in the right place.
+                If you want a SaaS website that explains your product flawlessly and shows up in modern search, let&apos;s map out your architecture.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="flex flex-col sm:flex-row justify-center gap-4"
+                className="flex justify-center"
               >
                 <button
                   onClick={handleRequestBuildSlot}
@@ -801,12 +673,6 @@ export default function SaaSWebsiteDesignPage() {
                 >
                   Request a Build Slot
                 </button>
-                <Link
-                  href="/saas-website-examples"
-                  className="btn-outline px-10 py-4 text-lg"
-                >
-                  View SaaS Website Examples
-                </Link>
               </motion.div>
             </div>
           </section>

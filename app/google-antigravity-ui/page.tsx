@@ -176,7 +176,7 @@ export default function GoogleAntigravityUILanding() {
               </h2>
               <div className="w-full h-[700px] rounded-xl overflow-hidden border border-brand-gray-dark bg-brand-black">
                 <iframe
-                  src="https://googleantigravity.netlify.app"
+                  src="https://zerogs.netlify.app"
                   width="100%"
                   height="100%"
                   frameBorder="0"
@@ -188,7 +188,7 @@ export default function GoogleAntigravityUILanding() {
               </div>
               <div className="mt-4 text-center">
                 <a
-                  href="https://googleantigravity.netlify.app"
+                  href="https://zerogs.netlify.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-4 px-6 py-3 rounded-lg bg-brand-black text-brand-gold hover:bg-brand-gray-dark transition border border-brand-gold/20"

@@ -11,7 +11,7 @@ const staticPages = [
   { url: 'https://lopezproductions.ai/about', priority: 0.7, changefreq: 'monthly' as const },
   { url: 'https://lopezproductions.ai/contact', priority: 0.7, changefreq: 'monthly' as const },
   { url: 'https://lopezproductions.ai/free-portfolio-template', priority: 0.8, changefreq: 'monthly' as const },
-  { url: 'https://lopezproductions.ai/systems-in-action', priority: 0.7, changefreq: 'monthly' as const },
+  { url: 'https://lopezproductions.ai/systems', priority: 0.7, changefreq: 'monthly' as const },
   { url: 'https://lopezproductions.ai/ai-portfolio-builder', priority: 0.9, changefreq: 'weekly' as const },
   { url: 'https://lopezproductions.ai/ai-systems-for-freelancers', priority: 0.9, changefreq: 'weekly' as const },
   { url: 'https://lopezproductions.ai/case-studies/nvidia-competitive-edge', priority: 0.6, changefreq: 'monthly' as const },

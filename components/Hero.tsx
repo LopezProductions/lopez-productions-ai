@@ -14,7 +14,7 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-text-primary mb-6 leading-tight"
         >
-          AI Business Systems for Modern Teams
+          Stop Stitching Software Together. Start Scaling.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -22,25 +22,19 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto mb-12 leading-relaxed"
         >
-          Lopez Productions designs AI business systems — websites, workflows, and search architecture built to perform across Google, ChatGPT, and modern AI discovery. Everything is engineered to ship fast, scale cleanly, and operate like a real product, not a stitched-together stack.
+          Lopez Productions engineers bespoke Next.js websites, private AI automations, and search architecture for SaaS teams. We build digital systems that give you total control and visibility—no leaky API wrappers, no fragmented stacks.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex justify-center"
         >
           <Link
             href="/pricing"
             className="btn-primary px-8 py-4 text-lg"
           >
             Explore Pricing & Systems
-          </Link>
-          <Link
-            href="/templates"
-            className="btn-outline px-8 py-4 text-lg"
-          >
-            Download a UI Kit
           </Link>
         </motion.div>
       </div>

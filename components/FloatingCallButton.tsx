@@ -1,8 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function FloatingCallButton() {
+  const pathname = usePathname()
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -50,6 +52,8 @@ export default function FloatingCallButton() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [lastScrollY])
+
+  if (pathname === '/') return null
 
   return (
     <a

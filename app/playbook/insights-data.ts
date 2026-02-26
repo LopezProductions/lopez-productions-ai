@@ -159,8 +159,8 @@ export const allInsights: Insight[] = [
   },
   {
     slug: 'google-antigravity-ui',
-    title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
-    excerpt: 'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
+    title: 'Zero-G Dashboard: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
+    excerpt: 'When AI search results fail to deliver, you have to build the interface yourself. A look into our physics-based React UI system.',
     readTime: '12 min read',
     category: 'Interface Architecture',
     publishedDate: '2025-12-10',

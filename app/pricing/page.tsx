@@ -38,7 +38,7 @@ export default function PricingPage() {
   const frontendSystems = [
     {
       id: 'antigravity-kit-source',
-      name: 'Google Antigravity Kit — Source Code',
+      name: 'Zero-G Dashboard Kit — Source Code',
       price: 149,
       priceDisplay: '$149',
       description: 'A high-performance React + Tailwind UI system built for AI dashboards, tools, and landing pages.',
@@ -58,7 +58,7 @@ export default function PricingPage() {
       name: 'Concierge Deployment — Launch Assist',
       price: 495,
       priceDisplay: '$495',
-      description: 'We configure the entire kit so you can focus on your backend.',
+      description: 'We configure the Zero-G Kit, inject your brand\'s visual identity, wire your authentication, and set up your deployment pipeline with precision.',
       builtFor: 'founders who want it done right, fast.',
       includes: [
         'Everything in the Source Code License',
@@ -76,7 +76,7 @@ export default function PricingPage() {
   const customArchitectures = [
     {
       id: 'growth-wrapper',
-      name: 'The Growth Wrapper — Marketing Site',
+      name: 'Launch Infrastructure — Marketing Site',
       price: 2800,
       priceDisplay: '$2,800',
       timeline: '2-week sprint',
@@ -93,7 +93,7 @@ export default function PricingPage() {
     },
     {
       id: 'geo-architecture',
-      name: 'The GEO Architecture — Premium Build',
+      name: 'Search Visibility System — Premium Build',
       price: 4800,
       priceDisplay: '$4,800',
       timeline: '3-week sprint',
@@ -111,7 +111,7 @@ export default function PricingPage() {
     },
     {
       id: 'aeo-ecosystem',
-      name: 'The AEO Ecosystem — Full Suite',
+      name: 'AEO Ecosystem — Total Market Presence',
       price: 7800,
       priceDisplay: '$7,800',
       timeline: '4-week sprint',
@@ -386,7 +386,7 @@ export default function PricingPage() {
                     </div>
                     {product.id === 'antigravity-kit-source' && (
                       <a
-                        href="https://googleantigravity.netlify.app"
+                        href="https://zerogs.netlify.app"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-outline w-full py-3 text-lg mb-3 text-center block"

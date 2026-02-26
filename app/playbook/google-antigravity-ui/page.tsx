@@ -10,27 +10,27 @@ import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch | Lopez Productions',
+  title: 'Zero-G Dashboard: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch | Lopez Productions',
   description:
-    'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
+    'When AI search results fail to deliver, you have to build the interface yourself. A look into our physics-based React UI system.',
   keywords:
-    'Google Antigravity, Google IDE AI, AI Studio Google, Gemini 3, UI Design, Interface Layer, Google AI IDE Antigravity, Gemini Antigravity',
+    'Zero-G Dashboard, Google Antigravity, Google IDE AI, AI Studio Google, Gemini 3, UI Design, Interface Layer, Physics-based React UI',
   alternates: {
     canonical: 'https://lopezproductions.ai/playbook/google-antigravity-ui',
   },
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/google-antigravity-ui',
-    title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
+    title: 'Zero-G Dashboard: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     description:
-      'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
+      'When AI search results fail to deliver, you have to build the interface yourself. A look into our physics-based React UI system.',
     images: ['https://lopezproductions.ai/1200-google-antigravity.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
+    title: 'Zero-G Dashboard: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch',
     description:
-      'I searched Google Antigravity, Google AI IDE Antigravity, and Gemini Antigravity—and Gemini 3 kept returning a 1965 space mission. So I built the interface Google never shipped.',
+      'When AI search results fail to deliver, you have to build the interface yourself. A look into our physics-based React UI system.',
     images: ['https://lopezproductions.ai/1200-google-antigravity.png'],
   },
 }
@@ -58,7 +58,7 @@ export default function GoogleAntigravityUITemplate() {
         <section className="pt-20 pb-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <Breadcrumbs
-              title="Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch"
+              title="Zero-G Dashboard: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch"
               slug="google-antigravity-ui"
             />
 
@@ -75,7 +75,7 @@ export default function GoogleAntigravityUITemplate() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight bg-gradient-to-b from-brand-gold to-brand-gold-dark bg-clip-text text-transparent mb-6">
-              Google Antigravity
+              Zero-G Dashboard
             </h1>
 
             <p className="text-xl text-text-secondary mb-4 leading-relaxed">
@@ -326,7 +326,7 @@ export default function GoogleAntigravityUITemplate() {
               </h3>
               <div className="w-full h-[700px] rounded-xl overflow-hidden border border-border bg-background">
                 <iframe
-                  src="https://googleantigravity.netlify.app"
+                  src="https://zerogs.netlify.app"
                   width="100%"
                   height="100%"
                   frameBorder="0"
@@ -338,7 +338,7 @@ export default function GoogleAntigravityUITemplate() {
               </div>
               <div className="mt-4 text-center">
                 <a
-                  href="https://googleantigravity.netlify.app"
+                  href="https://zerogs.netlify.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-accent hover:text-accent-dark underline text-sm"

@@ -511,7 +511,7 @@ export default function AIGeneratedDesignSystemsGovernance() {
                 </Link>
               </li>
               <li>
-                <Link href="/saas-websites#ai" className="text-accent hover:text-accent-dark underline">
+                <Link href="/saas-websites#approach" className="text-accent hover:text-accent-dark underline">
                   AI Company Websites
                 </Link>
               </li>

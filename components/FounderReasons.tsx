@@ -9,7 +9,7 @@ export default function FounderReasons() {
     {
       icon: Code,
       title: 'Technical, Not Fluffy',
-      description: 'No coaching, no generic productivity templates. Engineering-minded systems for product teams.',
+      description: 'Engineering-minded systems for product teams. We build actual software architecture, not Notion habit trackers.',
     },
     {
       icon: Zap,
@@ -23,8 +23,8 @@ export default function FounderReasons() {
     },
     {
       icon: Shield,
-      title: 'Sovereign Infrastructure',
-      description: 'Systems designed for data control and privacy. We prioritize self-hosted workflows and controlled infrastructure over generic, leaky API wrappers.',
+      title: 'Data Privacy First',
+      description: 'Systems designed for security and control. We prioritize self-hosted workflows and controlled infrastructure over generic, leaky API wrappers.',
     },
   ]
 

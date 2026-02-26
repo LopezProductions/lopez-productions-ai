@@ -1,25 +1,26 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Zap, Layout, Rocket } from 'lucide-react'
+import { Layout, Database, Shield } from 'lucide-react'
 
 export default function ValueProps() {
   const props = [
     {
-      icon: Zap,
-      title: 'Fast Frontends',
-      description: 'Launch your product or dashboard UI in days, not weeks. React, Next.js, Tailwind, Vite — performance-first.',
-    },
-    {
       icon: Layout,
-      title: 'Clean Architecture',
-      description: 'Deterministic Data Structures. We engineer your frontend so LLMs (ChatGPT, Perplexity) cite your product accurately, eliminating AI hallucinations about your brand.',
+      title: 'Clean Architecture, No Stitched Stacks',
+      description: 'Move past the limitations of traditional, bloated CMS platforms. We build with React, Next.js, and Tailwind to ensure your frontend is fast, secure, and fully owned by you.',
     },
     {
-      icon: Rocket,
-      title: 'Startup Velocity',
-      description: 'Systems designed for shipping: UI kits, docs frameworks, onboarding flows, automation loops.',
+      icon: Database,
+      title: 'Deterministic Data for AI Discovery',
+      description: "We engineer your site's structure so modern LLMs (like ChatGPT and Perplexity) cite your product accurately, eliminating AI hallucinations about your brand.",
+    },
+    {
+      icon: Shield,
+      title: 'Controlled Infrastructure',
+      description: 'Systems designed for data control and privacy. We prioritize self-hosted workflows and controlled infrastructure over generic, third-party data handling.',
     },
   ]
 
@@ -33,7 +34,7 @@ export default function ValueProps() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-serif font-bold text-center mb-4 text-text-primary"
         >
-          Why Founders Come Here
+          Engineered to Perform, Not Just Look Good.
         </motion.h2>
         <div className="grid gap-8 md:grid-cols-3 mt-12">
           {props.map((prop, index) => {
@@ -62,6 +63,20 @@ export default function ValueProps() {
             )
           })}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <Link
+            href="/systems"
+            className="btn-primary px-8 py-3 text-lg"
+          >
+            View Live Examples & Systems
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

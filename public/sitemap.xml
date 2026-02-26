@@ -313,9 +313,9 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Systems Showcase -->
+  <!-- Systems -->
   <url>
-    <loc>https://lopezproductions.ai/systems-in-action</loc>
+    <loc>https://lopezproductions.ai/systems</loc>
     <lastmod>2025-11-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

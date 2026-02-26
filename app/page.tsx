@@ -6,9 +6,7 @@ import Footer from '../components/Footer'
 import HomePageClient from '../components/HomePageClient'
 import Hero from '../components/Hero'
 import ValueProps from '../components/ValueProps'
-import FrontendSystems from '../components/FrontendSystems'
-import Services from '../components/Services'
-import TemplateShowcase from '../components/TemplateShowcase'
+import InfrastructureSection from '../components/InfrastructureSection'
 import FounderReasons from '../components/FounderReasons'
 import TheArchitectSection from '../components/TheArchitectSection'
 import BlogPreview from '../components/BlogPreview'
@@ -125,14 +123,8 @@ export default function Home() {
           {/* Why Founders Come Here */}
           <ValueProps />
 
-          {/* Frontend Systems */}
-          <FrontendSystems />
-
-          {/* Services for Growing Startups */}
-          <Services />
-
-          {/* Templates & Systems */}
-          <TemplateShowcase />
+          {/* Infrastructure for Growing Startups */}
+          <InfrastructureSection />
 
           {/* Why AI Founders Trust Us */}
           <FounderReasons />
