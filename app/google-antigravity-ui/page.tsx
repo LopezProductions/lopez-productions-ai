@@ -8,36 +8,36 @@ import FAQSchema from '../../components/FAQSchema'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Google Antigravity UI Template — The Interface Google Never Shipped | Lopez Productions',
+  title: 'Zero Gravity UI Template — The Interface for Modern Dashboards | Lopez Productions',
   description:
-    'Download the Google Antigravity UI template — a modern, futuristic interface concept built with React, Vite, TailwindCSS, and Framer Motion. The UI system that defines what Google Antigravity should be.',
+    'Download the Zero Gravity UI template — a modern, futuristic interface concept built with React, Vite, TailwindCSS, and Framer Motion. The UI system that defines what modern dashboards should be.',
   keywords:
-    'Google Antigravity, Google IDE AI, AI Studio Google, Gemini 3, UI Design, Interface Layer, Google AI IDE Antigravity, Gemini Antigravity, React template, Vite template, UI template',
+    'Zero Gravity, Dashboard UI, AI Interface, UI Design, Interface Layer, React template, Vite template, UI template',
   alternates: {
     canonical: 'https://www.lopezproductions.ai/google-antigravity-ui',
   },
   openGraph: {
     type: 'website',
     url: 'https://www.lopezproductions.ai/google-antigravity-ui',
-    title: 'Google Antigravity UI Template — The Interface Google Never Shipped',
+    title: 'Zero Gravity UI Template — The Interface for Modern Dashboards',
     description:
-      'Download the Google Antigravity UI template — a modern, futuristic interface concept built with React, Vite, TailwindCSS, and Framer Motion.',
+      'Download the Zero Gravity UI template — a modern, futuristic interface concept built with React, Vite, TailwindCSS, and Framer Motion.',
     images: ['/1200-google-antigravity.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Google Antigravity UI Template — The Interface Google Never Shipped',
+    title: 'Zero Gravity UI Template — The Interface for Modern Dashboards',
     description:
-      'Download the Google Antigravity UI template — a modern, futuristic interface concept built with React, Vite, TailwindCSS, and Framer Motion.',
+      'Download the Zero Gravity UI template — a modern, futuristic interface concept built with React, Vite, TailwindCSS, and Framer Motion.',
     images: ['/1200-google-antigravity.png'],
   },
 }
 
 const faqs = [
   {
-    question: "What's included in the Google Antigravity UI template?",
+    question: "What's included in the Zero Gravity UI template?",
     answer:
-      'The template includes the complete React + Vite codebase, all source files, TailwindCSS configuration, Framer Motion animations, custom Antigravity color palette, setup instructions, and documentation. You get everything needed to customize and deploy the interface.',
+      'The template includes the complete React + Vite codebase, all source files, TailwindCSS configuration, Framer Motion animations, custom Zero Gravity color palette, setup instructions, and documentation. You get everything needed to customize and deploy the interface.',
   },
   {
     question: 'Do I need coding experience to use this template?',
@@ -69,9 +69,9 @@ const faqs = [
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Google Antigravity UI Template',
+  name: 'Zero Gravity UI Template',
   description:
-    'A modern, futuristic UI template built with React, Vite, TailwindCSS, and Framer Motion. Features floating search elements, microgravity-style motion, and a custom Antigravity color palette.',
+    'A modern, futuristic UI template built with React, Vite, TailwindCSS, and Framer Motion. Features floating search elements, microgravity-style motion, and a custom Zero Gravity color palette.',
   image: 'https://www.lopezproductions.ai/1200-google-antigravity.png',
   brand: {
     '@type': 'Brand',
@@ -128,32 +128,32 @@ export default function GoogleAntigravityUILanding() {
           {/* Hero Section */}
           <section className="pt-20 pb-16 px-6 md:px-12">
             <div className="max-w-4xl mx-auto">
-              <Breadcrumbs title="Google Antigravity UI Template" slug="google-antigravity-ui" type="simple" />
+              <Breadcrumbs title="Zero Gravity UI Template" slug="google-antigravity-ui" type="simple" />
 
               <p className="text-xs uppercase tracking-[0.2em] text-brand-gold mb-3">UI Template</p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight bg-gradient-to-b from-brand-gold to-brand-gold-dark bg-clip-text text-transparent mb-6">
-                Google Antigravity UI Template
+                Zero Gravity UI Template
               </h1>
               <p className="text-xl text-brand-gray-light mb-4 max-w-3xl leading-relaxed">
-                The interface concept that defines what <strong className="text-brand-gold">Google Antigravity</strong> should be — not a 1965 space launch, but a modern, futuristic UI system.
+                A modern, futuristic UI system that defines what <strong className="text-brand-gold">Zero Gravity</strong> dashboards should be — clean, weightless interfaces built for AI-era tools.
               </p>
               <p className="text-lg text-brand-gray-light mb-8 max-w-3xl leading-relaxed">
-                Built with React, Vite, TailwindCSS, and Framer Motion. Features floating search elements, microgravity-style motion, and a custom Antigravity color palette inspired by Google&rsquo;s design language.
+                Built with React, Vite, TailwindCSS, and Framer Motion. Features floating search elements, microgravity-style motion, and a custom Zero Gravity color palette.
               </p>
 
               {/* Keywords */}
               <div className="flex flex-wrap gap-2 mb-8">
                 <span className="px-3 py-1 text-xs rounded-full bg-brand-gold/10 text-brand-gold border border-brand-gold/20">
-                  Google IDE AI
+                  Zero Gravity
                 </span>
                 <span className="px-3 py-1 text-xs rounded-full bg-brand-gold/10 text-brand-gold border border-brand-gold/20">
-                  AI Studio Google
+                  Dashboard UI
                 </span>
                 <span className="px-3 py-1 text-xs rounded-full bg-brand-gold/10 text-brand-gold border border-brand-gold/20">
-                  Gemini Antigravity
+                  AI Interface
                 </span>
                 <span className="px-3 py-1 text-xs rounded-full bg-brand-gold/10 text-brand-gold border border-brand-gold/20">
-                  Google AI IDE Antigravity
+                  React Template
                 </span>
               </div>
 
@@ -172,7 +172,7 @@ export default function GoogleAntigravityUILanding() {
           <section className="py-12 px-6 md:px-12">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-gold mb-6 text-center">
-                Live Demo — Google Antigravity Interface Preview
+                Live Demo — Zero Gravity Interface Preview
               </h2>
               <div className="w-full h-[700px] rounded-xl overflow-hidden border border-brand-gray-dark bg-brand-black">
                 <iframe
@@ -182,7 +182,7 @@ export default function GoogleAntigravityUILanding() {
                   frameBorder="0"
                   allow="fullscreen"
                   loading="lazy"
-                  title="Google Antigravity UI Preview"
+                  title="Zero Gravity UI Preview"
                   className="border-0"
                 />
               </div>
@@ -219,13 +219,13 @@ export default function GoogleAntigravityUILanding() {
                 <div className="border border-brand-gray-dark rounded-lg p-6 bg-brand-black/50">
                   <h3 className="text-xl font-serif font-bold text-brand-gold mb-3">Ultra-Minimal Spacing</h3>
                   <p className="text-brand-gray-light">
-                    Clean, Google-inspired typography and spacing that creates a sense of depth without clutter.
+                    Clean typography and spacing that creates a sense of depth without clutter.
                   </p>
                 </div>
                 <div className="border border-brand-gray-dark rounded-lg p-6 bg-brand-black/50">
                   <h3 className="text-xl font-serif font-bold text-brand-gold mb-3">Custom Color Palette</h3>
                   <p className="text-brand-gray-light">
-                    Antigravity color system: Zero-G White, Event Horizon Black, Ion Glow Blue, Quantum Mint, and Gravity Well Pink.
+                    Zero Gravity color system: Zero Gravity White, Event Horizon Black, Ion Glow Blue, Quantum Mint, and Gravity Well Pink.
                   </p>
                 </div>
                 <div className="border border-brand-gray-dark rounded-lg p-6 bg-brand-black/50">
@@ -278,7 +278,7 @@ export default function GoogleAntigravityUILanding() {
               <div className="my-8 rounded-xl overflow-hidden border border-brand-gray-dark">
                 <Image
                   src="/inside-the-kit.png"
-                  alt="What's inside the Google Antigravity UI template"
+                  alt="What's inside the Zero Gravity UI template"
                   width={1200}
                   height={800}
                   className="w-full h-auto"
@@ -296,7 +296,7 @@ export default function GoogleAntigravityUILanding() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-brand-gold">•</span>
-                  <span>TailwindCSS configuration with custom Antigravity palette</span>
+                  <span>TailwindCSS configuration with custom Zero Gravity palette</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-brand-gold">•</span>
@@ -322,10 +322,10 @@ export default function GoogleAntigravityUILanding() {
           <section className="py-16 px-6 md:px-12 border-t border-brand-gray-dark">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold mb-4">
-                Ready to Build the Interface Google Never Shipped?
+                Ready to Build Your Zero Gravity Interface?
               </h2>
               <p className="text-lg text-brand-gray-light mb-8 max-w-2xl mx-auto">
-                Download the complete Google Antigravity UI template and start customizing your own futuristic interface today.
+                Download the complete Zero Gravity UI template and start customizing your own futuristic interface today.
               </p>
               <a
                 href={stripeCheckoutUrl}
@@ -369,7 +369,7 @@ export default function GoogleAntigravityUILanding() {
                 href="/playbook/google-antigravity-ui"
                 className="inline-block text-brand-gold hover:text-brand-gold/80 underline text-lg"
               >
-                Google Antigravity: The UI I Built After Gemini 3 Kept Showing a 1965 Space Launch →
+                Zero Gravity: The Story Behind the Dashboard UI →
               </a>
             </div>
           </section>

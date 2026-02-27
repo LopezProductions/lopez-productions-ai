@@ -81,7 +81,7 @@ const Footer = () => {
       {/* Bottom */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <p className="text-center mt-8 md:mt-12 opacity-60 text-sm md:text-xs">
-          © 2025 Lopez Productions — All Rights Reserved
+          ©2026 Lopez Productions - All Rights Reserved
         </p>
       </div>
     </footer>

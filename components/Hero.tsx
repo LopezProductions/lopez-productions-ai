@@ -31,10 +31,10 @@ export default function Hero() {
           className="flex justify-center"
         >
           <Link
-            href="/pricing"
+            href="/systems"
             className="btn-primary px-8 py-4 text-lg"
           >
-            Explore Pricing & Systems
+            Explore Our Systems
           </Link>
         </motion.div>
       </div>

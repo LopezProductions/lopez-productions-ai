@@ -2,12 +2,10 @@
 
 import React from 'react'
 import Script from 'next/script'
-import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import { motion } from 'framer-motion'
-import { Calendar, Mail, HelpCircle, Twitter } from 'lucide-react'
 
 export default function ContactPage() {
   const schema = {
@@ -81,127 +79,8 @@ export default function ContactPage() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed"
             >
-              Whether you&apos;re shipping an MVP, scaling your AI product, or architecting your next release — this is the best way to get in touch.
+              Whether you&apos;re shipping an MVP, scaling your AI product, or architecting your next release: this is the best way to get in touch.
             </motion.p>
-          </section>
-
-          {/* ----------------------------- */}
-          {/* CONTACT OPTIONS */}
-          {/* ----------------------------- */}
-          <section className="py-16 px-6 md:px-12 bg-surface">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Schedule a Technical Call */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="bg-background rounded-xl border border-border p-8 card-hover"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <Calendar className="w-6 h-6 text-brand-gold" />
-                    <h3 className="text-2xl font-serif font-bold text-text-primary">
-                      Schedule a Technical Call
-                    </h3>
-                  </div>
-                  <p className="text-text-secondary mb-2 font-semibold">
-                    A direct conversation for founders and technical teams.
-                  </p>
-                  <p className="text-text-secondary text-sm mb-6 leading-relaxed">
-                    Discuss scope, timelines, technical requirements, architectures, or integration questions.
-                  </p>
-                  <a
-                    href="https://calendly.com/reuben-lopezproductions/intro"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary inline-flex items-center gap-2"
-                  >
-                    Book a 15-Minute Call →
-                  </a>
-                </motion.div>
-
-                {/* General Inquiries */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-background rounded-xl border border-border p-8 card-hover"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <Mail className="w-6 h-6 text-brand-gold" />
-                    <h3 className="text-2xl font-serif font-bold text-text-primary">
-                      General Inquiries
-                    </h3>
-                  </div>
-                  <p className="text-text-secondary mb-2 font-semibold">
-                    For questions about pricing, systems, UI kits, or upcoming availability.
-                  </p>
-                  <a
-                    href="mailto:contact@lopezproductions.ai"
-                    className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-medium group mt-4"
-                  >
-                    <span>contact@lopezproductions.ai</span>
-                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                  </a>
-                </motion.div>
-
-                {/* Customer Support */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="bg-background rounded-xl border border-border p-8 card-hover"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <HelpCircle className="w-6 h-6 text-brand-gold" />
-                    <h3 className="text-2xl font-serif font-bold text-text-primary">
-                      Customer Support
-                    </h3>
-                  </div>
-                  <p className="text-text-secondary mb-2 font-semibold">
-                    Issues with downloads, billing, template installation, or Stripe receipts.
-                  </p>
-                  <a
-                    href="mailto:support@lopezproductions.ai"
-                    className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-medium group mt-4"
-                  >
-                    <span>support@lopezproductions.ai</span>
-                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                  </a>
-                </motion.div>
-
-                {/* X (Twitter) */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="bg-background rounded-xl border border-border p-8 card-hover"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <Twitter className="w-6 h-6 text-brand-gold" />
-                    <h3 className="text-2xl font-serif font-bold text-text-primary">
-                      X (Twitter)
-                    </h3>
-                  </div>
-                  <p className="text-text-secondary mb-2 font-semibold">
-                    Fast replies, quick technical questions, and async communication.
-                  </p>
-                  <a
-                    href="https://x.com/LopezProdx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-medium group mt-4"
-                  >
-                    <span>@LopezProdx</span>
-                    <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                  </a>
-                </motion.div>
-              </div>
-            </div>
           </section>
 
           {/* ----------------------------- */}
