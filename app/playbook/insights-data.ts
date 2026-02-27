@@ -18,6 +18,30 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'bare-minimum-self-hosted-llm-hardware',
+    title: 'The Bare Minimum: What It Actually Takes to Run a Self-Hosted LLM (Without Losing Your Mind)',
+    excerpt: 'The exact hardware setup for running Mistral Nemo 12B locally. Where the real bottlenecks are, and what you actually need to build self-hosted AI workflows without your machine grinding to a halt.',
+    readTime: '7 min read',
+    category: 'Automation & Ops Engineering',
+    publishedDate: '2026-02-27',
+    entityTags: ['SelfHosted', 'LocalLLM', 'n8n'],
+    coverImage: '/bare-minimum-self-hosted-llm-hardware-cover-image.png',
+    faqs: [
+      {
+        question: 'What is the minimum RAM for running a self-hosted LLM?',
+        answer: '16GB is the absolute bare minimum, but you will feel the pain every time you spin up a container. 32GB is the realistic starting line for builders running LM Studio, Docker, Cursor, and Chrome simultaneously.',
+      },
+      {
+        question: 'How much VRAM do I need for Mistral Nemo 12B?',
+        answer: 'A 12GB GPU like the RTX 4070 can run a quantized Mistral Nemo 12B model. The KV Cache for a 32k context window alone can use 2–4GB of VRAM, so 8GB GPUs will struggle with meaningful context windows.',
+      },
+      {
+        question: 'What is the "App Tax" when running local AI?',
+        answer: 'The App Tax is the combined RAM usage of your development stack—LM Studio, Docker, Cursor, Chrome, and OS overhead—which can easily consume 24GB+ on a 32GB system, leaving little headroom.',
+      },
+    ],
+  },
+  {
     slug: 'self-hosted-llm-limitations-n8n',
     title: 'The Hard Truth About Self-Hosting: Why My "ChatGPT Killer" Failed (And What I Learned)',
     excerpt: 'I tried to replace ChatGPT with a self-hosted local LLM and n8n. Here is why it failed, the technical limitations I faced, and the reality of local AI privacy.',
@@ -529,6 +553,7 @@ export const pillarMappings: Record<string, string[]> = {
     'zapiers-npm-account-hacked'
   ],
   'automation-systems': [
+    'bare-minimum-self-hosted-llm-hardware',
     'self-hosted-llm-limitations-n8n',
     'build-simple-business-automation-system',
     'ai-workflows-save-time',
