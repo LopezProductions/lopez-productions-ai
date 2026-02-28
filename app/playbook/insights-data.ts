@@ -18,6 +18,34 @@ export interface Insight {
 
 export const allInsights: Insight[] = [
   {
+    slug: 'what-model-should-i-use-for-cursor-ai-in-2026',
+    title: "What Model Should I Use for Cursor AI in 2026? (A Builder's Guide)",
+    excerpt: "A breakdown of which models to use, which to avoid, and how to navigate Cursor's pricing so you don't hit rate limits or overage bills.",
+    readTime: '9 min read',
+    category: 'AI Workflows',
+    publishedDate: '2026-02-28',
+    entityTags: ['Cursor', 'Claude', 'GPT', 'GitHub Copilot', 'SelfHosted'],
+    coverImage: '/cursor-ai-2026.png',
+    faqs: [
+      {
+        question: 'What model should I use for Cursor AI?',
+        answer: 'Use Composer 1.5 for your daily coding tasks, save Opus 4.5 for complex architectural logic, and use Claude 4.5 Sonnet for writing and documentation.',
+      },
+      {
+        question: 'Is Cursor better than GitHub Copilot?',
+        answer: "Yes. Copilot is a great autocomplete tool, but Cursor's autonomous agent capabilities and multi-file understanding put it in a completely different league for building software.",
+      },
+      {
+        question: 'Is buying the Cursor AI Pro plan worth it?',
+        answer: 'Absolutely. For $20 a month, the Pro plan saves hours of friction by automatically executing terminal commands, handling Git commits, and preventing the AI from just "debating" with you.',
+      },
+      {
+        question: 'What is the best free/cheap model for Cursor?',
+        answer: 'Grok Code, GPT-5.1 Codex, and Claude Haiku 4.5 offer the best value per token for budget-conscious builders or multi-agent testing.',
+      },
+    ],
+  },
+  {
     slug: 'bare-minimum-self-hosted-llm-hardware',
     title: 'The Bare Minimum: What It Actually Takes to Run a Self-Hosted LLM (Without Losing Your Mind)',
     excerpt: 'The exact hardware setup for running Mistral Nemo 12B locally. Where the real bottlenecks are, and what you actually need to build self-hosted AI workflows without your machine grinding to a halt.',
@@ -533,6 +561,7 @@ export const pillarMappings: Record<string, string[]> = {
   'creator-systems': [
   ],
   'ai-workflows': [
+    'what-model-should-i-use-for-cursor-ai-in-2026',
     'why-im-moving-away-from-chatgpt-in-2026',
     'ai-isnt-making-people-less-intelligent',
     'is-chatgpt-5-2-all-the-hype',
