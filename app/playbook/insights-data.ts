@@ -244,7 +244,7 @@ export const allInsights: Insight[] = [
     readTime: '6 min read',
     category: 'AI Workflows',
     publishedDate: '2025-12-02',
-    modifiedDate: '2026-01-01',
+    modifiedDate: '2026-03-01',
     coverImage: '/worst-gemini-feature.png',
   },
   {

@@ -6,7 +6,6 @@ import Image from 'next/image'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import PostSchema from '../../../components/PostSchema'
 import Related from '../../../components/Related'
-import BrandSheetCheckoutButton from '../../../components/BrandSheetCheckoutButton'
 import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
@@ -90,6 +89,9 @@ export default function TheWorstThingAboutGemini3Pro() {
               <span>•</span>
               <span>6 min read</span>
             </div>
+            <div className="flex items-center gap-2 mt-2">
+              <span className="text-sm text-text-muted">Last updated: March 1, 2026</span>
+            </div>
           </div>
         </section>
 
@@ -113,7 +115,7 @@ export default function TheWorstThingAboutGemini3Pro() {
         <section className="py-16 px-6 md:px-12">
           <div className="max-w-4xl mx-auto prose prose-lg">
             <p className="text-lg text-text-secondary mb-6 leading-relaxed font-semibold text-text-primary">
-              If you&apos;re wondering whether <strong>Gemini 3 Pro has project folders or any way to organize your chats</strong>, the answer is <strong>no</strong>. Gemini 3 Pro does not offer folders, grouping, or structured project organization, which makes it harder to manage ongoing research, drafts, or multi-step workflows. Unlike ChatGPT and Claude—which both include project folders—Gemini stores everything in a single chronological list. For users who switch between multiple topics or rely on organized context, this becomes a major workflow bottleneck. This article explains why the missing project folder system matters and how to work around it using tools like Notion.
+              If you&apos;re wondering whether <strong>Gemini 3 Pro has project folders or any way to organize your chats</strong>, the answer is <strong>no</strong>. Gemini 3 Pro does not offer folders, grouping, or structured project organization, which makes it harder to manage ongoing research, drafts, or multi-step workflows. Unlike ChatGPT and Claude, which both include project folders, Gemini stores everything in a single chronological list. For users who switch between multiple topics or rely on organized context, this becomes a major workflow bottleneck. This article explains why the missing project folder system matters and how to work around it using tools like Notion.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
@@ -121,7 +123,7 @@ export default function TheWorstThingAboutGemini3Pro() {
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              To be fair, it <em>is</em> incredible at what it does — especially image generation and contextual support for research.
+              To be fair, it <em>is</em> incredible at what it does, especially image generation and contextual support for research.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
@@ -129,7 +131,7 @@ export default function TheWorstThingAboutGemini3Pro() {
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              And if you&apos;re someone who works across multiple ideas, multiple projects, or multiple tabs… this flaw is brutal.
+              And if you&apos;re someone who works across multiple ideas, multiple projects, or multiple tabs, this flaw is brutal.
             </p>
 
             <hr className="my-12 border-border" />
@@ -153,11 +155,11 @@ export default function TheWorstThingAboutGemini3Pro() {
             </ul>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Users coming from other platforms are often confused, searching for &quot;Gemini 3 folders&quot; or asking &quot;does Gemini have projects like ChatGPT?&quot; The answer is frustratingly simple: it doesn&apos;t.
+              Users coming from other platforms are often confused, searching for &quot;does Gemini have project folders like ChatGPT&quot; or &quot;why doesn&apos;t Gemini have folders.&quot; The answer is frustratingly simple: it doesn&apos;t.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              While <strong>Claude has Projects</strong> and <strong>ChatGPT has customizable Folders</strong> (via Archives and GPTs), Gemini throws <em>everything</em> into one long-running chronological list. This becomes chaos if your workflow relies on switching between threads or managing long-term research.
+              While <strong>Claude has Projects</strong> and <strong>ChatGPT has customizable Folders</strong>, Gemini throws <em>everything</em> into one long-running chronological list. This becomes chaos if your workflow relies on switching between threads or managing long-term research.
             </p>
 
             <div className="my-8">
@@ -202,11 +204,7 @@ export default function TheWorstThingAboutGemini3Pro() {
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              There have been days where decision fatigue hits <em>not</em> because the work is hard…
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              but because I wasted 20 minutes trying to find a single line from an old chat.
+              There have been days where decision fatigue hits not because the work is hard, but because I wasted 20 minutes trying to find a single line from an old chat.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
@@ -220,28 +218,12 @@ export default function TheWorstThingAboutGemini3Pro() {
             </h2>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Image generation? Massive upgrade.
+              Image generation? Massive upgrade. Research context? Genuinely useful. Reasoning? Strong when it hits.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Research context? Genuinely useful.
+              But the lack of organization is still a dealbreaker for people like students juggling multiple classes, teachers prepping different units, creators managing content pipelines, professionals working on the go, and anyone who doesn&apos;t want chaos buried under their chat history.
             </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Reasoning? Strong when it hits.
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              But the lack of organization is still a dealbreaker for people like:
-            </p>
-
-            <ul className="list-disc pl-6 text-text-secondary space-y-2 mb-6">
-              <li>Students juggling multiple classes</li>
-              <li>Teachers prepping different units</li>
-              <li>Creators managing content pipelines</li>
-              <li>Travelers or professionals working on-the-go</li>
-              <li>Anyone who doesn&apos;t want chaos buried under their chat history</li>
-            </ul>
 
             <div className="my-8">
               <div className="rounded-2xl overflow-hidden border border-border mb-4 max-w-2xl mx-auto">
@@ -273,26 +255,12 @@ export default function TheWorstThingAboutGemini3Pro() {
               I realized early on that I couldn&apos;t rely on Gemini&apos;s sidebar. Instead, I built an automated workflow that pipes my research directly into Notion.
             </p>
 
-            <ul className="list-disc pl-6 text-text-secondary space-y-2 mb-6">
-              <li>
-                <Link href="/playbook/ai-notion-weekly-organization" className="text-accent hover:text-accent-dark underline">
-                  Read the Guide: How I Use AI to Organize My Week Inside Notion →
-                </Link>
-              </li>
-            </ul>
-
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Without this external &quot;brain,&quot; you are forced to:
+              <strong>Read the Guide: <Link href="/playbook/ai-notion-weekly-organization" className="text-accent hover:text-accent-dark underline">How I Use AI to Organize My Week Inside Notion</Link></strong>
             </p>
 
-            <ul className="list-disc pl-6 text-text-secondary space-y-2 mb-6">
-              <li>Sift through endless chronological chats.</li>
-              <li>Search for exact phrases you might have forgotten.</li>
-              <li>Re-create work because you couldn&apos;t locate the previous output.</li>
-            </ul>
-
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              That is time you aren&apos;t getting back—and time that could have been spent doing real focused work.
+              Without this external &quot;brain,&quot; you are forced to sift through endless chronological chats, search for exact phrases you might have forgotten, and recreate work because you couldn&apos;t locate the previous output. That is time you aren&apos;t getting back, and time that could have been spent doing real focused work.
             </p>
 
             <div className="my-8">
@@ -310,6 +278,16 @@ export default function TheWorstThingAboutGemini3Pro() {
             <hr className="my-12 border-border" />
 
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
+              When Will Gemini Have Folders?
+            </h2>
+
+            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+              This is one of the most searched questions about Gemini right now, and the honest answer is: Google hasn&apos;t announced a timeline. Given that both of Gemini&apos;s main competitors have already shipped this feature, the pressure is there. But until it arrives, the workaround is an external knowledge system, not waiting.
+            </p>
+
+            <hr className="my-12 border-border" />
+
+            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gradient mt-12">
               The Bottom Line
             </h2>
 
@@ -322,32 +300,39 @@ export default function TheWorstThingAboutGemini3Pro() {
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Until Google fixes this, the solution isn&apos;t switching models —
+              Until Google fixes this, the solution isn&apos;t switching models. It&apos;s pairing Gemini with a proper knowledge management system. For me, that&apos;s Notion. For you, it might be something else.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              <strong className="text-text-primary">it&apos;s pairing Gemini with a proper knowledge management system.</strong>
+              But one thing is certain: Gemini&apos;s greatest weakness isn&apos;t its output. It&apos;s the <em>organization</em> around it.
             </p>
 
             <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              For me, that&apos;s Notion.
+              The fact that two of the biggest AI platforms already built this and Gemini still hasn&apos;t says something important about how Google is prioritizing the user experience. Good AI design isn&apos;t just about the model. It&apos;s about the system built around it.
             </p>
 
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              For you, it might be something else.
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              But one thing&apos;s certain:
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              Gemini&apos;s greatest weakness isn&apos;t its output…
-            </p>
-
-            <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-              it&apos;s the <em>organization</em> around it.
-            </p>
+            {/* Schedule a Call CTA */}
+            <div className="mt-16 p-8 bg-surface rounded-2xl text-center border border-border">
+              <h3 className="text-2xl font-serif font-bold text-text-primary mb-4">
+                If you&apos;re building AI products and want to talk about getting the architecture right from day one:
+              </h3>
+              <p className="text-text-secondary mb-6">
+                Let&apos;s talk about AI system design and building a product experience that actually works.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://calendly.com/reuben-lopezproductions/intro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Schedule a Call
+                </a>
+                <Link href="/playbook" className="btn-outline">
+                  Read More Insights
+                </Link>
+              </div>
+            </div>
 
             <hr className="my-12 border-border" />
 
@@ -381,43 +366,6 @@ export default function TheWorstThingAboutGemini3Pro() {
                 </Link>
               </li>
             </ul>
-
-            {/* Brand Sheet CTA */}
-            <div className="mt-16 p-8 bg-surface rounded-2xl text-center border border-brand-gold/20">
-              <h3 className="text-2xl font-serif font-bold text-text-primary mb-4">
-                Professional Brand Sheet
-              </h3>
-              <p className="text-text-secondary mb-2 font-semibold text-lg">
-                $135
-              </p>
-              <p className="text-text-secondary mb-6">
-                Receive a clean, modern brand sheet that defines your visual identity in one place — colors, fonts, logo variations, spacing rules, and brand tone. Ideal for creators launching a website, businesses formalizing their look, and anyone who wants a consistent, professional appearance online.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <BrandSheetCheckoutButton />
-                <Link href="/playbook" className="btn-outline">
-                  Read More Insights
-                </Link>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="mt-8 p-8 bg-surface rounded-2xl text-center">
-              <h3 className="text-2xl font-serif font-bold text-text-primary mb-4">
-                Ready to build your content engine?
-              </h3>
-              <p className="text-text-secondary mb-6">
-                Get a free 20-minute audit of your current processes and discover which workflows you can automate today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/solutions" className="btn-primary">
-                  Book a Free System Audit
-                </Link>
-                <Link href="/playbook" className="btn-outline">
-                  Read More Insights
-                </Link>
-              </div>
-            </div>
           </div>
         </section>
 
