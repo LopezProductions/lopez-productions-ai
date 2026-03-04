@@ -53,7 +53,7 @@ export default function FloatingCallButton() {
     }
   }, [lastScrollY])
 
-  if (pathname === '/') return null
+  if (pathname === '/' || pathname?.startsWith('/playbook')) return null
 
   return (
     <a
