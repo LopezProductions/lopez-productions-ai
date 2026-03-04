@@ -24,8 +24,9 @@ export const allInsights: Insight[] = [
     readTime: '9 min read',
     category: 'AI Workflows',
     publishedDate: '2026-02-28',
+    modifiedDate: '2025-03-04',
     entityTags: ['Cursor', 'Claude', 'GPT', 'GitHub Copilot', 'SelfHosted'],
-    coverImage: '/cursor-ai-2026.png',
+    coverImage: '/cursor-ai-models-2026.png',
     faqs: [
       {
         question: 'What model should I use for Cursor AI?',

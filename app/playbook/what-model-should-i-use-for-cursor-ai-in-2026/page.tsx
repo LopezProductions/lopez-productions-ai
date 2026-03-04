@@ -10,9 +10,9 @@ import { allInsights } from '../insights-data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "What Model Should I Use for Cursor AI in 2026? (A Builder's Guide) | Lopez Productions",
+  title: "Best Cursor AI Models (March 2026): Don't Waste Your Pro Credits | Lopez Productions",
   description:
-    "A breakdown of which models to use, which to avoid, and how to navigate Cursor's pricing so you don't hit rate limits or overage bills.",
+    "Wondering which model to use in Cursor AI? Here is a breakdown of Composer 1.5 vs. Claude 4.5, which free models are worth it, and how to avoid massive API overages.",
   keywords:
     'Cursor AI, Cursor Pro, Claude Opus, Composer 1.5, GPT-5.2 Codex, GitHub Copilot, Cursor model selection, AI coding editor',
   alternates: {
@@ -21,17 +21,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://lopezproductions.ai/playbook/what-model-should-i-use-for-cursor-ai-in-2026',
-    title: "What Model Should I Use for Cursor AI in 2026? (A Builder's Guide)",
+    title: "Best Cursor AI Models (March 2026): Don't Waste Your Pro Credits",
     description:
-      "A breakdown of which models to use, which to avoid, and how to navigate Cursor's pricing so you don't hit rate limits or overage bills.",
-    images: ['https://lopezproductions.ai/cursor-ai-2026.png'],
+      "Wondering which model to use in Cursor AI? Here is a breakdown of Composer 1.5 vs. Claude 4.5, which free models are worth it, and how to avoid massive API overages.",
+    images: ['https://lopezproductions.ai/cursor-ai-models-2026.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "What Model Should I Use for Cursor AI in 2026? (A Builder's Guide)",
+    title: "Best Cursor AI Models (March 2026): Don't Waste Your Pro Credits",
     description:
-      "A breakdown of which models to use, which to avoid, and how to navigate Cursor's pricing so you don't hit rate limits or overage bills.",
-    images: ['https://lopezproductions.ai/cursor-ai-2026.png'],
+      "Wondering which model to use in Cursor AI? Here is a breakdown of Composer 1.5 vs. Claude 4.5, which free models are worth it, and how to avoid massive API overages.",
+    images: ['https://lopezproductions.ai/cursor-ai-models-2026.png'],
   },
 }
 
@@ -97,7 +97,7 @@ export default function WhatModelShouldIUseForCursorAIIn2026() {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-2xl overflow-hidden border border-border">
               <Image
-                src="/cursor-ai-2026.png"
+                src="/cursor-ai-models-2026.png"
                 alt="What Model Should I Use for Cursor AI in 2026?"
                 width={1200}
                 height={630}
